@@ -24,7 +24,14 @@ let track = document.createElement('audio');
 
 
 //All songs list.
+//Add as many song as you want.
 let All_song = [
+	//{
+     	  //name: ".....",     Name of song
+     	  //path: "music/..... .mp3",     Name of song With extention, don't forget to give underscore or hyphen in between the words of Songs, Here as well as in your Directory. 
+     	  //img: "img/..... .jpg",     Name of the image of audio with extenstin.
+     	  //singer: "....."     Name of the Singers of the Song.
+   	//},
 	{
 	  name: "Aaj Phir",
 	  path: "music/Aaj_Phir.mp3",

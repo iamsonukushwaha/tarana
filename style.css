@@ -77,7 +77,6 @@ body{
 	height: 100%;
 	width: 100%;
 	border-radius: 20px;
-	box-shadow: 1px 0px 20px 12px rgba(240,240,240,0.2);
 }
 /* both range slider part */
 input[type="range"] {

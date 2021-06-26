@@ -23,7 +23,7 @@ let track = document.createElement('audio');
 
 
 //All songs list.
-//Add enough song as you want.
+//Add as many song as you want.
 //I'm taking example of five Audios.
 let All_song = [
    {

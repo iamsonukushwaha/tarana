@@ -23,36 +23,38 @@ let track = document.createElement('audio');
 
 
 //All songs list.
+//Add enough song as you want.
+//I'm taking example of five Audios.
 let All_song = [
    {
-     name: "Aaj Phir",
-     path: "music/Aaj_Phir.mp3",
-     img: "img/img1.jpg",
-     singer: "Arijit Singh & Samira Koppikar"
+     name: ".....",     //Name of song
+     path: "music/..... .mp3",     //Name of song With extention, don't forget to give underscore or hyphen in between the words of Songs, Here as well as in your Directory. 
+     img: "img/..... .jpg",     //Name of the image of audio with extenstin.
+     singer: "....."     //Name of the Singers of the Song.
    },
    {
-     name: "Baarish",
-     path: "music/Baarish.mp3",
-     img: "img/img2.jpg",
-     singer: "Tanishk Bagchi, Shashaa Tirupati"
+     name: ".....",
+     path: "music/.....",
+     img: "img/.....",
+     singer: "....."
    },
    {
-     name: "Bolna",
-     path: "music/bolna.mp3",
-     img: "img/img3.jpg",
-     singer: "Tanishk Bagchi, Arijit Singh & Asees Kaur"
+     name: ".....",
+     path: "music/.....",
+     img: "img/.....",
+     singer: "....."
    },
    {
-     name: "Hawayein",
-     path: "music/Hawayein.mp3",
-     img: "img/img4.jpg",
-     singer: "Arijit Singh , Pritam"
+     name: ".....",
+     path: "music/.....",
+     img: "img/.....",
+     singer: "....."
    },
    {
-     name: "Kaun Tujhe",
-     path: "music/Kaun_Tujhe.mp3",
-     img: "img/img5.jpg",
-     singer: "Palak Muchhal"
+     name: ".....",
+     path: "music/.....",
+     img: "img/.....",
+     singer: "....."
    }
 ];
 

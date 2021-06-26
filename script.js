@@ -31,10 +31,10 @@ let All_song = [
      singer: "Arijit Singh & Samira Koppikar"
    },
    {
-	name: "Baarish",
-	path: "music/Baarish.mp3",
-	img: "img/img2.jpg",
-	singer: "Tanishk Bagchi, Shashaa Tirupati"
+     name: "Baarish",
+     path: "music/Baarish.mp3",
+     img: "img/img2.jpg",
+     singer: "Tanishk Bagchi, Shashaa Tirupati"
    },
    {
      name: "Bolna",

@@ -33,34 +33,124 @@ let All_song = [
      	  //singer: "....."     Name of the Singers of the Song.
    	//},
 	{
-	  name: "Aaj Phir",
-	  path: "music/Aaj_Phir.mp3",
-	  img: "img/img1.jpg",
-	  singer: "Arijit Singh & Samira Koppikar"
-	},
-	{
 	 name: "Baarish",
 	 path: "music/Baarish.mp3",
-	 img: "img/img2.jpg",
+	 img: "img/Baarish.jpeg",
 	 singer: "Tanishk Bagchi, Shashaa Tirupati"
 	},
 	{
-	  name: "Bolna",
-	  path: "music/bolna.mp3",
-	  img: "img/img3.jpg",
-	  singer: "Tanishk Bagchi, Arijit Singh & Asees Kaur"
+	 name: "",
+	 path: "",
+	 img: "",
+	 singer: ""
+	},
+	{
+	 name: "",
+	 path: "",
+	 img: "",
+	 singer: ""
+	},
+	{
+	 name: "",
+	 path: "",
+	 img: "",
+	 singer: ""
+	},
+	{
+	 name: "",
+	 path: "",
+	 img: "",
+	 singer: ""
+	},
+	{
+	 name: "",
+	 path: "",
+	 img: "",
+	 singer: ""
 	},
 	{
 	  name: "Hawayein",
 	  path: "music/Hawayein.mp3",
-	  img: "img/img4.jpg",
+	  img: "img/Hawayein.jpeg",
 	  singer: "Arijit Singh , Pritam"
 	},
 	{
 	  name: "Kaun Tujhe",
 	  path: "music/Kaun_Tujhe.mp3",
-	  img: "img/img5.jpg",
+	  img: "img/Kaun_Tujhe.jpeg",
 	  singer: "Palak Muchhal"
+	},
+	{
+	 name: "",
+	 path: "",
+	 img: "",
+	 singer: ""
+	},
+	{
+	 name: "",
+	 path: "",
+	 img: "",
+	 singer: ""
+	},
+	{
+	 name: "",
+	 path: "",
+	 img: "",
+	 singer: ""
+	},
+	{
+	 name: "",
+	 path: "",
+	 img: "",
+	 singer: ""
+	},
+	{
+	 name: "",
+	 path: "",
+	 img: "",
+	 singer: ""
+	},
+	{
+	 name: "",
+	 path: "",
+	 img: "",
+	 singer: ""
+	},
+	{
+	 name: "",
+	 path: "",
+	 img: "",
+	 singer: ""
+	},
+	{
+	 name: "",
+	 path: "",
+	 img: "",
+	 singer: ""
+	},
+	{
+	 name: "",
+	 path: "",
+	 img: "",
+	 singer: ""
+	},
+	{
+	 name: "",
+	 path: "",
+	 img: "",
+	 singer: ""
+	},
+	{
+	 name: "",
+	 path: "",
+	 img: "",
+	 singer: ""
+	},
+	{
+	 name: "",
+	 path: "",
+	 img: "",
+	 singer: ""
 	}
 ];
 

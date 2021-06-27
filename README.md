@@ -1,6 +1,17 @@
 ## Hii There,
     Here Is An Amazing Music Player You Can Use On Your PC Or MOBILE PHONE.
     This Music Player Includes Play/Pause Button, Backword Button, Forward Button, Volume Slider, Mute Button, Music-Track Slider And An Autoplay Button.
+    I've Preveously Added 20 Songs For You Guys, So Play And Enjoy.
+
+
+## Buttons And Slider
+    Play/Pause-> This Button Can Be Used To Play Or Pause Songs.
+    Forward-> This Button Can Be Used To Jump On Next Song.
+    Backward-> This Button Can Be Used To Jump On Previous Song.
+    Autoplay-> This Button Is Used To Play Song Continously On Your Device. If The Following Button Is Pink In Color Then Autoplay Is On.
+    Mute-> This Button Can Be Used To Mute The Song Means Volume Down To 0.
+    Volume Slider-> This Can Be Used To Change The Intensity Of Sound From 0 To 100.
+    Song Track-> This Slider Is Useful When You Wants To Slide Forward Or Backward In The Same Song You Are Playing. This Reflects The Status Of Your Song
 
 
 ## How To Use 👇

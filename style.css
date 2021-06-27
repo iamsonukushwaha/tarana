@@ -322,7 +322,7 @@ input[type="range"]::-webkit-slider-thumb{
 		transform: translateX(-10%);
 		text-transform: capitalize;
 		color: #fff;
-		font-size: 35px;
+		font-size: 30px;
 	}
 	.right #artist{
 		display: none;

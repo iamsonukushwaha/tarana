@@ -87,7 +87,7 @@ let All_song = [
 	 singer: "Arijit Singh & Shreya Ghoshal"
 	},
 	{
-	 name: "Phir Bhi Tumko Chaahunga",
+	 name: "Chaahunga",
 	 path: "music/Phir_Bhi_Tumko_Chaahunga.mp3",
 	 img: "img/Phir_Bhi_Tumko_Chaahunga.jpeg",
 	 singer: "Mithoon, Arijit Singh & Shashaa Tirupati"
@@ -99,7 +99,7 @@ let All_song = [
 	 singer: "Arijit Singh"
 	},
 	{
-	 name: "Rabba Main Toh Mar Gaya Oye",
+	 name: "Rabba Main Toh",
 	 path: "music/Rabba_Main_Toh_Mar_Gaya_Oye.mp3",
 	 img: "img/Rabba_Mai_To_Mar_Gya_Oye.webp",
 	 singer: "Rahat Fateh Ali Khan"
@@ -123,19 +123,19 @@ let All_song = [
 	 singer: "Abhijeet Bhattacharya"
 	},
 	{
-	 name: "Tauba Tumhare Yeh Ishare",
+	 name: "Tumhare Yeh Ishare",
 	 path: "music/Tauba_Tumhare_Yeh_Ishare.mp3",
 	 img: "img/Tauba_Tumhare_Yeh_Ishare.jpeg",
 	 singer: "Abhijeet Bhattacharya"
 	},
 	{
-	 name: "Tera Hone Laga Hoon",
+	 name: "Tera Hone Laga",
 	 path: "music/Tera_Hone_Laga_Hoon.mp3",
 	 img: "img/Tera_Hone_Laga_Hoon.jpeg",
 	 singer: "Atif Aslam & Alisha Chinoy"
 	},
 	{
-	 name: "Tere Bin Nahi Laage - Male",
+	 name: "Tere Bin Nahi Laage",
 	 path: "music/Tere_Bin_Nahi_Laage-Male.mp3",
 	 img: "img/Tere_Bin_Nahi_Lage.jpeg",
 	 singer: "Uzair Jaswal"

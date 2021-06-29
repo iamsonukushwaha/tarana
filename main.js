@@ -11,6 +11,7 @@ let auto_play = document.querySelector('#auto');
 let present = document.querySelector('#present');
 let total = document.querySelector('#total');
 let artist = document.querySelector('#artist');
+let main = document.querySelector('#main');
 
 
 let timer;
@@ -311,11 +312,13 @@ hide_show.onclick = function () {
 }
 function change() {
     main_body_hide.style.display = '';
+	main.style.display = 'none';
     hide_show.innerText = 'X';
     hide_show.style.color = "#fff";
 }
 function nochange() {
     main_body_hide.style.display = 'none';
+	main.style.display = '';
     hide_show.innerText = '☰';
     hide_show.style.color = "#fff";
 }

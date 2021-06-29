@@ -275,20 +275,47 @@ function autoplay_switch(){
 function range_slider(){
 	let position = 0;
         
-        // update slider position
-		if(!isNaN(track.duration)){
-		   position = track.currentTime * (100 / track.duration);
-		   slider.value =  position;
-	      }
+    // update slider position
+	if(!isNaN(track.duration)){
+	   position = track.currentTime * (100 / track.duration);
+	   slider.value =  position;
+	}
 
        
-       // function will run when the song is over
-       if(track.ended){
-       	 play.innerHTML = '<i class="fa fa-play" aria-hidden="true"></i>';
-           if(autoplay==1){
-		       index_no += 1;
-		       load_track(index_no);
-		       playsong();
-           }
-	    }
+    // function will run when the song is over
+    if(track.ended){
+       	play.innerHTML = '<i class="fa fa-play" aria-hidden="true"></i>';
+        if(autoplay==1){
+		    index_no += 1;
+		    load_track(index_no);
+		    playsong();
+        }
+	}
+}
+
+
+// Function to open and close documentation.
+const hide_show = document.getElementById('hide_show');
+const main_body_hide = document.getElementById('main_body_hide');
+var first_click = true;
+nochange();
+hide_show.onclick = function () {
+    if (first_click) {
+        change();
+        first_click = false;
     }
+    else {
+        nochange();
+        first_click = true;
+    }
+}
+function change() {
+    main_body_hide.style.display = '';
+    hide_show.innerText = 'X';
+    hide_show.style.color = "#fff";
+}
+function nochange() {
+    main_body_hide.style.display = 'none';
+    hide_show.innerText = '☰';
+    hide_show.style.color = "#fff";
+}

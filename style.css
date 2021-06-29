@@ -239,8 +239,8 @@ input[type="range"]::-webkit-slider-thumb{
 }
 .documentation{
 	position: absolute;
-	top: 3.5%;
-	right: 30px;
+	top: 8%;
+	right: 7%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -361,7 +361,7 @@ input[type="range"]::-webkit-slider-thumb{
 		bottom: 5%;
 	}
 	.documentation{
-		right: 30px;
+		right: 15%;
 	}
 	.documentation_body h1{
 		font-size: 2em;
@@ -410,8 +410,8 @@ input[type="range"]::-webkit-slider-thumb{
 		left: 50%;
 	}
 	.documentation{
-		top: 6%;
-		right: 30px;
+		top: 10%;
+		right: 9%;
 	}
 	.documentation_body{
 		height: 82.5%;

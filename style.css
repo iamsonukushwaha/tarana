@@ -364,7 +364,7 @@ input[type="range"]::-webkit-slider-thumb{
 		right: 15%;
 	}
 	.documentation_page{
-		height: 97.5%;
+		height: 99%;
 	}
 	.documentation_body h1{
 		font-size: 2em;
@@ -417,7 +417,7 @@ input[type="range"]::-webkit-slider-thumb{
 		right: 9%;
 	}
 	.documentation_page{
-		height: 110%;
+		height: 106%;
 	}
 	.documentation_body{
 		height: 82.5%;

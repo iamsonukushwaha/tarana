@@ -363,6 +363,10 @@ input[type="range"]::-webkit-slider-thumb{
 	.documentation{
 		right: 15%;
 	}
+	.documentation_page{
+		height: 100%;
+		width: 100%;
+	}
 	.documentation_body h1{
 		font-size: 2em;
 	}
@@ -412,6 +416,10 @@ input[type="range"]::-webkit-slider-thumb{
 	.documentation{
 		top: 10%;
 		right: 9%;
+	}
+	.documentation_page{
+		height: 100%;
+		width: 100%;
 	}
 	.documentation_body{
 		height: 82.5%;

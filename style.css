@@ -25,7 +25,7 @@ body{
 	box-shadow: inset -5px -5px 6px #224a61,
             inset 5px 5px 6px #88ffff;
 }
-.main #logo{
+#logo{
 	position: absolute;
 	top: 10px;
 	left: 30px;
@@ -44,10 +44,10 @@ body{
 		filter: hue-rotate(360deg);
 	}
 }
-.main #logo i{
+#logo i{
 	margin-right: 15px;
 }
-.main button{
+button{
 	padding: 10px 12px;
 	margin: 0 10px;
 }
@@ -134,8 +134,8 @@ input[type="range"]::-webkit-slider-thumb{
 }
 .right .show_song_no{
 	position: absolute;
-	top: 10px;
-	right: 20px;
+	top: 360px;
+	right: 47.5%;
 	width: 30px;
 	height: 20px;
 	display: flex;
@@ -236,7 +236,77 @@ input[type="range"]::-webkit-slider-thumb{
 .right i:before{
 	color: #fff;
 	font-size: 20px;
-} 
+}
+.documentation{
+	position: absolute;
+	top: 3.5%;
+	right: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+}
+.hide_show{
+	position: absolute;
+	font-size: 25px;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.documentation_page{
+	position: absolute;
+	height: 90%;
+	width: 90%;
+	box-sizing: border-box;
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: repeating-linear-gradient(45deg, rgba(0,0,0,0.1),transparent,rgba(0,0,0,0.04),rgba(0,0,0,0.04),rgba(0,0,0,0.01),rgba(0,0,0,0.02),rgba(0,0,0,0.05),transparent,rgba(0,0,0,0.04),rgba(0,0,0,0.1),rgba(0,0,0,0.03) 3px),linear-gradient(0deg, rgb(230, 105, 196), rgb(85, 159, 230));
+	box-shadow: inset -5px -5px 6px #224a61,
+            inset 5px 5px 6px #88ffff;
+}
+.documentation_body{
+	position: absolute;
+	box-sizing: border-box;
+	height: 90%;
+	width: 100%;
+	box-sizing: border-box;
+	top: 7.5%;
+	padding: 20px;
+	overflow: scroll;
+}
+::-webkit-scrollbar{
+	display: none;
+}
+.documentation_body h1{
+	font-size: 3em;
+	text-align: center;
+	color: navajowhite;
+}
+.documentation_body h2{
+	font-size: 1.25em;
+}
+.documentation_body h2 ol{
+	margin: 0 50px;
+}
+.documentation_body h2 ol li:nth-child(1), .documentation_body h2 ol li:nth-child(6), .documentation_body h2 ol li:nth-child(11), .documentation_body h2 ol li:nth-child(16){
+	color: rgb(127, 35, 240);
+}
+.documentation_body h2 ol li:nth-child(2), .documentation_body h2 ol li:nth-child(7), .documentation_body h2 ol li:nth-child(12), .documentation_body h2 ol li:nth-child(17){
+	color: rgb(131, 224, 255);
+}
+.documentation_body h2 ol li:nth-child(3), .documentation_body h2 ol li:nth-child(8), .documentation_body h2 ol li:nth-child(13), .documentation_body h2 ol li:nth-child(18){
+	color: rgb(23, 92, 219);
+}
+.documentation_body h2 ol li:nth-child(4), .documentation_body h2 ol li:nth-child(9), .documentation_body h2 ol li:nth-child(14), .documentation_body h2 ol li:nth-child(19){
+	color: rgb(254, 228, 64);
+}
+.documentation_body h2 ol li:nth-child(5), .documentation_body h2 ol li:nth-child(10), .documentation_body h2 ol li:nth-child(15), .documentation_body h2 ol li:nth-child(20){
+	color: rgb(0, 245, 212);
+}
 
 @media screen and (max-width: 600px) and (min-width: 300px){
 	.right, .left{
@@ -265,7 +335,8 @@ input[type="range"]::-webkit-slider-thumb{
 		top: 50%;
 	}
 	.right .show_song_no{
-		top: -118%;
+		top: 50%;
+		left: 45%;
 	}
 	.right .show_song_no p:nth-child(2){
 		margin: 0 2px;
@@ -289,6 +360,18 @@ input[type="range"]::-webkit-slider-thumb{
 	.right .duration{
 		bottom: 5%;
 	}
+	.documentation{
+		right: 30px;
+	}
+	.documentation_body h1{
+		font-size: 2em;
+	}
+	.documentation_body h2{
+		font-size: 1em;
+	}
+	.documentation_body h2 ol{
+		margin: 0 30px;
+	}
 }
 
 @media screen and (max-height: 500px) and (orientation: landscape){
@@ -298,6 +381,10 @@ input[type="range"]::-webkit-slider-thumb{
 	}
 	.left .volume{
 		bottom: 10%;
+	}
+	.right .show_song_no{
+		top: 90%;
+		right: 5%;
 	}
 	.right .show_song_no p:nth-child(2){
 		margin: 0 2px;
@@ -321,5 +408,22 @@ input[type="range"]::-webkit-slider-thumb{
 	.right .duration{
 		bottom: 11%;
 		left: 50%;
+	}
+	.documentation{
+		top: 6%;
+		right: 30px;
+	}
+	.documentation_body{
+		height: 82.5%;
+		top: 12.5%;
+	}
+	.documentation_body h1{
+		font-size: 2em;
+	}
+	.documentation_body h2{
+		font-size: 1em;
+	}
+	.documentation_body h2 ol{
+		margin: 0 35px;
 	}
 }

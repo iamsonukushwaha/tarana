@@ -1,0 +1,122 @@
+[
+  {
+	 name: "Baarish",
+	 path: "music/Baarish.mp3",
+	 img: "img/Baarish.jpeg",
+	 singer: "Tanishk Bagchi, Ash King & Shashaa Tirupati"
+	},
+	{
+	 name: "Be Intehaan",
+	 path: "music/Be_Intehaan.mp3",
+	 img: "img/Be_Intehaan.jpeg",
+	 singer: "Atif Aslam & Sunidhi Chauhan"
+	},
+	{
+	 name: "Chashni",
+	 path: "music/Chashni.mp3",
+	 img: "img/Chashni.jpeg",
+	 singer: "Abhijeet Srivastava"
+	},
+	{
+	 name: "Chedkhaniyaan",
+	 path: "music/Chedkhaniyaan.mp3",
+	 img: "img/Chedkhaniyaan.jpeg",
+	 singer: "Shankar Mahadevan, Ehsaan & Loy"
+	},
+	{
+	 name: "Dil Jaaniye",
+	 path: "music/Dil_Jaaniye.mp3",
+	 img: "img/Dil_Jaaniye.jpeg",
+	 singer: "Tulsi Kumar & Jubin Nautiyal"
+	},
+	{
+	 name: "Dil Meri Na Sune",
+	 path: "music/Dil_Meri_Na_Sune.mp3",
+	 img: "img/Dil_Meri_Na_Sune.jpeg",
+	 singer: "Atif Aslam & Payal Dev"
+	},
+	{
+	  name: "Hawayein",
+	  path: "music/Hawayein.mp3",
+	  img: "img/Hawayein.jpeg",
+	  singer: "Arijit Singh & Pritam"
+	},
+	{
+	  name: "Kaun Tujhe",
+	  path: "music/Kaun_Tujhe.mp3",
+	  img: "img/Kaun_Tujhe.jpeg",
+	  singer: "Palak Muchhal"
+	},
+	{
+	 name: "Pal",
+	 path: "music/Pal.mp3",
+	 img: "img/Pal.jpeg",
+	 singer: "Arijit Singh & Shreya Ghoshal"
+	},
+	{
+	 name: "Chaahunga",
+	 path: "music/Phir_Bhi_Tumko_Chaahunga.mp3",
+	 img: "img/Phir_Bhi_Tumko_Chaahunga.jpeg",
+	 singer: "Mithoon, Arijit Singh & Shashaa Tirupati"
+	},
+	{
+	 name: "Phir Kabhi",
+	 path: "music/Phir_Kabhi.mp3",
+	 img: "img/Phir_Kabhi.jpeg",
+	 singer: "Arijit Singh"
+	},
+	{
+	 name: "Rabba Main Toh",
+	 path: "music/Rabba_Main_Toh_Mar_Gaya_Oye.mp3",
+	 img: "img/Rabba_Mai_To_Mar_Gya_Oye.webp",
+	 singer: "Rahat Fateh Ali Khan"
+	},
+	{
+	 name: "Saude Bazzi",
+	 path: "music/Saude_Bazzi.mp3",
+	 img: "img/Saude_Baazi.webp",
+	 singer: "Javed Ali"
+	},
+	{
+	 name: "Shukran Allah",
+	 path: "music/Shukran_Allah.mp3",
+	 img: "img/Shukran_Allah.webp",
+	 singer: "Sonu Nigam"
+	},
+	{
+	 name: "Suno Na Suno Na",
+	 path: "music/Suno_Na_Suno_Na.mp3",
+	 img: "img/Suno_Na_Suno_Na.jpeg",
+	 singer: "Abhijeet Bhattacharya"
+	},
+	{
+	 name: "Tumhare Yeh Ishare",
+	 path: "music/Tauba_Tumhare_Yeh_Ishare.mp3",
+	 img: "img/Tauba_Tumhare_Yeh_Ishare.jpeg",
+	 singer: "Abhijeet Bhattacharya"
+	},
+	{
+	 name: "Tera Hone Laga",
+	 path: "music/Tera_Hone_Laga_Hoon.mp3",
+	 img: "img/Tera_Hone_Laga_Hoon.jpeg",
+	 singer: "Atif Aslam & Alisha Chinoy"
+	},
+	{
+	 name: "Tere Bin Nahi Laage",
+	 path: "music/Tere_Bin_Nahi_Laage-Male.mp3",
+	 img: "img/Tere_Bin_Nahi_Lage.jpeg",
+	 singer: "Uzair Jaswal"
+	},
+	{
+	 name: "Teri Jhuki Nazar",
+	 path: "music/Teri_Jhuki_Nazar.mp3",
+	 img: "img/Teri_Jhuki_Nazar.jpeg",
+	 singer: "Shafqat Amanat Ali"
+	},
+	{
+	 name: "Thoda Thoda Pyaar",
+	 path: "music/Thoda_Thoda_Pyaar.mp3",
+	 img: "img/Thoda_Thoda_Pyar.jpeg",
+	 singer: "Stebin Ben"
+	}
+]

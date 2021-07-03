@@ -24,18 +24,7 @@ let Playing_song = false;
 //creating an audio Element.
 let track = document.createElement('audio');
 
-
-//All songs list.
-//Add as many song as you want.
-// let All_song = [
-// 	// {
-//   //    	  name: ".....",     Name of song
-//   //    	  path: "music/..... .mp3",     Name of song With extention, don't forget to give underscore or hyphen in between the words of Songs, Here as well as in your Directory. 
-//   //    	  img: "img/..... .jpg",     Name of the image of audio with extenstin.
-//   //    	  singer: "....."     Name of the Singers of the Song.
-//   //  	},
-
-// ]; 
+let All_song;
 
 getSongs();
 
@@ -48,8 +37,7 @@ function getSongs() {
       let All_song = data;
       // console.log(All_song);
 
-      // Functions Starts Here 
-
+      load_track(index_no);
 
       // function load the track
       function load_track(index_no) {
@@ -57,7 +45,6 @@ function getSongs() {
         reset_slider();
 
         track.src = All_song[index_no].path;
-        console.log(track.src);
         title.innerHTML = All_song[index_no].name;
         track_image.src = All_song[index_no].img;
         artist.innerHTML = All_song[index_no].singer;
@@ -68,155 +55,158 @@ function getSongs() {
         present.innerHTML = index_no + 1;
       }
 
-      load_track(index_no);
-
-
-      //mute sound function
-      function mute_sound() {
-        track.volume = 0;
-        volume.value = 0;
-        volume_show.innerHTML = 0;
-      }
-
-
-      // checking.. the song is playing or not
-      function justplay() {
-        if (Playing_song == false) {
-          playsong();
-
-        } else {
-          pausesong();
-        }
-      }
-
-
-      // reset song slider
-      function reset_slider() {
-        slider.value = 0;
-      }
-
-      // play song
-      function playsong() {
-        track.play();
-        Playing_song = true;
-        play.innerHTML = '<i class="fa fa-pause" aria-hidden="true"></i>';
-      }
-
-      //pause song
-      function pausesong() {
-        track.pause();
-        Playing_song = false;
-        play.innerHTML = '<i class="fa fa-play" aria-hidden="true"></i>';
-      }
-
-
-      // next song
-      function next_song() {
-        if (index_no < All_song.length - 1) {
-          index_no += 1;
-          load_track(index_no);
-          playsong();
-        } else {
-          index_no = 0;
-          load_track(index_no);
-          playsong();
-
-        }
-      }
-
-
-      // previous song
-      function previous_song() {
-        if (index_no > 0) {
-          index_no -= 1;
-          load_track(index_no);
-          playsong();
-
-        } else {
-          index_no = All_song.length;
-          load_track(index_no);
-          playsong();
-        }
-      }
-
-
-      // change volume
-      function volume_change() {
-        volume_show.innerHTML = recent_volume.value;
-        track.volume = recent_volume.value / 100;
-      }
-
-
-      // change slider position 
-      function change_duration() {
-        slider_position = track.duration * (slider.value / 100);
-        track.currentTime = slider_position;
-      }
-
-
-      // autoplay function
-      function autoplay_switch() {
-        if (autoplay == 1) {
-          autoplay = 0;
-          auto_play.style.background = "linear-gradient(145deg, #4d8fcf, #5baaf6)";
-        } else {
-          autoplay = 1;
-          auto_play.style.background = "linear-gradient(145deg, #cf5fb0, #f670d2)";
-        }
-      }
-
-
-      function range_slider() {
-        let position = 0;
-
-        // update slider position
-        if (!isNaN(track.duration)) {
-          position = track.currentTime * (100 / track.duration);
-          slider.value = position;
-        }
-
-
-        // function will run when the song is over
-        if (track.ended) {
-          play.innerHTML = '<i class="fa fa-play" aria-hidden="true"></i>';
-          if (autoplay == 1) {
-            index_no += 1;
-            load_track(index_no);
-            playsong();
-          }
-        }
-      }
-
-
-      // Function to open and close documentation.
-      const hide_show = document.getElementById('hide_show');
-      const main_body_hide = document.getElementById('main_body_hide');
-      var first_click = true;
-      nochange();
-      hide_show.onclick = function () {
-        if (first_click) {
-          change();
-          first_click = false;
-        }
-        else {
-          nochange();
-          first_click = true;
-        }
-      }
-      function change() {
-        main_body_hide.style.display = '';
-        main.style.display = 'none';
-        hide_show.innerText = 'X';
-        hide_show.style.color = "#fff";
-      }
-      function nochange() {
-        main_body_hide.style.display = 'none';
-        main.style.display = '';
-        hide_show.innerText = '☰';
-        hide_show.style.color = "#fff";
-      }
-
 
     });
+}
+
+
+
+
+
+
+//mute sound function
+function mute_sound() {
+  track.volume = 0;
+  volume.value = 0;
+  volume_show.innerHTML = 0;
+}
+
+
+// checking.. the song is playing or not
+function justplay() {
+  if (Playing_song == false) {
+    playsong();
+
+  } else {
+    pausesong();
+  }
+}
+
+
+// reset song slider
+function reset_slider() {
+  slider.value = 0;
+}
+
+// play song
+function playsong() {
+  track.play();
+  Playing_song = true;
+  play.innerHTML = '<i class="fa fa-pause" aria-hidden="true"></i>';
+}
+
+//pause song
+function pausesong() {
+  track.pause();
+  Playing_song = false;
+  play.innerHTML = '<i class="fa fa-play" aria-hidden="true"></i>';
+}
+
+
+
+// next song
+function next_song() {
+  if (index_no < All_song.length - 1) {
+    index_no += 1;
+    load_track(index_no);
+    playsong();
+  } else {
+    index_no = 0;
+    load_track(index_no);
+    playsong();
+
+  }
+}
+
+
+// previous song
+function previous_song() {
+  if (index_no > 0) {
+    index_no -= 1;
+    load_track(index_no);
+    playsong();
+
+  } else {
+    index_no = All_song.length;
+    load_track(index_no);
+    playsong();
+  }
+}
+
+// change volume
+function volume_change() {
+  volume_show.innerHTML = recent_volume.value;
+  track.volume = recent_volume.value / 100;
+}
+
+
+// change slider position 
+function change_duration() {
+  slider_position = track.duration * (slider.value / 100);
+  track.currentTime = slider_position;
+}
+
+
+// autoplay function
+function autoplay_switch() {
+  if (autoplay == 1) {
+    autoplay = 0;
+    auto_play.style.background = "linear-gradient(145deg, #4d8fcf, #5baaf6)";
+  } else {
+    autoplay = 1;
+    auto_play.style.background = "linear-gradient(145deg, #cf5fb0, #f670d2)";
+  }
+}
+
+
+
+function range_slider() {
+  let position = 0;
+
+  // update slider position
+  if (!isNaN(track.duration)) {
+    position = track.currentTime * (100 / track.duration);
+    slider.value = position;
+  }
+
+
+  // function will run when the song is over
+  if (track.ended) {
+    play.innerHTML = '<i class="fa fa-play" aria-hidden="true"></i>';
+    if (autoplay == 1) {
+      index_no += 1;
+      load_track(index_no);
+      playsong();
+    }
+  }
+}
+
+
+// Function to open and close documentation.
+const hide_show = document.getElementById('hide_show');
+const main_body_hide = document.getElementById('main_body_hide');
+var first_click = true;
+nochange();
+hide_show.onclick = function () {
+  if (first_click) {
+    change();
+    first_click = false;
+  }
+  else {
+    nochange();
+    first_click = true;
+  }
+}
+function change() {
+  main_body_hide.style.display = '';
+  main.style.display = 'none';
+  hide_show.innerText = 'X';
+  hide_show.style.color = "#fff";
+}
+function nochange() {
+  main_body_hide.style.display = 'none';
+  main.style.display = '';
+  hide_show.innerText = '☰';
+  hide_show.style.color = "#fff";
 }
 

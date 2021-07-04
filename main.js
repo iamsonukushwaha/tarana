@@ -26,42 +26,41 @@ let track = document.createElement('audio');
 
 let All_song;
 
-getSongs();
 
-function getSongs() {
+
+load_track(index_no);
+
+// function load the track
+
+function load_track(index_no) {
+
+  clearInterval(timer);
+  reset_slider();
+
   fetch("https://www.sonu.live/Music-Player/db.json")
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
-      let All_song = data;
-      // console.log(All_song);
+      All_song = data;
+      console.log(All_song.length);
+      console.log(All_song[index_no].path);
+      track.src = All_song[index_no].path;
+      title.innerHTML = All_song[index_no].name;
+      track_image.src = All_song[index_no].img;
+      artist.innerHTML = All_song[index_no].singer;
 
-      load_track(index_no);
 
-      // function load the track
-      function load_track(index_no) {
-        clearInterval(timer);
-        reset_slider();
+      track.load();
 
-        track.src = All_song[index_no].path;
-        title.innerHTML = All_song[index_no].name;
-        track_image.src = All_song[index_no].img;
-        artist.innerHTML = All_song[index_no].singer;
-        track.load();
-
-        timer = setInterval(range_slider, 1000);
-        total.innerHTML = All_song.length;
-        present.innerHTML = index_no + 1;
-      }
+      timer = setInterval(range_slider, 1000);
+      total.innerHTML = All_song.length;
+      present.innerHTML = index_no + 1;
 
 
     });
+
 }
-
-
-
-
 
 
 //mute sound function
@@ -197,16 +196,19 @@ hide_show.onclick = function () {
     first_click = true;
   }
 }
+
+
 function change() {
   main_body_hide.style.display = '';
   main.style.display = 'none';
   hide_show.innerText = 'X';
   hide_show.style.color = "#fff";
 }
+
+
 function nochange() {
   main_body_hide.style.display = 'none';
   main.style.display = '';
   hide_show.innerText = '☰';
   hide_show.style.color = "#fff";
 }
-

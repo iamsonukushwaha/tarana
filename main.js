@@ -43,8 +43,9 @@ function load_track(index_no) {
     })
     .then(function (data) {
       All_song = data;
-      console.log(All_song.length);
-      console.log(All_song[index_no].path);
+      // console.log(All_song.length);
+      // console.log(All_song[index_no].path);
+      
       track.src = All_song[index_no].path;
       title.innerHTML = All_song[index_no].name;
       track_image.src = All_song[index_no].img;
@@ -212,3 +213,5 @@ function nochange() {
   hide_show.innerText = '☰';
   hide_show.style.color = "#fff";
 }
+
+

@@ -179,20 +179,9 @@ function range_slider() {
     slider.value = position;
   }
 
-
   // function will run when the song is over
   if (track.ended) {
-    play.innerHTML = '<i class="fa fa-play" aria-hidden="true"></i>';
-    if (autoplay == 1) {
-      index_no += 1;
-      load_track(index_no);
-      playsong();
-    }
-    else {
-      load_track(index_no);
-      playsong();
-
-    }
+    next_song();
 
   }
 }

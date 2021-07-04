@@ -13,6 +13,7 @@ let present = document.querySelector('#present');
 let total = document.querySelector('#total');
 let artist = document.querySelector('#artist');
 let main = document.querySelector('#main');
+let list = document.querySelector('#list');
 
 
 let timer;
@@ -45,7 +46,7 @@ function load_track(index_no) {
       All_song = data;
       // console.log(All_song.length);
       // console.log(All_song[index_no].path);
-      
+
       track.src = All_song[index_no].path;
       title.innerHTML = All_song[index_no].name;
       track_image.src = All_song[index_no].img;
@@ -57,6 +58,15 @@ function load_track(index_no) {
       timer = setInterval(range_slider, 1000);
       total.innerHTML = All_song.length;
       present.innerHTML = index_no + 1;
+
+      All_song.forEach(element => {
+        // console.log(element);
+        // console.log(element.singer);
+        let li = document.createElement('li');
+        li.innerHTML = `${element.name} &rarr; ${element.singer} <br/><br/><br/>`;
+        list.append(li);
+
+      });
 
 
     });
@@ -173,11 +183,11 @@ function range_slider() {
   // function will run when the song is over
   if (track.ended) {
     play.innerHTML = '<i class="fa fa-play" aria-hidden="true"></i>';
-    if (autoplay == 1) {
+    // if (autoplay == 1) {
       index_no += 1;
       load_track(index_no);
       playsong();
-    }
+    // }
   }
 }
 
@@ -187,6 +197,7 @@ const hide_show = document.getElementById('hide_show');
 const main_body_hide = document.getElementById('main_body_hide');
 var first_click = true;
 nochange();
+
 hide_show.onclick = function () {
   if (first_click) {
     change();

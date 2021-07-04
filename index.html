@@ -9,7 +9,7 @@
    <meta name="email" content="nihalpriyadarshi1999@gmail.com">
 	<title>Music Player</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   <link rel="stylesheet" type="text/css" href="style.css">
+   <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 <body>
    <div class="main" id="main">
@@ -37,49 +37,30 @@
          <!--- middle part of right part--->
   	 	   <div class="middle">
   	         <button onclick="previous_song()" id="pre" class="right_blue"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
-      	   <button onclick="justplay()" id="play" class="right_pink"><i class="fa fa-play" aria-hidden="true"></i></button>
-  	         <button onclick="next_song()" id="next" class="right_blue"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+      	   <button onclick="justplay();" id="play" class="right_pink"><i class="fa fa-play" aria-hidden="true"></i></button>
+  	         <button onclick="next_song();" id="next" class="right_blue"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
   	      </div>
          <!--- song duration part --->
          <div class="duration">
-            <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+            <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration();">
          </div>
-         <button id="auto" onclick="autoplay_switch()" class="blue">Auto play</i></button>
+         <button id="auto" onclick="autoplay_switch();" class="blue">Auto play</i></button>
   	   </div>
    </div>
    <div class="documentation"><button class="hide_show" id="hide_show"></button></div>
    <div class="documentation_page" id="main_body_hide">
          <p id="logo"><i class="fa fa-music"></i>Music</p>
          <div class="documentation_body">
-            <h1>PLAYLIST</h1>
+            <h1>PLAYLIST</h1><br/><br/>
             <h2>
-               <ol>
-                  <li>Baarish &rarr; Tanishk Bagchi, Ash King & Shashaa Tirupati.</li>
-                  <li>Be Intehaan &rarr; Atif Aslam & Sunidhi Chauhan.</li>
-                  <li>Chashni &rarr; Abhijeet Srivastava.</li>
-                  <li>Chedkhaniyaan &rarr; Shankar Mahadevan, Ehsaan & Loy.</li>
-                  <li>Dil Jaaniye &rarr; Tulsi Kumar & Jubin Nautiyal.</li>
-                  <li>Dil Meri Na Sune &rarr; Atif Aslam & Payal Dev.</li>
-                  <li>Hawayein &rarr; Arijit Singh & Pritam.</li>
-                  <li>Kaun Tujhe &rarr; Palak Muchhal.</li>
-                  <li>Pal &rarr; Arijit Singh & Shreya Ghoshal.</li>
-                  <li>Phir Bhi Tumko Chaahunga &rarr; Mithoon, Arijit Singh & Shashaa Tirupati.</li>
-                  <li>Phir Kabhi &rarr; Arijit Singh.</li>
-                  <li>Rabba Main Toh Mar Gya Oye &rarr; Rahat Fateh Ali Khan.</li>
-                  <li>Saude Bazzi &rarr; Javed Ali.</li>
-                  <li>Shukran Allah &rarr; Sonu Nigam.</li>
-                  <li>Suno Na Suno Na &rarr; Abhijeet Bhattacharya.</li>
-                  <li>Tauba Tumhare Yeh Ishare &rarr; Abhijeet Bhattacharya.</li>
-                  <li>Tera Hone Laga Hoon &rarr; Atif Aslam & Alisha Chinoy.</li>
-                  <li>Tere Bin Nahi Laage - Male &rarr; Uzair Jaswal.</li>
-                  <li>Teri Jhuki Nazar &rarr; Shafqat Amanat Ali.</li>
-                  <li>Thoda Thoda Pyaar &rarr; Stebin Ben.</li>
+               <ol id="list" >
+                  
                </ol>
             </h2>
          </div>
    </div>
    
   <!--- Add javascript file --->
-  <script src="main.js"></script>
+  <script src="./main.js"></script>
 </body>
 </html>

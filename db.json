@@ -1,19 +1,19 @@
 [
   {
 	 "name": "Baarish",
-	 "path": "music/Baarish.mp3",
+	 "path": "https://www.sonu.live/Music-Player/music/Baarish.mp3",
 	 "img": "img/Baarish.jpeg",
 	 "singer": "Tanishk Bagchi, Ash King & Shashaa Tirupati"
 	},
 	{
 	 "name": "Be Intehaan",
-	 "path": "music/Be_Intehaan.mp3",
+	 "path": "/music/Be_Intehaan.mp3",
 	 "img": "img/Be_Intehaan.jpeg",
 	 "singer": "Atif Aslam & Sunidhi Chauhan"
 	},
 	{
 	 "name": "Chashni",
-	 "path": "music/Chashni.mp3",
+	 "path": "/music/Chashni.mp3",
 	 "img": "img/Chashni.jpeg",
 	 "singer": "Abhijeet Srivastava"
 	},

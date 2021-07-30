@@ -73,7 +73,6 @@ function load_track(index_no) {
           present.innerHTML = index_no;
 
           nochange();
-          load_track();
 
         })
 

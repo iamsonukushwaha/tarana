@@ -65,10 +65,12 @@ function load_track(index_no) {
         let link = document.createElement('a');
         link.innerHTML = `${element.name} &rarr; ${element.singer} <br/><br/><br/>`;
         link.addEventListener('click',function() {
-          track.src=element.path;
-          title.innerHTML=element.name;
+          track.src = element.path;
+          title.innerHTML = element.name;
           track_image.src = element.img;
           artist.innerHTML = element.singer;
+          index_no = element.id;
+          console.log(index_no);
 
           nochange();
           load_track();

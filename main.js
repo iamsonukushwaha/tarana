@@ -63,7 +63,7 @@ function load_track(index_no) {
         // console.log(element);
         // console.log(element.singer);
         let link = document.createElement('a');
-        link.innerHTML = `${element.id} ${element.name} &rarr; ${element.singer} <br/><br/><br/>`;
+        link.innerHTML = `${element.id}. ${element.name} &rarr; ${element.singer} <br/><br/><br/>`;
         link.addEventListener('click',function() {
           track.src = element.path;
           title.innerHTML = element.name;

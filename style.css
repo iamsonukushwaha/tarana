@@ -298,7 +298,7 @@ input[type="range"]::-webkit-slider-thumb{
 	margin: 0 50px;
 }
 
-.documentation_body h2 ol li:nth-child(1), .documentation_body h2 ol li:nth-child(6), .documentation_body h2 ol li:nth-child(11), .documentation_body h2 ol li:nth-child(16){
+.documentation_body h2 ol a:nth-child(1), .documentation_body h2 ol a:nth-child(6), .documentation_body h2 ol a:nth-child(11), .documentation_body h2 ol a:nth-child(16){
 	color: rgb(127, 35, 240);
 }
 .documentation_body h2 ol a:nth-child(2), .documentation_body h2 ol a:nth-child(7), .documentation_body h2 ol a:nth-child(12), .documentation_body h2 ol a:nth-child(17){

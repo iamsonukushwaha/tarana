@@ -51,20 +51,31 @@ function load_track(index_no) {
       title.innerHTML = All_song[index_no].name;
       track_image.src = All_song[index_no].img;
       artist.innerHTML = All_song[index_no].singer;
-
-
+      
+      
       track.load();
-
+      
       timer = setInterval(range_slider, 1000);
       total.innerHTML = All_song.length;
       present.innerHTML = index_no + 1;
-
+      
       All_song.forEach(element => {
         // console.log(element);
         // console.log(element.singer);
-        let li = document.createElement('li');
-        li.innerHTML = `${element.name} &rarr; ${element.singer} <br/><br/><br/>`;
-        list.append(li);
+        let link = document.createElement('a');
+        link.innerHTML = `${element.name} &rarr; ${element.singer} <br/><br/><br/>`;
+        link.addEventListener('click',function() {
+          track.src=element.path;
+          title.innerHTML=element.name;
+          track_image.src = element.img;
+          artist.innerHTML = element.singer;
+
+          nochange();
+          load_track();
+
+        })
+
+        list.append(link);
 
       });
 

@@ -1,7 +1,7 @@
 # Music Player
 
 
-Live Demo [sonu.live/Music-Player](https://www.sonu.live/Music-Player]
+Live Demo [sonu.live/Music-Player](https://www.sonu.live/Music-Player)
 
 
 

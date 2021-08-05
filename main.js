@@ -16,74 +16,93 @@ let main = document.querySelector('#main');
 let list = document.querySelector('#list');
 
 
-let timer;
+let timer, link, All_song, index_no = 0;
 let autoplay = 0;
 
-let index_no = 0;
-let Playing_song = false;
 
 //creating an audio Element.
 let track = document.createElement('audio');
 
-let All_song;
 
 
-load_track(index_no);
 
 // function load the track
 
-function load_track(index_no) {
-
-     clearInterval(timer);
-     reset_slider();
-
-     fetch("https://www.sonu.live/Music-Player/db.json")
-          .then(function (response) {
-               return response.json();
-          })
-          .then(function (data) {
-               All_song = data;
-               // console.log(All_song);
-               // console.log(All_song.length);
-               // console.log(All_song[index_no].path);
-
-               track.src = All_song[index_no].path;
-               title.innerHTML = All_song[index_no].name;
-               track_image.src = All_song[index_no].img;
-               artist.innerHTML = All_song[index_no].singer;
 
 
-               track.load();
+fetch("http://127.0.0.1:5500/db.json")
+     .then(function (response) {
+          return response.json();
+     })
+     .then(function (data) {
 
-               timer = setInterval(range_slider, 1000);
-               total.innerHTML = All_song.length;
-               present.innerHTML = index_no + 1;
+          All_song = data;
+          // console.log(index_no);
+          // console.log(All_song.length);
+          // console.log(All_song[index_no].path);
 
-               All_song.forEach(element => {
-                    // console.log(element);
-                    // console.log(element.singer);
-                    let link = document.createElement('a');
-                    link.innerHTML = `${element.id}. ${element.name} &rarr; ${element.singer} <br/><br/><br/>`;
-                    link.addEventListener('click', function () {
-                         track.src = element.path;
-                         title.innerHTML = element.name;
-                         track_image.src = element.img;
-                         artist.innerHTML = element.singer;
-                         index_no = element.id;
-                         present.innerHTML = index_no;
-                         justplay();
+          track.src = All_song[index_no].path;
+          title.innerHTML = All_song[index_no].name;
+          track_image.src = All_song[index_no].img;
+          artist.innerHTML = All_song[index_no].singer;
 
-                         nochange();
 
-                    })
+          track.load();
 
-                    list.appendChild(link);
+
+          timer = setInterval(range_slider, 1000);
+          total.innerHTML = All_song.length;
+          present.innerHTML = index_no + 1;
+
+
+
+
+          All_song.forEach(element => {
+               // console.log(element.singer);
+
+
+               link = document.createElement('a');
+               link.innerHTML = `${element.id}. ${element.name} &rarr; ${element.singer} <br/><br/>`;
+
+
+               link.addEventListener('click', function () {
+                    // console.log(element.id);
+
+                    // console.log(All_song[element.id-1]);
+                    index_no = element.id - 1;
+                    track.src = All_song[element.id - 1].path;
+                    title.innerHTML = All_song[element.id - 1].name;
+                    track_image.src = element.img;
+                    artist.innerHTML = element.singer;
+                    present.innerHTML = All_song[element.id - 1].id;
+                    playsong();
+
+                    nochange();
+                    clearInterval(timer);
+                    reset_slider();
 
                });
 
+               list.appendChild(link);
 
           });
 
+     });
+
+
+
+var first_click = true;
+pausesong();
+
+play.onclick = function () {
+     if (first_click) {
+          playsong();
+          first_click = false;
+     }
+     else {
+          pausesong();
+          first_click = true;
+     }
 }
 
 
@@ -95,17 +114,6 @@ function mute_sound() {
 }
 
 
-// checking.. the song is playing or not
-function justplay() {
-     if (Playing_song == false) {
-          playsong();
-          Playing_song == true;
-     } else {
-          pausesong();
-          Playing_song == false;
-     }
-}
-
 
 // reset song slider
 function reset_slider() {
@@ -115,14 +123,14 @@ function reset_slider() {
 // play song
 function playsong() {
      track.play();
-     Playing_song = true;
+     first_click = false;
      play.innerHTML = '<i class="fa fa-pause" aria-hidden="true"></i>';
 }
 
 //pause song
 function pausesong() {
      track.pause();
-     Playing_song = false;
+     first_click = true;
      play.innerHTML = '<i class="fa fa-play" aria-hidden="true"></i>';
 }
 
@@ -132,32 +140,74 @@ function pausesong() {
 function next_song() {
      if (index_no < All_song.length - 1) {
           index_no += 1;
-          load_track(index_no);
-          list.innerHTML = '';
-          justplay();
+          track.src = All_song[index_no].path;
+          title.innerHTML = All_song[index_no].name;
+          track_image.src = All_song[index_no].img;
+          artist.innerHTML = All_song[index_no].singer;
+
+
+
+          track.load();
+
+          timer = setInterval(range_slider, 1000);
+          total.innerHTML = All_song.length;
+          present.innerHTML = index_no + 1;
+          playsong();
      } else {
           index_no = 0;
-          load_track(index_no);
-          list.innerHTML = '';
-          justplay();
+          track.src = All_song[index_no].path;
+          title.innerHTML = All_song[index_no].name;
+          track_image.src = All_song[index_no].img;
+          artist.innerHTML = All_song[index_no].singer;
+
+
+          track.load();
+
+          timer = setInterval(range_slider, 1000);
+          total.innerHTML = All_song.length;
+          present.innerHTML = index_no + 1;
+          playsong();
 
      }
+
+
 }
 
 
 // previous song
+
 function previous_song() {
      if (index_no > 0) {
           index_no -= 1;
-          load_track(index_no);
-          list.innerHTML = '';
-          justplay();
+          track.src = All_song[index_no].path;
+          title.innerHTML = All_song[index_no].name;
+          track_image.src = All_song[index_no].img;
+          artist.innerHTML = All_song[index_no].singer;
+
+
+
+          track.load();
+
+
+          timer = setInterval(range_slider, 1000);
+          total.innerHTML = All_song.length;
+          present.innerHTML = index_no + 1;
+          playsong();
 
      } else {
-          index_no = All_song.length;
-          load_track(index_no);
-          list.innerHTML = '';
-          justplay();
+          index_no = All_song.length - 1;
+          track.src = All_song[index_no].path;
+          title.innerHTML = All_song[index_no].name;
+          track_image.src = All_song[index_no].img;
+          artist.innerHTML = All_song[index_no].singer;
+
+
+          track.load();
+
+          timer = setInterval(range_slider, 1000);
+          total.innerHTML = All_song.length;
+          present.innerHTML = index_no + 1;
+          playsong();
      }
 }
 
@@ -209,17 +259,18 @@ function range_slider() {
 // Function to open and close documentation.
 const hide_show = document.getElementById('hide_show');
 const main_body_hide = document.getElementById('main_body_hide');
-var first_click = true;
+
+var click = true;
 nochange();
 
 hide_show.onclick = function () {
-     if (first_click) {
+     if (click) {
           change();
-          first_click = false;
+          click = false;
      }
      else {
           nochange();
-          first_click = true;
+          click = true;
      }
 }
 

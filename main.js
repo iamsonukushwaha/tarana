@@ -30,7 +30,7 @@ let track = document.createElement('audio');
 
 
 
-fetch("http://127.0.0.1:5500/db.json")
+fetch("https://www.sonu.live/Music-Player/db.json")
      .then(function (response) {
           return response.json();
      })

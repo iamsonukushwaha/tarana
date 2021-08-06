@@ -8,7 +8,6 @@ let volume_show = document.querySelector('#volume_show');
 let slider = document.querySelector('#duration_slider');
 let show_duration = document.querySelector('#show_duration');
 let track_image = document.querySelector('#track_image');
-let auto_play = document.querySelector('#auto');
 let present = document.querySelector('#present');
 let total = document.querySelector('#total');
 let artist = document.querySelector('#artist');
@@ -17,7 +16,7 @@ let list = document.querySelector('#list');
 
 
 let timer, link, All_song, index_no = 0;
-let autoplay = 0;
+
 
 
 //creating an audio Element.
@@ -224,17 +223,6 @@ function change_duration() {
      track.currentTime = slider_position;
 }
 
-
-// autoplay function
-function autoplay_switch() {
-     if (autoplay == 1) {
-          autoplay = 0;
-          auto_play.style.background = "linear-gradient(145deg, #4d8fcf, #5baaf6)";
-     } else {
-          autoplay = 1;
-          auto_play.style.background = "linear-gradient(145deg, #cf5fb0, #f670d2)";
-     }
-}
 
 
 

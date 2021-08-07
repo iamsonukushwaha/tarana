@@ -210,7 +210,17 @@ input[type="range"]::-webkit-slider-thumb{
 	box-shadow:  8px 8px 16px #234c64,
              -8px -8px 16px #87ffff;
 }
-
+.right #auto{
+	position: relative;
+	font-size: 18px;
+	cursor: pointer;
+	margin-top: 45px;
+	border: none;
+	padding: 10px 14px;
+	color: #fff;
+	outline: none;
+	border-radius: 10px;
+}
 .right .duration{
 	position: absolute;
 	bottom: 20%;
@@ -304,7 +314,7 @@ input[type="range"]::-webkit-slider-thumb{
 	color: rgb(0, 245, 212);
 }
 
-@media screen and (max-width: 600px) and (min-width: 300px){
+@media screen and (max-width: 600px) and (min-width: 220px){
 	.right, .left{
 		position: absolute;
 		height: 50%;
@@ -339,7 +349,7 @@ input[type="range"]::-webkit-slider-thumb{
 	}
 	.right #title{
 		position: relative;
-		top: -45%;
+		top: -60%;
 		font-size: 30px;
 	}
 	.right #artist{
@@ -350,6 +360,9 @@ input[type="range"]::-webkit-slider-thumb{
 		position: absolute;
 		top: 20%;
    	}
+   	.right #auto{
+		top: 5%;
+	}
 	.right .duration{
 		bottom: 5%;
 	}
@@ -398,6 +411,9 @@ input[type="range"]::-webkit-slider-thumb{
 		position: relative;
 		top: 0;
     }
+   	.right #auto{
+		top: -7%;
+	}
 	.right .duration{
 		bottom: 11%;
 		left: 50%;

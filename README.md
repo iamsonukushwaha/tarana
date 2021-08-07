@@ -1,57 +1,8 @@
-## Hii There,
-    Here Is An Amazing Music Player You Can Use On Your PC Or MOBILE PHONE.
-    This Music Player Includes Play/Pause Button, Backword Button, Forward Button, Volume Slider, Mute Button, Music-Track Slider And An Autoplay Button.
-    I've Preveously Added 20 Songs For You Guys, So Play And Enjoy.
+# Music Player
 
 
-## Buttons And Slider
-    Play/Pause-> This Button Can Be Used To Play Or Pause Songs.
-    Forward-> This Button Can Be Used To Jump On Next Song.
-    Backward-> This Button Can Be Used To Jump On Previous Song.
-    Autoplay-> This Button Is Used To Play Song Continously On Your Device. If The Following Button Is Pink In Color Then Autoplay Is On.
-    Mute-> This Button Can Be Used To Mute The Song Means Volume Down To 0.
-    Volume Slider-> This Can Be Used To Change The Intensity Of Sound From 0 To 100.
-    Song Track-> This Slider Is Useful When You Wants To Slide Forward Or Backward In The Same Song You Are Playing. This Reflects The Status Of Your Song
+Live Demo [sonu.live/Music-Player](https://www.sonu.live/Music-Player)
 
 
-## How To Use 👇
-    STEP 1-> First You've To Create Two Folder Named As "img" And "music", Type Carefully As It Is Case Sensitive.
-    STEP 2-> Copy Image Of Your Song/Audio In Image Folder And Also Song/Audio In Music Folder.
-    STEP 3-> Download The Code And Open Javascript File, Go To Line No. 26 And Here You've To Write Information Of Your Songs, I'm Providing An Image For Clarification.
 
-   ![Screenshot](./Images/JavaScript_Help.png "Screenshot")
-
-    Here You Can See That You've To Fill Name Of Song, Path Of Song, Path Of Inage Of Song And Singer Of The Song In The Same Manner That I'm Following.
-    STEP 4-> Open "index.html" To Play Song.
-
-
-## Music-Player
-    If You Are Using Your Desktop, Music Player Looks Like This 👇 Open Your PC And Start Playing Songs 😉.
-    
-![Screenshot](./Images/Desktop_Screenshot.png "Screenshot")
-
-    If You Are Using Your Mobile In Portrait Mode, Music Player Looks Like This 👇 Open Your MOBILE And Start Playing Songs 😉.
-    
-![Screenshot](./Images/Mobile_Portrait_Screenshot.png "Screenshot")
-
-    If You Are Using Your Mobile In Landscape Mode, Music Player Looks Like This 👇 Open Your MOBILE And Start Playing Songs 😉.
-    
-![Screenshot](./Images/Mobile_Landscape_Screenshot.png "Screenshot")
-
-
-----------
-
-
-#### Thanks!
-
-Thank you for being here! You can find my other project **[here](https://github.com/Nihal-Priyadarshi?tab=repositories)**.
-
-<br><br>
-<p align="center"> Let's have a chat on </p> 
-<p align="center">
-	<a href="https://github.com/Nihal-Priyadarshi"><img src="https://img.shields.io/github/followers/Nihal-Priyadarshi.svg?label=GitHub&style=social" alt="GitHub"></a>
-	<a href="https://www.facebook.com/nihal.priyadarshi.1999"><img src="https://img.shields.io/badge/Facebook--_.svg?style=social&logo=facebook" alt="Facebook"></a>
-	<a href="https://instagram.com/nihal_priyadarshi?igshid=1sdgxdfcf7ksq"><img src="https://img.shields.io/badge/Instagram--_.svg?style=social&logo=instagram" alt="Instagram"></a>
-	<a href="https://twitter.com/nihal08121999"><img src="https://img.shields.io/twitter/follow/nihal08121999?label=Follow&style=social" alt="Twitter"></a>
-
-</p>
+<p align="center"> Let's have a chat on </p><p align="center"><a href="https://github.com/flyingsonu122"><img src="https://img.shields.io/github/followers/flyingsonu122.svg?label=GitHub&style=social" alt="GitHub"></a><a href="https://flyingsonu122.netlify.app/"><img src="https://img.shields.io/badge/Website-blueviolet?style=flat&logo=google-chrome&logoColor=white&color=Black" alt="website"></a><a href="https://www.linkedin.com/in/sonukumarkushwaha/"><img src="https://img.shields.io/badge/LinkedIn--_.svg?style=social&logo=linkedin" alt="LinkedIn"></a><a href="https://www.facebook.com/sonukumarkushwaha736"><img src="https://img.shields.io/badge/Facebook--_.svg?style=social&logo=facebook" alt="Facebook"></a><a href="https://www.instagram.com/flyingsonu736/"><img src="https://img.shields.io/badge/Instagram--_.svg?style=social&logo=instagram" alt="Instagram"></a><a href="https://medium.com/@sonukumarkushwaha"><img src="https://img.shields.io/badge/Medium--_.svg?style=social&logo=medium" alt="Medium"></a><a href="https://www.youtube.com/channel/UCugIYeIc-HzCp-SZxRwuQbA"><img src="https://img.shields.io/youtube/channel/subscribers/UCugIYeIc-HzCp-SZxRwuQbA?label=YouTube&style=social&logo=YouTube" alt="YouTube"></a><a href="https://twitter.com/sonukumarkush12"><img src="https://img.shields.io/twitter/follow/sonukumarkush12?label=Follow&style=social" alt="Twitter"></a></p>

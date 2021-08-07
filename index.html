@@ -1,66 +1,71 @@
 <!DOCTYPE html>
 <html>
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="description" content="Music Player">
-   <meta name="auther" content="Nihal Priyadarshi">
-   <meta name="email" content="nihalpriyadarshi1999@gmail.com">
-	<title>Music Player</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   <link rel="stylesheet" type="text/css" href="./style.css">
-</head>
-<body>
-   <div class="main" id="main">
-      <p id="logo"><i class="fa fa-music"></i>Music</p>
-      <!--- left part --->
-      <div class="left">
-         <!--- song img --->
-         <div class="image"><img id="track_image"></div>
-         <div class="volume">
-            <p id="volume_show">60</p>
-            <i class="fa fa-volume-up" aria-hidden="true" onclick="mute_sound()" id="volume_icon"></i>
-            <input type="range" min="0" max="100" value="60" onchange="volume_change()" id="volume">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Music Player">
+      <meta name="auther" content="Nihal Priyadarshi">
+      <meta name="email" content="nihalpriyadarshi1999@gmail.com">
+      <title>Music Player</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="./style.css">
+   </head>
+
+   <body>
+      <div class="main" id="main">
+         <p id="logo"><i class="fa fa-music"></i>Music</p>
+         <!--- left part --->
+         <div class="left">
+            <!--- song img --->
+            <div class="image"><img id="track_image"></div>
+            <div class="volume">
+               <p id="volume_show">40</p>
+               <i class="fa fa-volume-up" aria-hidden="true" onclick="mute_sound()" id="volume_icon"></i>
+               <input type="range" min="0" max="100" value="40" onchange="volume_change()" id="volume">
+            </div>
+         </div>
+         <!--- right part --->
+         <div class="right">
+            <div class="show_song_no">
+               <p id="present"></p>
+               <p>/</p>
+               <p id="total"></p>
+            </div>
+            <!--- song title & artist name --->
+            <p id="title">title</p>
+            <p id="artist">Artist name</p>
+            <!--- middle part of right part--->
+            <div class="middle">
+               <button onclick="previous_song();" id="pre" class="right_blue"><i class="fa fa-step-backward"
+                     aria-hidden="true"></i></button>
+               <button id="play" class="right_pink"><i class="fa fa-play" aria-hidden="true"></i></button>
+               <button onclick="next_song();" id="next" class="right_blue"><i class="fa fa-step-forward"
+                     aria-hidden="true"></i></button>
+            </div>
+            <!--- song duration part --->
+            <div class="duration">
+               <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration();">
+               <p id="show_duration">0</p>
+            </div>
          </div>
       </div>
-      <!--- right part --->
-  	   <div class="right">
-         <div class="show_song_no">
-            <p id="present">1</p>
-            <p>/</p>
-            <p id="total">5</p>
-         </div>
-         <!--- song title & artist name --->
-         <p id="title">title.mp3</p>
-         <p id="artist">Artist name</p>
-         <!--- middle part of right part--->
-  	 	   <div class="middle">
-  	         <button onclick="previous_song()" id="pre" class="right_blue"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
-      	   <button onclick="justplay();" id="play" class="right_pink"><i class="fa fa-play" aria-hidden="true"></i></button>
-  	         <button onclick="next_song();" id="next" class="right_blue"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
-  	      </div>
-         <!--- song duration part --->
-         <div class="duration">
-            <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration();">
-         </div>
-         <button id="auto" onclick="autoplay_switch();" class="blue">Auto play</i></button>
-  	   </div>
-   </div>
-   <div class="documentation"><button class="hide_show" id="hide_show"></button></div>
-   <div class="documentation_page" id="main_body_hide">
+      <div class="documentation"><button class="hide_show" id="hide_show"></button></div>
+      <div class="documentation_page" id="main_body_hide">
          <p id="logo"><i class="fa fa-music"></i>Music</p>
          <div class="documentation_body">
-            <h1>PLAYLIST</h1><br/><br/>
+            <h1>PLAYLIST</h1><br /><br />
             <h2>
-               <ol id="list" >
-                  
+               <ol id="list">
+
                </ol>
             </h2>
          </div>
-   </div>
-   
-  <!--- Add javascript file --->
-  <script src="./main.js"></script>
-</body>
+      </div>
+
+      <!--- Add javascript file --->
+      <script src="./main.js"></script>
+   </body>
+
 </html>

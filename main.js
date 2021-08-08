@@ -12,7 +12,7 @@ let track = document.createElement('audio');
 
 
 
-fetch("https://www.sonu.live/Music-Player/db.json")
+fetch("https://nihal-priyadarshi.github.io/Music-Player/db.json")
      .then(function (response) {
           return response.json();
      })

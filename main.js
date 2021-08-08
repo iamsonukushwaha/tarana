@@ -2,12 +2,9 @@
 let previous = document.querySelector('#pre'), play = document.querySelector('#play'), next = document.querySelector('#next'), title = document.querySelector('#title'), recent_volume = document.querySelector('#volume'), volume_icon = document.querySelector('#volume_icon'), volume_show = document.querySelector('#volume_show'), slider = document.querySelector('#duration_slider'), full_duration = document.querySelector('#full_duration'), passed_duration = document.querySelector('#passed_duration'), track_image = document.querySelector('#track_image'), present = document.querySelector('#present'), total = document.querySelector('#total'), artist = document.querySelector('#artist'), main = document.querySelector('#main'), list = document.querySelector('#list'), repeat = document.querySelector('#repeat'), shuffle = document.querySelector('#shuffle');
 
 
-
 let timer, link, All_song, max, index_no = 0;
 
-
-//creating an audio Element.
-
+// creating an audio Element.
 let track = document.createElement('audio');
 
 
@@ -29,14 +26,11 @@ fetch("http://127.0.0.1:5500/db.json")
           track_image.src = All_song[index_no].img;
           artist.innerHTML = All_song[index_no].singer;
 
-
           track.load();
-
 
           timer = setInterval(range_slider, 1000);
           total.innerHTML = All_song.length;
           present.innerHTML = index_no + 1;
-
 
           All_song.forEach(element => {
                // console.log(element.singer);
@@ -47,7 +41,6 @@ fetch("http://127.0.0.1:5500/db.json")
 
                link.addEventListener('click', function () {
                     // console.log(element.id);
-
                     // console.log(All_song[element.id-1]);
                     index_no = element.id - 1;
                     track.src = All_song[element.id - 1].path;
@@ -99,7 +92,7 @@ volume_icon.onclick = function () {
      }
 }
 
-//mute sound function
+// sound functions
 var curVolume, curVolVal;
 function mute_sound() {
      curVolVal = recent_volume.value;
@@ -127,7 +120,7 @@ function playsong() {
      play.innerHTML = '<i class="fa fa-pause" aria-hidden="true"></i>';
 }
 
-//pause song
+// pause song
 function pausesong() {
      track.pause();
      first_click = true;
@@ -360,8 +353,6 @@ function range_slider() {
      }
 
 }
-
-
 
 
 // Function to open and close documentation.

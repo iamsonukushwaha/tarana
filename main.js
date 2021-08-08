@@ -12,7 +12,7 @@ let track = document.createElement('audio');
 
 
 
-fetch("https://www.sonu.live/Music-Player/db.json")
+fetch("http://127.0.0.1:5500/db.json")
      .then(function (response) {
           return response.json();
      })
@@ -205,7 +205,7 @@ function volume_change() {
      if (volume_icon.classList.contains('fa-volume-off')) {
           first = true;
           volume_icon.classList.add('fa-volume-up');
-     } 
+     }
 
      volume_show.innerHTML = recent_volume.value;
      track.volume = recent_volume.value / 100;
@@ -242,7 +242,11 @@ function range_slider() {
           }
 
           var durmins = Math.floor(track.duration / 60), dursecs = Math.floor(track.duration - durmins * 60);
-          full_duration.innerHTML = `${durmins} : ${dursecs}`;
+          if (dursecs < 10) {
+               full_duration.innerHTML = `${durmins} : 0${dursecs}`;
+          } else {
+               full_duration.innerHTML = `${durmins} : ${dursecs}`;
+          }
      }
 
      repeat.onclick = function () {

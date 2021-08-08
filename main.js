@@ -1,31 +1,14 @@
 
-let previous = document.querySelector('#pre');
-let play = document.querySelector('#play');
-let next = document.querySelector('#next');
-let title = document.querySelector('#title');
-let recent_volume = document.querySelector('#volume');
-let volume_show = document.querySelector('#volume_show');
-let slider = document.querySelector('#duration_slider');
-let show_duration = document.querySelector('#show_duration');
-let track_image = document.querySelector('#track_image');
-let present = document.querySelector('#present');
-let total = document.querySelector('#total');
-let artist = document.querySelector('#artist');
-let main = document.querySelector('#main');
-let list = document.querySelector('#list');
+let previous = document.querySelector('#pre'), play = document.querySelector('#play'), next = document.querySelector('#next'), title = document.querySelector('#title'), recent_volume = document.querySelector('#volume'), volume_show = document.querySelector('#volume_show'), slider = document.querySelector('#duration_slider'), show_duration = document.querySelector('#show_duration'), track_image = document.querySelector('#track_image'), present = document.querySelector('#present'), total = document.querySelector('#total'), artist = document.querySelector('#artist'), main = document.querySelector('#main'), list = document.querySelector('#list'), repeat = document.querySelector('#repeat'), shuffle = document.querySelector('#shuffle');
 
 
-let timer, link, All_song, index_no = 0;
 
+let timer, link, All_song, max, index_no = 0;
 
 
 //creating an audio Element.
 let track = document.createElement('audio');
 
-
-
-
-// function load the track
 
 
 
@@ -38,6 +21,7 @@ fetch("https://www.sonu.live/Music-Player/db.json")
           All_song = data;
           // console.log(index_no);
           // console.log(All_song.length);
+          max = All_song.length;
           // console.log(All_song[index_no].path);
 
           track.src = All_song[index_no].path;
@@ -54,11 +38,8 @@ fetch("https://www.sonu.live/Music-Player/db.json")
           present.innerHTML = index_no + 1;
 
 
-
-
           All_song.forEach(element => {
                // console.log(element.singer);
-
 
                link = document.createElement('a');
                link.innerHTML = `${element.id}. ${element.name} &rarr; ${element.singer} <br/><br/>`;
@@ -89,7 +70,6 @@ fetch("https://www.sonu.live/Music-Player/db.json")
      });
 
 
-
 var first_click = true;
 pausesong();
 
@@ -104,15 +84,12 @@ play.onclick = function () {
      }
 }
 
-
 //mute sound function
 function mute_sound() {
      track.volume = 0;
      volume.value = 0;
      volume_show.innerHTML = 0;
 }
-
-
 
 // reset song slider
 function reset_slider() {
@@ -133,8 +110,6 @@ function pausesong() {
      play.innerHTML = '<i class="fa fa-play" aria-hidden="true"></i>';
 }
 
-
-
 // next song
 function next_song() {
      if (index_no < All_song.length - 1) {
@@ -143,8 +118,6 @@ function next_song() {
           title.innerHTML = All_song[index_no].name;
           track_image.src = All_song[index_no].img;
           artist.innerHTML = All_song[index_no].singer;
-
-
 
           track.load();
 
@@ -159,7 +132,6 @@ function next_song() {
           track_image.src = All_song[index_no].img;
           artist.innerHTML = All_song[index_no].singer;
 
-
           track.load();
 
           timer = setInterval(range_slider, 1000);
@@ -169,9 +141,7 @@ function next_song() {
 
      }
 
-
 }
-
 
 // previous song
 
@@ -183,10 +153,7 @@ function previous_song() {
           track_image.src = All_song[index_no].img;
           artist.innerHTML = All_song[index_no].singer;
 
-
-
           track.load();
-
 
           timer = setInterval(range_slider, 1000);
           total.innerHTML = All_song.length;
@@ -199,7 +166,6 @@ function previous_song() {
           title.innerHTML = All_song[index_no].name;
           track_image.src = All_song[index_no].img;
           artist.innerHTML = All_song[index_no].singer;
-
 
           track.load();
 
@@ -223,8 +189,12 @@ function change_duration() {
      track.currentTime = slider_position;
 }
 
+// for repeat
+var select = true;
+repeat.innerHTML = ``;
 
-
+// for shuffle
+var selected = true;
 
 function range_slider() {
      let position = 0;
@@ -236,17 +206,123 @@ function range_slider() {
           show_duration.innerHTML = `${slider.value} %`;
      }
 
+     repeat.onclick = function () {
+          if (select) {
+               repeat.innerHTML = `1`;
+               repeat.classList.add('selected');
+               repeat.classList.remove('repeat');
+               if (track.ended) {
+                    // console.log(index_no);
+                    track.src = All_song[index_no].path;
+                    title.innerHTML = All_song[index_no].name;
+                    track_image.src = All_song[index_no].img;
+                    artist.innerHTML = All_song[index_no].singer;
+
+                    track.load();
+
+                    timer = setInterval(range_slider, 1000);
+                    total.innerHTML = All_song.length;
+                    present.innerHTML = index_no + 1;
+                    playsong();
+
+               }
+
+               select = false;
+
+          } else {
+               repeat.innerHTML = ``;
+               repeat.classList.add('repeat');
+               repeat.classList.remove('selected');
+               select = true;
+          }
+     }
+
+
+     shuffle.onclick = function () {
+
+          if (selected) {
+
+               shuffle.classList.add('selected');
+               shuffle.classList.remove('shuffle');
+               // console.log(shuffle.className);
+               selected = false;
+
+               if (track.ended) {
+
+               } else {
+                    var anotherRandom = Math.floor(Math.random() * max);
+                    // console.log(anotherRandom);
+                    index_no = anotherRandom;
+                    // console.log(index_no);
+                    track.src = All_song[index_no].path;
+                    title.innerHTML = All_song[index_no].name;
+                    track_image.src = All_song[index_no].img;
+                    artist.innerHTML = All_song[index_no].singer;
+
+                    track.load();
+
+                    timer = setInterval(range_slider, 1000);
+                    total.innerHTML = All_song.length;
+                    present.innerHTML = index_no + 1;
+                    playsong();
+               }
+
+          } else {
+               shuffle.classList.remove('selected');
+               shuffle.classList.add('shuffle');
+               selected = true;
+          }
+     }
+
+
      // function will run when the song is over
      if (track.ended) {
-          next_song();
+          if (shuffle.classList.contains("selected") && repeat.innerHTML == '') {
+               var random = Math.floor(Math.random() * max);
+               index_no = random;
+               track.src = All_song[index_no].path;
+               title.innerHTML = All_song[index_no].name;
+               track_image.src = All_song[index_no].img;
+               artist.innerHTML = All_song[index_no].singer;
+
+               track.load();
+
+               timer = setInterval(range_slider, 1000);
+               total.innerHTML = All_song.length;
+               present.innerHTML = index_no + 1;
+               playsong();
+          }
+
+          else if (repeat.innerHTML == '') {
+               next_song();
+          }
+          else {
+               if (track.ended) {
+                    // console.log(index_no);
+                    track.src = All_song[index_no].path;
+                    title.innerHTML = All_song[index_no].name;
+                    track_image.src = All_song[index_no].img;
+                    artist.innerHTML = All_song[index_no].singer;
+
+                    track.load();
+
+                    timer = setInterval(range_slider, 1000);
+                    total.innerHTML = All_song.length;
+                    present.innerHTML = index_no + 1;
+                    playsong();
+
+               }
+          }
 
      }
+
 }
 
 
+
+
 // Function to open and close documentation.
-const hide_show = document.getElementById('hide_show');
-const main_body_hide = document.getElementById('main_body_hide');
+const hide_show = document.getElementById('hide_show'), main_body_hide = document.getElementById('main_body_hide');
 
 var click = true;
 nochange();
@@ -262,14 +338,12 @@ hide_show.onclick = function () {
      }
 }
 
-
 function change() {
      main_body_hide.style.display = '';
      main.style.display = 'none';
      hide_show.innerText = 'X';
      hide_show.style.color = "#fff";
 }
-
 
 function nochange() {
      main_body_hide.style.display = 'none';

@@ -103,8 +103,8 @@ input[type="range"] {
 
 input[type="range"]::-webkit-slider-thumb{
 	-webkit-appearance: none;
-	height: 20px;
-	width: 20px;
+	height: 15px;
+	width: 15px;
 	background: linear-gradient(90deg, rgb(255, 0, 187), rgb(0, 132, 255));
 	border-radius: 50%;
 	cursor: pointer;
@@ -284,6 +284,7 @@ input[type="range"]::-webkit-slider-thumb{
 }
 
 .right .duration{
+	color: white;
 	position: absolute;
 	bottom: 20%;
 	left: 50%;
@@ -527,3 +528,4 @@ a:hover{
 	text-decoration: underline;
 	cursor: pointer;
 }
+

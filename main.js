@@ -1,5 +1,5 @@
 
-let previous = document.querySelector('#pre'), play = document.querySelector('#play'), next = document.querySelector('#next'), title = document.querySelector('#title'), recent_volume = document.querySelector('#volume'), volume_show = document.querySelector('#volume_show'), slider = document.querySelector('#duration_slider'), show_duration = document.querySelector('#show_duration'), track_image = document.querySelector('#track_image'), present = document.querySelector('#present'), total = document.querySelector('#total'), artist = document.querySelector('#artist'), main = document.querySelector('#main'), list = document.querySelector('#list'), repeat = document.querySelector('#repeat'), shuffle = document.querySelector('#shuffle');
+let previous = document.querySelector('#pre'), play = document.querySelector('#play'), next = document.querySelector('#next'), title = document.querySelector('#title'), recent_volume = document.querySelector('#volume'), volume_icon = document.querySelector('#volume_icon'), volume_show = document.querySelector('#volume_show'), slider = document.querySelector('#duration_slider'), full_duration = document.querySelector('#full_duration'), passed_duration = document.querySelector('#passed_duration'), track_image = document.querySelector('#track_image'), present = document.querySelector('#present'), total = document.querySelector('#total'), artist = document.querySelector('#artist'), main = document.querySelector('#main'), list = document.querySelector('#list'), repeat = document.querySelector('#repeat'), shuffle = document.querySelector('#shuffle');
 
 
 
@@ -7,12 +7,12 @@ let timer, link, All_song, max, index_no = 0;
 
 
 //creating an audio Element.
+
 let track = document.createElement('audio');
 
 
 
-
-fetch("https://www.sonu.live/Music-Player/db.json")
+fetch("http://127.0.0.1:5500/db.json")
      .then(function (response) {
           return response.json();
      })
@@ -84,11 +84,35 @@ play.onclick = function () {
      }
 }
 
+var first = true;
+volume_icon.onclick = function () {
+     if (first) {
+          mute_sound();
+          first = false;
+          volume_icon.classList.add('fa-volume-off');
+          volume_icon.classList.remove('fa-volume-up');
+     } else {
+          reset_sound();
+          first = true;
+          volume_icon.classList.remove('fa-volume-off');
+          volume_icon.classList.add('fa-volume-up');
+     }
+}
+
 //mute sound function
+var curVolume, curVolVal;
 function mute_sound() {
+     curVolVal = recent_volume.value;
+     curVolume = recent_volume.value / 100;
      track.volume = 0;
      volume.value = 0;
      volume_show.innerHTML = 0;
+}
+
+function reset_sound() {
+     track.volume = curVolume;
+     volume.value = curVolVal;
+     volume_show.innerHTML = curVolVal;
 }
 
 // reset song slider
@@ -178,6 +202,11 @@ function previous_song() {
 
 // change volume
 function volume_change() {
+     if (volume_icon.classList.contains('fa-volume-off')) {
+          first = true;
+          volume_icon.classList.add('fa-volume-up');
+     } 
+
      volume_show.innerHTML = recent_volume.value;
      track.volume = recent_volume.value / 100;
 }
@@ -201,9 +230,19 @@ function range_slider() {
 
      // update slider position
      if (!isNaN(track.duration)) {
+
           position = track.currentTime * (100 / track.duration);
           slider.value = position;
-          show_duration.innerHTML = `${slider.value} %`;
+
+          var curmins = Math.floor(track.currentTime / 60), cursecs = Math.floor(track.currentTime - curmins * 60);
+          if (cursecs < 10) {
+               passed_duration.innerHTML = `${curmins} : 0${cursecs}`;
+          } else {
+               passed_duration.innerHTML = `${curmins} : ${cursecs}`;
+          }
+
+          var durmins = Math.floor(track.duration / 60), dursecs = Math.floor(track.duration - durmins * 60);
+          full_duration.innerHTML = `${durmins} : ${dursecs}`;
      }
 
      repeat.onclick = function () {

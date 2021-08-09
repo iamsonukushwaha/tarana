@@ -1,16 +1,9 @@
-
-let previous = document.querySelector('#pre'), play = document.querySelector('#play'), next = document.querySelector('#next'), title = document.querySelector('#title'), recent_volume = document.querySelector('#volume'), volume_show = document.querySelector('#volume_show'), slider = document.querySelector('#duration_slider'), show_duration = document.querySelector('#show_duration'), track_image = document.querySelector('#track_image'), present = document.querySelector('#present'), total = document.querySelector('#total'), artist = document.querySelector('#artist'), main = document.querySelector('#main'), list = document.querySelector('#list'), repeat = document.querySelector('#repeat'), shuffle = document.querySelector('#shuffle');
-
-
+let previous = document.querySelector('#pre'), play = document.querySelector('#play'), next = document.querySelector('#next'), title = document.querySelector('#title'), recent_volume = document.querySelector('#volume'), volume_icon = document.querySelector('#volume_icon'), volume_show = document.querySelector('#volume_show'), slider = document.querySelector('#duration_slider'), full_duration = document.querySelector('#full_duration'), passed_duration = document.querySelector('#passed_duration'), track_image = document.querySelector('#track_image'), present = document.querySelector('#present'), total = document.querySelector('#total'), artist = document.querySelector('#artist'), main = document.querySelector('#main'), list = document.querySelector('#list'), repeat = document.querySelector('#repeat'), shuffle = document.querySelector('#shuffle');
 
 let timer, link, All_song, max, index_no = 0;
 
-
-//creating an audio Element.
+// Creating An Audio Element.
 let track = document.createElement('audio');
-
-
-
 
 fetch("https://nihal-priyadarshi.github.io/Music-Player/db.json")
      .then(function (response) {
@@ -29,14 +22,11 @@ fetch("https://nihal-priyadarshi.github.io/Music-Player/db.json")
           track_image.src = All_song[index_no].img;
           artist.innerHTML = All_song[index_no].singer;
 
-
           track.load();
-
 
           timer = setInterval(range_slider, 1000);
           total.innerHTML = All_song.length;
           present.innerHTML = index_no + 1;
-
 
           All_song.forEach(element => {
                // console.log(element.singer);
@@ -47,7 +37,6 @@ fetch("https://nihal-priyadarshi.github.io/Music-Player/db.json")
 
                link.addEventListener('click', function () {
                     // console.log(element.id);
-
                     // console.log(All_song[element.id-1]);
                     index_no = element.id - 1;
                     track.src = All_song[element.id - 1].path;
@@ -66,9 +55,7 @@ fetch("https://nihal-priyadarshi.github.io/Music-Player/db.json")
                list.appendChild(link);
 
           });
-
      });
-
 
 var first_click = true;
 pausesong();
@@ -84,33 +71,57 @@ play.onclick = function () {
      }
 }
 
-//mute sound function
+var first = true;
+volume_icon.onclick = function () {
+     if (first) {
+          mute_sound();
+          first = false;
+          volume_icon.classList.add('fa-volume-off');
+          volume_icon.classList.remove('fa-volume-up');
+     } else {
+          reset_sound();
+          first = true;
+          volume_icon.classList.remove('fa-volume-off');
+          volume_icon.classList.add('fa-volume-up');
+     }
+}
+
+// Sound Functions
+var curVolume, curVolVal;
 function mute_sound() {
+     curVolVal = recent_volume.value;
+     curVolume = recent_volume.value / 100;
      track.volume = 0;
      volume.value = 0;
      volume_show.innerHTML = 0;
 }
 
-// reset song slider
+function reset_sound() {
+     track.volume = curVolume;
+     volume.value = curVolVal;
+     volume_show.innerHTML = curVolVal;
+}
+
+// Reset Song Slider
 function reset_slider() {
      slider.value = 0;
 }
 
-// play song
+// Play Song
 function playsong() {
      track.play();
      first_click = false;
      play.innerHTML = '<i class="fa fa-pause" aria-hidden="true"></i>';
 }
 
-//pause song
+// Pause Song
 function pausesong() {
      track.pause();
      first_click = true;
      play.innerHTML = '<i class="fa fa-play" aria-hidden="true"></i>';
 }
 
-// next song
+// Next Song
 function next_song() {
      if (index_no < All_song.length - 1) {
           index_no += 1;
@@ -140,11 +151,9 @@ function next_song() {
           playsong();
 
      }
-
 }
 
-// previous song
-
+// Previous Song
 function previous_song() {
      if (index_no > 0) {
           index_no -= 1;
@@ -176,34 +185,51 @@ function previous_song() {
      }
 }
 
-// change volume
+// Change Volume
 function volume_change() {
+     if (volume_icon.classList.contains('fa-volume-off')) {
+          first = true;
+          volume_icon.classList.add('fa-volume-up');
+     }
      volume_show.innerHTML = recent_volume.value;
      track.volume = recent_volume.value / 100;
 }
 
-
-// change slider position 
+// Change Slider Position 
 function change_duration() {
      slider_position = track.duration * (slider.value / 100);
      track.currentTime = slider_position;
 }
 
-// for repeat
+// For Repeat
 var select = true;
 repeat.innerHTML = ``;
 
-// for shuffle
+// For Shuffle
 var selected = true;
 
 function range_slider() {
      let position = 0;
 
-     // update slider position
+     // Update Slider Position
      if (!isNaN(track.duration)) {
+          
           position = track.currentTime * (100 / track.duration);
           slider.value = position;
-          show_duration.innerHTML = `${slider.value} %`;
+          
+          var curmins = Math.floor(track.currentTime / 60), cursecs = Math.floor(track.currentTime - curmins * 60);
+          if (cursecs < 10) {
+               passed_duration.innerHTML = `${curmins} : 0${cursecs}`;
+          } else {
+               passed_duration.innerHTML = `${curmins} : ${cursecs}`;
+          }
+
+          var durmins = Math.floor(track.duration / 60), dursecs = Math.floor(track.duration - durmins * 60);
+          if (dursecs < 10) {
+               full_duration.innerHTML = `${durmins} : 0${dursecs}`;
+          } else {
+               full_duration.innerHTML = `${durmins} : ${dursecs}`;
+          }
      }
 
      repeat.onclick = function () {
@@ -275,7 +301,7 @@ function range_slider() {
      }
 
 
-     // function will run when the song is over
+     // Function Will Run When The Song Is Over
      if (track.ended) {
           if (shuffle.classList.contains("selected") && repeat.innerHTML == '') {
                var random = Math.floor(Math.random() * max);
@@ -310,18 +336,12 @@ function range_slider() {
                     total.innerHTML = All_song.length;
                     present.innerHTML = index_no + 1;
                     playsong();
-
                }
           }
-
      }
-
 }
 
-
-
-
-// Function to open and close documentation.
+// Function To Open And Close Documentation.
 const hide_show = document.getElementById('hide_show'), main_body_hide = document.getElementById('main_body_hide');
 
 var click = true;
@@ -351,4 +371,3 @@ function nochange() {
      hide_show.innerText = '☰';
      hide_show.style.color = "#fff";
 }
-

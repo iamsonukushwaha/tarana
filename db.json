@@ -1,6 +1,13 @@
 [
 	{
 		"id": "1",
+		"name": "Aabaad Barbaad",
+		"path": "music/Aabaad_Barbaad.mp3",
+		"img": "img/Aabaad_Barbaad.jpeg",
+		"singer": "Arijit Singh"
+	},
+	{
+		"id": "1",
 		"name": "Baarish",
 		"path": "music/Baarish.mp3",
 		"img": "img/Baarish.jpeg",

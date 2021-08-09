@@ -3,7 +3,7 @@
 
 Live Demo [sonu.live/music-player](https://www.sonu.live/music-player)
 
-Download **Android App [Musicify](https://www.sonu.live/music-player/assets/Musicify.apk)**
+Download **Android App [Musicify](https://drive.google.com/file/d/17bHganFtZi-giy43V0D1FuJXqN72IhlO/view?usp=drivesdk)**
 
 Download as Desktop App [Musicify](https://drive.google.com/file/d/1RlreCu6DWbh7TpLmWKbM0etR3S14fA26/view?usp=sharing)
 

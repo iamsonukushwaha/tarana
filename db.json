@@ -203,25 +203,277 @@
 		"singer": "Tulsi Kumar & Jubin Nautiyal"
 	},
 	{
-		"id": "6",
+		"id": "30",
+		"name": "Dil Mera Muft Ka",
+		"path": "music/Dil_Mera_Muft_Ka.mp3",
+		"img": "img/Dil_Mera_Muft_Ka.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "31",
 		"name": "Dil Meri Na Sune",
 		"path": "music/Dil_Meri_Na_Sune.mp3",
 		"img": "img/Dil_Meri_Na_Sune.jpeg",
 		"singer": "Atif Aslam & Payal Dev"
 	},
 	{
-		"id": "7",
+		"id": "32",
+		"name": "Dilbar",
+		"path": "music/Dilbar.mp3",
+		"img": "img/Dilbar.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "33",
+		"name": "Ding Dang",
+		"path": "music/Ding_Dang.mp3",
+		"img": "img/Ding_Dang.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "34",
+		"name": "Dj Waley Babu",
+		"path": "music/Dj_Waley_Babu.mp3",
+		"img": "img/Dj_Waley_Babu.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "35",
+		"name": "Ek Chumma",
+		"path": "music/Ek_Chumma.mp3",
+		"img": "img/Ek_Chumma.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "36",
+		"name": "Ek Do Teen",
+		"path": "music/Ek_Do_Teen.mp3",
+		"img": "img/Ek_Do_Teen.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "37",
+		"name": "Gali Gali",
+		"path": "music/Gali_Gali.mp3",
+		"img": "img/Gali_Gali.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "38",
+		"name": "Galti Se Mistake",
+		"path": "music/Galti_Se_Mistake.mp3",
+		"img": "img/Galti_Se_Mistake.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "39",
+		"name": "Genda Phool",
+		"path": "music/Genda_Phool.mp3",
+		"img": "img/Genda_Phool.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "40",
+		"name": "Ghalat Fehmi",
+		"path": "music/Ghalat_Fehmi.mp3",
+		"img": "img/Ghalat_Fehmi.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "41",
+		"name": "Guzarish",
+		"path": "music/Guzarish.mp3",
+		"img": "img/Guzarish.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "42",
+		"name": "Hangover",
+		"path": "music/Hangover.mp3",
+		"img": "img/Hangover.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "43",
 		"name": "Hawayein",
 		"path": "music/Hawayein.mp3",
 		"img": "img/Hawayein.jpeg",
 		"singer": "Arijit Singh & Pritam"
 	},
 	{
-		"id": "8",
+		"id": "44",
+		"name": "High Heels",
+		"path": "music/High_Heels.mp3",
+		"img": "img/High_Heels.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "45",
+		"name": "Hookah Bar",
+		"path": "music/Hookah_Bar.mp3",
+		"img": "img/Hookah_Bar.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "46",
+		"name": "Humein Jab Se Mohabbat",
+		"path": "music/Humein_Jab_Se_Mohabbat.mp3",
+		"img": "img/Humein_Jab_Se_Mohabbat.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "47",
+		"name": "Husn Parcham",
+		"path": "music/Husn_Parcham.mp3",
+		"img": "img/Husn_Parcham.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "48",
+		"name": "Ik Mulaqaat",
+		"path": "music/Ik_Mulaqaat.mp3",
+		"img": "img/Ik_Mulaqaat.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "49",
+		"name": "Illegal Weapon 2.0",
+		"path": "music/Illegal_Weapon_2.0.mp3",
+		"img": "img/Illegal_Weapon_2.0.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "50",
+		"name": "Ishq Ka Raja",
+		"path": "music/Ishq_Ka_Raja.mp3",
+		"img": "img/Ishq_Ka_Raja.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "51",
+		"name": "Ishq Sufiyana",
+		"path": "music/Ishq_Sufiyana.mp3",
+		"img": "img/Ishq_Sufiyana.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "52",
+		"name": "Ishq Wala Love",
+		"path": "music/Ishq_Wala_Love.mp3",
+		"img": "img/Ishq_Wala_Love.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "53",
+		"name": "Jab Tak",
+		"path": "music/Jab_Tak.mp3",
+		"img": "img/Jab_Tak.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "54",
+		"name": "Jumme Ki Raat",
+		"path": "music/Jumme_Ki_Raat.mp3",
+		"img": "img/Jumme_Ki_Raat.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "55",
+		"name": "Kabhi Jo Baadal Barse",
+		"path": "music/Kabhi_Jo_Baadal_Barse.mp3",
+		"img": "img/Kabhi_Jo_Baadal_Barse.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "56",
+		"name": "KamariyaKamli",
+		"path": "music/KamariyaKamli.mp3",
+		"img": "img/KamariyaKamli.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "57",
+		"name": "Kamli",
+		"path": "music/Kamli.mp3",
+		"img": "img/Kamli.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "58",
+		"name": "Kar Gayi Chull",
+		"path": "music/Kar_Gayi_Chull.mp3",
+		"img": "img/Kar_Gayi_Chull.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "59",
 		"name": "Kaun Tujhe",
 		"path": "music/Kaun_Tujhe.mp3",
 		"img": "img/Kaun_Tujhe.jpeg",
 		"singer": "Palak Muchhal"
+	},
+	{
+		"id": "60",
+		"name": "Khairiyat",
+		"path": "music/Khairiyat.mp3",
+		"img": "img/Khairiyat.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "61",
+		"name": "Khuda Jaane",
+		"path": "music/Khuda_Jaane.mp3",
+		"img": "img/Khuda_Jaane.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "62",
+		"name": "Khudaya Khair",
+		"path": "music/Khudaya_Khair.mp3",
+		"img": "img/Khudaya_Khair.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "63",
+		"name": "Kinna Sona",
+		"path": "music/Kinna_Sona.mp3",
+		"img": "img/Kinna_Sona.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "64",
+		"name": "Lagdi Lahore Di",
+		"path": "music/Lagdi_Lahore_Di.mp3",
+		"img": "img/Lagdi_Lahore_Di.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "65",
+		"name": "Laila Main Lailaa",
+		"path": "music/Laila_Main_Laila.mp3",
+		"img": "img/Laila_Main_Laila.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "66",
+		"name": "Lat Lag Gayee",
+		"path": "music/Lat_Lag_Gayee.mp3",
+		"img": "img/Lat_Lag_Gayee.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "67",
+		"name": "Love Me Thoda Aur",
+		"path": "music/Love_Me_Thoda_Aur.mp3",
+		"img": "img/Love_Me_Thoda_Aur.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "68",
+		"name": "Lut Gaye",
+		"path": "music/Lut_Gaye.mp3",
+		"img": "img/Lut_Gaye.jpeg",
+		"singer": " "
 	},
 	{
 		"id": "9",

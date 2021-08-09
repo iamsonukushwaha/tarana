@@ -102,15 +102,22 @@ function mute_sound() {
      track.volume = 0;
      volume.value = 0;
      volume_show.innerHTML = 0;
-     volume_icon.title = "Unmute";
+     
 }
 
 function reset_sound() {
      track.volume = curVolume;
      volume.value = curVolVal;
      volume_show.innerHTML = curVolVal;
-     volume_icon.title = "Mute";
+     
 }
+
+if(volume.value>0) {
+     volume_icon.title = "Mute";
+} else {
+     volume_icon.title = "Unmute";
+}
+
 
 // reset song slider
 function reset_slider() {
@@ -202,7 +209,6 @@ function volume_change() {
      if (volume_icon.classList.contains('fa-volume-off')) {
           first = true;
           volume_icon.classList.add('fa-volume-up');
-          volume_icon.title = "Mute";
      }
 
      volume_show.innerHTML = recent_volume.value;

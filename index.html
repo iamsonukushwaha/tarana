@@ -22,7 +22,7 @@
             <div class="image"><img id="track_image"></div>
             <div class="volume">
                <p id="volume_show">40</p>
-               <i class="fa fa-volume-up" aria-hidden="true" id="volume_icon"></i>
+               <i class="fa fa-volume-up" aria-hidden="true" id="volume_icon" title="Mute"></i>
                <input type="range" min="0" max="100" value="40" onchange="volume_change()" id="volume">
             </div>
          </div>
@@ -40,10 +40,10 @@
             <div class="middle">
                <button id="shuffle" class="shuffle fa fa-random" title="Enable shuffle">
                </button>
-               <button onclick="previous_song();" id="pre" class="right_blue"><i class="fa fa-step-backward"
-                     aria-hidden="true" title="Previous"></i>
+               <button onclick="previous_song();" id="pre" class="right_blue" title="Previous"><i class="fa fa-step-backward"
+                     aria-hidden="true" ></i>
                </button>
-               <button id="play" class="right_pink"><i class="fa fa-play" aria-hidden="true" title="Play"></i>
+               <button id="play" class="right_pink" title="Play"><i class="fa fa-play" aria-hidden="true" ></i>
                </button>
                <button onclick="next_song();" id="next" class="right_blue" title="Next"><i class="fa fa-step-forward"
                      aria-hidden="true"></i>

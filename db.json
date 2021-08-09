@@ -24,7 +24,7 @@
 		"id": "4",
 		"name": "Aashiq Surrender Hua",
 		"path": "music/Aashiq_Surrender_Hua.mp3",
-		"img": "img/Aashiq_Surrender_Hua.jpeg",
+		"img": "img/Aashiq_Surrender_Hua.webp",
 		"singer": " "
 	},
 	{
@@ -476,87 +476,367 @@
 		"singer": " "
 	},
 	{
-		"id": "9",
+		"id": "69",
+		"name": "Main Tera Boyfriend",
+		"path": "music/Main_Tera_Boyfriend.mp3",
+		"img": "img/Main_Tera_Boyfriend.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "70",
+		"name": "MashAllah",
+		"path": "music/MashAllah.mp3",
+		"img": "img/MashAllah.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "71",
+		"name": "Meri Aashiqui",
+		"path": "music/Meri_Aashiqui.mp3",
+		"img": "img/Meri_Aashiqui.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "72",
+		"name": "Muskurane",
+		"path": "music/Muskurane.mp3",
+		"img": "img/Muskurane.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "73",
+		"name": "Nashe Si Chadh Gayi",
+		"path": "music/Nashe_Si_Chadh_Gayi.mp3",
+		"img": "img/Nashe_Si_Chadh_Gayi.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "74",
+		"name": "Nit Khair Manga",
+		"path": "music/Nit_Khair_Manga.mp3",
+		"img": "img/Nit_Khair_Manga.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "75",
+		"name": "O Saki Saki",
+		"path": "music/O_Saki_Saki.mp3",
+		"img": "img/O_Saki_Saki.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "76",
+		"name": "Pachtaoge",
+		"path": "music/Pachtaoge.mp3",
+		"img": "img/Pachtaoge.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "77",
 		"name": "Pal",
 		"path": "music/Pal.mp3",
 		"img": "img/Pal.jpeg",
 		"singer": "Arijit Singh & Shreya Ghoshal"
 	},
 	{
-		"id": "10",
-		"name": "Chaahunga",
+		"id": "78",
+		"name": "Party On My Mind",
+		"path": "music/Party_On_My_Mind.mp3",
+		"img": "img/Party_On_My_Mind.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "79",
+		"name": "Pee Loon",
+		"path": "music/Pee_Loon.mp3",
+		"img": "img/Pee_Loon.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "80",
+		"name": "Phir Bhi Tumko Chaahunga",
 		"path": "music/Phir_Bhi_Tumko_Chaahunga.mp3",
 		"img": "img/Phir_Bhi_Tumko_Chaahunga.jpeg",
 		"singer": "Mithoon, Arijit Singh & Shashaa Tirupati"
 	},
 	{
-		"id": "11",
+		"id": "81",
 		"name": "Phir Kabhi",
 		"path": "music/Phir_Kabhi.mp3",
 		"img": "img/Phir_Kabhi.jpeg",
 		"singer": "Arijit Singh"
 	},
 	{
-		"id": "12",
-		"name": "Rabba Main Toh",
+		"id": "82",
+		"name": "Pyar Humko Bhi Hai",
+		"path": "music/Pyar_Humko_Bhi_Hai.mp3",
+		"img": "img/Pyar_Humko_Bhi_Hai.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "83",
+		"name": "Qaafirana",
+		"path": "music/Qaafirana.mp3",
+		"img": "img/Qaafirana.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "84",
+		"name": "Raanjhanaa",
+		"path": "music/Raanjhanaa.mp3",
+		"img": "img/Raanjhanaa.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "85",
+		"name": "Raat Bhar",
+		"path": "music/Raat_Bhar.mp3",
+		"img": "img/Raat_Bhar.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "86",
+		"name": "Rabba Main Toh Mar Gaya Oye",
 		"path": "music/Rabba_Main_Toh_Mar_Gaya_Oye.mp3",
-		"img": "img/Rabba_Mai_To_Mar_Gya_Oye.webp",
+		"img": "img/Rabba_Main_Toh_Mar_Gaya_Oye.jpeg",
 		"singer": "Rahat Fateh Ali Khan"
 	},
 	{
-		"id": "13",
+		"id": "87",
+		"name": "Radha",
+		"path": "music/Balma.mp3",
+		"img": "img/Balma.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "88",
+		"name": "Sau Tarah Ke",
+		"path": "music/Sau_Tarah_Ke.mp3",
+		"img": "img/Sau_Tarah_Ke.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "89",
 		"name": "Saude Bazzi",
 		"path": "music/Saude_Bazzi.mp3",
 		"img": "img/Saude_Baazi.webp",
 		"singer": "Javed Ali"
 	},
 	{
-		"id": "14",
+		"id": "90",
+		"name": "Sawan Aaya Hai",
+		"path": "music/Sawan_Aaya_Hai.mp3",
+		"img": "img/Sawan_Aaya_Hai.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "91",
+		"name": "Shayad",
+		"path": "music/Shayad.mp3",
+		"img": "img/Shayad.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "92",
 		"name": "Shukran Allah",
 		"path": "music/Shukran_Allah.mp3",
 		"img": "img/Shukran_Allah.webp",
 		"singer": "Sonu Nigam"
 	},
 	{
-		"id": "15",
+		"id": "93",
+		"name": "Slow_Motion",
+		"path": "music/Slow_Motion.mp3",
+		"img": "img/Slow_Motion.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "94",
+		"name": "Soniyo",
+		"path": "music/Soniyo.mp3",
+		"img": "img/Soniyo.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "95",
 		"name": "Suno Na Suno Na",
 		"path": "music/Suno_Na_Suno_Na.mp3",
 		"img": "img/Suno_Na_Suno_Na.jpeg",
 		"singer": "Abhijeet Bhattacharya"
 	},
 	{
-		"id": "16",
-		"name": "Tumhare Yeh Ishare",
+		"id": "96",
+		"name": "Sweetheart",
+		"path": "music/Sweetheart.mp3",
+		"img": "img/Sweetheart.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "97",
+		"name": "Tauba Tumhare Yeh Ishare",
 		"path": "music/Tauba_Tumhare_Yeh_Ishare.mp3",
 		"img": "img/Tauba_Tumhare_Yeh_Ishare.jpeg",
 		"singer": "Abhijeet Bhattacharya"
 	},
 	{
-		"id": "17",
-		"name": "Tera Hone Laga",
+		"id": "98",
+		"name": "Tera Fitoor",
+		"path": "music/Tera_Fitoor.mp3",
+		"img": "img/Tera_Fitoor.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "99",
+		"name": "Tera Hone Laga Hoon",
 		"path": "music/Tera_Hone_Laga_Hoon.mp3",
 		"img": "img/Tera_Hone_Laga_Hoon.jpeg",
 		"singer": "Atif Aslam & Alisha Chinoy"
 	},
 	{
-		"id": "18",
+		"id": "100",
+		"name": "Tera Rastaa Chhodoon Na",
+		"path": "music/Tera_Rastaa_Chhodoon_Na.mp3",
+		"img": "img/Tera_Rastaa_Chhodoon_Na.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "101",
+		"name": "Tere Bin",
+		"path": "music/Tere_Bin.mp3",
+		"img": "img/Tere_Bin.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "102",
 		"name": "Tere Bin Nahi Laage",
 		"path": "music/Tere_Bin_Nahi_Laage-Male.mp3",
-		"img": "img/Tere_Bin_Nahi_Lage.jpeg",
+		"img": "img/Tere_Bin_Nahi_Lage-Male.jpeg",
 		"singer": "Uzair Jaswal"
 	},
 	{
-		"id": "19",
+		"id": "103",
+		"name": "Tere Bin Nahi Laage",
+		"path": "music/Tere_Bin_Nahi_Laage.mp3",
+		"img": "img/Tere_Bin_Nahi_Laage.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "104",
+		"name": "Tere Naina Maar Hi Daalenge",
+		"path": "music/Tere_Naina_Maar_Hi_Daalenge.mp3",
+		"img": "img/Tere_Naina_Maar_Hi_Daalenge.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "105",
 		"name": "Teri Jhuki Nazar",
 		"path": "music/Teri_Jhuki_Nazar.mp3",
 		"img": "img/Teri_Jhuki_Nazar.jpeg",
 		"singer": "Shafqat Amanat Ali"
 	},
 	{
-		"id": "20",
+		"id": "106",
+		"name": "Teri Ore",
+		"path": "music/Teri_Ore.mp3",
+		"img": "img/Teri_Ore.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "107",
+		"name": "The Humma Song",
+		"path": "music/The_Humma_Song.mp3",
+		"img": "img/The_Humma_Song.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "108",
+		"name": "The Jawaani Song",
+		"path": "music/The_Jawaani_Song.mp3",
+		"img": "img/The_Jawaani_Song.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "109",
 		"name": "Thoda Thoda Pyaar",
 		"path": "music/Thoda_Thoda_Pyaar.mp3",
 		"img": "img/Thoda_Thoda_Pyar.jpeg",
 		"singer": "Stebin Ben"
+	},
+	{
+		"id": "110",
+		"name": "Thodi Der",
+		"path": "music/Thodi_Der.mp3",
+		"img": "img/Thodi_Der.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "111",
+		"name": "Titli",
+		"path": "music/Titli.mp3",
+		"img": "img/Titli.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "112",
+		"name": "Tu Chahiye",
+		"path": "music/Tu_Chahiye.mp3",
+		"img": "img/Tu_Chahiye.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "113",
+		"name": "Tum Saath Ho",
+		"path": "music/Tum_Saath_Ho.mp3",
+		"img": "img/Tum_Saath_Ho.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "114",
+		"name": "Tum Tak",
+		"path": "music/Tum_Tak.mp3",
+		"img": "img/Balma.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "115",
+		"name": "Tune Maari Entriyaan",
+		"path": "music/Tune_Maari_Entriyaan.mp3",
+		"img": "img/Tune_Maari_Entriyaan.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "116",
+		"name": "Yaad Piya Ki Aane Lagi",
+		"path": "music/Yaad_Piya_Ki_Aane_Lagi.mp3",
+		"img": "img/Yaad_Piya_Ki_Aane_Lagi.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "117",
+		"name": "Yaar Naa Miley",
+		"path": "music/Yaar_Naa_Miley.mp3",
+		"img": "img/Yaar_Naa_Miley.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "118",
+		"name": "Zaalima",
+		"path": "music/Zaalima.mp3",
+		"img": "img/Zaalima.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "119",
+		"name": "Zilla Hilela",
+		"path": "music/Zilla_Hilela.mp3",
+		"img": "img/Zilla_Hilela.jpeg",
+		"singer": " "
+	},
+	{
+		"id": "120",
+		"name": "Zindagi",
+		"path": "music/Zindagi.mp3",
+		"img": "img/Zindagi.jpeg",
+		"singer": " "
 	}
 ]

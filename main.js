@@ -84,13 +84,13 @@ volume_icon.onclick = function () {
           first = false;
           volume_icon.classList.add('fa-volume-off');
           volume_icon.classList.remove('fa-volume-up');
-          volume_icon.title = "Mute";
+          
      } else {
           reset_sound();
           first = true;
           volume_icon.classList.remove('fa-volume-off');
           volume_icon.classList.add('fa-volume-up');
-          volume_icon.title = "Unmute";
+          
      }
 }
 
@@ -102,12 +102,14 @@ function mute_sound() {
      track.volume = 0;
      volume.value = 0;
      volume_show.innerHTML = 0;
+     volume_icon.title = "Unmute";
 }
 
 function reset_sound() {
      track.volume = curVolume;
      volume.value = curVolVal;
      volume_show.innerHTML = curVolVal;
+     volume_icon.title = "Mute";
 }
 
 // reset song slider

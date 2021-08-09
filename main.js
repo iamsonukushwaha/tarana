@@ -65,7 +65,7 @@ fetch("https://www.sonu.live/music-player/db.json")
 
 var first_click = true;
 pausesong();
-
+play.title = "Play";
 play.onclick = function () {
      if (first_click) {
           playsong();

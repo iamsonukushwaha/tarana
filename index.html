@@ -38,26 +38,26 @@
             <p id="artist">Artist name</p>
             <!--- middle part of right part--->
             <div class="middle">
-               <button id="shuffle" class="shuffle fa fa-random">
+               <button id="shuffle" class="shuffle fa fa-random" title="Enable shuffle">
                </button>
                <button onclick="previous_song();" id="pre" class="right_blue"><i class="fa fa-step-backward"
+                     aria-hidden="true" title="Previous"></i>
+               </button>
+               <button id="play" class="right_pink"><i class="fa fa-play" aria-hidden="true" title="Play"></i>
+               </button>
+               <button onclick="next_song();" id="next" class="right_blue" title="Next"><i class="fa fa-step-forward"
                      aria-hidden="true"></i>
                </button>
-               <button id="play" class="right_pink"><i class="fa fa-play" aria-hidden="true"></i>
-               </button>
-               <button onclick="next_song();" id="next" class="right_blue"><i class="fa fa-step-forward"
-                     aria-hidden="true"></i>
-               </button>
-               <button id="repeat" class="repeat fa fa-repeat">
+               <button id="repeat" class="repeat fa fa-repeat" title="Enable repeat">
                </button>
 
 
             </div>
             <!--- song duration part --->
             <div class="duration">
-               <p id="passed_duration"></p>
+               <p id="passed_duration">0:00</p>
                <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration();">
-               <p id="full_duration"></p>
+               <p id="full_duration">0:00</p>
             </div>
          </div>
       </div>

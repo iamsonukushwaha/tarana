@@ -79,8 +79,8 @@ button{
 	width: 60%;
 	border-radius: 20px;
 	background: #55b9f3;
-	box-shadow:  8px 8px 16px #234c64,
-             -8px -8px 16px #87ffff;
+	/* box-shadow:  8px 8px 16px #234c64,
+             -8px -8px 16px #87ffff; */
 }
 
 /* song image */

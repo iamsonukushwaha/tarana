@@ -16,16 +16,15 @@ body{
 
 .main{
 	position: relative;
-	height: 90%;
-	width: 90%;
-	box-sizing: border-box;
-	border-radius: 20px;
+	height: 100%;
+	width: 100%;
+	/* border-radius: 20px; */
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	background: repeating-linear-gradient(45deg, rgba(0,0,0,0.1),transparent,rgba(0,0,0,0.04),rgba(0,0,0,0.04),rgba(0,0,0,0.01),rgba(0,0,0,0.02),rgba(0,0,0,0.05),transparent,rgba(0,0,0,0.04),rgba(0,0,0,0.1),rgba(0,0,0,0.03) 3px),linear-gradient(0deg, rgb(230, 105, 196), rgb(85, 159, 230));
-	box-shadow: inset -5px -5px 6px #224a61,
-            inset 5px 5px 6px #88ffff;
+	/* box-shadow: inset -5px -5px 6px #224a61,
+            inset 5px 5px 6px #88ffff; */
 }
 
 #logo{
@@ -208,6 +207,11 @@ input[type="range"]::-webkit-slider-thumb{
 	outline: none;
 }
 
+.right .middle button#play{
+	height: 70px;
+	width: 70px;
+}
+
 .right_blue{
 	background: linear-gradient(145deg, #4d8fcf, #5baaf6);
 	box-shadow:  5px 5px 8px #4887c4,
@@ -304,8 +308,8 @@ input[type="range"]::-webkit-slider-thumb{
 
 .documentation{
 	position: absolute;
-	top: 9%;
-	right: 9%;
+	top: 4%;
+	right: 3%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -314,26 +318,25 @@ input[type="range"]::-webkit-slider-thumb{
 
 .hide_show{
 	position: absolute;
-	font-size: 25px;
+	font-size: 20px;
 	border: none;
 	background: transparent;
 	cursor: pointer;
     text-decoration: none;
-    box-sizing: border-box;
 }
 
 .documentation_page{
 	position: absolute;
-	height: 90%;
-	width: 90%;
+	height: 100%;
+	width: 100%;
 	box-sizing: border-box;
-	border-radius: 20px;
+	/* border-radius: 20px; */
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	background: repeating-linear-gradient(45deg, rgba(0,0,0,0.1),transparent,rgba(0,0,0,0.04),rgba(0,0,0,0.04),rgba(0,0,0,0.01),rgba(0,0,0,0.02),rgba(0,0,0,0.05),transparent,rgba(0,0,0,0.04),rgba(0,0,0,0.1),rgba(0,0,0,0.03) 3px),linear-gradient(0deg, rgb(230, 105, 196), rgb(85, 159, 230));
-	box-shadow: inset -5px -5px 6px #224a61,
-            inset 5px 5px 6px #88ffff;
+	/* box-shadow: inset -5px -5px 6px #224a61,
+            inset 5px 5px 6px #88ffff; */
 }
 
 .documentation_body{
@@ -435,9 +438,10 @@ input[type="range"]::-webkit-slider-thumb{
 		bottom: 5%;
 	}
 	.documentation{
-		right: 15%;
+		right: 10%;
 	}
 	.documentation_page{
+		top: 0;
 		height: 98.28%;
 	}
 	.documentation_body h1{
@@ -452,6 +456,23 @@ input[type="range"]::-webkit-slider-thumb{
 	.right .middle button{
 		height: 40px;
 		width: 40px;
+	}
+	.right .middle button#play{
+		height: 50px;
+		width: 50px;
+	}
+
+	#playlist{
+		position: relative;
+		height: 95%;
+		width: 100%;
+	}
+	
+	#playlist h3{
+		text-align: center;
+		top: 5%;
+		padding-top: 50px ;
+		color: navajowhite;
 	}
 }
 

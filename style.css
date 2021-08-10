@@ -371,23 +371,15 @@ input[type="range"]::-webkit-slider-thumb{
 
 .documentation_body h2 ol{
 	margin: 0 50px;
-	padding-bottom: 100vh;
+	padding-bottom: 650px;
 }
 
-.documentation_body h2 ol a:nth-child(1), .documentation_body h2 ol a:nth-child(6), .documentation_body h2 ol a:nth-child(11), .documentation_body h2 ol a:nth-child(16){
-	color: rgb(127, 35, 240);
+.documentation_body h2 ol a{
+	color: white;
 }
-.documentation_body h2 ol a:nth-child(2), .documentation_body h2 ol a:nth-child(7), .documentation_body h2 ol a:nth-child(12), .documentation_body h2 ol a:nth-child(17){
-	color: rgb(131, 224, 255);
-}
-.documentation_body h2 ol a:nth-child(3), .documentation_body h2 ol a:nth-child(8), .documentation_body h2 ol a:nth-child(13), .documentation_body h2 ol a:nth-child(18){
-	color: rgb(23, 92, 219);
-}
-.documentation_body h2 ol a:nth-child(4), .documentation_body h2 ol a:nth-child(9), .documentation_body h2 ol a:nth-child(14), .documentation_body h2 ol a:nth-child(19){
-	color: rgb(254, 228, 64);
-}
-.documentation_body h2 ol a:nth-child(5), .documentation_body h2 ol a:nth-child(10), .documentation_body h2 ol a:nth-child(15), .documentation_body h2 ol a:nth-child(20){
-	color: rgb(0, 245, 212);
+
+.documentation_body h2 ol a:hover{
+	color: rgb(220, 226, 226);
 }
 
 @media screen and (max-width: 600px) and (min-width: 220px){
@@ -537,4 +529,3 @@ a:hover{
 	text-decoration: underline;
 	cursor: pointer;
 }
-

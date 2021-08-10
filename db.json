@@ -907,7 +907,7 @@
 		"id": "114",
 		"name": "Tum Tak",
 		"path": "music/Tum_Tak.mp3",
-		"img": "img/Balma.jpeg",
+		"img": "img/Tum_Tak.jpeg",
 		"singer": " ",
 		"genre": " "
 	},
@@ -915,7 +915,7 @@
 		"id": "115",
 		"name": "Tune Maari Entriyaan",
 		"path": "music/Tune_Maari_Entriyaan.mp3",
-		"img": "img/Tune_Maari_Entriyaan.jpeg",
+		"img": "img/Tune_Maari_Entriyaan.webp",
 		"singer": " ",
 		"genre": " "
 	},
@@ -931,7 +931,7 @@
 		"id": "117",
 		"name": "Yaar Naa Miley",
 		"path": "music/Yaar_Naa_Miley.mp3",
-		"img": "img/Yaar_Naa_Miley.jpeg",
+		"img": "img/Yaar_Naa_Miley.webp",
 		"singer": " ",
 		"genre": " "
 	},
@@ -955,7 +955,7 @@
 		"id": "120",
 		"name": "Zindagi",
 		"path": "music/Zindagi.mp3",
-		"img": "img/Zindagi.jpeg",
+		"img": "img/Zindagi.webp",
 		"singer": " ",
 		"genre": " "
 	}

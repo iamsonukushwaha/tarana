@@ -65,6 +65,7 @@ fetch("https://www.sonu.live/music-player/db.json")
 
 var first_click = true;
 pausesong();
+
 play.onclick = function () {
      if (first_click) {
           playsong();
@@ -128,7 +129,7 @@ function playsong() {
      track.play();
      first_click = false;
      play.innerHTML = '<i class="fa fa-pause" aria-hidden="true"></i>';
-     
+     play.title = "Pause";
 }
 
 // pause song
@@ -136,7 +137,7 @@ function pausesong() {
      track.pause();
      first_click = true;
      play.innerHTML = '<i class="fa fa-play" aria-hidden="true"></i>';
-     
+     play.title = "Play";
 }
 
 // next song

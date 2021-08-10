@@ -1,11 +1,11 @@
-# Music Player
+# Tarana - Best Music Player
 
 
-Live Demo [sonu.live/music-player](https://www.sonu.live/music-player)
+Live Demo [sonu.live/tarana](https://www.sonu.live/tarana)
 
-Download **Android App [Musicify](https://drive.google.com/file/d/17bHganFtZi-giy43V0D1FuJXqN72IhlO/view?usp=drivesdk)**
+Download **Android App** [Tarana](https://drive.google.com/file/d/1874DS1D8wXIHYhyaGjhnP16Ay7s3HhOy/view?usp=drivesdk)
 
-Download as Desktop App [Musicify](https://drive.google.com/file/d/1RlreCu6DWbh7TpLmWKbM0etR3S14fA26/view?usp=sharing)
+Download as **Desktop App** [Tarana]()
 
 
 

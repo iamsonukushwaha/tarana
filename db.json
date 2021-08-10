@@ -441,9 +441,9 @@
 	},
 	{
 		"id": "56",
-		"name": "KamariyaKamli",
-		"path": "music/KamariyaKamli.mp3",
-		"img": "img/KamariyaKamli.jpeg",
+		"name": "Kamariya",
+		"path": "music/Kamariya.mp3",
+		"img": "img/Kamariya.jpeg",
 		"singer": " ",
 		"genre": " "
 	},
@@ -690,8 +690,8 @@
 	{
 		"id": "87",
 		"name": "Radha",
-		"path": "music/Balma.mp3",
-		"img": "img/Balma.jpeg",
+		"path": "music/Radha.mp3",
+		"img": "img/Radha.jpeg",
 		"singer": " ",
 		"genre": " "
 	},
@@ -819,7 +819,7 @@
 		"id": "103",
 		"name": "Tere Bin Nahi Laage",
 		"path": "music/Tere_Bin_Nahi_Laage.mp3",
-		"img": "img/Tere_Bin_Nahi_Laage.jpeg",
+		"img": "img/Tere_Bin_Nahi_Laage.webp",
 		"singer": " ",
 		"genre": " "
 	},

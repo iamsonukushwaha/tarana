@@ -338,31 +338,40 @@ input[type="range"]::-webkit-slider-thumb{
 
 .documentation_body{
 	position: absolute;
-	box-sizing: border-box;
-	height: 90%;
+	height: 80%;
 	width: 100%;
-	box-sizing: border-box;
-	top: 7.5%;
-	padding: 20px;
-	overflow: scroll;
+	top: 10.5%;
+	margin-top: 30px;
+	/* overflow: scroll; */
+	/* overflow: auto; */
+	overflow-y: auto;
 }
 
 ::-webkit-scrollbar{
 	display: none;
 }
 
-.documentation_body h1{
-	font-size: 3em;
+#playlist{
+	position: relative;
+	height: 90%;
+	width: 90%;
+}
+
+#playlist h3{
 	text-align: center;
+	top: 0;
+	padding-top: 22px ;
 	color: navajowhite;
 }
 
 .documentation_body h2{
 	font-size: 1.25em;
+	padding-top: 50px;
 }
 
 .documentation_body h2 ol{
 	margin: 0 50px;
+	padding-bottom: 100vh;
 }
 
 .documentation_body h2 ol a:nth-child(1), .documentation_body h2 ol a:nth-child(6), .documentation_body h2 ol a:nth-child(11), .documentation_body h2 ol a:nth-child(16){

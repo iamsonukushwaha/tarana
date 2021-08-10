@@ -1,11 +1,15 @@
+
 let previous = document.querySelector('#pre'), play = document.querySelector('#play'), next = document.querySelector('#next'), title = document.querySelector('#title'), recent_volume = document.querySelector('#volume'), volume_icon = document.querySelector('#volume_icon'), volume_show = document.querySelector('#volume_show'), slider = document.querySelector('#duration_slider'), full_duration = document.querySelector('#full_duration'), passed_duration = document.querySelector('#passed_duration'), track_image = document.querySelector('#track_image'), present = document.querySelector('#present'), total = document.querySelector('#total'), artist = document.querySelector('#artist'), main = document.querySelector('#main'), list = document.querySelector('#list'), repeat = document.querySelector('#repeat'), shuffle = document.querySelector('#shuffle');
+
 
 let timer, link, All_song, max, index_no = 0;
 
-// Creating An Audio Element.
+// creating an audio Element.
 let track = document.createElement('audio');
 
-fetch("https://nihal-priyadarshi.github.io/Music-Player/db.json")
+
+
+fetch("https://www.sonu.live/music-player/db.json")
      .then(function (response) {
           return response.json();
      })
@@ -55,7 +59,9 @@ fetch("https://nihal-priyadarshi.github.io/Music-Player/db.json")
                list.appendChild(link);
 
           });
+
      });
+
 
 var first_click = true;
 pausesong();
@@ -78,15 +84,19 @@ volume_icon.onclick = function () {
           first = false;
           volume_icon.classList.add('fa-volume-off');
           volume_icon.classList.remove('fa-volume-up');
+          volume_icon.title = "Unmute";
+
      } else {
           reset_sound();
           first = true;
           volume_icon.classList.remove('fa-volume-off');
           volume_icon.classList.add('fa-volume-up');
+          volume_icon.title = "Mute";
+
      }
 }
 
-// Sound Functions
+// sound functions
 var curVolume, curVolVal;
 function mute_sound() {
      curVolVal = recent_volume.value;
@@ -94,6 +104,7 @@ function mute_sound() {
      track.volume = 0;
      volume.value = 0;
      volume_show.innerHTML = 0;
+
 }
 
 function reset_sound() {
@@ -102,26 +113,31 @@ function reset_sound() {
      volume_show.innerHTML = curVolVal;
 }
 
-// Reset Song Slider
+
+
+
+// reset song slider
 function reset_slider() {
      slider.value = 0;
 }
 
-// Play Song
+// play song
 function playsong() {
      track.play();
      first_click = false;
      play.innerHTML = '<i class="fa fa-pause" aria-hidden="true"></i>';
+     play.title = "Pause";
 }
 
-// Pause Song
+// pause song
 function pausesong() {
      track.pause();
      first_click = true;
      play.innerHTML = '<i class="fa fa-play" aria-hidden="true"></i>';
+     play.title = "Play";
 }
 
-// Next Song
+// next song
 function next_song() {
      if (index_no < All_song.length - 1) {
           index_no += 1;
@@ -151,9 +167,11 @@ function next_song() {
           playsong();
 
      }
+
 }
 
-// Previous Song
+// previous song
+
 function previous_song() {
      if (index_no > 0) {
           index_no -= 1;
@@ -185,38 +203,40 @@ function previous_song() {
      }
 }
 
-// Change Volume
+// change volume
 function volume_change() {
+     volume_icon.title = "Mute";
      if (volume_icon.classList.contains('fa-volume-off')) {
           first = true;
           volume_icon.classList.add('fa-volume-up');
      }
+
      volume_show.innerHTML = recent_volume.value;
      track.volume = recent_volume.value / 100;
 }
 
-// Change Slider Position 
+
+// change slider position 
 function change_duration() {
      slider_position = track.duration * (slider.value / 100);
      track.currentTime = slider_position;
 }
 
-// For Repeat
+// for repeat
 var select = true;
 repeat.innerHTML = ``;
 
-// For Shuffle
+// for shuffle
 var selected = true;
 
 function range_slider() {
      let position = 0;
-
-     // Update Slider Position
+     // update slider position
      if (!isNaN(track.duration)) {
-          
+
           position = track.currentTime * (100 / track.duration);
           slider.value = position;
-          
+
           var curmins = Math.floor(track.currentTime / 60), cursecs = Math.floor(track.currentTime - curmins * 60);
           if (cursecs < 10) {
                passed_duration.innerHTML = `${curmins} : 0${cursecs}`;
@@ -237,6 +257,7 @@ function range_slider() {
                repeat.innerHTML = `1`;
                repeat.classList.add('selected');
                repeat.classList.remove('repeat');
+               repeat.title = "Disable repeat";
                if (track.ended) {
                     // console.log(index_no);
                     track.src = All_song[index_no].path;
@@ -260,6 +281,7 @@ function range_slider() {
                repeat.classList.add('repeat');
                repeat.classList.remove('selected');
                select = true;
+               repeat.title = "Enable repeat";
           }
      }
 
@@ -272,6 +294,7 @@ function range_slider() {
                shuffle.classList.remove('shuffle');
                // console.log(shuffle.className);
                selected = false;
+               shuffle.title = "Disable shuffle";
 
                if (track.ended) {
 
@@ -297,11 +320,12 @@ function range_slider() {
                shuffle.classList.remove('selected');
                shuffle.classList.add('shuffle');
                selected = true;
+               shuffle.title = "Enable shuffle";
           }
      }
 
 
-     // Function Will Run When The Song Is Over
+     // function will run when the song is over
      if (track.ended) {
           if (shuffle.classList.contains("selected") && repeat.innerHTML == '') {
                var random = Math.floor(Math.random() * max);
@@ -336,12 +360,16 @@ function range_slider() {
                     total.innerHTML = All_song.length;
                     present.innerHTML = index_no + 1;
                     playsong();
+
                }
           }
+
      }
+
 }
 
-// Function To Open And Close Documentation.
+
+// Function to open and close documentation.
 const hide_show = document.getElementById('hide_show'), main_body_hide = document.getElementById('main_body_hide');
 
 var click = true;

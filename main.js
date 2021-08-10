@@ -84,13 +84,15 @@ volume_icon.onclick = function () {
           first = false;
           volume_icon.classList.add('fa-volume-off');
           volume_icon.classList.remove('fa-volume-up');
-          
+          volume_icon.title = "Unmute";
+
      } else {
           reset_sound();
           first = true;
           volume_icon.classList.remove('fa-volume-off');
           volume_icon.classList.add('fa-volume-up');
-          
+          volume_icon.title = "Mute";
+
      }
 }
 
@@ -102,21 +104,16 @@ function mute_sound() {
      track.volume = 0;
      volume.value = 0;
      volume_show.innerHTML = 0;
-     
+
 }
 
 function reset_sound() {
      track.volume = curVolume;
      volume.value = curVolVal;
      volume_show.innerHTML = curVolVal;
-     
 }
 
-if(volume.value>0) {
-     volume_icon.title = "Mute";
-} else {
-     volume_icon.title = "Unmute";
-}
+
 
 
 // reset song slider
@@ -208,6 +205,7 @@ function previous_song() {
 
 // change volume
 function volume_change() {
+     volume_icon.title = "Mute";
      if (volume_icon.classList.contains('fa-volume-off')) {
           first = true;
           volume_icon.classList.add('fa-volume-up');
@@ -233,7 +231,6 @@ var selected = true;
 
 function range_slider() {
      let position = 0;
-
      // update slider position
      if (!isNaN(track.duration)) {
 
@@ -402,4 +399,3 @@ function nochange() {
      hide_show.innerText = '☰';
      hide_show.style.color = "#fff";
 }
-

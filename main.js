@@ -9,7 +9,7 @@ let track = document.createElement('audio');
 
 
 
-fetch("https://www.sonu.live/music-player/db.json")
+fetch("https://www.sonu.live/tarana/db.json")
      .then(function (response) {
           return response.json();
      })

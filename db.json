@@ -219,7 +219,7 @@
 		"id": "28",
 		"name": "Dil Aaj Kal",
 		"path": "music/Dil_Aaj_Kal.mp3",
-		"img": "img/Dil_Aaj_Kal.jpeg",
+		"img": "img/Dil_Aaj_Kal.webp",
 		"singer": " ",
 		"genre": " "
 	},
@@ -379,7 +379,7 @@
 		"id": "48",
 		"name": "Ik Mulaqaat",
 		"path": "music/Ik_Mulaqaat.mp3",
-		"img": "img/Ik_Mulaqaat.jpeg",
+		"img": "img/Ik_Mulaqaat.webp",
 		"singer": " ",
 		"genre": " "
 	},
@@ -387,7 +387,7 @@
 		"id": "49",
 		"name": "Illegal Weapon 2.0",
 		"path": "music/Illegal_Weapon_2.0.mp3",
-		"img": "img/Illegal_Weapon_2.0.jpeg",
+		"img": "img/Illegal_Weapon_2.0.webp",
 		"singer": " ",
 		"genre": " "
 	},
@@ -395,7 +395,7 @@
 		"id": "50",
 		"name": "Ishq Ka Raja",
 		"path": "music/Ishq_Ka_Raja.mp3",
-		"img": "img/Ishq_Ka_Raja.jpeg",
+		"img": "img/Ishq_Ka_Raja.webp",
 		"singer": " ",
 		"genre": " "
 	},
@@ -435,7 +435,7 @@
 		"id": "55",
 		"name": "Kabhi Jo Baadal Barse",
 		"path": "music/Kabhi_Jo_Baadal_Barse.mp3",
-		"img": "img/Kabhi_Jo_Baadal_Barse.jpeg",
+		"img": "img/Kabhi_Jo_Baadal_Barse.webp",
 		"singer": " ",
 		"genre": " "
 	},
@@ -483,7 +483,7 @@
 		"id": "61",
 		"name": "Khuda Jaane",
 		"path": "music/Khuda_Jaane.mp3",
-		"img": "img/Khuda_Jaane.jpeg",
+		"img": "img/Khuda_Jaane.webp",
 		"singer": " ",
 		"genre": " "
 	},
@@ -507,7 +507,7 @@
 		"id": "64",
 		"name": "Lagdi Lahore Di",
 		"path": "music/Lagdi_Lahore_Di.mp3",
-		"img": "img/Lagdi_Lahore_Di.jpeg",
+		"img": "img/Lagdi_Lahore_Di.webp",
 		"singer": " ",
 		"genre": " "
 	},
@@ -531,7 +531,7 @@
 		"id": "67",
 		"name": "Love Me Thoda Aur",
 		"path": "music/Love_Me_Thoda_Aur.mp3",
-		"img": "img/Love_Me_Thoda_Aur.jpeg",
+		"img": "img/Love_Me_Thoda_Aur.webp",
 		"singer": " ",
 		"genre": " "
 	},
@@ -579,7 +579,7 @@
 		"id": "73",
 		"name": "Nashe Si Chadh Gayi",
 		"path": "music/Nashe_Si_Chadh_Gayi.mp3",
-		"img": "img/Nashe_Si_Chadh_Gayi.jpeg",
+		"img": "img/Nashe_Si_Chadh_Gayi.webp",
 		"singer": " ",
 		"genre": " "
 	},
@@ -627,7 +627,7 @@
 		"id": "79",
 		"name": "Pee Loon",
 		"path": "music/Pee_Loon.mp3",
-		"img": "img/Pee_Loon.jpeg",
+		"img": "img/Pee_Loon.webp",
 		"singer": " ",
 		"genre": " "
 	},
@@ -675,7 +675,7 @@
 		"id": "85",
 		"name": "Raat Bhar",
 		"path": "music/Raat_Bhar.mp3",
-		"img": "img/Raat_Bhar.jpeg",
+		"img": "img/Raat_Bhar.webp",
 		"singer": " ",
 		"genre": " "
 	},
@@ -683,7 +683,7 @@
 		"id": "86",
 		"name": "Rabba Main Toh Mar Gaya Oye",
 		"path": "music/Rabba_Main_Toh_Mar_Gaya_Oye.mp3",
-		"img": "img/Rabba_Main_Toh_Mar_Gaya_Oye.webp",
+		"img": "img/Rabba_Mai_To_Mar_Gya_Oye.webp",
 		"singer": "Rahat Fateh Ali Khan",
 		"genre": " "
 	},
@@ -739,7 +739,7 @@
 		"id": "93",
 		"name": "Slow_Motion",
 		"path": "music/Slow_Motion.mp3",
-		"img": "img/Slow_Motion.jpeg",
+		"img": "img/Slow_Motion.webp",
 		"singer": " ",
 		"genre": " "
 	},
@@ -795,7 +795,7 @@
 		"id": "100",
 		"name": "Tera Rastaa Chhodoon Na",
 		"path": "music/Tera_Rastaa_Chhodoon_Na.mp3",
-		"img": "img/Tera_Rastaa_Chhodoon_Na.jpeg",
+		"img": "img/Tera_Rastaa_Chhodoon_Na.webp",
 		"singer": " ",
 		"genre": " "
 	},
@@ -851,7 +851,7 @@
 		"id": "107",
 		"name": "The Humma Song",
 		"path": "music/The_Humma_Song.mp3",
-		"img": "img/The_Humma_Song.jpeg",
+		"img": "img/The_Humma_Song.webp",
 		"singer": " ",
 		"genre": " "
 	},
@@ -883,7 +883,7 @@
 		"id": "111",
 		"name": "Titli",
 		"path": "music/Titli.mp3",
-		"img": "img/Titli.jpeg",
+		"img": "img/Titli.webp",
 		"singer": " ",
 		"genre": " "
 	},

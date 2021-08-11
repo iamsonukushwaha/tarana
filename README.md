@@ -6,7 +6,11 @@ Live Demo [sonu.live/tarana](https://www.sonu.live/tarana)
 
 Download **Android App** [Tarana](https://drive.google.com/file/d/1874DS1D8wXIHYhyaGjhnP16Ay7s3HhOy/view?usp=drivesdk)
 
-Download as **Desktop App** [Tarana]()
+<!---
+
+ Download as **Desktop App** [Tarana]()
+
+-->
 
 <br/>
 

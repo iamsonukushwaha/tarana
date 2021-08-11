@@ -26,9 +26,10 @@
             <!--- song img --->
             <div class="image"><img id="track_image"></div>
             <div class="volume">
-               <p id="volume_show">100</p>
+               <p id="volume_show">40</p>
                <i class="fa fa-volume-up" aria-hidden="true" id="volume_icon" title="Mute"></i>
-               <input type="range" min="0" max="100" value="100" onchange="volume_change()" id="volume">
+               <input type="range" min="0" max="100" value="40" onchange="volume_change()" id="volume" title="">
+               
             </div>
          </div>
          <!--- right part --->
@@ -40,7 +41,7 @@
             </div>
             <!--- song title & artist name --->
             <p id="title">title</p>
-            <p id="artist">Artist name</p>
+            <p id="artist">artist name</p>
             <!--- middle part of right part--->
             <div class="middle">
                <button id="shuffle" class="shuffle fa fa-random" title="Enable shuffle">
@@ -55,13 +56,11 @@
                </button>
                <button id="repeat" class="repeat fa fa-repeat" title="Enable repeat">
                </button>
-
-
             </div>
             <!--- song duration part --->
             <div class="duration">
                <p id="passed_duration">0:00</p>
-               <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration();">
+               <input type="range" min="0" max="100" value="0" id="duration_slider" oninput="change_duration();" title="">
                <p id="full_duration">0:00</p>
             </div>
          </div>
@@ -83,7 +82,7 @@
          </div>
       </div>
 
-      <!--- Add javascript file --->
+      <!--- javascript file --->
       <script src="./main.js"></script>
    </body>
 

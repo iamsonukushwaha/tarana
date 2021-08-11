@@ -377,12 +377,27 @@ input[type="range"]::-webkit-slider-thumb{
 	padding-bottom: 650px;
 }
 
-.documentation_body h2 ol a{
-	color: white;
+/* #list a:nth-child(3n) {
+	color: red;
 }
 
-.documentation_body h2 ol a:hover{
+#list a:nth-child(3n + 1) {
+	color: yellow;
+}
+
+#list a:nth-child(2n ) {
+	color: blue;
+} */
+
+#list a {
+	color: white;
+	text-decoration: none;
+}
+
+#list a:hover {
 	color: rgb(220, 226, 226);
+	text-decoration: underline;
+	cursor: pointer;
 }
 
 @media screen and (max-width: 600px) and (min-width: 220px){
@@ -540,13 +555,3 @@ input[type="range"]::-webkit-slider-thumb{
 	}
 }
 
-
-a {
-	text-decoration: none;
-	
-}
-
-a:hover{
-	text-decoration: underline;
-	cursor: pointer;
-}

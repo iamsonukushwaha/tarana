@@ -4,7 +4,7 @@ Live Demo [sonu.live/tarana](https://www.sonu.live/tarana)
 
 <br/>
 
-Download **Android App** [Tarana](https://drive.google.com/file/d/1874DS1D8wXIHYhyaGjhnP16Ay7s3HhOy/view?usp=drivesdk)
+Download **Android App** [Tarana](https://github.com/flyingsonu122/tarana/releases/download/v1.0/Tarana.apk)
 
 <!---
 

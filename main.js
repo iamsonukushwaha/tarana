@@ -27,6 +27,9 @@ fetch("https://www.sonu.live/tarana/db.json")
           artist.innerHTML = All_song[index_no].singer;
 
           track.load();
+          // console.log(recent_volume.value);
+          track.volume = recent_volume.value / 100;
+          // console.log(track.volume);
 
           timer = setInterval(range_slider, 1000);
           total.innerHTML = All_song.length;
@@ -113,6 +116,37 @@ function reset_sound() {
      volume_show.innerHTML = curVolVal;
 }
 
+// change volume
+function volume_change() {
+     volume_icon.title = "Mute";
+     // playsong();
+     // first_click = false;
+     if (volume_icon.classList.contains('fa-volume-off')) {
+          first = true;
+          volume_icon.classList.add('fa-volume-up');
+     }
+
+     volume_show.innerHTML = recent_volume.value;
+     track.volume = recent_volume.value / 100;
+     if (track.volume == 0) {
+          first = false;
+          volume_icon.title = "Unmute";
+          volume_icon.classList.add('fa-volume-off');
+          volume_icon.classList.remove('fa-volume-up');
+     } else {
+          first = true;
+          volume_icon.title = "Mute";
+          volume_icon.classList.remove('fa-volume-off');
+          volume_icon.classList.add('fa-volume-up');
+     }
+
+}
+
+
+recent_volume.oninput = function () {
+     volume_show.innerHTML = this.value;
+     track.volume = this.value / 100;
+}
 
 
 
@@ -203,23 +237,27 @@ function previous_song() {
      }
 }
 
-// change volume
-function volume_change() {
-     volume_icon.title = "Mute";
-     if (volume_icon.classList.contains('fa-volume-off')) {
-          first = true;
-          volume_icon.classList.add('fa-volume-up');
-     }
 
-     volume_show.innerHTML = recent_volume.value;
-     track.volume = recent_volume.value / 100;
-}
-
+var curmins, cursecs;
 
 // change slider position 
 function change_duration() {
      slider_position = track.duration * (slider.value / 100);
      track.currentTime = slider_position;
+     curmins = Math.floor(track.currentTime / 60), cursecs = Math.floor(track.currentTime - curmins * 60);
+     
+
+     if (cursecs < 10) {
+          passed_duration.innerHTML = `${curmins} : 0${cursecs}`;
+     } else {
+          passed_duration.innerHTML = `${curmins} : ${cursecs}`;
+     }
+}
+
+slider.onchange = function () {
+     slider_position = track.duration * (slider.value / 100);
+     track.currentTime = slider_position;
+    
 }
 
 // for repeat
@@ -237,7 +275,7 @@ function range_slider() {
           position = track.currentTime * (100 / track.duration);
           slider.value = position;
 
-          var curmins = Math.floor(track.currentTime / 60), cursecs = Math.floor(track.currentTime - curmins * 60);
+          curmins = Math.floor(track.currentTime / 60), cursecs = Math.floor(track.currentTime - curmins * 60);
           if (cursecs < 10) {
                passed_duration.innerHTML = `${curmins} : 0${cursecs}`;
           } else {

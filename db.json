@@ -5,7 +5,7 @@
 		"path": "music/Aabaad_Barbaad.mp3",
 		"img": "img/Aabaad_Barbaad.jpeg",
 		"singer": "Arijit Singh",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "2",
@@ -13,7 +13,7 @@
 		"path": "music/Aankh_Marey.mp3",
 		"img": "img/Aankh_Marey.jpeg",
 		"singer": "Kumar Sanu, Mika Singh & Neha Kakkar",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "3",
@@ -21,7 +21,7 @@
 		"path": "music/Aao_Kabhi_Haveli_Pe.mp3",
 		"img": "img/Aao_Kabhi_Haveli_Pe.jpeg",
 		"singer": "Badshah & Nikhita Gandhi",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "4",
@@ -29,7 +29,7 @@
 		"path": "music/Aashiq_Surrender_Hua.mp3",
 		"img": "img/Aashiq_Surrender_Hua.webp",
 		"singer": "Amaal Mallik & Shreya Ghoshal",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "5",
@@ -37,7 +37,7 @@
 		"path": "music/Agar_Tum_Mil_Jao.mp3",
 		"img": "img/Agar_Tum_Mil_Jao.jpeg",
 		"singer": "Shreya Ghoshal",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "6",
@@ -45,7 +45,7 @@
 		"path": "music/Akh_Lad_Jave.mp3",
 		"img": "img/Akh_Lad_Jave.jpeg",
 		"singer": "Asees Kaur, Badshah & Jubin Nautiyal",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "7",
@@ -53,7 +53,7 @@
 		"path": "music/Baarish.mp3",
 		"img": "img/Baarish.jpeg",
 		"singer": "Ash King, Shashaa Tirupati & Tanishk Bagchi",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "8",
@@ -61,7 +61,7 @@
 		"path": "music/Baby_Doll.mp3",
 		"img": "img/Baby_Doll.jpeg",
 		"singer": "Kanika Kapoor, Kunal Avanti & Meet Bros.",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "9",
@@ -69,7 +69,7 @@
 		"path": "music/Backbone.mp3",
 		"img": "img/Backbone.jpeg",
 		"singer": "Hardy Sandhu",
-		"genre": " "
+		"genre": "Club"
 	},
 	{
 		"id": "10",
@@ -77,7 +77,7 @@
 		"path": "music/Badri_Ki_Dulhania.mp3",
 		"img": "img/Badri_Ki_Dulhania.jpeg",
 		"singer": "Dev Neg, Ikka, Monali Thakur & Neha Kakkar",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "11",
@@ -85,7 +85,7 @@
 		"path": "music/Bakhuda_Tumhi_Ho.mp3",
 		"img": "img/Bakhuda_Tumhi_Ho.jpeg",
 		"singer": "Alka Yagnik & Atif Aslam",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "12",
@@ -93,7 +93,7 @@
 		"path": "music/Balam_Pichkari.mp3",
 		"img": "img/Balam_Pichkari.jpeg",
 		"singer": "Shalmali Kholgade & Vishal Dadlani",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "13",
@@ -101,7 +101,7 @@
 		"path": "music/Balma.mp3",
 		"img": "img/Balma.jpeg",
 		"singer": "Shreya Ghoshal & Shriram",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "14",
@@ -109,7 +109,7 @@
 		"path": "music/Be_Intehaan.mp3",
 		"img": "img/Be_Intehaan.jpeg",
 		"singer": "Atif Aslam & Sunidhi Chauhan",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "15",
@@ -117,7 +117,7 @@
 		"path": "music/Besabriyaan.mp3",
 		"img": "img/Besabriyaan.jpeg",
 		"singer": "Armaan Malik",
-		"genre": " "
+		"genre": "Club"
 	},
 	{
 		"id": "16",
@@ -125,7 +125,7 @@
 		"path": "music/Blue_Eyes.mp3",
 		"img": "img/Blue_Eyes.jpeg",
 		"singer": "Yo Yo Honey Singh",
-		"genre": " "
+		"genre": "Club"
 	},
 	{
 		"id": "17",
@@ -133,7 +133,7 @@
 		"path": "music/Bol_Do_Na_Zara.mp3",
 		"img": "img/Bol_Do_Na_Zara.jpeg",
 		"singer": "Armaan Malik",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "18",
@@ -141,7 +141,7 @@
 		"path": "music/Bom_Diggy_Diggy.mp3",
 		"img": "img/Bom_Diggy_Diggy.jpeg",
 		"singer": "Jasmin Walia & Zack Knight",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "19",
@@ -149,7 +149,7 @@
 		"path": "music/Brown_Rang.mp3",
 		"img": "img/Brown_Rang.jpeg",
 		"singer": "Yo Yo Honey Singh",
-		"genre": " "
+		"genre": "Club"
 	},
 	{
 		"id": "20",
@@ -157,7 +157,7 @@
 		"path": "music/Chamma_Chamma.mp3",
 		"img": "img/Chamma_Chamma.jpeg",
 		"singer": "Arun, Ikka, Neha Kakkar & Romi",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "21",
@@ -165,7 +165,7 @@
 		"path": "music/Chammak_Challo.mp3",
 		"img": "img/Chammak_Challo.jpeg",
 		"singer": "Akon & Hamsika Iyer",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "22",
@@ -173,7 +173,7 @@
 		"path": "music/Channa_Mereya.mp3",
 		"img": "img/Channa_Mereya.jpeg",
 		"singer": "Arijit Singh",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "23",
@@ -181,7 +181,7 @@
 		"path": "music/Chashni.mp3",
 		"img": "img/Chashni.jpeg",
 		"singer": "Abhijeet Srivastava",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "24",
@@ -189,7 +189,7 @@
 		"path": "music/Chedkhaniyaan.mp3",
 		"img": "img/Chedkhaniyaan.jpeg",
 		"singer": "Ehsaan, Loy & Shankar Mahadevan",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "25",
@@ -197,7 +197,7 @@
 		"path": "music/Chhote_Chhote_Peg.mp3",
 		"img": "img/Chhote_Chhote_Peg.jpeg",
 		"singer": "Navraj Hans, Neha Kakkar & Yo Yo Honey Singh",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "26",
@@ -205,7 +205,7 @@
 		"path": "music/Chittiyaan_Kalaiyaan.mp3",
 		"img": "img/Chittiyaan_Kalaiyaan.jpeg",
 		"singer": "Kanika Kapoor & Meet Bros Anjjan",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "27",
@@ -213,7 +213,7 @@
 		"path": "music/Chup_Chup_Ke.mp3",
 		"img": "img/Chup_Chup_Ke.jpeg",
 		"singer": "Shaan",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "28",
@@ -221,7 +221,7 @@
 		"path": "music/Dil_Aaj_Kal.mp3",
 		"img": "img/Dil_Aaj_Kal.webp",
 		"singer": "K.K",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "29",
@@ -229,7 +229,7 @@
 		"path": "music/Dil_Jaaniye.mp3",
 		"img": "img/Dil_Jaaniye.jpeg",
 		"singer": "Jubin Nautiyal & Tulsi Kumar",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "30",
@@ -237,7 +237,7 @@
 		"path": "music/Dil_Mera_Muft_Ka.mp3",
 		"img": "img/Dil_Mera_Muft_Ka.jpeg",
 		"singer": "Altamash Faridi, Muazzam, Rizwan, Nandini Srikar, Shadab Faridi & Shabab Sabri",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "31",
@@ -245,7 +245,7 @@
 		"path": "music/Dil_Meri_Na_Sune.mp3",
 		"img": "img/Dil_Meri_Na_Sune.jpeg",
 		"singer": "Atif Aslam & Payal Dev",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "32",
@@ -253,7 +253,7 @@
 		"path": "music/Dilbar.mp3",
 		"img": "img/Dilbar.jpeg",
 		"singer": "Dhvani Bhanushali, Ikka & Neha Kakkar",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "33",
@@ -261,7 +261,7 @@
 		"path": "music/Ding_Dang.mp3",
 		"img": "img/Ding_Dang.jpeg",
 		"singer": "Amit Mishra & Antara Mitra",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "34",
@@ -269,7 +269,7 @@
 		"path": "music/Dj_Waley_Babu.mp3",
 		"img": "img/Dj_Waley_Babu.jpeg",
 		"singer": "Aastha Gill & Badshah",
-		"genre": " "
+		"genre": "Club"
 	},
 	{
 		"id": "35",
@@ -277,7 +277,7 @@
 		"path": "music/Ek_Chumma.mp3",
 		"img": "img/Ek_Chumma.jpeg",
 		"singer": "Altamash Faridi & Jyotica Tangri",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "36",
@@ -285,7 +285,7 @@
 		"path": "music/Ek_Do_Teen.mp3",
 		"img": "img/Ek_Do_Teen.jpeg",
 		"singer": "Parry G & Shreya Ghoshal",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "37",
@@ -293,7 +293,7 @@
 		"path": "music/Gali_Gali.mp3",
 		"img": "img/Gali_Gali.jpeg",
 		"singer": "Neha Kakkar",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "38",
@@ -301,7 +301,7 @@
 		"path": "music/Galti_Se_Mistake.mp3",
 		"img": "img/Galti_Se_Mistake.jpeg",
 		"singer": "Amit Mishra & Arijit Singh",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "39",
@@ -309,7 +309,7 @@
 		"path": "music/Genda_Phool.mp3",
 		"img": "img/Genda_Phool.jpeg",
 		"singer": "Badshah & Payal Dev",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "40",
@@ -317,7 +317,7 @@
 		"path": "music/Ghalat_Fehmi.mp3",
 		"img": "img/Ghalat_Fehmi.jpeg",
 		"singer": "Asim Azhar & Zenab Fatimah Sultan",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "41",
@@ -325,7 +325,7 @@
 		"path": "music/Guzarish.mp3",
 		"img": "img/Guzarish.jpeg",
 		"singer": "Javed Ali & Sonu Nigam",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "42",
@@ -333,7 +333,7 @@
 		"path": "music/Hangover.mp3",
 		"img": "img/Hangover.jpeg",
 		"singer": "Meet Bros Anjjan, Salman Khan & Shreya Ghoshal",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "43",
@@ -341,7 +341,7 @@
 		"path": "music/Hawayein.mp3",
 		"img": "img/Hawayein.jpeg",
 		"singer": "Arijit Singh & Pritam",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "44",
@@ -349,7 +349,7 @@
 		"path": "music/High_Heels.mp3",
 		"img": "img/High_Heels.jpeg",
 		"singer": "Aditi Singh Sharma, Jaz Dhami & Meet Bros.",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "45",
@@ -357,7 +357,7 @@
 		"path": "music/Hookah_Bar.mp3",
 		"img": "img/Hookah_Bar.jpeg",
 		"singer": "Aaman Trikha, Himesh Reshammiya & Vinit Singh",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "46",
@@ -365,7 +365,7 @@
 		"path": "music/Humein_Jab_Se_Mohabbat.mp3",
 		"img": "img/Humein_Jab_Se_Mohabbat.jpeg",
 		"singer": "Alka Yagnik & Sonu Nigam",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "47",
@@ -373,7 +373,7 @@
 		"path": "music/Husn_Parcham.mp3",
 		"img": "img/Husn_Parcham.jpeg",
 		"singer": "Bhoomi Trivedi & Raja Kumari",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "48",
@@ -381,7 +381,7 @@
 		"path": "music/Ik_Mulaqaat.mp3",
 		"img": "img/Ik_Mulaqaat.jpeg",
 		"singer": "Altamash Faridi & Palak Muchal",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "49",
@@ -389,7 +389,7 @@
 		"path": "music/Illegal_Weapon_2.0.mp3",
 		"img": "img/Illegal_Weapon_2.0.webp",
 		"singer": "Garry Sandhu & Jasmine Sandlas",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "50",
@@ -397,7 +397,7 @@
 		"path": "music/Ishq_Ka_Raja.mp3",
 		"img": "img/Ishq_Ka_Raja.webp",
 		"singer": "Addy Nagar & Hamsar Hayat",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "51",
@@ -405,7 +405,7 @@
 		"path": "music/Ishq_Sufiyana.mp3",
 		"img": "img/Ishq_Sufiyana.jpeg",
 		"singer": "Kamal Khan",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "52",
@@ -413,7 +413,7 @@
 		"path": "music/Ishq_Wala_Love.mp3",
 		"img": "img/Ishq_Wala_Love.jpeg",
 		"singer": "Neeti Mohan, Salim Merchant & Shekhar Ravjiani",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "53",
@@ -421,7 +421,7 @@
 		"path": "music/Jab_Tak.mp3",
 		"img": "img/Jab_Tak.jpeg",
 		"singer": "Armaan Malik",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "54",
@@ -429,7 +429,7 @@
 		"path": "music/Jumme_Ki_Raat.mp3",
 		"img": "img/Jumme_Ki_Raat.jpeg",
 		"singer": "Mika Singh & Palak Muchhal",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "55",
@@ -437,7 +437,7 @@
 		"path": "music/Kabhi_Jo_Baadal_Barse.mp3",
 		"img": "img/Kabhi_Jo_Baadal_Barse.webp",
 		"singer": "Arijit Singh",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "56",
@@ -445,7 +445,7 @@
 		"path": "music/Kamariya.mp3",
 		"img": "img/Kamariya.jpeg",
 		"singer": "Aastha Gill, Divya Kumar & Sachin Jigar",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "57",
@@ -453,7 +453,7 @@
 		"path": "music/Kamli.mp3",
 		"img": "img/Kamli.jpeg",
 		"singer": "Sunidhi Chauhan",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "58",
@@ -461,7 +461,7 @@
 		"path": "music/Kar_Gayi_Chull.mp3",
 		"img": "img/Kar_Gayi_Chull.jpeg",
 		"singer": "Badshah, Fazilpuria, Neha Kakkar & Sukriti Kakar",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "59",
@@ -469,7 +469,7 @@
 		"path": "music/Kaun_Tujhe.mp3",
 		"img": "img/Kaun_Tujhe.jpeg",
 		"singer": "Palak Muchhal",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "60",
@@ -477,7 +477,7 @@
 		"path": "music/Khairiyat.mp3",
 		"img": "img/Khairiyat.jpeg",
 		"singer": "Arijit Singh",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "61",
@@ -485,7 +485,7 @@
 		"path": "music/Khuda_Jaane.mp3",
 		"img": "img/Khuda_Jaane.webp",
 		"singer": "K.K & Shilpa Rao",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "62",
@@ -493,7 +493,7 @@
 		"path": "music/Khudaya_Khair.mp3",
 		"img": "img/Khudaya_Khair.jpeg",
 		"singer": "Akriti Kakkar, Monali Thakur & Soham Chakraborty",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "63",
@@ -501,7 +501,7 @@
 		"path": "music/Kinna_Sona.mp3",
 		"img": "img/Kinna_Sona.jpeg",
 		"singer": "Sunil Kamath",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "64",
@@ -509,7 +509,7 @@
 		"path": "music/Lagdi_Lahore_Di.mp3",
 		"img": "img/Lagdi_Lahore_Di.webp",
 		"singer": "Guru Randhawa & Tulsi Kumar",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "65",
@@ -517,7 +517,7 @@
 		"path": "music/Laila_Main_Laila.mp3",
 		"img": "img/Laila_Main_Laila.jpeg",
 		"singer": "Pawni Pandey",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "66",
@@ -525,7 +525,7 @@
 		"path": "music/Lat_Lag_Gayee.mp3",
 		"img": "img/Lat_Lag_Gayee.jpeg",
 		"singer": "Benny Dayal & Shalmali Kholgade",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "67",
@@ -533,7 +533,7 @@
 		"path": "music/Love_Me_Thoda_Aur.mp3",
 		"img": "img/Love_Me_Thoda_Aur.webp",
 		"singer": "Arijit Singh & Monali Thakur",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "68",
@@ -541,7 +541,7 @@
 		"path": "music/Lut_Gaye.mp3",
 		"img": "img/Lut_Gaye.jpeg",
 		"singer": "Emraan Hashmi & Jubin Nautiyal",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "69",
@@ -549,7 +549,7 @@
 		"path": "music/Main_Tera_Boyfriend.mp3",
 		"img": "img/Main_Tera_Boyfriend.jpeg",
 		"singer": "Arjit Singh & Neha Kakkar",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "70",
@@ -557,7 +557,7 @@
 		"path": "music/MashAllah.mp3",
 		"img": "img/MashAllah.jpeg",
 		"singer": "Shreya Ghoshal & Wajid",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "71",
@@ -565,7 +565,7 @@
 		"path": "music/Meri_Aashiqui.mp3",
 		"img": "img/Meri_Aashiqui.jpeg",
 		"singer": "Jubin Nautiyal",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "72",
@@ -573,7 +573,7 @@
 		"path": "music/Muskurane.mp3",
 		"img": "img/Muskurane.jpeg",
 		"singer": "Arijit Singh",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "73",
@@ -581,7 +581,7 @@
 		"path": "music/Nashe_Si_Chadh_Gayi.mp3",
 		"img": "img/Nashe_Si_Chadh_Gayi.webp",
 		"singer": "Arijit Singh",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "74",
@@ -589,7 +589,7 @@
 		"path": "music/Nit_Khair_Manga.mp3",
 		"img": "img/Nit_Khair_Manga.jpeg",
 		"singer": "Rahat Fateh Ali Khan",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "75",
@@ -597,7 +597,7 @@
 		"path": "music/O_Saki_Saki.mp3",
 		"img": "img/O_Saki_Saki.jpeg",
 		"singer": "B Praak, Neha Kakkar & Tulsi Kumar",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "76",
@@ -605,7 +605,7 @@
 		"path": "music/Pachtaoge.mp3",
 		"img": "img/Pachtaoge.jpeg",
 		"singer": "Arijit Singh",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "77",
@@ -613,7 +613,7 @@
 		"path": "music/Pal.mp3",
 		"img": "img/Pal.jpeg",
 		"singer": "Arijit Singh & Shreya Ghoshal",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "78",
@@ -621,7 +621,7 @@
 		"path": "music/Party_On_My_Mind.mp3",
 		"img": "img/Party_On_My_Mind.jpeg",
 		"singer": "Yo Yo Honey Singh",
-		"genre": " "
+		"genre": "Club"
 	},
 	{
 		"id": "79",
@@ -629,7 +629,7 @@
 		"path": "music/Pee_Loon.mp3",
 		"img": "img/Pee_Loon.jpeg",
 		"singer": "Mohit Chauhan",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "80",
@@ -637,7 +637,7 @@
 		"path": "music/Phir_Bhi_Tumko_Chaahunga.mp3",
 		"img": "img/Phir_Bhi_Tumko_Chaahunga.jpeg",
 		"singer": "Arijit Singh, Mithoon & Shashaa Tirupati",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "81",
@@ -645,7 +645,7 @@
 		"path": "music/Phir_Kabhi.mp3",
 		"img": "img/Phir_Kabhi.jpeg",
 		"singer": "Arijit Singh",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "82",
@@ -653,7 +653,7 @@
 		"path": "music/Pyar_Humko_Bhi_Hai.mp3",
 		"img": "img/Pyar_Humko_Bhi_Hai.jpeg",
 		"singer": "Abhijeet & Alka Yagnik",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "83",
@@ -661,7 +661,7 @@
 		"path": "music/Qaafirana.mp3",
 		"img": "img/Qaafirana.jpeg",
 		"singer": "Arijit Singh & Nikhita Gandhi",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "84",
@@ -669,7 +669,7 @@
 		"path": "music/Raanjhanaa.mp3",
 		"img": "img/Raanjhanaa.jpeg",
 		"singer": "Jaswinder Singh & Shiraz Uppal",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "85",
@@ -677,7 +677,7 @@
 		"path": "music/Raat_Bhar.mp3",
 		"img": "img/Raat_Bhar.webp",
 		"singer": "Arijit Singh & Shreya Ghoshal",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "86",
@@ -685,7 +685,7 @@
 		"path": "music/Rabba_Main_Toh_Mar_Gaya_Oye.mp3",
 		"img": "img/Rabba_Main_Toh_Mar_Gaya_Oye.webp",
 		"singer": "Rahat Fateh Ali Khan",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "87",
@@ -693,7 +693,7 @@
 		"path": "music/Radha.mp3",
 		"img": "img/Radha.jpeg",
 		"singer": "Shekhar Ravjiani, Shreya Ghoshal, Udit Narayan & Vishal Dadlani",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "88",
@@ -701,7 +701,7 @@
 		"path": "music/Sau_Tarah_Ke.mp3",
 		"img": "img/Sau_Tarah_Ke.jpeg",
 		"singer": "Amit Mishra, Jonita Gandhi & Pritam",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "89",
@@ -709,7 +709,7 @@
 		"path": "music/Saude_Bazzi.mp3",
 		"img": "img/Saude_Baazi.webp",
 		"singer": "Javed Ali",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "90",
@@ -717,7 +717,7 @@
 		"path": "music/Sawan_Aaya_Hai.mp3",
 		"img": "img/Sawan_Aaya_Hai.jpeg",
 		"singer": "Arijit Singh",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "91",
@@ -725,7 +725,7 @@
 		"path": "music/Shayad.mp3",
 		"img": "img/Shayad.jpeg",
 		"singer": "Arijit Singh",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "92",
@@ -733,7 +733,7 @@
 		"path": "music/Shukran_Allah.mp3",
 		"img": "img/Shukran_Allah.webp",
 		"singer": "Sonu Nigam",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "93",
@@ -741,7 +741,7 @@
 		"path": "music/Slow_Motion.mp3",
 		"img": "img/Slow_Motion.webp",
 		"singer": "Nakash Aziz & Shreya Ghoshal",
-		"genre": " "
+		"genre": "Club"
 	},
 	{
 		"id": "94",
@@ -749,7 +749,7 @@
 		"path": "music/Soniyo.mp3",
 		"img": "img/Soniyo.jpeg",
 		"singer": "Shreya Ghoshal & Sonu Nigam",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "95",
@@ -757,7 +757,7 @@
 		"path": "music/Suno_Na_Suno_Na.mp3",
 		"img": "img/Suno_Na_Suno_Na.jpeg",
 		"singer": "Abhijeet Bhattacharya",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "96",
@@ -765,7 +765,7 @@
 		"path": "music/Sweetheart.mp3",
 		"img": "img/Sweetheart.jpeg",
 		"singer": "Dev Negi",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "97",
@@ -773,7 +773,7 @@
 		"path": "music/Tauba_Tumhare_Yeh_Ishare.mp3",
 		"img": "img/Tauba_Tumhare_Yeh_Ishare.jpeg",
 		"singer": "Abhijeet Bhattacharya",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "98",
@@ -781,7 +781,7 @@
 		"path": "music/Tera_Fitoor.mp3",
 		"img": "img/Tera_Fitoor.jpeg",
 		"singer": "Arijit Singh",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "99",
@@ -789,7 +789,7 @@
 		"path": "music/Tera_Hone_Laga_Hoon.mp3",
 		"img": "img/Tera_Hone_Laga_Hoon.jpeg",
 		"singer": "Alisha Chinoy & Atif Aslam",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "100",
@@ -797,7 +797,7 @@
 		"path": "music/Tera_Rastaa_Chhodoon_Na.mp3",
 		"img": "img/Tera_Rastaa_Chhodoon_Na.webp",
 		"singer": "Amitabh Bhattacharya & Anusha Mani",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "101",
@@ -805,7 +805,7 @@
 		"path": "music/Tere_Bin.mp3",
 		"img": "img/Tere_Bin.jpeg",
 		"singer": "Rahat Fateh Ali Khan",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "102",
@@ -813,7 +813,7 @@
 		"path": "music/Tere_Bin_Nahi_Laage-Male.mp3",
 		"img": "img/Tere_Bin_Nahi_Laage-Male.jpeg",
 		"singer": "Uzair Jaswal",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "103",
@@ -821,7 +821,7 @@
 		"path": "music/Tere_Bin_Nahi_Laage.mp3",
 		"img": "img/Tere_Bin_Nahi_Laage.webp",
 		"singer": "Aishwarya Majmudar, Alam Khan, Daboo Malik & Tulsi Kumar",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "104",
@@ -829,7 +829,7 @@
 		"path": "music/Tere_Naina_Maar_Hi_Daalenge.mp3",
 		"img": "img/Tere_Naina_Maar_Hi_Daalenge.jpeg",
 		"singer": "Shreya Ghoshal",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "105",
@@ -837,7 +837,7 @@
 		"path": "music/Teri_Jhuki_Nazar.mp3",
 		"img": "img/Teri_Jhuki_Nazar.jpeg",
 		"singer": "Shafqat Amanat Ali",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "106",
@@ -845,7 +845,7 @@
 		"path": "music/Teri_Ore.mp3",
 		"img": "img/Teri_Ore.jpeg",
 		"singer": "Rahat Fateh Ali Khan & Shreya Ghoshal",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "107",
@@ -853,7 +853,7 @@
 		"path": "music/The_Humma_Song.mp3",
 		"img": "img/The_Humma_Song.webp",
 		"singer": "Badshah, Jubin Nautiyal & Shashaa Tirupati",
-		"genre": " "
+		"genre": "Club"
 	},
 	{
 		"id": "108",
@@ -861,7 +861,7 @@
 		"path": "music/The_Jawaani_Song.mp3",
 		"img": "img/The_Jawaani_Song.jpeg",
 		"singer": "Payal Dev & Vishal Dadlani",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "109",
@@ -869,7 +869,7 @@
 		"path": "music/Thoda_Thoda_Pyaar.mp3",
 		"img": "img/Thoda_Thoda_Pyar.jpeg",
 		"singer": "Stebin Ben",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "110",
@@ -877,7 +877,7 @@
 		"path": "music/Thodi_Der.mp3",
 		"img": "img/Thodi_Der.jpeg",
 		"singer": "Farhan Saeed & Shreya Ghoshal",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "111",
@@ -885,7 +885,7 @@
 		"path": "music/Titli.mp3",
 		"img": "img/Titli.webp",
 		"singer": "Chinmayi Sripaada & Gopi Sunder",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "112",
@@ -893,7 +893,7 @@
 		"path": "music/Tu_Chahiye.mp3",
 		"img": "img/Tu_Chahiye.jpeg",
 		"singer": "Atif Aslam",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "113",
@@ -901,7 +901,7 @@
 		"path": "music/Tum_Saath_Ho.mp3",
 		"img": "img/Tum_Saath_Ho.jpeg",
 		"singer": "Alka Yagnik & Arijit Singh",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "114",
@@ -909,7 +909,7 @@
 		"path": "music/Tum_Tak.mp3",
 		"img": "img/Tum_Tak.jpeg",
 		"singer": "Javed Ali, Kirti Sagathia & Pooja AV",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "115",
@@ -917,7 +917,7 @@
 		"path": "music/Tune_Maari_Entriyaan.mp3",
 		"img": "img/Tune_Maari_Entriyaan.webp",
 		"singer": "Bappi Lahiri, KK, Neeti Mohan & Vishal Dadlani",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "116",
@@ -925,7 +925,7 @@
 		"path": "music/Yaad_Piya_Ki_Aane_Lagi.mp3",
 		"img": "img/Yaad_Piya_Ki_Aane_Lagi.jpeg",
 		"singer": "Neha Kakkar",
-		"genre": " "
+		"genre": "Club"
 	},
 	{
 		"id": "117",
@@ -933,7 +933,7 @@
 		"path": "music/Yaar_Naa_Miley.mp3",
 		"img": "img/Yaar_Naa_Miley.webp",
 		"singer": "Jasmine Sandlas & Yo Yo Honey Singh",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "118",
@@ -941,7 +941,7 @@
 		"path": "music/Zaalima.mp3",
 		"img": "img/Zaalima.jpeg",
 		"singer": "Arijit Singh & Harshdeep Kaur",
-		"genre": " "
+		"genre": "Romantic"
 	},
 	{
 		"id": "119",
@@ -949,7 +949,7 @@
 		"path": "music/Zilla_Hilela.mp3",
 		"img": "img/Zilla_Hilela.jpeg",
 		"singer": "Dev Negi & Monali Thakur",
-		"genre": " "
+		"genre": "Hot Hits"
 	},
 	{
 		"id": "120",
@@ -957,6 +957,6 @@
 		"path": "music/Zindagi.mp3",
 		"img": "img/Zindagi.webp",
 		"singer": "Jubin Nautiyal",
-		"genre": " "
+		"genre": "Romantic "
 	}
 ]

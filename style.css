@@ -341,41 +341,53 @@ input[type="range"]::-webkit-slider-thumb{
 
 .documentation_body{
 	position: absolute;
-	height: 80%;
+	height: 80vh;
 	width: 100%;
 	top: 10.5%;
-	margin-top: 30px;
-	/* overflow: scroll; */
-	/* overflow: auto; */
+	margin-top: 40px;
 	overflow-y: auto;
 }
 
-::-webkit-scrollbar{
-	display: none;
-}
-
-#playlist{
-	position: relative;
-	height: 90%;
-	width: 90%;
-}
-
-#playlist h3{
+#find {
+	color: rgb(226, 230, 179);
 	text-align: center;
-	top: 0;
-	padding-top: 22px ;
-	color: navajowhite;
+	bottom: 20px;
+	position: fixed;
 }
 
-.documentation_body h2{
-	font-size: 1.25em;
-	padding-top: 50px;
+#find a {
+	text-decoration: none;
+
 }
 
-.documentation_body h2 ol{
-	margin: 0 50px;
-	padding-bottom: 650px;
+#find a:hover {
+	color: rgb(215, 224, 88);
+	text-decoration: underline;
 }
+
+
+
+#list{
+	position: fixed;
+	overflow-y: scroll;
+	margin-left: 6px;
+	margin-right: 15px;
+	padding-bottom: 200px;
+	height: 75vh;
+	width: 99%;
+}
+
+#list a {
+	color: white;
+	text-decoration: none;
+}
+
+#list a:hover {
+	color: rgb(220, 226, 226);
+	text-decoration: underline;
+	cursor: pointer;
+}
+
 
 /* #list a:nth-child(3n) {
 	color: red;
@@ -389,16 +401,61 @@ input[type="range"]::-webkit-slider-thumb{
 	color: blue;
 } */
 
-#list a {
-	color: white;
-	text-decoration: none;
+
+/*
+
+::-webkit-scrollbar{
+	display: none;
 }
 
-#list a:hover {
-	color: rgb(220, 226, 226);
-	text-decoration: underline;
-	cursor: pointer;
+*/
+
+/* ---------scroll show ------ */
+
+::-webkit-scrollbar {
+	width: 10px;
 }
+  
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey;
+	border-radius: 10px;
+}
+  
+::-webkit-scrollbar-thumb {
+	background: rgb(66, 120, 156);
+	border-radius: 10px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+	background: #b30000;
+} 
+  
+/* ------- scroll show --------- */
+
+#playlist{
+	position: relative;
+	height: 90%;
+	width: 90%;
+	text-align: center;
+}
+
+#playlist h4{
+	text-align: center;
+	top: 0;
+	padding-top: 22px ;
+	color: navajowhite;
+}
+
+#genre {
+	width: 50%;
+	margin-top: 5px;
+	padding: 3px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	outline: none;
+
+}
+
 
 @media screen and (max-width: 600px) and (min-width: 220px){
 	.right, .left{

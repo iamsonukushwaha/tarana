@@ -43,7 +43,7 @@ fetch("https://www.sonu.live/tarana/db.json")
                All_song.forEach(e => {
                     if (e.genre == gen) {
                          link = document.createElement('a');
-                         link.innerHTML = `${e.id}. ${e.name} &rarr;${e.singer} type<br/><br/>`;
+                         link.innerHTML = `${e.id}. ${e.name} &rarr;${e.singer}<br/><br/>`;
 
                          link.addEventListener('click', function () {
                               // console.log(e.id);
@@ -68,7 +68,7 @@ fetch("https://www.sonu.live/tarana/db.json")
 
                     } else if (gen == '') {
                          link = document.createElement('a');
-                         link.innerHTML = `${e.id}. ${e.name} &rarr;${e.singer} type<br/><br/>`;
+                         link.innerHTML = `${e.id}. ${e.name} &rarr;${e.singer}<br/><br/>`;
 
                          link.addEventListener('click', function () {
                               // console.log(e.id);
@@ -99,7 +99,7 @@ fetch("https://www.sonu.live/tarana/db.json")
 
           All_song.forEach(element => {
                link = document.createElement('a');
-               link.innerHTML = `${element.id}. ${element.name} &rarr;${element.singer} type<br/><br/>`;
+               link.innerHTML = `${element.id}. ${element.name} &rarr;${element.singer}<br/><br/>`;
 
                link.addEventListener('click', function () {
                     // console.log(element.id);

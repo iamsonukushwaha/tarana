@@ -1,8 +1,8 @@
 
-let previous = document.querySelector('#pre'), play = document.querySelector('#play'), next = document.querySelector('#next'), title = document.querySelector('#title'), recent_volume = document.querySelector('#volume'), volume_icon = document.querySelector('#volume_icon'), volume_show = document.querySelector('#volume_show'), slider = document.querySelector('#duration_slider'), full_duration = document.querySelector('#full_duration'), passed_duration = document.querySelector('#passed_duration'), track_image = document.querySelector('#track_image'), present = document.querySelector('#present'), total = document.querySelector('#total'), artist = document.querySelector('#artist'), main = document.querySelector('#main'), list = document.querySelector('#list'), repeat = document.querySelector('#repeat'), shuffle = document.querySelector('#shuffle');
+let previous = document.querySelector('#pre'), play = document.querySelector('#play'), next = document.querySelector('#next'), title = document.querySelector('#title'), recent_volume = document.querySelector('#volume'), volume_icon = document.querySelector('#volume_icon'), volume_show = document.querySelector('#volume_show'), slider = document.querySelector('#duration_slider'), full_duration = document.querySelector('#full_duration'), passed_duration = document.querySelector('#passed_duration'), track_image = document.querySelector('#track_image'), present = document.querySelector('#present'), total = document.querySelector('#total'), artist = document.querySelector('#artist'), main = document.querySelector('#main'), list = document.querySelector('#list'), repeat = document.querySelector('#repeat'), shuffle = document.querySelector('#shuffle'), genreSearch = document.querySelector('#genre');
 
 
-let timer, link, All_song, max, index_no = 0;
+let timer, link, All_song, max, gen, index_no = 0;
 
 // creating an audio Element.
 let track = document.createElement('audio');
@@ -35,12 +35,67 @@ fetch("https://www.sonu.live/tarana/db.json")
           total.innerHTML = All_song.length;
           present.innerHTML = index_no + 1;
 
+          genreSearch.addEventListener('input', function () {
+               list.innerHTML = '';
+               // console.log(this.value);
+               gen = this.value;
+               // console.log(gen);
+               All_song.forEach(e => {
+                    if (e.genre == gen) {
+                         link = document.createElement('a');
+                         link.innerHTML = `${e.id}. ${e.name} &rarr;${e.singer} type<br/><br/>`;
+
+                         link.addEventListener('click', function () {
+                              // console.log(e.id);
+                              // console.log(All_song[e.id-1]);
+                              index_no = e.id - 1;
+                              track.src = All_song[e.id - 1].path;
+                              title.innerHTML = All_song[e.id - 1].name;
+                              track_image.src = e.img;
+                              artist.innerHTML = e.singer;
+                              present.innerHTML = All_song[e.id - 1].id;
+                              playsong();
+
+                              nochange();
+                              clearInterval(timer);
+                              reset_slider();
+
+                         });
+
+                         list.append(link);
+
+                    } else if (gen == ''){
+                         link = document.createElement('a');
+                         link.innerHTML = `${e.id}. ${e.name} &rarr;${e.singer} type<br/><br/>`;
+
+                         link.addEventListener('click', function () {
+                              // console.log(e.id);
+                              // console.log(All_song[e.id-1]);
+                              index_no = e.id - 1;
+                              track.src = All_song[e.id - 1].path;
+                              title.innerHTML = All_song[e.id - 1].name;
+                              track_image.src = e.img;
+                              artist.innerHTML = e.singer;
+                              present.innerHTML = All_song[e.id - 1].id;
+                              playsong();
+
+                              nochange();
+                              clearInterval(timer);
+                              reset_slider();
+
+                         });
+
+                         list.append(link);
+                    }
+               });
+
+          });
+
+
+
           All_song.forEach(element => {
-               // console.log(element.singer);
-
                link = document.createElement('a');
-               link.innerHTML = `${element.id}. ${element.name} &rarr; ${element.singer} <br/><br/>`;
-
+               link.innerHTML = `${element.id}. ${element.name} &rarr;${element.singer} type<br/><br/>`;
 
                link.addEventListener('click', function () {
                     // console.log(element.id);
@@ -59,7 +114,7 @@ fetch("https://www.sonu.live/tarana/db.json")
 
                });
 
-               list.appendChild(link);
+               list.append(link);
 
           });
 
@@ -245,7 +300,7 @@ function change_duration() {
      slider_position = track.duration * (slider.value / 100);
      track.currentTime = slider_position;
      curmins = Math.floor(track.currentTime / 60), cursecs = Math.floor(track.currentTime - curmins * 60);
-     
+
 
      if (cursecs < 10) {
           passed_duration.innerHTML = `${curmins} : 0${cursecs}`;
@@ -257,7 +312,7 @@ function change_duration() {
 slider.onchange = function () {
      slider_position = track.duration * (slider.value / 100);
      track.currentTime = slider_position;
-    
+
 }
 
 // for repeat

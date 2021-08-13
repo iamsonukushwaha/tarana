@@ -9,7 +9,7 @@ let track = document.createElement('audio');
 
 
 
-fetch("https://www.sonu.live/tarana/db.json")
+fetch("http://127.0.0.1:5500/db.json")
      .then(function (response) {
           return response.json();
      })
@@ -54,17 +54,19 @@ fetch("https://www.sonu.live/tarana/db.json")
                               track_image.src = e.img;
                               artist.innerHTML = e.singer;
                               present.innerHTML = All_song[e.id - 1].id;
-                              playsong();
 
                               nochange();
                               clearInterval(timer);
                               reset_slider();
 
+                              playsong();
+
+
                          });
 
                          list.append(link);
 
-                    } else if (gen == ''){
+                    } else if (gen == '') {
                          link = document.createElement('a');
                          link.innerHTML = `${e.id}. ${e.name} &rarr;${e.singer} type<br/><br/>`;
 
@@ -77,11 +79,13 @@ fetch("https://www.sonu.live/tarana/db.json")
                               track_image.src = e.img;
                               artist.innerHTML = e.singer;
                               present.innerHTML = All_song[e.id - 1].id;
-                              playsong();
+
 
                               nochange();
                               clearInterval(timer);
                               reset_slider();
+
+                              playsong();
 
                          });
 
@@ -106,11 +110,13 @@ fetch("https://www.sonu.live/tarana/db.json")
                     track_image.src = element.img;
                     artist.innerHTML = element.singer;
                     present.innerHTML = All_song[element.id - 1].id;
-                    playsong();
+
 
                     nochange();
                     clearInterval(timer);
                     reset_slider();
+
+                    playsong();
 
                });
 
@@ -299,6 +305,14 @@ var curmins, cursecs;
 function change_duration() {
      slider_position = track.duration * (slider.value / 100);
      track.currentTime = slider_position;
+}
+
+function changeDur() {
+     
+
+
+     slider_position = track.duration * (slider.value / 100);
+     track.currentTime = slider_position;
      curmins = Math.floor(track.currentTime / 60), cursecs = Math.floor(track.currentTime - curmins * 60);
 
 
@@ -307,11 +321,6 @@ function change_duration() {
      } else {
           passed_duration.innerHTML = `${curmins} : ${cursecs}`;
      }
-}
-
-slider.onchange = function () {
-     slider_position = track.duration * (slider.value / 100);
-     track.currentTime = slider_position;
 
 }
 

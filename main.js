@@ -27,9 +27,7 @@ fetch("https://www.sonu.live/tarana/db.json")
           artist.innerHTML = All_song[index_no].singer;
 
           track.load();
-          // console.log(recent_volume.value);
           track.volume = recent_volume.value / 100;
-          // console.log(track.volume);
 
           timer = setInterval(range_slider, 1000);
           total.innerHTML = All_song.length;
@@ -37,17 +35,13 @@ fetch("https://www.sonu.live/tarana/db.json")
 
           genreSearch.addEventListener('input', function () {
                list.innerHTML = '';
-               // console.log(this.value);
                gen = this.value;
-               // console.log(gen);
                All_song.forEach(e => {
                     if (e.genre == gen) {
                          link = document.createElement('a');
                          link.innerHTML = `${e.id}. ${e.name} &rarr;${e.singer}<br/><br/>`;
 
                          link.addEventListener('click', function () {
-                              // console.log(e.id);
-                              // console.log(All_song[e.id-1]);
                               index_no = e.id - 1;
                               track.src = All_song[e.id - 1].path;
                               title.innerHTML = All_song[e.id - 1].name;
@@ -56,7 +50,6 @@ fetch("https://www.sonu.live/tarana/db.json")
                               present.innerHTML = All_song[e.id - 1].id;
 
                               nochange();
-                              clearInterval(timer);
                               reset_slider();
 
                               playsong();
@@ -71,8 +64,6 @@ fetch("https://www.sonu.live/tarana/db.json")
                          link.innerHTML = `${e.id}. ${e.name} &rarr;${e.singer}<br/><br/>`;
 
                          link.addEventListener('click', function () {
-                              // console.log(e.id);
-                              // console.log(All_song[e.id-1]);
                               index_no = e.id - 1;
                               track.src = All_song[e.id - 1].path;
                               title.innerHTML = All_song[e.id - 1].name;
@@ -82,7 +73,6 @@ fetch("https://www.sonu.live/tarana/db.json")
 
 
                               nochange();
-                              clearInterval(timer);
                               reset_slider();
 
                               playsong();
@@ -113,7 +103,6 @@ fetch("https://www.sonu.live/tarana/db.json")
 
 
                     nochange();
-                    clearInterval(timer);
                     reset_slider();
 
                     playsong();

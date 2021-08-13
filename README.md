@@ -14,9 +14,7 @@ Download **Android App** [Tarana](https://github.com/flyingsonu122/tarana/releas
 
 <br/>
 
-For any queries, suggestions or support. 
-
-Email us at [taranacare@gmail.com](mailto:taranacare@gmail.com)
+For any queries, suggestions or support. Please email us at [taranacare@gmail.com](mailto:taranacare@gmail.com)
 
 <br/><br/><br/>
 

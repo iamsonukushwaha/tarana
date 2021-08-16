@@ -348,12 +348,20 @@ input[type="range"]::-webkit-slider-thumb{
 	overflow-y: auto;
 }
 
-#find {
-	color: rgb(226, 230, 179);
+.visits {
+	color: rgb(76, 82, 9);
 	text-align: center;
-	bottom: 20px;
+	bottom: 10px;
 	position: fixed;
 }
+
+/* #find {
+	color: rgb(226, 230, 179);
+	text-align: center;
+	bottom: 10px;
+	position: fixed;
+}
+
 
 #find a {
 	text-decoration: none;
@@ -363,7 +371,7 @@ input[type="range"]::-webkit-slider-thumb{
 #find a:hover {
 	color: rgb(215, 224, 88);
 	text-decoration: underline;
-}
+} */
 
 
 
@@ -372,21 +380,34 @@ input[type="range"]::-webkit-slider-thumb{
 	overflow-y: scroll;
 	margin-left: 6px;
 	margin-right: 15px;
-	padding-bottom: 200px;
+	padding-bottom: 10px;
 	height: 75vh;
 	width: 99%;
 }
 
 #list a {
-	color: white;
+	display: flex;
+	flex-direction: column;
+	padding: 8px 4px;
+	margin: 10px auto;
 	text-decoration: none;
+	width: 80%;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	border: 3px solid #f6f6f6;
+	border-radius: 5px;
+	background-color: white;
 }
 
 #list a:hover {
-	color: rgb(220, 226, 226);
-	text-decoration: underline;
+	color: rgb(68, 13, 52);
 	cursor: pointer;
+	box-shadow: 3px 3px 10px #ccc;
+  	transform: translateX(-1px);
 }
+
+
 
 
 /* #list a:nth-child(3n) {
@@ -435,7 +456,7 @@ input[type="range"]::-webkit-slider-thumb{
 #playlist{
 	position: relative;
 	height: 90%;
-	width: 90%;
+	width: 60%;
 	text-align: center;
 }
 
@@ -514,16 +535,7 @@ input[type="range"]::-webkit-slider-thumb{
 	}
 	.documentation_page{
 		top: 0;
-		height: 98.28%;
-	}
-	.documentation_body h1{
-		font-size: 2em;
-	}
-	.documentation_body h2{
-		font-size: 1em;
-	}
-	.documentation_body h2 ol{
-		margin: 0 30px;
+		height: 100%;
 	}
 	.right .middle button{
 		height: 40px;
@@ -545,6 +557,12 @@ input[type="range"]::-webkit-slider-thumb{
 		top: 5%;
 		padding-top: 50px ;
 		color: navajowhite;
+	}
+
+	#list a {
+		font-size: 12px;
+		padding: 5px 3px;
+		margin: 10px auto;
 	}
 }
 
@@ -601,14 +619,4 @@ input[type="range"]::-webkit-slider-thumb{
 		height: 82.5%;
 		top: 12.5%;
 	}
-	.documentation_body h1{
-		font-size: 2em;
-	}
-	.documentation_body h2{
-		font-size: 1em;
-	}
-	.documentation_body h2 ol{
-		margin: 0 35px;
-	}
 }
-

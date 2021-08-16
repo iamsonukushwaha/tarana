@@ -59,7 +59,8 @@
             <!--- song duration part --->
             <div class="duration">
                <p id="passed_duration">0:00</p>
-               <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()" oninput="changeDur()">
+               <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()"
+                  oninput="changeDur()">
                <p id="full_duration">0:00</p>
             </div>
          </div>
@@ -79,18 +80,27 @@
             </select>
          </div>
          <div class="documentation_body">
-            <h2>
-               <ol id="list">
+            <div id="list">
 
-               </ol>
-            </h2>
+            </div>
          </div>
+         <p class="visits"></p>
          <!---  
          <p id="find">Find us on <a href="https://github.com/flyingsonu122/tarana/graphs/contributors" target="_blank" rel="noopener noreferrer">Tarana</a></p>
          --->
       </div>
 
+      <script>
+         function cb(response) {
+            document.querySelector('.visits').innerHTML = `Visits : ${response.value}`;
+         }
+
+
+      </script>
+
+
       <script src="./main.js"></script>
+      <script async src="https://api.countapi.xyz/hit/sonu.live/tarana?callback=cb"></script>
    </body>
 
 </html>

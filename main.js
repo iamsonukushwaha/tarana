@@ -39,7 +39,7 @@ fetch("https://www.sonu.live/tarana/db.json")
                All_song.forEach(e => {
                     if (e.genre == gen) {
                          link = document.createElement('a');
-                         link.innerHTML = `${e.id}. ${e.name} &rarr;${e.singer}<br/><br/>`;
+                         link.innerHTML = `${e.id}. ${e.name} &rarr;${e.singer}`;
 
                          link.addEventListener('click', function () {
                               index_no = e.id - 1;
@@ -61,7 +61,7 @@ fetch("https://www.sonu.live/tarana/db.json")
 
                     } else if (gen == '') {
                          link = document.createElement('a');
-                         link.innerHTML = `${e.id}. ${e.name} &rarr;${e.singer}<br/><br/>`;
+                         link.innerHTML = `${e.id}. ${e.name} &rarr;${e.singer}`;
 
                          link.addEventListener('click', function () {
                               index_no = e.id - 1;
@@ -89,7 +89,7 @@ fetch("https://www.sonu.live/tarana/db.json")
 
           All_song.forEach(element => {
                link = document.createElement('a');
-               link.innerHTML = `${element.id}. ${element.name} &rarr;${element.singer}<br/><br/>`;
+               link.innerHTML = `${element.id}. ${element.name} &rarr;${element.singer}`;
 
                link.addEventListener('click', function () {
                     // console.log(element.id);
@@ -490,3 +490,7 @@ function nochange() {
      hide_show.innerText = '☰';
      hide_show.style.color = "#fff";
 }
+
+
+
+

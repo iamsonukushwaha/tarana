@@ -1,6 +1,6 @@
 <h1 align="center"> Tarana - Best Music Player </h1>
 
-Live Demo [sonu.live/tarana](https://www.sonu.live/tarana)
+Live Demo on [sonu.live/tarana](https://www.sonu.live/tarana)
 
 <br/>
 

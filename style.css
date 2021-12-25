@@ -1,5 +1,4 @@
 
-
 * {
     margin: 0;
     padding: 0;
@@ -361,11 +360,18 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .visits {
-    color: rgb(76, 82, 9);
-    text-align: center;
+    display: flex;
+    color: #000;
     bottom: 10px;
     position: fixed;
+    gap: 50vw;
 }
+
+#about{
+    color: white;
+    cursor: pointer;
+}
+
 
 
 /* #find {

@@ -7,11 +7,12 @@
 
 
 
-Live Demo on [sonu.live/tarana](https://www.sonu.live/tarana)
+# Live Demo on [sonu.live/tarana](https://www.sonu.live/tarana)
 
 <br/>
 
-Download **Android App** [Tarana](https://github.com/flyingsonu122/tarana/releases/download/v1.0/Tarana.apk)
+## Download **Android App** [Tarana](https://github.com/flyingsonu122/tarana/releases/download/v1.0/Tarana.apk)
+
 
 <!---
 

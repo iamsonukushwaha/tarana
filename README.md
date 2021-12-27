@@ -27,7 +27,7 @@ For any queries, suggestions or support. Please email us at [taranacare@gmail.co
 
 ## We do not have any license of these songs, copyright reserved to their respective owners.
 
-### we have made this web app for learning purpose.
+### We have made this web app for learning purpose.
 
 <br/><br/><br/>
 

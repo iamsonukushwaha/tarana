@@ -3,11 +3,11 @@
 
 
 
-<a href="https://www.singlebucks.live"><img align="center" src="https://raw.githubusercontent.com/singlebucks/tarana/master/images/1.Tarana_page-view.png"></a>
+<a href="https://singlebucks.blogspot.com/2022/01/tarana-best-music-player.html"><img align="center" src="https://raw.githubusercontent.com/singlebucks/tarana/master/images/1.Tarana_page-view.png"></a>
 
 
 
-# Live Demo on [sonu.live/tarana](https://www.sonu.live/tarana)
+# Live Demo on [sonu.live/tarana](https://rr2---sn-npoe7ne6.googlevideo.com/videoplayback?expire=1641080841&ei=iXfQYeqIGPOC-LYPys-f4AQ&ip=157.35.43.84&id=35a4c93a680139ca&itag=18&source=blogger&susc=bl&mime=video/mp4&vprv=1&dur=388.562&lmt=1641051986145017&txp=1311224&sparams=expire,ei,ip,id,itag,source,susc,mime,vprv,dur,lmt&sig=AOq0QJ8wRAIgVK55-o2IDwqotaG6GtbgI7MXJwa1ybv2oCi2w5MYFGwCIFuNNJrhPp4I2iJ2qCm2h8TUOqfc0LdDvXI_8aqv5JNA&cpn=YD9LdRHWM8cPJXxb&c=WEB_EMBEDDED_PLAYER&cver=1.20211215.00.01&redirect_counter=1&cm2rm=sn-qxay7l&req_id=b2bad602219da3ee&cms_redirect=yes&mh=3m&mm=34&mn=sn-npoe7ne6&ms=ltu&mt=1641052141&mv=m&mvi=2&pl=23&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRQIgKLhKyqGgvC2k1yxEPac8HY-S2-T2dkbv4jeLkIUivg8CIQCdOVtNRkT2-o4Q_O-TjQbxQS2LqlC0zTpUHdIjclHfmA%3D%3D)
 
 <br/>
 

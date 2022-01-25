@@ -1,7 +1,7 @@
 const searchForm = document.querySelector('#srh');
 
 const getSongs = async (term) => {
-    let uri = `https://www.sonu.live/music-player/songs/?_sort=name&_order=asc`;
+    let uri = `https://tarana-music-player.herokuapp.com/songs/?_sort=name&_order=asc`;
 
     if(term) {
         uri += `&q=${term}`;

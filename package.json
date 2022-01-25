@@ -5,13 +5,14 @@
   "main": "main.js",
   "scripts": {
     "start": "nodemon server.js",
-    "serve": "json-server --watch users.json"
+    "serve": "json-server --watch songs.json"
   },
   "keywords": [],
   "author": "Sonu Kumar Kushwaha <flyingsonu736@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",
+    "http-server": "^0.12.3",
     "json-server": "^0.16.3"
   },
   "devDependencies": {

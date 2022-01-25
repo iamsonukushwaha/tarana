@@ -1,45 +1,48 @@
-const searchForm = document.querySelector('#srh');
+// const searchForm = document.querySelector('#srh');
 
-const getSongs = async (term) => {
-    let uri = `https://tarana-music-player.herokuapp.com/songs/?_sort=name&_order=asc`;
+// const getSongs = async (term) => {
+//     let uri = `https://tarana-music-player.herokuapp.com/songs/?_sort=name&_order=asc`;
 
-    if(term) {
-        uri += `&q=${term}`;
-        list.innerHTML = "";
-    }
+//     if (term) {
+//         uri += `&q=${term}`;
+//         list.innerHTML = "";
+//     }
 
-    const res = await fetch(uri);
-    const data = await res.json();
-    
-    data.forEach(element => {
-        link = document.createElement('a');
-        link.innerHTML = `${element.id}. ${element.name} &rarr;${element.singer}`;
+//     const res = await fetch(uri);
+//     const data = await res.json();
 
-        link.addEventListener('click', function () {
-            index_no = element.id - 1;
-            track.src = All_song[element.id - 1].path;
-            title.innerHTML = All_song[element.id - 1].name;
-            track_image.src = element.img;
-            artist.innerHTML = element.singer;
-            present.innerHTML = All_song[element.id - 1].id;
+//     data.forEach(element => {
+//         link = document.createElement('a');
+//         link.innerHTML = `${element.id}. ${element.name} &rarr;${element.singer}`;
+
+//         // console.log(element);
+
+//         link.addEventListener('click', function () {
+//             track.src = element.path;
+//             title.innerHTML = element.name;
+//             track_image.src = element.img;
+//             artist.innerHTML = element.singer;
+//             present.innerHTML = element.id;
+
+//             total.innerHTML = All_song.length;
 
 
-            nochange();
-            reset_slider();
+//             nochange();
+//             reset_slider();
 
-            playsong();
+//             playsong();
 
-        });
-        
-        list.append(link);
-    });
+//         });
 
-}
+//         list.append(link);
+//     });
 
-searchForm.addEventListener('input', (e) => {
-    e.preventDefault();
-    getSongs(searchForm.value.trim());
+// }
 
-});
+// searchForm.addEventListener('input', (e) => {
+//     e.preventDefault();
+//     getSongs(searchForm.value.trim());
 
-window.addEventListener('DOMContentLoaded', () => getSongs());
+// });
+
+// // window.addEventListener('DOMContentLoaded', () => getSongs());

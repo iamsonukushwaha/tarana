@@ -18,6 +18,9 @@ const renderDetails = async () => {
     timer = setInterval(range_slider, 1000);
     present.innerHTML = song.id;
 
+    
+    total.innerHTML = All_song.length;
+
 }
 
 window.addEventListener('DOMContentLoaded', renderDetails);

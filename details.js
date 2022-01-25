@@ -1,7 +1,7 @@
 const id = new URLSearchParams(window.location.search).get('id');
 
 const renderDetails = async () => {
-    const res = await fetch(`https://www.sonu.live/music-player/songs/` + id);
+    const res = await fetch(`https://tarana-music-player.herokuapp.com/songs/` + id);
     if (!res.ok) {
         window.location.replace("./index.html");
     }

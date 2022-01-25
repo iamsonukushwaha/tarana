@@ -587,3 +587,7 @@ searchForm.addEventListener('input', (e) => {
     getSongs(searchForm.value.trim());
 
 });
+
+
+
+window.addEventListener('DOMContentLoaded', () => getSongs());

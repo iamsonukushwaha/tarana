@@ -1,4 +1,5 @@
-[
+{
+    "songs" : [
 	{
 		"id": "1",
 		"name": "Aabaad Barbaad",
@@ -959,4 +960,4 @@
 		"singer": "Jubin Nautiyal",
 		"genre": "Romantic "
 	}
-]
+]}

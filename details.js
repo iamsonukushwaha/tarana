@@ -7,9 +7,9 @@ const renderDetails = async () => {
     }
 
     const song = await res.json();
-    // track.src = song.path;
+    track.src = song.path;
     title.innerHTML = song.name;
-    // track_image.src = song.img;
+    track_image.src = song.img;
     artist.innerHTML = song.singer;
 
     track.load();

@@ -35,9 +35,9 @@ fetch("https://www.sonu.live/music-player/songs?_sort=name&_order=asc")
         All_song = data;
         max = All_song.length;
 
-        // track.src = All_song[index_no].path;
+        track.src = All_song[index_no].path;
         title.innerHTML = All_song[index_no].name;
-        // track_image.src = All_song[index_no].img;
+        track_image.src = All_song[index_no].img;
         artist.innerHTML = All_song[index_no].singer;
 
         track.load();

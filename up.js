@@ -26,7 +26,7 @@ let track = document.createElement('audio');
 
 
 
-fetch("https://www.sonu.live/music-player/songs?_sort=name&_order=asc")
+fetch("https://tarana-music-player.herokuapp.com/songs?_sort=name&_order=asc")
     .then(function (response) {
         return response.json();
     })

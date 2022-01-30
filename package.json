@@ -7,7 +7,10 @@
     "start": "nodemon server.js",
     "serve": "json-server --watch songs.json"
   },
-  "keywords": [],
+  "keywords": [
+    "tarana",
+    "music-player"
+  ],
   "author": "Sonu Kumar Kushwaha <flyingsonu736@gmail.com>",
   "license": "MIT",
   "dependencies": {

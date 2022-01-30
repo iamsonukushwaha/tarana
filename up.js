@@ -21,18 +21,18 @@ let previous = document.querySelector('#pre'),
 
 let timer, link, All_song, max, gen, index_no = 0;
 
+
 // creating an audio Element.
 let track = document.createElement('audio');
 
-
-
-fetch("https://tarana-music-player.herokuapp.com/songs?_sort=name&_order=asc")
+fetch("https://tarana-music-player.herokuapp.com/songs/?_sort=name&_order=asc")
     .then(function (response) {
         return response.json();
     })
     .then(function (data) {
 
         All_song = data;
+
         max = All_song.length;
 
         track.src = All_song[index_no].path;
@@ -47,81 +47,48 @@ fetch("https://tarana-music-player.herokuapp.com/songs?_sort=name&_order=asc")
         total.innerHTML = All_song.length;
         present.innerHTML = index_no + 1;
 
+        All_song.forEach(element => {
+            genLink(element);
+
+        });
+
         genreSearch.addEventListener('input', function () {
             list.innerHTML = '';
             gen = this.value;
             All_song.forEach(e => {
                 if (e.genre == gen) {
-                    link = document.createElement('a');
-                    link.innerHTML = `${e.id}. ${e.name} &rarr;${e.singer}`;
-
-                    link.addEventListener('click', function () {
-                        index_no = e.id - 1;
-                        track.src = All_song[e.id - 1].path;
-                        title.innerHTML = All_song[e.id - 1].name;
-                        track_image.src = e.img;
-                        artist.innerHTML = e.singer;
-                        present.innerHTML = All_song[e.id - 1].id;
-
-                        nochange();
-                        reset_slider();
-                        playsong();
-                    });
-
-                    list.append(link);
+                    genLink(e);
 
                 } else if (gen == '') {
-                    link = document.createElement('a');
-                    link.innerHTML = `${e.id}. ${e.name} &rarr;${e.singer}`;
-
-                    link.addEventListener('click', function () {
-                        index_no = e.id - 1;
-                        track.src = All_song[e.id - 1].path;
-                        title.innerHTML = All_song[e.id - 1].name;
-                        track_image.src = e.img;
-                        artist.innerHTML = e.singer;
-                        present.innerHTML = All_song[e.id - 1].id;
-
-
-                        nochange();
-                        reset_slider();
-                        playsong();
-
-                    });
-
-                    list.append(link);
+                    genLink(e);
                 }
             });
 
         });
 
-
-
-        All_song.forEach(element => {
-            link = document.createElement('a');
-            link.innerHTML = `${element.id}. ${element.name} &rarr;${element.singer}`;
-
-            link.addEventListener('click', function () {
-                index_no = element.id - 1;
-                track.src = All_song[element.id - 1].path;
-                title.innerHTML = All_song[element.id - 1].name;
-                track_image.src = element.img;
-                artist.innerHTML = element.singer;
-                present.innerHTML = All_song[element.id - 1].id;
-
-
-                nochange();
-                reset_slider();
-
-                playsong();
-
-            });
-
-            list.append(link);
-
-        });
-
     });
+
+
+function genLink(e) {
+    link = document.createElement('a');
+    link.innerHTML = `${e.name} &rarr;${e.singer}`;
+
+    link.addEventListener('click', function () {
+        index_no = e.id - 1;
+        track.src = All_song[e.id - 1].path;
+        title.innerHTML = All_song[e.id - 1].name;
+        track_image.src = e.img;
+        artist.innerHTML = e.singer;
+        present.innerHTML = All_song[e.id - 1].id;
+
+        nochange();
+        reset_slider();
+        playsong();
+    });
+
+    list.append(link);
+
+}
 
 
 var first_click = true;
@@ -234,30 +201,10 @@ function pausesong() {
 function next_song() {
     if (index_no < All_song.length - 1) {
         index_no += 1;
-        track.src = All_song[index_no].path;
-        title.innerHTML = All_song[index_no].name;
-        track_image.src = All_song[index_no].img;
-        artist.innerHTML = All_song[index_no].singer;
-
-        track.load();
-
-        timer = setInterval(range_slider, 1000);
-        total.innerHTML = All_song.length;
-        present.innerHTML = index_no + 1;
-        playsong();
+        out();
     } else {
         index_no = 0;
-        track.src = All_song[index_no].path;
-        title.innerHTML = All_song[index_no].name;
-        track_image.src = All_song[index_no].img;
-        artist.innerHTML = All_song[index_no].singer;
-
-        track.load();
-
-        timer = setInterval(range_slider, 1000);
-        total.innerHTML = All_song.length;
-        present.innerHTML = index_no + 1;
-        playsong();
+        out();
 
     }
 
@@ -268,31 +215,11 @@ function next_song() {
 function previous_song() {
     if (index_no > 0) {
         index_no -= 1;
-        track.src = All_song[index_no].path;
-        title.innerHTML = All_song[index_no].name;
-        track_image.src = All_song[index_no].img;
-        artist.innerHTML = All_song[index_no].singer;
-
-        track.load();
-
-        timer = setInterval(range_slider, 1000);
-        total.innerHTML = All_song.length;
-        present.innerHTML = index_no + 1;
-        playsong();
+        out();
 
     } else {
         index_no = All_song.length - 1;
-        track.src = All_song[index_no].path;
-        title.innerHTML = All_song[index_no].name;
-        track_image.src = All_song[index_no].img;
-        artist.innerHTML = All_song[index_no].singer;
-
-        track.load();
-
-        timer = setInterval(range_slider, 1000);
-        total.innerHTML = All_song.length;
-        present.innerHTML = index_no + 1;
-        playsong();
+        out();
     }
 }
 
@@ -360,18 +287,7 @@ function range_slider() {
             repeat.classList.remove('repeat');
             repeat.title = "Disable repeat";
             if (track.ended) {
-                // console.log(index_no);
-                track.src = All_song[index_no].path;
-                title.innerHTML = All_song[index_no].name;
-                track_image.src = All_song[index_no].img;
-                artist.innerHTML = All_song[index_no].singer;
-
-                track.load();
-
-                timer = setInterval(range_slider, 1000);
-                total.innerHTML = All_song.length;
-                present.innerHTML = index_no + 1;
-                playsong();
+                out();
 
             }
 
@@ -404,17 +320,7 @@ function range_slider() {
                 // console.log(anotherRandom);
                 index_no = anotherRandom;
                 // console.log(index_no);
-                track.src = All_song[index_no].path;
-                title.innerHTML = All_song[index_no].name;
-                track_image.src = All_song[index_no].img;
-                artist.innerHTML = All_song[index_no].singer;
-
-                track.load();
-
-                timer = setInterval(range_slider, 1000);
-                total.innerHTML = All_song.length;
-                present.innerHTML = index_no + 1;
-                playsong();
+                out();
             }
 
         } else {
@@ -431,41 +337,30 @@ function range_slider() {
         if (shuffle.classList.contains("selected") && repeat.innerHTML == '') {
             var random = Math.floor(Math.random() * max);
             index_no = random;
-            track.src = All_song[index_no].path;
-            title.innerHTML = All_song[index_no].name;
-            track_image.src = All_song[index_no].img;
-            artist.innerHTML = All_song[index_no].singer;
-
-            track.load();
-
-            timer = setInterval(range_slider, 1000);
-            total.innerHTML = All_song.length;
-            present.innerHTML = index_no + 1;
-            playsong();
+            out();
         } else if (repeat.innerHTML == '') {
             next_song();
         } else {
             if (track.ended) {
-                // console.log(index_no);
-                track.src = All_song[index_no].path;
-                title.innerHTML = All_song[index_no].name;
-                track_image.src = All_song[index_no].img;
-                artist.innerHTML = All_song[index_no].singer;
-
-                track.load();
-
-                timer = setInterval(range_slider, 1000);
-                total.innerHTML = All_song.length;
-                present.innerHTML = index_no + 1;
-                playsong();
-
+                out();
             }
         }
-
     }
-
 }
 
+function out() {
+    track.src = All_song[index_no].path;
+    title.innerHTML = All_song[index_no].name;
+    track_image.src = All_song[index_no].img;
+    artist.innerHTML = All_song[index_no].singer;
+
+    track.load();
+
+    timer = setInterval(range_slider, 1000);
+    total.innerHTML = All_song.length;
+    present.innerHTML = index_no + 1;
+    playsong();
+}
 
 // Function to open and close documentation.
 const hide_show = document.getElementById('hide_show'),
@@ -537,57 +432,3 @@ function n_ch() {
 }
 
 
-
-// search
-
-
-const searchForm = document.querySelector('#srh');
-
-const getSongs = async (term) => {
-    let uri = `https://tarana-music-player.herokuapp.com/songs/?_sort=name&_order=asc`;
-
-    if (term) {
-        uri += `&q=${term}`;
-        list.innerHTML = "";
-    }
-
-    const res = await fetch(uri);
-    const data = await res.json();
-
-    data.forEach(element => {
-        // link = document.createElement('a');
-        link.innerHTML = `${element.id}. ${element.name} &rarr;${element.singer}`;
-
-        // console.log(element);
-
-        link.addEventListener('click', function () {
-            track.src = element.path;
-            title.innerHTML = element.name;
-            track_image.src = element.img;
-            artist.innerHTML = element.singer;
-            present.innerHTML = element.id;
-
-            total.innerHTML = All_song.length;
-
-
-            nochange();
-            reset_slider();
-
-            playsong();
-
-        });
-
-        list.append(link);
-    });
-
-}
-
-searchForm.addEventListener('input', (e) => {
-    e.preventDefault();
-    getSongs(searchForm.value.trim());
-
-});
-
-
-
-window.addEventListener('DOMContentLoaded', () => getSongs());

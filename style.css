@@ -222,6 +222,7 @@ input[type="range"]::-webkit-slider-thumb {
     justify-content: center;
     cursor: pointer;
     outline: none;
+    margin: 0 10px;
 }
 
 .right .middle button#play {

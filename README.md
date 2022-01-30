@@ -28,7 +28,7 @@
 
 <br/>
 
-For any queries, suggestions or support. Please email us at [taranacare@gmail.com](mailto:taranacare@gmail.com)
+For any queries, suggestions or support. Please email us at **[taranacare@gmail.com](mailto:taranacare@gmail.com)**
 
 
 ## We do not have any license of these songs, copyright reserved to their respective owners.

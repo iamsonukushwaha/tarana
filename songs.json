@@ -959,6 +959,31 @@
 			"img": "img/Zindagi.webp",
 			"singer": "Jubin Nautiyal",
 			"genre": "Romantic "
+		},
+		{
+			"id": "121",
+			"name": "Alvida",
+			"path": "music/Alvida- Life in a Metro, KK.mp3",
+			"img": "img/Alvida.jpg",
+			"singer": "KK",
+			"genre": "Soft Rock"
+		},
+		{
+			"id": "122",
+			"name": "Yaroon",
+			"path": "music/Yaaron- KK.mp3",
+			"img": "img/Yaroon.jpg",
+			"singer": "KK",
+			"genre": "POP"
+		},
+		{
+			"id": "123",
+			"name": "O Sanam",
+			"path": "music/O Sanam - Sunoh,  Lucky Ali .mp3",
+			"img": "img/O Sanam.jpg",
+			"singer": "Lucky Ali",
+			"genre": "Indie"
 		}
+
 	]
 }

@@ -959,6 +959,60 @@
 			"img": "img/Zindagi.webp",
 			"singer": "Jubin Nautiyal",
 			"genre": "Romantic "
+		},
+		{
+			"id": "121",
+			"name": "Baarishien",
+			"path": "music/Baarishien-Anuv-Jain.mp3",
+			"img": "img/taranalogo.jpeg",
+			"singer": "Anuv Jain",
+			"genre": "Romantic "
+
+		},
+		{
+			"id": "122",
+			"name": "Har Ek Pal",
+			"path": "music/Har Ek Pal Ashu Shukla_192-(PagalWorld.uk).mp3",
+			"img": "img/taranalogo.jpeg",
+			"singer": "Ashu Shukla",
+			"genre": "Romantic "
+
+		},
+		{
+			"id": "123",
+			"name": "Kitna-Hai-Pyaar",
+			"path": "music/Kitna-Hai-Pyaar_192(PagalWorld).mp3",
+			"img": "img/taranalogo.jpeg",
+			"singer": "Ashu Shukla",
+			"genre": "Romantic "
+
+		},		
+		{
+			"id": "124",
+			"name": "Maula",
+			"path": "music/Maula-Anuv-Jain.mp3",
+			"img": "img/taranalogo.jpeg",
+			"singer": "Anuv Jain",
+			"genre": "Romantic "
+
+		},	
+		{
+			"id": "125",
+			"name": "Ocean",
+			"path": "music/Ocean-Anuv-Jain.mp3",
+			"img": "img/taranalogo.jpeg",
+			"singer": "Anuv Jain",
+			"genre": "Romantic "
+
+		},	
+		{
+			"id": "126",
+			"name": "Riha",
+			"path": "music/Riha-Anuv-Jain.mp3",
+			"img": "img/taranalogo.jpeg",
+			"singer": "Anuv Jain",
+			"genre": "Romantic "
+
 		}
 	]
 }

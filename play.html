@@ -20,7 +20,7 @@
             type="image/x-icon" />
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="./style.css">
+        <link rel="stylesheet" type="text/css" href="./CSS/style.css">
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
             integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -104,19 +104,11 @@
             </div>
         </div>
 
-        <script>
-            function cb(response) {
-                document.querySelector('#visits').innerHTML = `${response.value} Views`;
-            }
+        <script src="./JS/script1.js"></script>       <!--The JS function declaration over here are moved to JS Folder-->
 
-            function aboutUs() {
-                window.open("./aboutus.html", "_blank");
-            }
-        </script>
-
-        <script src="./details.js"></script>
-        <script src="./up.js"></script>
-        <script src="./main.js"></script>
+        <script src="./JS/details.js"></script>
+        <script src="./JS/up.js"></script>
+        <script src="./JS/main.js"></script>
 
         <script async src="https://api.countapi.xyz/hit/sonu.live/tarana?callback=cb"></script>
     </body>

@@ -48,6 +48,42 @@
                     <p> / </p>
                     <p id="total"></p>
                 </div>
+                               <!--share button-->
+               <div class="container">
+                   <button class="share-btn">
+                    <i class="fa fa-share-alt-square" aria-hidden="true"></i>
+                   </button>
+                   <div class="share-optns">
+                       <p class="title">Share</p>
+                       <div class="social-media">
+                           <button class="social-media-btn"><i class="fa fa-folder-open-o" aria-hidden="true"></i></button>
+                           <button class="social-media-btn"><i class="fa fa-whatsapp" aria-hidden="true"></i></button>
+                           <button class="social-media-btn"><i class="fa fa-instagram" aria-hidden="true"></i></button>
+                           <button class="social-media-btn"><i class="fa fa-twitter" aria-hidden="true"></i></button>
+                           <button class="social-media-btn"><i class="fa fa-facebook-official" aria-hidden="true"></i></button>
+                           <button class="social-media-btn"><i class="fa fa-telegram" aria-hidden="true"></i></button>
+                       </div>
+                       <div class="link-container">
+                           <input id="link1" class="link" type="text" placeholder="Enter link to copy">
+                           <button onclick="myFunction()" class="copy-btn">copy</button>
+                       </div>
+                       <script>function myFunction() {
+                        /* Get the text field */
+                        var copyText = document.getElementById("link1");
+                      
+                        /* Select the text field */
+                        copyText.select();
+                        copyText.setSelectionRange(0, 99999); /* For mobile devices */
+                      
+                        /* Copy the text inside the text field */
+                        navigator.clipboard.writeText(copyText.value);
+                        
+                        /* Alert the copied text */
+                        alert("Copied the text: " + copyText.value);
+                      }</script>
+                   </div>
+               </div>
+               <script src="share-btn.js"></script>
 
                 <!--- song title & artist name --->
                 <p id="title">title</p>

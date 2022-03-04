@@ -2,9 +2,9 @@
   "name": "tarana",
   "version": "1.0.0",
   "description": "Tarana - Best Music Player",
-  "main": "up.js",
+  "main": "JS/up.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "nodemon ./JS/server.js",
     "serve": "json-server --watch songs.json"
   },
   "keywords": [

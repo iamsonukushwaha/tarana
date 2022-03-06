@@ -9,7 +9,7 @@
 
 ### [Issue #20](https://github.com/flyingsonu122/tarana/issues/20)
 * [Tarana UI](https://www.figma.com/file/69xki6f6ffjrUT2q69Jzj5/Gssoc-Music-Player?node-id=0%3A1)
-  * Team of 3 :
+  * Team of 3  :
 	* [Ajitish](https://github.com/ZZENGAA)
 	* [Manisha](https://github.com/M-anisha-coder)
 	* [Prajna](https://github.com/Prajnaprabhu3)

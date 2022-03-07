@@ -20,8 +20,7 @@
             type="image/x-icon" />
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="./style.css">
-
+            <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
             integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     </head>
@@ -48,7 +47,42 @@
                     <p> / </p>
                     <p id="total"></p>
                 </div>
+               <!--share button-->
+               <div class="container">
+                   <button class="share-btn">
+                    <i class="fa fa-share-alt-square" aria-hidden="true"></i>
+                   </button>
+                   <div class="share-optns">
+                       <p class="title">Share</p>
+                       <div class="social-media">
+                           <button class="social-media-btn"><i class="fa fa-folder-open-o" aria-hidden="true"></i></button>
+                           <button class="social-media-btn"><i class="fa fa-whatsapp" aria-hidden="true"></i></button>
+                           <button class="social-media-btn"><i class="fa fa-instagram" aria-hidden="true"></i></button>
+                           <button class="social-media-btn"><i class="fa fa-twitter" aria-hidden="true"></i></button>
+                           <button class="social-media-btn"><i class="fa fa-facebook-official" aria-hidden="true"></i></button>
+                           <button class="social-media-btn"><i class="fa fa-telegram" aria-hidden="true"></i></button>
+                       </div>
+                       <div class="link-container">
+                           <p id="link1" class="link">link1</p>
+                           <button onclick="myFunction()" class="copy-btn">copy</button>
+                       </div>
+                       <script>function myFunction() {
+                        /* Get the text field */
 
+                        var copyText = document.getElementById("link1").innerHTML;
+                        /* Select the text field 
+                        copyText.select();
+                        copyText.setSelectionRange(0, 99999); /* For mobile devices */
+                      
+                        /* Copy the text inside the text field */
+                        navigator.clipboard.writeText(copyText);
+                        
+                        /* Alert the copied text */
+                        alert("Copied the text: " + copyText);
+                      }</script>
+                   </div>
+               </div>
+               <script src="share-btn.js"></script>
                 <!--- song title & artist name --->
                 <p id="title">title</p>
                 <p id="artist">artist </p>

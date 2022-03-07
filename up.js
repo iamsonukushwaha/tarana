@@ -16,7 +16,8 @@ let previous = document.querySelector('#pre'),
     list = document.querySelector('#list'),
     repeat = document.querySelector('#repeat'),
     shuffle = document.querySelector('#shuffle'),
-    genreSearch = document.querySelector('#genre');
+    genreSearch = document.querySelector('#genre'),
+    links = document.querySelector('#link1');
 
 
 let timer, link, All_song, max, gen, index_no = 0;
@@ -39,6 +40,7 @@ fetch("https://tarana-music-player.herokuapp.com/songs/?_sort=name&_order=asc")
         title.innerHTML = All_song[index_no].name;
         track_image.src = All_song[index_no].img;
         artist.innerHTML = All_song[index_no].singer;
+        links.innerHTML = All_song[index_no].path;
 
         track.load();
         track.volume = recent_volume.value / 100;
@@ -79,6 +81,7 @@ function genLink(e) {
         title.innerHTML = All_song[e.id - 1].name;
         track_image.src = e.img;
         artist.innerHTML = e.singer;
+        links.innerHTML = e.path;
         present.innerHTML = All_song[e.id - 1].id;
 
         nochange();
@@ -353,6 +356,7 @@ function out() {
     title.innerHTML = All_song[index_no].name;
     track_image.src = All_song[index_no].img;
     artist.innerHTML = All_song[index_no].singer;
+    links.innerHTML = All_song[index_no].path;
 
     track.load();
 

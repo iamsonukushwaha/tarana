@@ -63,23 +63,22 @@
                            <button class="social-media-btn"><i class="fa fa-facebook-official" aria-hidden="true"></i></button>
                            <button class="social-media-btn"><i class="fa fa-telegram" aria-hidden="true"></i></button>
                        </div>
-                       <div class="link-container">
-                           <input id="link1" class="link" type="text" placeholder="Enter link to copy">
+                       <p id="link1" class="link">link1</p>
                            <button onclick="myFunction()" class="copy-btn">copy</button>
                        </div>
                        <script>function myFunction() {
                         /* Get the text field */
-                        var copyText = document.getElementById("link1");
-                      
-                        /* Select the text field */
+
+                        var copyText = document.getElementById("link1").innerHTML;
+                        /* Select the text field 
                         copyText.select();
                         copyText.setSelectionRange(0, 99999); /* For mobile devices */
                       
                         /* Copy the text inside the text field */
-                        navigator.clipboard.writeText(copyText.value);
+                        navigator.clipboard.writeText(copyText);
                         
                         /* Alert the copied text */
-                        alert("Copied the text: " + copyText.value);
+                        alert("Copied the text: " + copyText);
                       }</script>
                    </div>
                </div>

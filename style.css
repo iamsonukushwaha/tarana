@@ -538,7 +538,7 @@ input[type="range"]::-webkit-slider-thumb {
     height: 100%;
     line-height: 55px;
     color: black;
-    font-size: 15px;
+    font-size: 10px;
     border: none;
     text-align: center;
     border-radius: 15px;

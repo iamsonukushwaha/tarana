@@ -40,8 +40,7 @@ fetch("https://tarana-music-player.herokuapp.com/songs/?_sort=name&_order=asc")
         title.innerHTML = All_song[index_no].name;
         track_image.src = All_song[index_no].img;
         artist.innerHTML = All_song[index_no].singer;
-        links.innerHTML = All_song[index_no].path;
-
+       links.innerHTML = 'https://sonu.live/tarana/play.html?id=${All_song[index_no].id}';
         track.load();
         track.volume = recent_volume.value / 100;
 
@@ -81,7 +80,7 @@ function genLink(e) {
         title.innerHTML = All_song[e.id - 1].name;
         track_image.src = e.img;
         artist.innerHTML = e.singer;
-        links.innerHTML = e.path;
+       links.innerHTML = 'https://sonu.live/tarana/play.html?id=${All_song[index_no].id}';
         present.innerHTML = All_song[e.id - 1].id;
 
         nochange();
@@ -356,7 +355,7 @@ function out() {
     title.innerHTML = All_song[index_no].name;
     track_image.src = All_song[index_no].img;
     artist.innerHTML = All_song[index_no].singer;
-    links.innerHTML = All_song[index_no].path;
+   links.innerHTML = 'https://sonu.live/tarana/play.html?id=${All_song[index_no].id}';
 
     track.load();
 

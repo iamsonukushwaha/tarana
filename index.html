@@ -65,12 +65,7 @@
                            function sharefile1()
                            {
                             var copyText = document.getElementById("link1").innerHTML;
-                            window.open("whatsapp://send?text="+copyText,'_blank');
-                           }
-                           function sharefile2()
-                           {
-                            var copyText = document.getElementById("link1").innerHTML;
-                            window.open("https://instagram.com//text="+copyText,'_blank');
+                            window.open("https://api.whatsapp.com/send/?text="+copyText,'_blank');
                            }
                            function sharefile3()
                            {
@@ -80,7 +75,7 @@
                            function sharefile4()
                            {
                             var copyText = document.getElementById("link1").innerHTML;
-                            window.open("https://facebook.com//?text="+copyText,'_blank');
+                            window.open("https://facebook.com/sharer/sharer.php?u="+copyText,'_blank');
                            }
                            function sharefile5()
                            {

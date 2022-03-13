@@ -335,6 +335,12 @@ input[type="range"]::-webkit-slider-thumb {
     background: transparent;
     cursor: pointer;
     text-decoration: none;
+    border-radius: 10px;
+}
+
+.hide_show:hover{
+    transition: all .3s ease;
+    background-color: white;
 }
 
 .documentation_page {
@@ -353,11 +359,11 @@ input[type="range"]::-webkit-slider-thumb {
 
 .documentation_body {
     position: absolute;
-    height: 80vh;
+    height: 75vh;
     width: 100%;
     top: 10.5%;
     margin-top: 40px;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 .visits {
@@ -394,20 +400,19 @@ input[type="range"]::-webkit-slider-thumb {
 } */
 
 #list {
-    position: fixed;
-    overflow-y: scroll;
+    position: absolute;
     margin-left: 6px;
     margin-right: 15px;
     padding-bottom: 10px;
-    height: 75vh;
+    height:fit-content;
     width: 99%;
 }
 
-#list a {
+#list a{
     display: flex;
     flex-direction: column;
-    padding: 8px 4px;
-    margin: 10px auto;
+    padding: 12px 4px;
+    margin: 0px auto;
     text-decoration: none;
     width: 80%;
     -webkit-transition: all 0.3s;
@@ -418,11 +423,52 @@ input[type="range"]::-webkit-slider-thumb {
     /* background-color: white; */
 }
 
-#list a:hover {
+#list .music-box:hover {
     /* color: rgb(68, 13, 52); */
     cursor: pointer;
     box-shadow: 3px 3px 10px #ccc;
     transform: translateX(-1px);
+}
+
+.music-info{
+    width: 80%;
+    height: 50px;
+    display: flex;
+}
+#music-image{
+    height: 50px;
+    width: 50px;
+}
+
+#music-image img{
+    height: 45px;
+    width: 45px;
+    margin: 4px 10px;
+    padding: 2px;
+}
+
+#music-name{
+    width: 300px;
+    padding: 0 5px;
+    height: 50px;
+    margin-left: 3px;
+}
+
+#music-name h6{
+    margin-top: 7px;
+    font-size: 15px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    line-height: 15px;
+    color: white;
+}
+
+#music-name p{
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    line-height: 1.5px;
 }
 
 
@@ -577,11 +623,6 @@ input[type="range"]::-webkit-slider-thumb {
         height: 50px;
         width: 50px;
     }
-    #list a {
-        font-size: 12px;
-        padding: 5px 3px;
-        margin: 10px auto;
-    }
 }
 
 @media screen and (max-width: 230px) and (min-width: 150px) {
@@ -639,3 +680,5 @@ input[type="range"]::-webkit-slider-thumb {
         top: 12.5%;
     }
 }
+
+

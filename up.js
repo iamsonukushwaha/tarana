@@ -71,8 +71,20 @@ fetch("https://tarana-music-player.herokuapp.com/songs/?_sort=name&_order=asc")
 
 function genLink(e) {
     link = document.createElement('a');
-    link.innerHTML = `${e.name} &rarr;${e.singer}`;
+    link.innerHTML = ` 
+    <div class="music-box">
+        <div class="music-info">
+            <div id="music-image">
+                <img src=${e.img} alt="">
+            </div>
+            <div id="music-name"> 
+                <h6>${e.name}</h6>
+                <p>${e.singer}</p>   
+            </div>
+        </div>
+    </div>`;
 
+   
     link.addEventListener('click', function () {
         index_no = e.id - 1;
         track.src = All_song[e.id - 1].path;

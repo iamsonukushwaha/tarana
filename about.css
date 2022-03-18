@@ -1,0 +1,200 @@
+header{
+    font-size: 30px;
+    padding-top: 2rem; 
+    padding-bottom: 2rem;    
+    background: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.1), transparent, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.05), transparent, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.03) 3px), linear-gradient(0deg,  rgb(230, 105, 196),rgb(200, 241, 102));
+}
+footer{
+    width: 100%;
+    height: 10rem;
+    background: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.1), transparent, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.05), transparent, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.03) 3px), linear-gradient(0deg,  rgb(200, 241, 102),rgb(85, 159, 230));
+}
+footer h5{
+    color: rgba(4, 47, 97, 0.795);
+    font-size: 1.3rem;
+    padding-top: 1.5rem;
+}
+footer p{
+    padding-top: 2rem;
+    justify-items: center;
+    justify-content: center;
+    padding-bottom:0;
+    
+}
+footer a{
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+}
+
+#logo {
+    color: rgb(246, 248, 250);
+    text-shadow: 5px 5px 10px #acf596;
+    animation: animate 1s infinite linear;
+}
+
+@keyframes animate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(90deg);
+    }
+    100% {
+        filter: hue-rotate(180deg);
+    }
+}
+
+footer p a{  
+    padding-left: 3rem;
+  justify-items: center;
+  justify-items: center;
+    margin: 5px 2px;  
+    font-size: 2rem;  
+    text-decoration: none;
+  }  
+  footer p a i{
+    width: 50px;  
+    height: 40px;
+    text-align: center;
+    color: white;
+  }
+ 
+  @media (max-width: 1200px){
+	header{
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 991px){
+	header{
+        font-size: 20px;
+	}
+    	
+}
+
+@media (max-width: 768px){
+	header{
+        font-size: 15px;
+	}
+   
+}
+@media (max-width: 600px){
+	header{
+        font-size: 13px;
+	}
+}
+@media (max-width: 600px){
+	header{
+        font-size: 13px;
+	}
+}
+
+@media (max-width: 468px){
+	header{
+        font-size: 10px;
+	}
+
+}
+@media (max-width: 1143px){
+    footer{
+        height: 100%;
+    }
+    footer p a {
+        font-size: 35px;
+        padding-left: 10rem;
+    }
+    footer p a i{
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 1080px){
+    footer{
+        height: 100%;
+    }
+    footer p a {
+        font-size: 32px;
+        padding-left: 8rem;
+    }
+    footer p a i{
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 967px){
+    footer{
+        height: 100%;
+    }
+    footer p a {
+        font-size: 32px;
+        padding-left: 8rem;
+    }
+    footer p a i{
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 921px){
+    footer{
+        height: 100%;
+    }
+    footer p a {
+        font-size: 30px;
+        padding-left: 6rem;
+    }
+    footer p a i{
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 841px){
+    footer{
+        height: 100%;
+    }
+    footer p a {
+        font-size: 30px;
+        padding-left: 5rem;
+    }
+    footer p a i{
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 800px){
+    footer{
+        height: 100%;
+    }
+    footer p a {
+        font-size: 28px;
+        padding-left: 5rem;
+    }
+    footer p a i{
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 678px){
+    footer{
+        height: 100%;
+    }
+    footer p a {
+        font-size: 25px;
+        padding-left: 4rem;
+    }
+    footer p a i{
+        margin: 10px;
+    }
+}
+@media (max-width: 500px){
+    footer{
+        height: 100%;
+    }
+    footer p a {
+        font-size: 22px;
+        padding-left: 4rem;
+    }
+}
+@media (max-width: 297px){
+    footer{
+        height: 100%;
+    }
+    footer p a {
+        font-size: 20px;
+        padding-left: 1rem;
+    }
+}

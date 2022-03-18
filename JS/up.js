@@ -84,7 +84,7 @@ function genLink(e) {
         </div>
     </div>`;
 
-   
+
     link.addEventListener('click', function () {
         index_no = e.id - 1;
         track.src = All_song[e.id - 1].path;
@@ -442,5 +442,4 @@ function n_ch() {
     hide_show.style.color = "black";
     btn.className = "fa fa-moon-o";
 }
-
 

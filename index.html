@@ -61,46 +61,16 @@
                            <button class="social-media-btn" onclick="sharefile4()"><i class="fa fa-facebook-official" aria-hidden="true"></i></button>
                            <button class="social-media-btn" onclick="sharefile5()"><i class="fa fa-telegram" aria-hidden="true"></i></button>
                        </div>
-                       <script>
-                           function sharefile1()
-                           {
-                            var copyText = document.getElementById("link1").innerHTML;
-                            window.open("https://api.whatsapp.com/send/?text="+copyText,'_blank');
-                           }
-                           function sharefile3()
-                           {
-                            var copyText3 = document.getElementById("link1").innerHTML;
-                            window.open("https://twitter.com/intent/tweet?text="+copyText3,'_blank');
-                           }
-                           function sharefile4()
-                           {
-                            var copyText = document.getElementById("link1").innerHTML;
-                            window.open("https://facebook.com/sharer/sharer.php?u="+copyText,'_blank');
-                           }
-                           function sharefile5()
-                           {
-                            var copyText = document.getElementById("link1").innerHTML;
-                            window.open("https://telegram.org/send?text="+copyText,'_blank');
-                           }
-                       </script>
+
+                       <!-- Code Optimization -->
+                       <script src="./JS/sharefile.js"></script>
                        <div class="link-container">
                            <p id="link1" class="link">link1</p>
                            <button onclick="myFunction()" class="copy-btn">copy</button>
                        </div>
-                       <script>function myFunction() {
-                        /* Get the text field */
 
-                        var copyText = document.getElementById("link1").innerHTML;
-                        /* Select the text field 
-                        copyText.select();
-                        copyText.setSelectionRange(0, 99999); /* For mobile devices */
-                      
-                        /* Copy the text inside the text field */
-                        navigator.clipboard.writeText(copyText);
-                        
-                        /* Alert the copied text */
-                        alert("Copied the text: " + copyText);
-                      }</script>
+                       <!-- Code Optimization -->
+                       <script src="./JS/CopyText.js"></script>
                    </div>
                </div>
                <script src="./JS/share-btn.js"></script>
@@ -156,15 +126,8 @@
             </div>
         </div>
 
-        <script>
-            function cb(response) {
-                document.querySelector('#visits').innerHTML = `${response.value} Views`;
-            }
-
-            function aboutUs() {
-                window.open("./aboutus.html", "_blank");
-            }
-        </script>
+        <!-- Code Optimization -->
+        <script src="./JS/script2.js"></script>
 
         <script src="./main.js"></script>
         <script src="./up.js"></script>

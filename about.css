@@ -188,6 +188,9 @@ footer p a{
         font-size: 22px;
         padding-left: 4rem;
     }
+    .livedemo a{
+        font-size: small;
+    }
 }
 @media (max-width: 297px){
     footer{

@@ -15,6 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",
+    "firebase": "^9.7.0",
     "http-server": "^0.12.3",
     "json-server": "^0.16.3"
   },

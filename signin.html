@@ -28,7 +28,7 @@
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
     import { getDatabase,set,ref,update } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-database.js";
-    import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword,onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js";
+    import { getAuth,GoogleAuthProvider,signInWithPopup , createUserWithEmailAndPassword,signInWithEmailAndPassword,onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js";
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
   
@@ -84,6 +84,26 @@
         .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
+        });
+    })
+
+    document.getElementById('googlebtn').addEventListener('click', (e) => {
+        e.preventDefault();
+        const provider = new GoogleAuthProvider();
+        signInWithPopup(auth, provider)
+        .then((result) => {
+            const credential = GoogleAuthProvider.credentialFromResult(result);
+            const token = credential.accessToken;
+            const user = result.user;
+            alert('success');
+            // ...
+        }).catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+           
+            const email = error.email;
+            const credential = GoogleAuthProvider.credentialFromError(error);
+            alert(errorMessage);
         });
     })
 

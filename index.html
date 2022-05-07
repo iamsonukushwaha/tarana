@@ -28,13 +28,29 @@
 
     <body id="body">
 
+        <nav class="navbar">
+            <div class="logo">
+                <!-- <p id="button"></p> -->
+                <p id="logo"><i class="fa fa-music"></i>Tarana</p> 
+            </div>
+            <div class="Button">
+                <a href="signin.hmtl"><button>Sign in</button></a>
+                <div class="documentation">
+                    <button class="hide_show" id="hide_show"></button>
+                </div>
+            </div>
+            
+
+        </nav>
+        
+
         <div class="main" id="main">
-            <p id="button"></p>
-            <p id="logo"><i class="fa fa-music"></i>Tarana</p>
+            <!-- -->
             <!--- left part --->
             <div class="left">
-                <!--- song img --->
-                <div class="image"><img id="track_image"></div>
+                
+                    <img id="track_image">
+                
                 <div class="volume">
                     <p id="volume_show">40</p>
                     <i class="fa fa-volume-up" aria-hidden="true" id="volume_icon" title="Mute"></i>
@@ -42,16 +58,26 @@
                 </div>
             </div>
             <!--- right part --->
+
             <div class="right">
-                <div class="show_song_no">
-                    <p id="present"></p>
-                    <p> / </p>
-                    <p id="total"></p>
-                </div>
+                
 
                 <!--- song title & artist name --->
-                <p id="title">title</p>
-                <p id="artist">artist </p>
+                <div class="Song__name">
+
+                    <p id="title">title</p>
+                    <p id="artist">artist </p>
+                </div>
+                <!--- song title & artist name --->
+
+                <!-- DURATION -->
+                <div class="duration">
+                    <p id="passed_duration">0:00</p>
+                    <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()" oninput="changeDur()">
+                    <p id="full_duration">0:00</p>
+                </div>
+                <!-- DURATION -->
+
                 <!--- middle part of right part--->
                 <div class="middle">
                     <button id="shuffle" class="shuffle fa fa-random" title="Enable shuffle">
@@ -67,20 +93,20 @@
                     <button id="repeat" class="repeat fa fa-repeat" title="Enable repeat">
                     </button>
                 </div>
-                <!--- song duration part --->
-                <div class="duration">
-                    <p id="passed_duration">0:00</p>
-                    <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()"
-                        oninput="changeDur()">
-                    <p id="full_duration">0:00</p>
+
+                <div class="show_song_no">
+                    <p id="present"></p>
+                    <p> / </p>
+                    <p id="total"></p>
                 </div>
+                
             </div>
         </div>
-        <div class="documentation">
-            <button class="hide_show" id="hide_show"></button>
-        </div>
+
+    
+        
         <div class="documentation_page" id="main_body_hide">
-            <p id="logo"><i class="fa fa-music"></i>Tarana</p>
+            
             <div id="playlist">
                 <select name="" id="genre"  class="form-control" >
                     <option value="">all</option>
@@ -90,16 +116,24 @@
                 </select>
                 <input type="text" class="form-control" placeholder="search song" required autofocus id="srh">
             </div>
+
             <div class="documentation_body">
                 <div id="list">
 
                 </div>
             </div>
+
             <div class="visits">
-                <p onclick="aboutUs();" id="about"> About Us</p>
+                <p style="color:black ;" onclick="aboutUs();" id="about"> About Us</p>
                 <p id="visits"></p>
             </div>
         </div>
+
+
+
+
+        
+        <!-- JAVASCRIPT STARTED -->
         
         <script>
             function cb(response) {

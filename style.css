@@ -4,15 +4,12 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins';
 }
+
 
 body {
     width: 100%;
-    /* background: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.1), transparent, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.05), transparent, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.03) 3px), linear-gradient(0deg, rgb(85, 159, 230), rgb(230, 105, 196));
-     */
-    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -119,14 +116,16 @@ input[type="range"] {
     outline: none;
     height: 3px;
     margin: 0 15px;
-    background: linear-gradient(45deg, rgb(0, 132, 255), rgb(255, 0, 187));
+    /* background: linear-gradient(45deg, rgb(0, 132, 255), rgb(255, 0, 187)); */
+    background-color: #87ffff;
 }
 
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     height: 15px;
     width: 15px;
-    background: linear-gradient(90deg, rgb(255, 0, 187), rgb(0, 132, 255));
+    /* background: linear-gradient(90deg, rgb(255, 0, 187), rgb(0, 132, 255)); */
+    background-color: #87ffff;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -651,7 +650,6 @@ NEW STYLING BEIGN HERE */
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: ;
 }
 
 .middle{
@@ -700,6 +698,9 @@ button{
     display: flex;
     gap: 5em;
     top: 1.5em;
+}
+.volume{
+    margin-top: 2em;
 }
 
 .volume input{

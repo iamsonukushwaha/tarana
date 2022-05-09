@@ -1,0 +1,36 @@
+body{
+    background:linear-gradient(145deg, #e282de62, #c48db1);
+}
+.title{
+background: linear-gradient(145deg, #e7aae462, #885778);
+box-shadow: 5px 5px 8px #600f46, -5px -5px 8px #6f2653;
+border-radius:4px;
+font-size:16px;
+color: rgb(12, 12, 12);
+padding:15px;
+margin:5px;
+opacity: 70%;
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    
+}
+.container_image{
+    max-width: 480px;
+	width: 100%;
+	height: auto;
+        display: block;
+        margin:20px auto;
+	
+
+}
+.container_text{
+    width: 500px;
+    padding-left: 50px;
+}
+.box_demo{
+    background-color: #885778;
+}

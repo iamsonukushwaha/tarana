@@ -14,11 +14,11 @@
         <input placeholder="Password" id="password" type="password"/>
         <button class="btn" type="submit" name="siginbtn" id="signin">Sign Up</button>
         <button class="btn" type="submit" name="loginbtn" id="login">Log In</button>
-        
+        <a href="MobileSign.html"><button class="tw btn">Sign In With Phone</button></a>
         <h6>Oh, social?</h6>
         <div class="social">
-        <button class="tw btn">Twitter</button>
-        <button class="fb btn">Facebook</button>
+        
+        <button class="fb btn" id="facebookbtn">Facebook</button>
         <button class="google fb btn" id="googlebtn">Google+</button>
         </div>
       </form>
@@ -29,7 +29,7 @@
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
     import { getDatabase,set,ref,update } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-database.js";
-    import { getAuth,GoogleAuthProvider,signInWithPopup , createUserWithEmailAndPassword,signInWithEmailAndPassword,onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js";
+    import { getAuth,GoogleAuthProvider,FacebookAuthProvider,signInWithPopup , createUserWithEmailAndPassword,signInWithEmailAndPassword,onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js";
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
   
@@ -105,6 +105,34 @@
             const email = error.email;
             const credential = GoogleAuthProvider.credentialFromError(error);
             alert(errorMessage);
+        });
+    })
+
+    document.getElementById('facebookbtn').addEventListener('click',(e) => {
+        e.preventDefault();
+        const provider = new FacebookAuthProvider();
+        signInWithPopup(auth, provider)
+        .then((result) => {
+            // The signed-in user info.
+            const user = result.user;
+
+            // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+            const credential = FacebookAuthProvider.credentialFromResult(result);
+            const accessToken = credential.accessToken;
+alert("Success")
+            // ...
+        })
+        .catch((error) => {
+            // Handle Errors here.
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // The email of the user's account used.
+            alert(errorMessage)
+            const email = error.email;
+            // The AuthCredential type that was used.
+            const credential = FacebookAuthProvider.credentialFromError(error);
+
+            // ...
         });
     })
 

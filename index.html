@@ -34,6 +34,7 @@
                 <p id="logo"><i class="fa fa-music"></i>Tarana</p> 
             </div>
             <div class="Button">
+                <h4 id="username" style="color: black;"></h4>
                 <a href="signin.html"><button>Sign in</button></a>
                 <div class="documentation">
                     <button class="hide_show" id="hide_show"></button>
@@ -139,6 +140,29 @@
         <!-- JAVASCRIPT STARTED -->
         
         <script>
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
+    import { getAuth,onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js";
+    const firebaseConfig = {
+      apiKey: "AIzaSyA3XEG03h7xhYlaR2gSTwb5iUeXV8LJZ1Y",
+      authDomain: "tarana-8e249.firebaseapp.com",
+      databaseURL: "https://tarana-8e249-default-rtdb.firebaseio.com",
+      projectId: "tarana-8e249",
+      storageBucket: "tarana-8e249.appspot.com",
+      messagingSenderId: "68256406454",
+      appId: "1:68256406454:web:4a221ece6cc43d4ee3ff17"
+    };
+  
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth();
+
+    const user = auth.currentUser;
+            onAuthStateChanged(auth, (user) => {
+                if (user) {
+                    document.getElementById('username').innerHTML = user.displayName;
+                }
+            });
+
             function cb(response) {
                 document.querySelector('#visits').innerHTML = `${response.value} Views`;
             }
@@ -146,6 +170,8 @@
             function aboutUs() {
                 window.open("./aboutus.html", "_blank");
             }
+
+            
         </script>
 
         <script src="./main.js"></script>

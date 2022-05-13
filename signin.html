@@ -8,32 +8,36 @@
     <title>Document</title>
 </head>
 <body>
-    <form>
-        <h1><span>Tarana</span> </h1>
-        <input placeholder="Email" id="email" type="Email"/>
-        <input placeholder="Password" id="password" type="password"/>
-        <button class="btn" type="submit" name="siginbtn" id="signin">Sign Up</button>
-        <button class="btn" type="submit" name="loginbtn" id="login">Log In</button>
-        <a href="MobileSign.html"><button class="tw btn">Sign In With Phone</button></a>
-        <h6>Oh, social?</h6>
-        <div class="social">
-        
-        <button class="fb btn" id="facebookbtn">Facebook</button>
-        <button class="google fb btn" id="googlebtn">Google+</button>
+    <div class="WholeSignUpContainer">
+        <div class="UserDetails">
+            <img id="useravatar" src=""  alt="UserAvatar" style="width: 50px ; border-radius:100px" />
+            <h1 id="username"></h1>
         </div>
-      </form>
+        <form>
+            <h1><span>Tarana</span> </h1>
+            <input placeholder="Email" id="email" type="Email"/>
+            <input placeholder="Password" id="password" type="password"/>
+            <button class="btn" type="submit" name="siginbtn" id="signin">Sign Up</button>
+            <button class="btn" type="submit" name="loginbtn" id="login">Log In</button>
+            <!-- <a href="MobileSign.html"><button class="tw btn">Sign In With Phone</button></a> -->
+            <h6>Oh, social?</h6>
+            <div class="social">
+                <button class="fb btn" id="facebookbtn">Facebook</button>
+                <button class="google fb btn" id="googlebtn">Google+</button>
+            </div>
+        </form>
+       
+    </div>
+    
+  
      
       
 </body>
 <script type="module">
-    // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
     import { getDatabase,set,ref,update } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-database.js";
     import { getAuth,GoogleAuthProvider,FacebookAuthProvider,signInWithPopup , createUserWithEmailAndPassword,signInWithEmailAndPassword,onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
   
-    // Your web app's Firebase configuration
     const firebaseConfig = {
       apiKey: "AIzaSyA3XEG03h7xhYlaR2gSTwb5iUeXV8LJZ1Y",
       authDomain: "tarana-8e249.firebaseapp.com",
@@ -44,13 +48,13 @@
       appId: "1:68256406454:web:4a221ece6cc43d4ee3ff17"
     };
   
-    // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const database = getDatabase(app);
     const auth = getAuth();
 
     document.getElementById('signin').addEventListener('click', (e) => {
         e.preventDefault();
+        
         var email = document.getElementById('email').value;
         var password = document.getElementById('password').value;
 
@@ -113,26 +117,16 @@
         const provider = new FacebookAuthProvider();
         signInWithPopup(auth, provider)
         .then((result) => {
-            // The signed-in user info.
             const user = result.user;
-
-            // This gives you a Facebook Access Token. You can use it to access the Facebook API.
             const credential = FacebookAuthProvider.credentialFromResult(result);
             const accessToken = credential.accessToken;
-alert("Success")
-            // ...
         })
         .catch((error) => {
-            // Handle Errors here.
             const errorCode = error.code;
             const errorMessage = error.message;
-            // The email of the user's account used.
             alert(errorMessage)
             const email = error.email;
-            // The AuthCredential type that was used.
             const credential = FacebookAuthProvider.credentialFromError(error);
-
-            // ...
         });
     })
 
@@ -140,8 +134,16 @@ alert("Success")
     const user = auth.currentUser;
     onAuthStateChanged(auth, (user) => {
         if (user) {
-            alert("Success")
-            window.location.href = "/index.html";
+            //alert(user.displayName + " Has Logged In")
+            console.log(user)
+            if(user.displayName === null || user.photoURL === null){
+                document.getElementById('useravatar').src = 'https://i.ibb.co/nB0tBvy/man.png'
+                document.getElementById('username').innerHTML = "Welcome, "+user.email;
+            }else{
+                
+            document.getElementById('useravatar').src = user.photoURL
+            document.getElementById('username').innerHTML = "Welcome, "+user.displayName;
+            }
         }
     });
 

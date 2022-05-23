@@ -1,71 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <title>Tarana - Best Music Player</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Tarana - Best Music Player">
-        <meta property="og:title" content="Tarana - Best Music Player">
-        <meta name="auther" content="Sonu Kumar Kushwaha">
-        <meta name="email" content="flyingsonu736@gmail.com">
-        <meta name="twitter:creator" content="@sonukumarkush12">
-        <meta name="og:country-name" content="India, Bharat" />
-        <meta property="og:url" content="https://www.sonu.live" />
-        <meta property="og:image"
-            content="https://raw.githubusercontent.com/flyingsonu122/tarana/master/img/tarana.jpg" />
+<head>
+    <meta charset="UTF-8">
+    <title>Tarana - Best Music Player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tarana - Best Music Player">
+    <meta property="og:title" content="Tarana - Best Music Player">
+    <meta name="auther" content="Sonu Kumar Kushwaha">
+    <meta name="email" content="flyingsonu736@gmail.com">
+    <meta name="twitter:creator" content="@sonukumarkush12">
+    <meta name="og:country-name" content="India, Bharat" />
+    <meta property="og:url" content="https://www.sonu.live" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/flyingsonu122/tarana/master/img/tarana.jpg" />
 
-        <link rel="shortcut icon"
-            href="https://raw.githubusercontent.com/flyingsonu122/tarana/master/img/taranalogo.jpeg"
-            type="image/x-icon" />
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="shortcut icon" href="img/taranalogo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     </head>
 
-    <body id="body">
+<body id="body">
 
-        <div class="main" id="main">
-            <p id="button"></p>
-            <p id="logo"><i class="fa fa-music"></i>Tarana</p>
-            <!--- left part --->
-            <div class="left">
-                <!--- song img --->
-                <div class="image"><img id="track_image"></div>
-                <div class="volume">
-                    <p id="volume_show">40</p>
-                    <i class="fa fa-volume-up" aria-hidden="true" id="volume_icon" title="Mute"></i>
-                    <input type="range" min="0" max="100" value="40" onchange="volume_change()" id="volume">
-                </div>
+    <div class="main" id="main">
+        <p id="button"></p>
+        <p id="logo"><img src="img/Tarana.svg"></i>Tarana</p>
+        <!--- left part --->
+        <div class="left">
+            <!--- song img --->
+            <div class="image"><img id="track_image"></div>
+            <div class="volume">
+                <p id="volume_show">40</p>
+                <i class="fa fa-volume-up" aria-hidden="true" id="volume_icon" title="Mute"></i>
+                <input type="range" min="0" max="100" value="40" onchange="volume_change()" id="volume">
             </div>
-            <!--- right part --->
-            <div class="right">
-                <div class="show_song_no">
-                    <p id="present"></p>
-                    <p> / </p>
-                    <p id="total"></p>
-                </div>
+        </div>
+        <!--- right part --->
+        <div class="right">
+            <div class="show_song_no">
+                <p id="present"></p>
+                <p> / </p>
+                <p id="total"></p>
+            </div>
 
-                <!--- song title & artist name --->
-                <p id="title">title</p>
-                <p id="artist">artist </p>
-                <!--- middle part of right part--->
-                <div class="middle">
-                    <button id="shuffle" class="shuffle fa fa-random" title="Enable shuffle">
-                    </button>
-                    <button onclick="previous_song();" id="pre" class="right_blue" title="Previous"><i
-                            class="fa fa-step-backward" aria-hidden="true"></i>
-                    </button>
-                    <button id="play" class="right_pink" title="Play"><i class="fa fa-play" aria-hidden="true"></i>
-                    </button>
-                    <button onclick="next_song();" id="next" class="right_blue" title="Next"><i
-                            class="fa fa-step-forward" aria-hidden="true"></i>
-                    </button>
-                    <button id="repeat" class="repeat fa fa-repeat" title="Enable repeat">
-                    </button>
+            <!--- song title & artist name --->
+            <p id="title">title</p>
+            <p id="artist">artist </p>
+            <!--- middle part of right part--->
+            <div class="middle">
+                <button id="shuffle" class="shuffle fa fa-random" title="Enable shuffle">
+                </button>
+                <button onclick="previous_song();" id="pre" class="right_blue" title="Previous"><i class="fa fa-step-backward"
+                        aria-hidden="true"></i>
+                </button>
+                <button id="play" class="right_pink" title="Play"><i class="fa fa-play" aria-hidden="true"></i>
+                </button>
+                <button onclick="next_song();" id="next" class="right_blue" title="Next"><i class="fa fa-step-forward"
+                        aria-hidden="true"></i>
+                </button>
+                <button id="repeat" class="repeat fa fa-repeat" title="Enable repeat">
+                </button>
                 </div>
                 <!--- song duration part --->
                 <div class="duration">
@@ -74,47 +70,47 @@
                         oninput="changeDur()">
                     <p id="full_duration">0:00</p>
                 </div>
-            </div>
-        </div>
-        <div class="documentation">
-            <button class="hide_show" id="hide_show"></button>
-        </div>
-        <div class="documentation_page" id="main_body_hide">
-            <p id="logo"><i class="fa fa-music"></i>Tarana</p>
-            <div id="playlist">
-                <select name="" id="genre"  class="form-control" >
-                    <option value="">all</option>
-                    <option value="Romantic">Romantic</option>
-                    <option value="Club">Club</option>
-                    <option value="HotHits">Hot Hits</option>
-                </select>
-                <input type="text" class="form-control" placeholder="search song" required autofocus id="srh">
+                </div>
+                </div>
+                <div class="documentation">
+                    <button class="hide_show" id="hide_show"></button>
+                </div>
+                <div class="documentation_page" id="main_body_hide">
+        <p id="logo"><img src="img/Tarana.svg">Tarana</p>
+        <div id="playlist">
+            <select name="" id="genre" class="form-control">
+                <option value="">all</option>
+                <option value="Romantic">Romantic</option>
+                <option value="Club">Club</option>
+                <option value="HotHits">Hot Hits</option>
+            </select>
+            <input type="text" class="form-control" placeholder="search song" required autofocus id="srh">
             </div>
             <div class="documentation_body">
                 <div id="list">
 
-                </div>
+            </div>
             </div>
             <div class="visits">
                 <p onclick="aboutUs();" id="about"> About Us</p>
                 <p id="visits"></p>
             </div>
-        </div>
-        
-        <script>
-            function cb(response) {
-                document.querySelector('#visits').innerHTML = `${response.value} Views`;
-            }
+            </div>
+            
+            <script>
+                function cb(response) {
+                    document.querySelector('#visits').innerHTML = `${response.value} Views`;
+                }
 
             function aboutUs() {
                 window.open("./aboutus.html", "_blank");
             }
         </script>
 
-        <script src="./main.js"></script>
-        <script src="./up.js"></script>
+    <script src="./main.js"></script>
+    <script src="./up.js"></script>
 
-        <script async src="https://api.countapi.xyz/hit/sonu.live/tarana?callback=cb"></script>
+    <script async src="https://api.countapi.xyz/hit/sonu.live/tarana?callback=cb"></script>
     </body>
 
 </html>

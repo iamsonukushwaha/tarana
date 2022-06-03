@@ -73,5 +73,5 @@ git push -u origin <your_branch_name>
 	<a href="https://flyingsonu122.github.io"><img src="https://img.shields.io/badge/Website-blueviolet?style=flat&logo=google-chrome&logoColor=white" alt="website"></a>
 	<a href="https://www.linkedin.com/in/sonukumarkushwaha/"><img src="https://img.shields.io/badge/LinkedIn--_.svg?style=social&logo=linkedin" alt="LinkedIn"></a>
 	<a href="https://www.youtube.com/channel/UCLSsTx4FVQMiNuuUbwFM7QA"><img src="https://img.shields.io/badge/YouTube--_.svg?style=social&logo=youtube" alt="YouTube"></a>
-	<a href="https://twitter.com/sonukumarkush12"><img src="https://img.shields.io/twitter/follow/sonukumarkush12?label=Friends on Twitter&style=social" alt="Twitter"></a>
+	<a href="https://twitter.com/iamsonukushwaha"><img src="https://img.shields.io/twitter/follow/iamsonukushwaha?label=Friends on Twitter&style=social" alt="Twitter"></a>
 </p>

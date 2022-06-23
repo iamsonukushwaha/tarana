@@ -1,120 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/signin.css" rel="stylesheet"  >
-    <title>Document</title>
-</head>
-<body>
-    <form>
-        <h1><span>Tarana</span> </h1>
-        <input placeholder="Email" id="email" type="Email"/>
-        <input placeholder="Password" id="password" type="password"/>
-        <button class="btn" type="submit" name="siginbtn" id="signin">Sign Up</button>
-        <button class="btn" type="submit" name="loginbtn" id="login">Log In</button>
-        
-        <h6>Oh, social?</h6>
-        <div class="social">
-        <!-- <button class="tw btn">Twitter</button>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/signin.css" rel="stylesheet">
+        <title>signin</title>
+    </head>
+
+    <body>
+        <form>
+            <h1><span>Tarana</span> </h1>
+            <input placeholder="Email" id="email" type="Email" />
+            <input placeholder="Password" id="password" type="password" />
+            <button class="btn" type="submit" name="siginbtn" id="signin">Sign Up</button>
+            <button class="btn" type="submit" name="loginbtn" id="login">Log In</button>
+
+            <h6>Oh, social?</h6>
+            <div class="social">
+                <!-- <button class="tw btn">Twitter</button>
         <button class="fb btn">Facebook</button> -->
-        <button class="google fb btn" id="googlebtn">Google+</button>
-        </div>
-      </form>
-      
-</body>
-<script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
-    import { getDatabase,set,ref,update } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-database.js";
-    import { getAuth,GoogleAuthProvider,signInWithPopup , createUserWithEmailAndPassword,signInWithEmailAndPassword,onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-  
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-      apiKey: "AIzaSyA3XEG03h7xhYlaR2gSTwb5iUeXV8LJZ1Y",
-      authDomain: "tarana-8e249.firebaseapp.com",
-      databaseURL: "https://tarana-8e249-default-rtdb.firebaseio.com",
-      projectId: "tarana-8e249",
-      storageBucket: "tarana-8e249.appspot.com",
-      messagingSenderId: "68256406454",
-      appId: "1:68256406454:web:4a221ece6cc43d4ee3ff17"
-    };
-  
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const database = getDatabase(app);
-    const auth = getAuth();
+                <button class="google fb btn" id="googlebtn">Google+</button>
+            </div>
+        </form>
 
-    document.getElementById('signin').addEventListener('click', (e) => {
-        e.preventDefault();
-        var email = document.getElementById('email').value;
-        var password = document.getElementById('password').value;
+    </body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
+        import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-database.js";
+        import { getAuth, GoogleAuthProvider, signInWithPopup, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
 
-        createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            const user = userCredential.user;
-            set(ref(database, 'users/'+user.uid),{
-                email:email
-            })
-            
+        // Your web app's Firebase configuration
+
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyDNTDXhWz8h8-arw5oAC_HQ0Oy6UZqnDl8",
+            authDomain: "tarana-36864.firebaseapp.com",
+            databaseURL: "https://tarana-36864-default-rtdb.firebaseio.com/",
+            projectId: "tarana-36864",
+            storageBucket: "tarana-36864.appspot.com",
+            messagingSenderId: "437811116293",
+            appId: "1:437811116293:web:d0eb8045e059aaca6f5f6c"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+
+
+        const database = getDatabase(app);
+        const auth = getAuth();
+
+        document.getElementById('signin').addEventListener('click', (e) => {
+            e.preventDefault();
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    const user = userCredential.user;
+                    set(ref(database, 'users/' + user.uid), {
+                        email: email
+                    })
+
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                });
         })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-        });
-    })
 
-    document.getElementById('login').addEventListener('click', (e) => {
-        e.preventDefault();
+        document.getElementById('login').addEventListener('click', (e) => {
+            e.preventDefault();
 
-        var email = document.getElementById('email').value;
-        var password = document.getElementById('password').value;
-        signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            // Signed in 
-            const user = userCredential.user;
-            const date = new Date();
-            update(ref(database, 'users/'+user.uid),{
-                recent_login: date
-            })
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            signInWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    // Signed in 
+                    const user = userCredential.user;
+                    const date = new Date();
+                    update(ref(database, 'users/' + user.uid), {
+                        recent_login: date
+                    })
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                });
         })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
+
+        document.getElementById('googlebtn').addEventListener('click', (e) => {
+            e.preventDefault();
+            const provider = new GoogleAuthProvider();
+            signInWithPopup(auth, provider)
+                .then((result) => {
+                    const credential = GoogleAuthProvider.credentialFromResult(result);
+                    const token = credential.accessToken;
+                    const user = result.user;
+                    alert('success');
+                    // ...
+                }).catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+
+                    const email = error.email;
+                    const credential = GoogleAuthProvider.credentialFromError(error);
+                    alert(errorMessage);
+                });
+        })
+
+
+        const user = auth.currentUser;
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                alert("Success")
+                window.location.href = "/index.html";
+            }
         });
-    })
 
-    document.getElementById('googlebtn').addEventListener('click', (e) => {
-        e.preventDefault();
-        const provider = new GoogleAuthProvider();
-        signInWithPopup(auth, provider)
-        .then((result) => {
-            const credential = GoogleAuthProvider.credentialFromResult(result);
-            const token = credential.accessToken;
-            const user = result.user;
-            alert('success');
-            // ...
-        }).catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-           
-            const email = error.email;
-            const credential = GoogleAuthProvider.credentialFromError(error);
-            alert(errorMessage);
-        });
-    })
+    </script>
 
-    
-    const user = auth.currentUser;
-    onAuthStateChanged(auth, (user) => {
-        if (user) {
-            alert("Success")
-            window.location.href = "/index.html";
-        }
-    });
-
-  </script>
 </html>

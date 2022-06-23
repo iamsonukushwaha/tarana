@@ -11,7 +11,7 @@
         <meta name="email" content="flyingsonu736@gmail.com">
         <meta name="twitter:creator" content="@iamsonukushwaha">
         <meta name="og:country-name" content="India, Bharat" />
-        
+
         <meta property="og:image"
             content="https://raw.githubusercontent.com/flyingsonu122/tarana/master/img/tarana.jpg" />
 
@@ -29,7 +29,22 @@
     <body id="body">
 
         <div class="main" id="main">
-            <p id="button"></p>
+            <div class="dropup">
+                <div>
+                    <p class="dropbtn"><i class="fa fa-share"></i></p>
+                </div>
+                <div class="dropup-content">
+                    <a href="https://facebook.com/sharer/sharer.php?u=https://flyingsonu122.github.io/tarana"
+                        target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="https://twitter.com/intent/tweet?text=https://flyingsonu122.github.io/tarana"
+                        target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="https://api.whatsapp.com/send/?text=https://flyingsonu122.github.io/tarana"
+                        target="_blank"><i class="fa fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <p id="themebutton"></p>
+
             <p id="logo"><i class="fa fa-music"></i>Tarana</p>
             <!--- left part --->
             <div class="left">
@@ -82,7 +97,7 @@
         <div class="documentation_page" id="main_body_hide">
             <p id="logo"><i class="fa fa-music"></i>Tarana</p>
             <div id="playlist">
-                <select name="" id="genre"  class="form-control" >
+                <select name="" id="genre" class="form-control">
                     <option value="">all</option>
                     <option value="Romantic">Romantic</option>
                     <option value="Club">Club</option>
@@ -100,7 +115,7 @@
                 <p id="visits"></p>
             </div>
         </div>
-        
+
         <script>
             function cb(response) {
                 document.querySelector('#visits').innerHTML = `${response.value} Views`;

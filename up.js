@@ -397,11 +397,11 @@ function nochange() {
 
 var body = document.getElementById("body");
 var m = document.getElementById("main");
-var btn = document.getElementById("button");
+var themebtn = document.getElementById("themebutton");
 var fc = true;
 
 n_ch();
-btn.onclick = function () {
+themebtn.onclick = function () {
     if (fc) {
         ch();
         fc = false;
@@ -412,23 +412,22 @@ btn.onclick = function () {
 }
 
 function ch() {
-    btn.style.color = "black";
-    btn.style.backgroundColor = "white";
+    themebtn.style.color = "black";
+    themebtn.style.backgroundColor = "white";
     body.style.backgroundColor = "black";
     body.style.color = "white";
     m.style.backgroundColor = "#414A4C";
     hide_show.style.color = "white";
-    btn.className = "fa fa-sun-o";
+    themebtn.className = "fa fa-sun-o";
 }
 
 function n_ch() {
-    btn.style.color = "white";
-    btn.style.backgroundColor = "black";
+    themebtn.style.color = "white";
+    themebtn.style.backgroundColor = "black";
     body.style.backgroundColor = "white";
     body.style.color = "black";
     m.style.backgroundColor = "#FFFAFA";
     hide_show.style.color = "black";
-    btn.className = "fa fa-moon-o";
+    themebtn.className = "fa fa-moon-o";
 }
-
 

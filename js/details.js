@@ -1,13 +1,12 @@
 const id = new URLSearchParams(window.location.search).get('id');
 
-
 const renderDetails = async () => {
     const res = await fetch(`https://tarana-music-player.herokuapp.com/songs/` + id);
     if (!res.ok) {
         // window.location.replace("./index.html");
-        // https://flyingsonu122.github.io/tarana/play.html?id=44
+        // https://sonukushwaha.me/tarana/play.html?id=44
 
-        window.history.pushState("object or string", "Title", "https://flyingsonu122.github.io/tarana/play.html");
+        window.history.pushState("object or string", "Title", "https://sonukushwaha.me/tarana/play.html");
     }
 
     const song = await res.json();
@@ -23,14 +22,11 @@ const renderDetails = async () => {
     timer = setInterval(range_slider, 1000);
     present.innerHTML = song.id;
 
-    
     total.innerHTML = All_song.length;
 
-    window.history.pushState("object or string", "Title", "https://flyingsonu122.github.io/tarana");
+    window.history.pushState("object or string", "Title", "https://sonukushwaha.me/tarana");
 
 }
-
-
 
 
 window.addEventListener('DOMContentLoaded', renderDetails);

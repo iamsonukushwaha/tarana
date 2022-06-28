@@ -22,7 +22,7 @@ let previous = document.querySelector('#pre'),
 let timer, link, All_song, max, gen, index_no;
 
 
-// share
+
 
 const id = new URLSearchParams(window.location.search).get('id');
 
@@ -34,7 +34,7 @@ const renderDetails = async () => {
 
     } else {
         const song = await res.json();
-        index_no = parseInt(song.id)-1;
+        index_no = parseInt(song.id) - 1;
         GetAllSongs(index_no);
 
         window.history.pushState("object or string", "Title", "https://sonukushwaha.me/tarana/index.html");
@@ -45,7 +45,17 @@ const renderDetails = async () => {
 
 window.addEventListener('DOMContentLoaded', renderDetails());
 
-// share
+
+function share() {
+    const fbshare = document.getElementById('fbshare');
+    fbshare.href = `https://facebook.com/sharer/sharer.php?u=https://flyingsonu122.github.io/tarana?id=${index_no}`
+    const twshare = document.getElementById('twshare');
+    twshare.href = `https://twitter.com/intent/tweet?text=https://flyingsonu122.github.io/tarana?id=${index_no}`
+    const whshare = document.getElementById('whshare');
+    whshare.href = `https://api.whatsapp.com/send/?text=https://flyingsonu122.github.io/tarana?id=${index_no}`
+
+
+}
 
 
 
@@ -53,6 +63,9 @@ window.addEventListener('DOMContentLoaded', renderDetails());
 let track = document.createElement('audio');
 
 function GetAllSongs(index_no) {
+
+    share();
+
     fetch("https://tarana-music-player.herokuapp.com/songs/?_sort=name&_order=asc")
         .then(function (response) {
             return response.json();

@@ -19,54 +19,97 @@ let previous = document.querySelector('#pre'),
     genreSearch = document.querySelector('#genre');
 
 
-let timer, link, All_song, max, gen, index_no = 0;
+let timer, link, All_song, max, gen, index_no;
+
+
+
+
+const id = new URLSearchParams(window.location.search).get('id');
+
+const renderDetails = async () => {
+    const res = await fetch(`https://tarana-music-player.herokuapp.com/songs/` + id);
+    if (!res.ok) {
+        index_no = 0;
+        GetAllSongs(index_no);
+
+    } else {
+        const song = await res.json();
+        index_no = parseInt(song.id) - 1;
+        GetAllSongs(index_no);
+
+        window.history.pushState("object or string", "Title", "https://sonukushwaha.me/tarana/index.html");
+    }
+
+}
+
+
+window.addEventListener('DOMContentLoaded', renderDetails());
+
+
+function shareplay() {
+    const fbshare = document.getElementById('fbshare');
+    fbshare.href = `https://facebook.com/sharer/sharer.php?u=https://flyingsonu122.github.io/tarana?id=${index_no+1}`
+    const twshare = document.getElementById('twshare');
+    twshare.href = `https://twitter.com/intent/tweet?text=https://flyingsonu122.github.io/tarana?id=${index_no+1}`
+    const whshare = document.getElementById('whshare');
+    whshare.href = `https://api.whatsapp.com/send/?text=https://flyingsonu122.github.io/tarana?id=${index_no+1}`
+
+
+}
+
+
 
 
 // creating an audio Element.
 let track = document.createElement('audio');
 
-fetch("https://tarana-music-player.herokuapp.com/songs/?_sort=name&_order=asc")
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
+function GetAllSongs(index_no) {
+    shareplay();
 
-        All_song = data;
+    fetch("https://tarana-music-player.herokuapp.com/songs/?_sort=name&_order=asc")
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
 
-        max = All_song.length;
+            All_song = data;
 
-        track.src = All_song[index_no].path;
-        title.innerHTML = All_song[index_no].name;
-        track_image.src = All_song[index_no].img;
-        artist.innerHTML = All_song[index_no].singer;
+            max = All_song.length;
 
-        track.load();
-        track.volume = recent_volume.value / 100;
+            track.src = All_song[index_no].path;
+            title.innerHTML = All_song[index_no].name;
+            track_image.src = All_song[index_no].img;
+            artist.innerHTML = All_song[index_no].singer;
 
-        timer = setInterval(range_slider, 1000);
-        total.innerHTML = All_song.length;
-        present.innerHTML = index_no + 1;
+            track.load();
+            track.volume = recent_volume.value / 100;
 
-        All_song.forEach(element => {
-            genLink(element);
+            timer = setInterval(range_slider, 1000);
+            total.innerHTML = All_song.length;
+            present.innerHTML = index_no + 1;
 
-        });
+            All_song.forEach(element => {
+                genLink(element);
 
-        genreSearch.addEventListener('input', function () {
-            list.innerHTML = '';
-            gen = this.value;
-            All_song.forEach(e => {
-                if (e.genre == gen) {
-                    genLink(e);
+            });
 
-                } else if (gen == '') {
-                    genLink(e);
-                }
+            genreSearch.addEventListener('input', function () {
+                list.innerHTML = '';
+                gen = this.value;
+                All_song.forEach(e => {
+                    if (e.genre == gen) {
+                        genLink(e);
+
+                    } else if (gen == '') {
+                        genLink(e);
+                    }
+                });
+
             });
 
         });
+}
 
-    });
 
 
 function genLink(e) {
@@ -182,6 +225,7 @@ function reset_slider() {
 
 // play song
 function playsong() {
+    shareplay();
     track.play();
     first_click = false;
     play.innerHTML = '<i class="fa fa-pause" aria-hidden="true"></i>';

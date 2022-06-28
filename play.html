@@ -11,6 +11,7 @@
         <meta name="email" content="flyingsonu736@gmail.com">
         <meta name="twitter:creator" content="@iamsonukushwaha">
         <meta name="og:country-name" content="India, Bharat" />
+
         <meta property="og:image"
             content="https://raw.githubusercontent.com/flyingsonu122/tarana/master/img/tarana.jpg" />
 
@@ -28,7 +29,21 @@
     <body id="body">
 
         <div class="main" id="main">
-            <p id="button"></p>
+            <div class="dropup">
+                <div>
+                    <p class="dropbtn"><i class="fa fa-share"></i></p>
+                </div>
+                <div class="dropup-content">
+                    <a href="https://facebook.com/sharer/sharer.php?u=https://flyingsonu122.github.io/tarana"
+                        target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="https://twitter.com/intent/tweet?text=https://flyingsonu122.github.io/tarana"
+                        target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="https://api.whatsapp.com/send/?text=https://flyingsonu122.github.io/tarana"
+                        target="_blank"><i class="fa fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <p id="themebutton"></p>
 
             <p id="logo"><i class="fa fa-music"></i>Tarana</p>
             <!--- left part --->
@@ -39,7 +54,6 @@
                     <p id="volume_show">40</p>
                     <i class="fa fa-volume-up" aria-hidden="true" id="volume_icon" title="Mute"></i>
                     <input type="range" min="0" max="100" value="40" onchange="volume_change()" id="volume">
-
                 </div>
             </div>
             <!--- right part --->
@@ -52,7 +66,7 @@
 
                 <!--- song title & artist name --->
                 <p id="title">title</p>
-                <p id="artist">artist name</p>
+                <p id="artist">artist </p>
                 <!--- middle part of right part--->
                 <div class="middle">
                     <button id="shuffle" class="shuffle fa fa-random" title="Enable shuffle">
@@ -83,13 +97,12 @@
         <div class="documentation_page" id="main_body_hide">
             <p id="logo"><i class="fa fa-music"></i>Tarana</p>
             <div id="playlist">
-                <select name="" id="genre"  class="form-control" >
+                <select name="" id="genre" class="form-control">
                     <option value="">all</option>
                     <option value="Romantic">Romantic</option>
                     <option value="Club">Club</option>
                     <option value="HotHits">Hot Hits</option>
                 </select>
-
                 <input type="text" class="form-control" placeholder="search song" required autofocus id="srh">
             </div>
             <div class="documentation_body">
@@ -113,9 +126,9 @@
             }
         </script>
 
-        <script src="./js/details.js"></script>
         <script src="./js/up.js"></script>
         <script src="./js/main.js"></script>
+        <script src="./js/details.js"></script>
 
         <script async src="https://api.countapi.xyz/hit/sonu.live/tarana?callback=cb"></script>
     </body>

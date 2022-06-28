@@ -46,16 +46,17 @@ const renderDetails = async () => {
 window.addEventListener('DOMContentLoaded', renderDetails());
 
 
-function share() {
+function shareplay() {
     const fbshare = document.getElementById('fbshare');
-    fbshare.href = `https://facebook.com/sharer/sharer.php?u=https://flyingsonu122.github.io/tarana?id=${index_no}`
+    fbshare.href = `https://facebook.com/sharer/sharer.php?u=https://flyingsonu122.github.io/tarana?id=${index_no+1}`
     const twshare = document.getElementById('twshare');
-    twshare.href = `https://twitter.com/intent/tweet?text=https://flyingsonu122.github.io/tarana?id=${index_no}`
+    twshare.href = `https://twitter.com/intent/tweet?text=https://flyingsonu122.github.io/tarana?id=${index_no+1}`
     const whshare = document.getElementById('whshare');
-    whshare.href = `https://api.whatsapp.com/send/?text=https://flyingsonu122.github.io/tarana?id=${index_no}`
+    whshare.href = `https://api.whatsapp.com/send/?text=https://flyingsonu122.github.io/tarana?id=${index_no+1}`
 
 
 }
+
 
 
 
@@ -63,8 +64,7 @@ function share() {
 let track = document.createElement('audio');
 
 function GetAllSongs(index_no) {
-
-    share();
+    shareplay();
 
     fetch("https://tarana-music-player.herokuapp.com/songs/?_sort=name&_order=asc")
         .then(function (response) {
@@ -225,6 +225,7 @@ function reset_slider() {
 
 // play song
 function playsong() {
+    shareplay();
     track.play();
     first_click = false;
     play.innerHTML = '<i class="fa fa-pause" aria-hidden="true"></i>';

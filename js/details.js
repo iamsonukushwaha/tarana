@@ -4,7 +4,8 @@ const id = new URLSearchParams(window.location.search).get('id');
 const renderDetails = async () => {
     const res = await fetch(`https://tarana-music-player.herokuapp.com/songs/` + id);
     if (!res.ok) {
-        window.location.replace("./index.html");
+        // window.location.replace("./index.html");
+        window.history.pushState("object or string", "Title", "https://sonukushwaha.me/tarana/play.html");
     }
 
     const song = await res.json();
@@ -21,7 +22,7 @@ const renderDetails = async () => {
     present.innerHTML = song.id;
 
     
-    total.innerHTML = All_song.length;
+    total.innerHTML = song.length;
 
 }
 

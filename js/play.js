@@ -37,7 +37,7 @@ const renderDetails = async () => {
         index_no = parseInt(song.id)-1;
         GetAllSongs(index_no);
 
-        window.history.pushState("object or string", "Title", "https://sonukushwaha.me/tarana");
+        window.history.pushState("object or string", "Title", "https://sonukushwaha.me/tarana/index.html");
     }
 
 }

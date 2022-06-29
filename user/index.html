@@ -80,8 +80,6 @@
 
         </div>
 
-
-
         <script type="module">
             import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
             import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-database.js";
@@ -115,10 +113,7 @@
                                 email: email,
                                 password: password,
                             })
-
                             inputForm.reset();
-
-
                         })
                         .catch((error) => {
                             const errorCode = error.code;
@@ -158,8 +153,6 @@
 
             })
 
-
-
             document.getElementById('googlebtn').addEventListener('click', (e) => {
                 e.preventDefault();
                 const provider = new GoogleAuthProvider();
@@ -168,12 +161,9 @@
                         const credential = GoogleAuthProvider.credentialFromResult(result);
                         const token = credential.accessToken;
                         const user = result.user;
-                        alert('success');
-                        // ...
                     }).catch((error) => {
                         const errorCode = error.code;
                         const errorMessage = error.message;
-
                         const email = error.email;
                         const credential = GoogleAuthProvider.credentialFromError(error);
                         alert(errorMessage);
@@ -183,9 +173,6 @@
             const user = auth.currentUser;
             onAuthStateChanged(auth, (user) => {
                 if (user) {
-                    //alert(user.displayName + " Has Logged In")
-                    // console.log(user)
-
                     document.querySelector(".UserDetails").style.display = "flex";
                     document.querySelector(".WholeSignUpContainer").style.display = "none";
                     if (user.displayName === null || user.photoURL === null) {
@@ -196,7 +183,6 @@
                         document.getElementById('username').innerHTML = "Welcome, " + user.displayName;
                     }
                 } else {
-
                     document.querySelector(".UserDetails").style.display = "none";
                     document.querySelector(".WholeSignUpContainer").style.display = "flex";
                     document.querySelector(".WholeSignUpContainer").style.flexDirection = "column";
@@ -208,14 +194,11 @@
                     alert("SignOut Successfully from System");
                     document.querySelector(".UserDetails").style.display = "none";
                 }).catch((error) => {
-
                     alert(error);
                 });
             })
 
         </script>
-
-
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -226,7 +209,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
-
 
     </body>
 

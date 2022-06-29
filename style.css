@@ -45,7 +45,7 @@ body {
 .dropbtn {
     background-color: #3498DB;
     color: white;
-    padding: 12px ;
+    padding: 12px;
     border: none;
     border-radius: 15%;
     margin-left: 2px;
@@ -67,10 +67,10 @@ body {
 
 .dropup-content a {
     color: black;
-    padding: 12px ;
+    padding: 12px;
     text-decoration: none;
     display: block;
-    
+
 }
 
 .dropup-content a:hover {
@@ -404,6 +404,7 @@ input[type="range"]::-webkit-slider-thumb {
     background: transparent;
     cursor: pointer;
     text-decoration: none;
+    outline: none;
 }
 
 .documentation_page {

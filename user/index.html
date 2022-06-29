@@ -21,7 +21,7 @@
             }
 
             .UserDetails {
-                display: flex;
+                display: none;
                 flex-direction: column;
                 text-align: center;
                 justify-content: center;
@@ -43,6 +43,7 @@
 
         <div class="WholeSignUpContainer">
             <h2 class="text-center p-4">Log in to Tarana</h2>
+            <p class="text-center p-1">sign up to get access to insider preview</p>
             <div class="container">
                 <form id="inputForm" class="py-3 px-3">
                     <div class="form-row">
@@ -108,18 +109,12 @@
                         .then((userCredential) => {
                             const user = userCredential.user;
                             set(ref(database, 'users/' + user.uid), {
-                                email: email
-                            })
-
-                            db.collection('users').doc().set({
                                 email: email,
                                 password: password,
-                            }).then(() => {
-                                inputForm.reset();
-                                // console.log("Document successfully written!");
-                            }).catch((error) => {
-                                console.error("Error writing document: ", error);
-                            });
+                            })
+
+                            inputForm.reset();
+                            
 
                         })
                         .catch((error) => {
@@ -207,8 +202,7 @@
                     //alert(user.displayName + " Has Logged In")
                     // console.log(user)
 
-                    document.querySelector(".UserDetails").style.display = "block";
-
+                    document.querySelector(".UserDetails").style.display = "flex";
                     document.querySelector(".WholeSignUpContainer").style.display = "none";
                     if (user.displayName === null || user.photoURL === null) {
                         document.getElementById('useravatar').src = 'https://i.ibb.co/nB0tBvy/man.png'
@@ -234,9 +228,6 @@
                     alert(error);
                 });
             })
-
-
-
 
         </script>
 

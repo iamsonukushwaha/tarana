@@ -14,13 +14,29 @@ let previous = document.querySelector('#pre'),
     artist = document.querySelector('#artist'),
     main = document.querySelector('#main'),
     list = document.querySelector('#list'),
+    mobi_list = document.querySelectorAll('.track_list'),
     repeat = document.querySelector('#repeat'),
     shuffle = document.querySelector('#shuffle'),
-    genreSearch = document.querySelector('#genre');
+    genreSearch = document.querySelector('#genre'),
+    menu_btn = document.querySelector(".menu-btn"),
+    sidenav = document.querySelector(".sidenav"),
+    play_open = document.querySelector(".play-open"),
+    playlist = document.querySelector(".playlist");
 
 
 let timer, link, All_song, max, gen, index_no;
 
+// for mobile sidenav
+
+menu_btn.addEventListener("click", ()=> {
+    if(menu_btn.classList.contains("active")){
+        menu_btn.classList.remove("active");
+        sidenav.style.left = "-100%"
+    }else {
+        menu_btn.classList.add("active");
+        sidenav.style.left = "0"
+    } 
+});
 
 
 
@@ -113,8 +129,9 @@ function GetAllSongs(index_no) {
 
 
 function genLink(e) {
-    link = document.createElement('a');
-    link.innerHTML = `${e.name} &rarr;${e.singer}`;
+    link = document.createElement('li');
+    link.innerHTML = `<span class="s-name">${e.name}</span><br><span class="s-artist">${e.singer}</span>`;
+
 
     link.addEventListener('click', function () {
         index_no = e.id - 1;
@@ -129,7 +146,9 @@ function genLink(e) {
         playsong();
     });
 
-    list.append(link);
+    mobi_list.forEach(lists=> {
+         lists.append(link);
+    });
 
 }
 
@@ -407,35 +426,35 @@ function out() {
 }
 
 // Function to open and close documentation.
-const hide_show = document.getElementById('hide_show'),
-    main_body_hide = document.getElementById('main_body_hide');
+// const hide_show = document.getElementById('hide_show'),
+//     main_body_hide = document.getElementById('main_body_hide');
 
-var click = true;
-nochange();
+// var click = true;
+// nochange();
 
-hide_show.onclick = function () {
-    if (click) {
-        change();
-        click = false;
-    } else {
-        nochange();
-        click = true;
-    }
-}
+// hide_show.onclick = function () {
+//     if (click) {
+//         change();
+//         click = false;
+//     } else {
+//         nochange();
+//         click = true;
+//     }
+// }
 
-function change() {
-    main_body_hide.style.display = '';
-    main.style.display = 'none';
-    hide_show.innerText = 'X';
+// function change() {
+//     main_body_hide.style.display = '';
+//     main.style.display = 'none';
+//     hide_show.innerText = 'X';
     // hide_show.style.color = "#fff";
-}
+// }
 
-function nochange() {
-    main_body_hide.style.display = 'none';
-    main.style.display = '';
-    hide_show.innerText = '☰';
+// function nochange() {
+//     main_body_hide.style.display = 'none';
+//     main.style.display = '';
+//     hide_show.innerText = '☰';
     // hide_show.style.color = "#fff";
-}
+// }
 
 //  dark mode
 
@@ -443,6 +462,17 @@ var body = document.getElementById("body");
 var m = document.getElementById("main");
 var themebtn = document.getElementById("themebutton");
 var fc = true;
+
+const active_tab = document.querySelector(".active"),
+music_controls = document.querySelector(".music-controls"),
+music_player = document.querySelector(".music-player"),
+bi_btn = document.querySelectorAll(".bi-btn"),
+song_slate = document.querySelector(".song-slate"),
+volu = document.querySelector(".vol"),
+vol_range = document.querySelector(".vol-range"),
+playing = document.querySelector(".playing"),
+list_hover = document.querySelectorAll(".sub-nav-list"),
+playlist_hover = document.querySelectorAll(".track_list li");
 
 n_ch();
 themebtn.onclick = function () {
@@ -455,23 +485,104 @@ themebtn.onclick = function () {
     }
 }
 
+//dark
 function ch() {
-    themebtn.style.color = "black";
-    themebtn.style.backgroundColor = "white";
+    themebtn.style.color = "#fff";
+    themebtn.style.backgroundColor = "#1d2742";
     body.style.backgroundColor = "black";
-    body.style.color = "white";
     m.style.backgroundColor = "#414A4C";
-    hide_show.style.color = "white";
-    themebtn.className = "fa fa-sun-o";
+    sidenav.style.backgroundColor = "#192033"
+    playlist.style.color = "white";
+    active_tab.style.backgroundColor = "#273251";
+    music_controls.style.backgroundColor = "#181c2d";
+    music_player.style.background = "#080f24";
+    shuffle.style.backgroundColor = "#273251";
+    repeat.style.backgroundColor = "#273251";
+    song_slate.style.color = "#fff";
+    playing.style.color = "#aea4a4";
+    play.style.backgroundColor = "#393d4d";
+    volu.style.backgroundColor = "#393d4d";
+    vol_range.style.backgroundColor = "#393d4d";
+
+
+    bi_btn.forEach(btn=> {
+        btn.style.backgroundColor = "#1d2742"
+    });
+
+    list_hover.forEach(list=> {
+        list.addEventListener("mouseover", ()=> {
+            list.style.backgroundColor = "#273251";
+        });
+    });
+    list_hover.forEach(list=> {
+        list.addEventListener("mouseout", ()=> {
+            if(!list.classList.contains("active")){
+                list.style.backgroundColor = "transparent";
+            }
+        });
+    })
+
+    playlist_hover.forEach(list=> {
+        list.addEventListener("mouseover", ()=> {
+            list.style.backgroundColor = "#273251";
+        });
+    });
+    playlist_hover.forEach(list=> {
+        list.addEventListener("mouseout", ()=> {
+                list.style.backgroundColor = "transparent";
+        });
+    });
+
 }
 
+
+//light
 function n_ch() {
     themebtn.style.color = "white";
-    themebtn.style.backgroundColor = "black";
+    themebtn.style.backgroundColor = "#143599";
     body.style.backgroundColor = "white";
-    body.style.color = "black";
     m.style.backgroundColor = "#FFFAFA";
-    hide_show.style.color = "black";
-    themebtn.className = "fa fa-moon-o";
-}
+    sidenav.style.backgroundColor = "#03164d";
+    playlist.style.color = "black";
+    active_tab.style.backgroundColor = "#072888";
+    music_controls.style.backgroundColor = "#5a75c6 ";
+    music_player.style.background = "linear-gradient(#0a388e 1%, #b1f0f7 80%)";
+    shuffle.style.backgroundColor = "#0876ec";
+    repeat.style.backgroundColor = "#0876ec";
+    song_slate.style.color = "black";
+    playing.style.color = "black";
+    play.style.backgroundColor = "#2d349f";
+    volu.style.backgroundColor = "#2d349f";
+    vol_range.style.backgroundColor = "#2d349f";
+    
 
+
+    bi_btn.forEach(btn=> {
+        btn.style.backgroundColor = "#143599"
+    });
+    
+
+    list_hover.forEach(list=> {
+        list.addEventListener("mouseover", ()=> {
+            list.style.backgroundColor = "rgb(7, 40, 136)";
+        });
+    })
+    list_hover.forEach(list=> {
+        list.addEventListener("mouseout", ()=> {
+            if(!list.classList.contains("active")){
+                list.style.backgroundColor = "transparent";
+            }
+        });
+    })
+
+    playlist_hover.forEach(list=> {
+        list.addEventListener("mouseover", ()=> {
+            list.style.backgroundColor = "red";
+        });
+    })
+    playlist_hover.forEach(list=> {
+        list.addEventListener("mouseout", ()=> {
+            list.style.backgroundColor = "transparent";
+        });
+    });
+}

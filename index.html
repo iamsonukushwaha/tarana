@@ -1,134 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tarana - Best Music Player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tarana - Music Player" />
+    <meta property="og:title" content="Tarana - Music Player" />
+    <meta name="auther" content="Sonu Kumar Kushwaha" />
+    <meta name="email" content="flyingsonu736@gmail.com" />
+    <meta name="twitter:creator" content="@iamsonukushwaha" />
+    <meta name="og:country-name" content="India, Bharat" />
 
-    <head>
-        <meta charset="UTF-8">
-        <title>Tarana - Best Music Player</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Tarana - Music Player">
-        <meta property="og:title" content="Tarana - Music Player">
-        <meta name="auther" content="Sonu Kumar Kushwaha">
-        <meta name="email" content="flyingsonu736@gmail.com">
-        <meta name="twitter:creator" content="@iamsonukushwaha">
-        <meta name="og:country-name" content="India, Bharat" />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/flyingsonu122/tarana/master/img/tarana.jpg"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://raw.githubusercontent.com/flyingsonu122/tarana/master/img/taranalogo.jpeg"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <!-- <link rel="stylesheet" type="text/css" href="./style.css"> -->
+    <link rel="stylesheet" type="text/css" href="./play.css" />
 
-        <meta property="og:image"
-            content="https://raw.githubusercontent.com/flyingsonu122/tarana/master/img/tarana.jpg" />
-        <link rel="shortcut icon"
-            href="https://raw.githubusercontent.com/flyingsonu122/tarana/master/img/taranalogo.jpeg"
-            type="image/x-icon" />
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="./style.css">
+    <!-- font link -->
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- bootstrap icons cdn link -->
 
-    <body id="body">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
 
-        <div class="main" id="main">
-            <div class="dropup">
-                <div>
-                    <p class="dropbtn"><i class="fa fa-share"></i></p>
-                </div>
-                <div class="dropup-content">
-                    <a id="fbshare" href="https://facebook.com/sharer/sharer.php?u=https://flyingsonu122.github.io/tarana"
-                        target="_blank"><i class="fa fa-facebook"></i></a>
-                    <a id="twshare" href="https://twitter.com/intent/tweet?text=https://flyingsonu122.github.io/tarana"
-                        target="_blank"><i class="fa fa-twitter"></i></a>
-                    <a id="whshare" href="https://api.whatsapp.com/send/?text=https://flyingsonu122.github.io/tarana"
-                        target="_blank"><i class="fa fa-whatsapp"></i></a>
-                </div>
-            </div>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
+  </head>
 
-            <p id="themebutton"></p>
+  <body id="body">
+    <div class="main" id="main">
+      <!-- sidelist -->
 
-            <p id="logo"><i class="fa fa-music"></i>Tarana</p>
-            <!--- left part --->
-            <div class="left">
-                <!--- song img --->
-                <div class="image"><img id="track_image"></div>
-                <div class="volume">
-                    <p id="volume_show">40</p>
-                    <i class="fa fa-volume-up" aria-hidden="true" id="volume_icon" title="Mute"></i>
-                    <input type="range" min="0" max="100" value="40" onchange="volume_change()" id="volume">
-                </div>
-            </div>
-            <!--- right part --->
-            <div class="right">
-                <div class="show_song_no">
-                    <p id="present"></p>
-                    <p> / </p>
-                    <p id="total"></p>
-                </div>
-
-                <!--- song title & artist name --->
-                <p id="title">title</p>
-                <p id="artist">artist </p>
-                <!--- middle part of right part--->
-                <div class="middle">
-                    <button id="shuffle" class="shuffle fa fa-random" title="Enable shuffle">
-                    </button>
-                    <button onclick="previous_song();" id="pre" class="right_blue" title="Previous"><i
-                            class="fa fa-step-backward" aria-hidden="true"></i>
-                    </button>
-                    <button id="play" class="right_pink" title="Play"><i class="fa fa-play" aria-hidden="true"></i>
-                    </button>
-                    <button onclick="next_song();" id="next" class="right_blue" title="Next"><i
-                            class="fa fa-step-forward" aria-hidden="true"></i>
-                    </button>
-                    <button id="repeat" class="repeat fa fa-repeat" title="Enable repeat">
-                    </button>
-                </div>
-                <!--- song duration part --->
-                <div class="duration">
-                    <p id="passed_duration">0:00</p>
-                    <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()"
-                        oninput="changeDur()">
-                    <p id="full_duration">0:00</p>
-                </div>
-            </div>
-        </div>
-        <div class="documentation">
-            <button class="hide_show" id="hide_show"></button>
-        </div>
-        <div class="documentation_page" id="main_body_hide">
-            <p id="logo"><i class="fa fa-music"></i>Tarana</p>
-            <div id="playlist">
-                <select name="" id="genre" class="form-control">
-                    <option value="">all</option>
-                    <option value="Romantic">Romantic</option>
-                    <option value="Club">Club</option>
-                    <option value="HotHits">Hot Hits</option>
-                </select>
-                <input type="text" class="form-control" placeholder="search song" required autofocus id="srh">
-            </div>
-            <div class="documentation_body">
-                <div id="list">
-
-                </div>
-            </div>
-            <div class="visits">
-                <p onclick="aboutUs();" id="about"> About Us</p>
-                <p id="visits"></p>
-            </div>
+      <div class="sidenav">
+        <div class="logo">
+          <div class="logo-img">
+            <img
+              src="https://raw.githubusercontent.com/flyingsonu122/tarana/master/img/taranalogo.jpeg"
+              alt=""
+            />
+          </div>
+          <div class="logo-title">Tarana</div>
         </div>
 
-        <script>
-            function cb(response) {
-                document.querySelector('#visits').innerHTML = `${response.value} Views`;
-            }
+        <ul class="side-list">
+          <li class="list">
+            <div class="nav-list">
+              <div class="list-icon"><i class="bi bi-globe"></i></div>
+              <div class="list-name">discover</div>
+            </div>
+            <ul class="sublist">
+              <li class="sub-nav-list active">
+                <div class="sublist-icon">
+                  <i class="fa-solid fa-house"></i>
+                </div>
+                <div class="sublist-name">home</div>
+              </li>
+              <li class="sub-nav-list">
+                <div class="sublist-icon"><i class="bi bi-search"></i></div>
+                <div class="sublist-name">search</div>
+              </li>
+              <li class="sub-nav-list">
+                <div class="sublist-icon">
+                  <i class="fa-solid fa-headphones-simple"></i>
+                </div>
+                <div class="sublist-name">library</div>
+              </li>
+            </ul>
+          </li>
+          <li class="list">
+            <div class="nav-list">
+              <div class="list-icon">
+                <i class="fa-solid fa-headphones-simple"></i>
+              </div>
+              <div class="list-name">library</div>
+            </div>
 
-            function aboutUs() {
-                window.open("./aboutus.html", "_blank");
-            }
-        </script>
+            <ul class="sublist">
+              <li class="sub-nav-list">
+                <div class="sublist-icon"><i class="bi bi-star-fill"></i></div>
+                <div class="sublist-name">favorites</div>
+              </li>
+              <li class="sub-nav-list">
+                <div class="sublist-icon">
+                  <i class="bi bi-music-note-list"></i>
+                </div>
+                <div class="sublist-name">playlist 1</div>
+              </li>
+              <li class="sub-nav-list">
+                <div class="sublist-icon">
+                  <i class="bi bi-music-note-list"></i>
+                </div>
+                <div class="sublist-name">party playlist</div>
+              </li>
+              <li class="sub-nav-list">
+                <div class="sublist-icon">
+                  <i class="bi bi-music-note-list"></i>
+                </div>
+                <div class="sublist-name">old songs</div>
+              </li>
+            </ul>
+          </li>
+          <li class="list">
+            <div class="nav-list">
+              <div class="list-icon"><i class="bi bi-person"></i></div>
+              <div class="list-name">about</div>
+            </div>
 
-        <script src="./js/search.js"></script>
-        <script src="./js/play.js"></script>
+            <ul class="sublist">
+              <li class="sub-nav-list">
+                <div class="sublist-icon">
+                  <i class="bi bi-person-fill"></i>
+                </div>
+                <div class="sublist-name" onclick="aboutUs();" id="about">
+                  about us
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="list">
+            <div class="nav-list">
+              <div class="view-icon"><i class="bi bi-eye-fill"></i></div>
+              <div class="view-count" id="visits"></div>
+            </div>
+            <div class="songs-count">
+              <span id="present"></span> / <span id="total"></span>
+            </div>
+          </li>
+        </ul>
+      </div>
 
-        <script async src="https://api.countapi.xyz/hit/sonu.live/tarana?callback=cb"></script>
-    </body>
+      <!-- sidelist end -->
 
+      <!-- musicplayer start -->
+
+      <div class="music-player">
+        <div class="player-head">
+          <div class="logo mobi-logo">
+            <div class="logo-img">
+              <img
+                src="https://raw.githubusercontent.com/flyingsonu122/tarana/master/img/taranalogo.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="logo-title">Tarana</div>
+          </div>
+
+          <div class="search">
+            <div class="search-icon">
+              <i class="bi bi-search"></i>
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search Song"
+              required
+              autofocus
+              id="srh"
+            />
+          </div>
+          <div class="links">
+            <div class="theme-btn bi-btn" id="themebutton">
+              <i class="bi bi-circle-half"></i>
+            </div>
+
+            <div class="social">
+              <div class="share-btn bi-btn">
+                <i class="bi bi-share-fill"></i>
+              </div>
+              <div class="social-content">
+                <a
+                  class="social-link bi-btn"
+                  id="fbshare"
+                  href="https://facebook.com/sharer/sharer.php?u=https://flyingsonu122.github.io/tarana"
+                  target="_blank"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+                <a
+                  class="social-link bi-btn"
+                  id="twshare"
+                  href="https://twitter.com/intent/tweet?text=https://flyingsonu122.github.io/tarana"
+                  target="_blank"
+                  ><i class="bi bi-twitter"></i
+                ></a>
+                <a
+                  class="social-link bi-btn"
+                  id="whshare"
+                  href="https://api.whatsapp.com/send/?text=https://flyingsonu122.github.io/tarana"
+                  target="_blank"
+                  ><i class="bi bi-whatsapp"></i
+                ></a>
+              </div>
+            </div>
+            <div class="menu-btn bi-btn">
+              <i class="bi bi-list"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="music-board">
+          <h2 class="playing">PLAYING NOW</h2>
+          <div class="song-slate">
+            <div class="left-slate">
+              <div class="image">
+                <img id="track_image" src="" alt="" />
+                <button class="play-pause-btn">
+                  <i class="bi bi-play-fill"></i>
+                </button>
+              </div>
+              <div class="song-detail">
+                <div class="song-name" id="title">Baarish</div>
+                <div class="artists" id="artist">
+                  Ash King, Shashaa Tirupati & Tanisk Baagchi
+                </div>
+              </div>
+            </div>
+            <div class="right-slate">
+              <div class="shuffle" id="shuffle" title="Enable shuffle">
+                <i class="bi bi-shuffle"></i>
+              </div>
+              <div class="reload" id="repeat" title="Enable repeat">
+                <i class="bi bi-arrow-clockwise"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="playlist">
+          <div class="play-title">
+            <div class="play-icon">
+              <i class="bi bi-music-note-list"></i>
+            </div>
+            <div class="playlist-name">PLAYLIST</div>
+          </div>
+
+          <div class="main-list">
+            <ul id="list" class="track_list">
+            </ul>
+          </div>
+        </div>
+
+        <!-- music controls -->
+        <div class="music-controls">
+          <div class="track-stuff">
+            <div class="song-img"><img id="track-image" src="" alt="" /></div>
+            <div class="track-name">Baarish</div>
+          </div>
+          <div class="controls">
+            <button
+              class="prev-btn"
+              onclick="previous_song();"
+              id="pre"
+              title="Previous"
+            >
+              <i class="fa-solid fa-backward-step"></i>
+            </button>
+            <button class="play-btn" id="play" title="Play">
+              <i class="bi bi-play-fill"></i>
+            </button>
+            <button
+              class="next-btn"
+              onclick="next_song();"
+              id="next"
+              title="Next"
+            >
+              <i class="fa-solid fa-forward-step"></i>
+            </button>
+          </div>
+          <div class="duration">
+            <div class="track">
+              <div>
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="0"
+                  id="duration_slider"
+                  onchange="change_duration()"
+                  oninput="changeDur()"
+                />
+              </div>
+              <div class="time">
+                <div><p id="passed_duration">0:00</p></div>
+                <div><p id="full_duration">0:00</p></div>
+              </div>
+            </div>
+          </div>
+          <div class="track-sound">
+            <div class="volume">
+              <div class="vol">
+                <i
+                  class="fa fa-volume-up"
+                  aria-hidden="true"
+                  id="volume_icon"
+                  title="Mute"
+                ></i>
+                <p class="vol-count" id="volume_show">40</p>
+                <div class="vol-range">
+                  <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="40"
+                    onchange="volume_change()"
+                    id="volume"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function cb(response) {
+        document.querySelector("#visits").innerHTML = `${response.value} Views`;
+      }
+
+      function aboutUs() {
+        window.open("./aboutus.html", "_blank");
+      }
+    </script>
+
+    <script src="./js/search.js"></script>
+    <script src="./js/play.js"></script>
+
+    <script
+      async
+      src="https://api.countapi.xyz/hit/sonu.live/tarana?callback=cb"
+    ></script>
+  </body>
 </html>

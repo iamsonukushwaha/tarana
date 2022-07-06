@@ -314,7 +314,7 @@ function changeDur() {
 
 // for repeat
 var select = true;
-repeat.innerHTML = ``;
+repeat.innerHTML = `<i class="bi bi-arrow-clockwise"></i>`;
 
 // for shuffle
 var selected = true;
@@ -357,7 +357,7 @@ function range_slider() {
             select = false;
 
         } else {
-            repeat.innerHTML = ``;
+            repeat.innerHTML = `<i class="bi bi-arrow-clockwise"></i>`;
             repeat.classList.add('repeat');
             repeat.classList.remove('selected');
             select = true;

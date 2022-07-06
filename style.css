@@ -197,6 +197,13 @@ body {
     padding-left: 100px;
     margin-top: 30px;
 }
+#track_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 9px;
+    object-position: top;
+}
 .image {
     width: 350px;
     height: 190px;

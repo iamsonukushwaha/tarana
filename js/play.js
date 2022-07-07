@@ -38,6 +38,14 @@ menu_btn.addEventListener("click", ()=> {
     } 
 });
 
+playlist.addEventListener("click",()=> {
+    if(!list.classList.contains("play_open")){
+        list.classList.add("play_open");
+    }else {
+        list.classList.remove("play_open");
+    }
+})
+
 
 
 const id = new URLSearchParams(window.location.search).get('id');

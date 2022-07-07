@@ -561,7 +561,7 @@ input[type=range]::-moz-range-progress {
         display: none;
     }
     .duration .track input {
-        width: 180px;
+        width: 155px;
     }
     .sidenav {
         width: 70vw;

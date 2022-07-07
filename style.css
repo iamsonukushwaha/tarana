@@ -461,6 +461,17 @@ input[type=range]::-moz-range-progress {
         margin-bottom: 90px !important;
     }
 }
+@media (max-height: 590px) and (min-width: 970px) {
+    body {
+        overflow-y: scroll;
+    }
+    .sidenav {
+        height: 100% !important;
+    }
+    .music-player {
+        height: auto;
+    }
+}
 
 @media (max-width:1210px ) {
     .playlist {

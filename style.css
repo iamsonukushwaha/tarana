@@ -160,11 +160,11 @@ body {
     background-color: #fff;
     padding: 2px;
     border-radius: 20px;
-    opacity: 0;
+    display: none;
     transition: all .3s ease;
 }
 .social:hover .social-content {
-    opacity: 1;
+    display: flex;
     z-index: 1;
 }
 .social-link {
@@ -459,12 +459,31 @@ input[type=range]::-moz-range-progress {
         width: 80%;
         margin: 10px auto 0;
         z-index: 0;
+        height: fit-content;
+        background-color: #1f3866;
+        border-radius: 4px;
+        cursor: pointer;
     }
     .play-title {
-        padding-bottom: 10px;
+        padding: 10px 30px;
+        
     }
     .main-list {
+        position: relative;
         margin-top: 0;
+    }
+    #list {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 0;
+        background-color: rgba(57, 77, 134, 0.9);
+        margin-bottom: 52px;
+        width: 100%;
+        border-radius: 4px;
+    }
+    #list.play_open {
+        height: 40vh;
     }
     .music-player {
         flex-basis: 100%;

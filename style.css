@@ -444,6 +444,23 @@ input[type=range]::-moz-range-progress {
         height: 395px;
     }
 }
+@media (max-height: 590px) and (max-width: 970px) {
+    body {
+        overflow-y: scroll;
+    }
+    .music-controls {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+    .music-player {
+        height: 100% !important;
+    }
+    .playlist {
+        margin-bottom: 90px !important;
+    }
+}
 
 @media (max-width:1210px ) {
     .playlist {
@@ -464,9 +481,14 @@ input[type=range]::-moz-range-progress {
         border-radius: 4px;
         cursor: pointer;
     }
+    .sidenav {
+        height: 100vh;
+    }
+    .music-player {
+        height: 100vh;
+    }
     .play-title {
         padding: 10px 30px;
-        
     }
     .main-list {
         position: relative;
@@ -500,16 +522,13 @@ input[type=range]::-moz-range-progress {
 }
 @media (max-width: 970px) {
     .sidenav {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: -100%;
         z-index: 1;
     }
     .menu-btn{
         display: flex;
-    }
-    .music-player {
-        height: 100Vh;
     }
     .mobi-logo {
         display: flex;

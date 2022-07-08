@@ -160,11 +160,11 @@ body {
     background-color: #fff;
     padding: 2px;
     border-radius: 20px;
-    opacity: 0;
+    display: none;
     transition: all .3s ease;
 }
 .social:hover .social-content {
-    opacity: 1;
+    display: flex;
     z-index: 1;
 }
 .social-link {
@@ -444,6 +444,34 @@ input[type=range]::-moz-range-progress {
         height: 395px;
     }
 }
+@media (max-height: 590px) and (max-width: 970px) {
+    body {
+        overflow-y: scroll;
+    }
+    .music-controls {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+    .music-player {
+        height: 100% !important;
+    }
+    .playlist {
+        margin-bottom: 90px !important;
+    }
+}
+@media (max-height: 590px) and (min-width: 970px) {
+    body {
+        overflow-y: scroll;
+    }
+    .sidenav {
+        height: 100% !important;
+    }
+    .music-player {
+        height: auto !important;
+    }
+}
 
 @media (max-width:1210px ) {
     .playlist {
@@ -459,12 +487,36 @@ input[type=range]::-moz-range-progress {
         width: 80%;
         margin: 10px auto 0;
         z-index: 0;
+        height: fit-content;
+        background-color: #1f3866;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .sidenav {
+        height: 100vh;
+    }
+    .music-player {
+        height: 100vh;
     }
     .play-title {
-        padding-bottom: 10px;
+        padding: 10px 30px;
     }
     .main-list {
+        position: relative;
         margin-top: 0;
+    }
+    #list {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 0;
+        background-color: rgba(57, 77, 134, 0.9);
+        margin-bottom: 52px;
+        width: 100%;
+        border-radius: 4px;
+    }
+    #list.play_open {
+        height: 40vh;
     }
     .music-player {
         flex-basis: 100%;
@@ -481,16 +533,13 @@ input[type=range]::-moz-range-progress {
 }
 @media (max-width: 970px) {
     .sidenav {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: -100%;
         z-index: 1;
     }
     .menu-btn{
         display: flex;
-    }
-    .music-player {
-        height: 100Vh;
     }
     .mobi-logo {
         display: flex;
@@ -542,7 +591,7 @@ input[type=range]::-moz-range-progress {
         display: none;
     }
     .duration .track input {
-        width: 180px;
+        width: 155px;
     }
     .sidenav {
         width: 70vw;

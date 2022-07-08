@@ -469,7 +469,7 @@ input[type=range]::-moz-range-progress {
         height: 100% !important;
     }
     .music-player {
-        height: auto;
+        height: auto !important;
     }
 }
 

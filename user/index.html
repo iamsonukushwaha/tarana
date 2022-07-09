@@ -13,7 +13,6 @@
         <meta name="og:country-name" content="India, Bharat" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
             integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <!-- <link rel="stylesheet" href="./signin.css"> -->
 
         <style>
             .UserDetails {
@@ -24,6 +23,26 @@
                 align-items: center;
                 gap: 1em;
                 margin: 1em 0 0 0;
+            }
+
+            #googlebtn {
+                display: flex;
+                gap: 10px;
+                font-size: 22px;
+                padding: 8px;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+
+            #googlebtn:hover {
+                background-color: rgba(211, 115, 182, 0.434);
+            }
+
+            @media only screen and (max-width: 600px) {
+
+                #googlebtn {
+                    font-size: 14px;
+                }
             }
         </style>
 
@@ -38,7 +57,8 @@
         </div>
 
         <div class="WholeSignUpContainer">
-            <h2 class="text-center p-4">Log in to <a href="https://flyingsonu122.github.io/tarana" target="_blank" rel="noopener noreferrer">Tarana</a></h2>
+            <h2 class="text-center p-2">Log in to <a href="https://flyingsonu122.github.io/tarana" target="_blank"
+                    rel="noopener noreferrer">Tarana</a></h2>
             <p class="text-center p-1">sign up to get access to insider preview</p>
             <div class="container">
                 <form id="inputForm" class="py-3 px-3">
@@ -54,27 +74,38 @@
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-md-4">
+                        <div class="form-group col-md-6">
                             <button type="button" class="btn btn-primary mb-2" id="signup">Sign Up</button>
                         </div>
+                    </div>
+                    <div class="form-row">
                         <div class="form-group col-md-6">
-                            <button type="button" class="btn btn-primary mb-2" id="signin">Log In</button>
+                            <button type="button" class="btn btn-outline-primary mb-2 pl-4 pr-4" id="signin">Log In</button>
                         </div>
                     </div>
 
                     <hr>
-                    <h6 class="mt-5">Directly Sign in using social sites</h6>
-                    <p class="mt-3"></p>
+                    <h6 class="m-3">Directly Sign in using social sites</h6>
+                    <button type="button" id="googlebtn">
+                        <span><svg class="svg" width="18" height="18" viewBox="0 0 18 18"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.874 2.684-6.615z"
+                                    fill-rule="evenodd" fill-opacity="1" fill="#4285f4" stroke="none"></path>
+                                <path
+                                    d="M9.003 18c2.43 0 4.467-.806 5.956-2.18L12.05 13.56c-.806.54-1.836.86-3.047.86-2.344 0-4.328-1.584-5.036-3.711H.96v2.332C2.44 15.983 5.485 18 9.003 18z"
+                                    fill-rule="evenodd" fill-opacity="1" fill="#34a853" stroke="none"></path>
+                                <path
+                                    d="M3.964 10.712c-.18-.54-.282-1.117-.282-1.71 0-.593.102-1.17.282-1.71V4.96H.957C.347 6.175 0 7.55 0 9.002c0 1.452.348 2.827.957 4.042l3.007-2.332z"
+                                    fill-rule="evenodd" fill-opacity="1" fill="#fbbc05" stroke="none"></path>
+                                <path
+                                    d="M9.003 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.464.891 11.428 0 9.002 0 5.485 0 2.44 2.017.96 4.958L3.967 7.29c.708-2.127 2.692-3.71 5.036-3.71z"
+                                    fill-rule="evenodd" fill-opacity="1" fill="#ea4335" stroke="none"></path>
+                            </svg></span>
 
-                    <button type="button" class="btn btn-outline-primary" id="googlebtn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-google" viewBox="0 0 16 16">
-                            <path
-                                d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z">
-                            </path>
-                        </svg>
-                        Login using Google
+                        <div class="">Continue with Google</div>
                     </button>
+
                 </form>
             </div>
 
@@ -198,7 +229,7 @@
                 });
             })
 
-        </script>
+        </script> 
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

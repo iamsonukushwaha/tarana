@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#sidenav {
+    width: 320px; 
+    height: 100% !important; 
+    position: absolute; 
+    background-color: #13192C;
+    letter-spacing: 1.5px;
+}
+
+#sidenav a {
+    color: #fff !important;
+}
+
+#sidenav .sidenav-logo {
+    text-decoration: none;
+}
+
+#sidenav .sidenav-subheading, .sidenav-menu .nav-link span {
+    color: #676A74;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+main {
+    margin-left: 320px;
+    height: 100%;
+    background-color: #181E30;
+}
+
+#themebutton {
+    border-radius: 30%;
+    cursor: pointer;
+    padding: 12px;
+    font-size: 15px;
+}
+
+#shuffle, #repeat {
+    position: absolute;
+}
+
+#shuffle {
+    top: 195px;
+    right: 20%;
+}
+
+#repeat {
+    top: 300px;
+    right: 20%;
+}
+
+#favorite-section .fav-item {
+    display: flex;
+}
+
+#music-player {
+    width: 85vw;
+    max-width: 100%;
+    height: 90px;
+    margin-left: 320px;
+    background-color: #2C313F;
+}
+
+#play {
+    border: 1px solid rgba(128,128,128, 0.25);
+    background: rgba(128,128,128, 0.25) !important;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 50%;
+    outline: none;
+    height: 3px;
+    margin: 0 15px;
+    background: rgba(128,128,128, 0.25);
+}
+
+input[type="range"]:focus {
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    background: #FFB801;
+    border-radius: 50%;
+    cursor: pointer;
+}

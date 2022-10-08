@@ -56,7 +56,7 @@ git commit -m "<your_commit_message>"
 git push -u origin <your_branch_name>
 ```
 
-**8.** Create a [PR](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) to **`develop`** branch !
+**8.** Create a [PR](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) to **`hack`** branch !
 
 **9.** **Congratulations!** :tada: Sit and relax, you've made your contribution to [Tarana](https://github.com/flyingsonu122/tarana) project. :v: :heart:
 

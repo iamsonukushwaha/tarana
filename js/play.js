@@ -114,7 +114,7 @@ function genLink(e) {
 
     link = document.createElement('a');
     // link.innerHTML = `${e.name} &rarr;${e.singer}`;
-    link.innerHTML = `<span style="color: yellow; ">${e.name}</span>  <i> ${e.singer} </i>`;
+    link.innerHTML = `<span >${e.name}</span>  <i style="color: silver; "> ${e.singer} </i>`;
     link.title = `click to play`; 
 
     link.addEventListener('click', function () {
@@ -403,41 +403,43 @@ function out() {
 }
 
 // Function to open and close documentation.
-const hide_show = document.getElementById('hide_show'),
-    main_body_hide = document.getElementById('main_body_hide');
+// const hide_show = document.getElementById('hide_show'),
+//     main_body_hide = document.getElementById('main_body_hide');
 
-var click = true;
-nochange();
+// var click = true;
+// nochange();
 
-hide_show.onclick = function () {
-    if (click) {
-        change();
-        click = false;
-    } else {
-        nochange();
-        click = true;
-    }
-}
+// hide_show.onclick = function () {
+//     if (click) {
+//         change();
+//         click = false;
+//     } else {
+//         nochange();
+//         click = true;
+//     }
+// }
 
-function change() {
-    main_body_hide.style.display = '';
-    main.style.display = 'none';
-    hide_show.innerText = 'X';
-    // hide_show.style.color = "#fff";
-}
+// function change() {
+//     main_body_hide.style.display = '';
+//     main.style.display = 'none';
+//     hide_show.innerText = 'X';
+//     // hide_show.style.color = "#fff";
+// }
 
-function nochange() {
-    main_body_hide.style.display = 'none';
-    main.style.display = '';
-    hide_show.innerText = '☰';
-    // hide_show.style.color = "#fff";
-}
+// function nochange() {
+//     main_body_hide.style.display = 'none';
+//     main.style.display = '';
+//     hide_show.innerText = '☰';
+//     // hide_show.style.color = "#fff";
+// }
 
 //  dark mode
 
 var body = document.getElementById("body");
 var m = document.getElementById("main");
 var themebtn = document.getElementById("themebutton");
+var about = document.getElementById("about");
+var visits = document.getElementById("visits");
 var fc = true;
 
 n_ch();
@@ -457,7 +459,9 @@ function ch() {
     body.style.backgroundColor = "black";
     body.style.color = "white";
     m.style.backgroundColor = "#414A4C";
-    hide_show.style.color = "white";
+    // hide_show.style.color = "white";
+    about.style.color = "white";
+    visits.style.color = "white";
     themebtn.className = "fa fa-sun-o";
 }
 
@@ -467,6 +471,8 @@ function n_ch() {
     body.style.backgroundColor = "white";
     body.style.color = "black";
     m.style.backgroundColor = "#FFFAFA";
-    hide_show.style.color = "black";
+    // hide_show.style.color = "black";
+    about.style.color = "black";
+    visits.style.color = "black";
     themebtn.className = "fa fa-moon-o";
 }

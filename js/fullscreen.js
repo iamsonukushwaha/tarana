@@ -1,7 +1,7 @@
-document.addEventListener("click", function () {
-    toggleFullScreen();
+// document.addEventListener("click", function () {
+//     toggleFullScreen();
 
-}, { once: true });
+// }, { once: true });
 
 function toggleFullScreen() {
     if (!document.fullscreenElement) {
@@ -11,3 +11,6 @@ function toggleFullScreen() {
     }
 }
 
+document.addEventListener("dblclick", function () {
+    toggleFullScreen();
+})

@@ -160,7 +160,7 @@ button {
 /* both range slider part */
 
 input[type="range"] {
-    -webkit-appearance: none;
+    /* -webkit-appearance: none; */
     width: 50%;
     outline: none;
     height: 3px;
@@ -169,7 +169,7 @@ input[type="range"] {
 }
 
 input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
+    /* -webkit-appearance: none; */
     height: 15px;
     width: 15px;
     background: linear-gradient(90deg, rgb(255, 0, 187), rgb(0, 132, 255));
@@ -419,17 +419,20 @@ input[type="range"]::-webkit-slider-thumb {
     color: white;
     cursor: pointer;
 }
+#about:hover {
+    text-decoration: underline;
+}
 
 
 
 #list {
-    position: fixed;
+    /* position: fixed; */
     overflow-y: scroll;
-    margin-left: 6px;
-    margin-right: 15px;
+    /* margin-left: 6px; */
+    /* margin-right: 15px; */
     padding-bottom: 10px;
     height: 75vh;
-    width: 99%;
+    width: 100%;
 }
 
 #list a {
@@ -442,8 +445,12 @@ input[type="range"]::-webkit-slider-thumb {
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
-    border: 3px solid #f6f6f6;
+    border: 1px solid #8f7f7f;
     border-radius: 5px;
+}
+
+#list a>span,i{
+    margin: auto 10px;
 }
 
 #list a:hover {

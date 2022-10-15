@@ -110,11 +110,15 @@ function GetAllSongs(index_no) {
         });
 }
 
+let genText;
 
-
+console.log(track.duration);
 function genLink(e) {
+
     link = document.createElement('a');
-    link.innerHTML = `${e.name} &rarr;${e.singer}`;
+    // link.innerHTML = `${e.name} &rarr;${e.singer}`;
+    link.innerHTML = `<span style="color: yellow; ">${e.name}</span>  <i> ${e.singer} </i>`;
+    link.title = `click to play`; 
 
     link.addEventListener('click', function () {
         index_no = e.id - 1;
@@ -277,9 +281,6 @@ function change_duration() {
 }
 
 function changeDur() {
-
-
-
     slider_position = track.duration * (slider.value / 100);
     track.currentTime = slider_position;
     curmins = Math.floor(track.currentTime / 60), cursecs = Math.floor(track.currentTime - curmins * 60);
@@ -474,4 +475,3 @@ function n_ch() {
     hide_show.style.color = "black";
     themebtn.className = "fa fa-moon-o";
 }
-

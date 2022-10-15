@@ -110,9 +110,6 @@ function GetAllSongs(index_no) {
         });
 }
 
-let genText;
-
-console.log(track.duration);
 function genLink(e) {
 
     link = document.createElement('a');
@@ -219,8 +216,6 @@ recent_volume.oninput = function () {
     volume_show.innerHTML = this.value;
     track.volume = this.value / 100;
 }
-
-
 
 // reset song slider
 function reset_slider() {

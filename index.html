@@ -5,8 +5,8 @@
         <meta charset="UTF-8">
         <title>Tarana - Best Music Player</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Tarana - Music Player">
-        <meta property="og:title" content="Tarana - Music Player">
+        <meta name="description" content="Tarana - Best Music Player">
+        <meta property="og:title" content="Tarana - Best Music Player">
         <meta name="auther" content="Sonu Kumar Kushwaha">
         <meta name="email" content="flyingsonu736@gmail.com">
         <meta name="twitter:creator" content="@iamsonukushwaha">
@@ -14,6 +14,7 @@
 
         <meta property="og:image"
             content="https://raw.githubusercontent.com/flyingsonu122/tarana/master/img/tarana.jpg" />
+
         <link rel="shortcut icon"
             href="https://raw.githubusercontent.com/flyingsonu122/tarana/master/img/taranalogo.jpeg"
             type="image/x-icon" />
@@ -103,6 +104,7 @@
                     <option value="HotHits">Hot Hits</option>
                 </select>
                 <input type="text" class="form-control" placeholder="search song" required autofocus id="srh">
+                
             </div>
             <div class="documentation_body">
                 <div id="list">
@@ -110,14 +112,14 @@
                 </div>
             </div>
             <div class="visits">
-                <p onclick="aboutUs();" id="about"> About Us</p>
+                <p onclick="aboutUs();" id="about" title="Sonu Kumar Kushwaha"> About Us</p>
                 <p id="visits"></p>
             </div>
         </div>
 
         <script>
             function cb(response) {
-                document.querySelector('#visits').innerHTML = `${response.value} Views`;
+                document.querySelector('#visits').innerHTML = `${response.value} Visits`;
             }
 
             function aboutUs() {
@@ -127,9 +129,11 @@
 
         <script src="./js/search.js"></script>
         <script src="./js/play.js"></script>
+        
         <script src="./js/fullscreen.js"></script>
 
         <script async src="https://api.countapi.xyz/hit/sonu.live/tarana?callback=cb"></script>
     </body>
+    
 
 </html>

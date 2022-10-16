@@ -9,6 +9,7 @@ let previous = document.querySelector('#pre'),
     full_duration = document.querySelector('#full_duration'),
     passed_duration = document.querySelector('#passed_duration'),
     track_image = document.querySelector('#track_image'),
+    trackImage = document.querySelector('#track-image'),
     present = document.querySelector('#present'),
     total = document.querySelector('#total'),
     artist = document.querySelector('#artist'),
@@ -28,20 +29,20 @@ let timer, link, All_song, max, gen, index_no;
 
 // for mobile sidenav
 
-menu_btn.addEventListener("click", ()=> {
-    if(menu_btn.classList.contains("active")){
+menu_btn.addEventListener("click", () => {
+    if (menu_btn.classList.contains("active")) {
         menu_btn.classList.remove("active");
         sidenav.style.left = "-100%"
-    }else {
+    } else {
         menu_btn.classList.add("active");
         sidenav.style.left = "0"
-    } 
+    }
 });
 
-playlist.addEventListener("click",()=> {
-    if(!list.classList.contains("play_open")){
+playlist.addEventListener("click", () => {
+    if (!list.classList.contains("play_open")) {
         list.classList.add("play_open");
-    }else {
+    } else {
         list.classList.remove("play_open");
     }
 })
@@ -72,11 +73,11 @@ window.addEventListener('DOMContentLoaded', renderDetails());
 
 function shareplay() {
     const fbshare = document.getElementById('fbshare');
-    fbshare.href = `https://facebook.com/sharer/sharer.php?u=https://flyingsonu122.github.io/tarana?id=${index_no+1}`
+    fbshare.href = `https://facebook.com/sharer/sharer.php?u=https://flyingsonu122.github.io/tarana?id=${index_no + 1}`
     const twshare = document.getElementById('twshare');
-    twshare.href = `https://twitter.com/intent/tweet?text=https://flyingsonu122.github.io/tarana?id=${index_no+1}`
+    twshare.href = `https://twitter.com/intent/tweet?text=https://flyingsonu122.github.io/tarana?id=${index_no + 1}`
     const whshare = document.getElementById('whshare');
-    whshare.href = `https://api.whatsapp.com/send/?text=https://flyingsonu122.github.io/tarana?id=${index_no+1}`
+    whshare.href = `https://api.whatsapp.com/send/?text=https://flyingsonu122.github.io/tarana?id=${index_no + 1}`
 
 
 }
@@ -103,6 +104,7 @@ function GetAllSongs(index_no) {
             track.src = All_song[index_no].path;
             title.innerHTML = All_song[index_no].name;
             track_image.src = All_song[index_no].img;
+            trackImage.src = All_song[index_no].img;
             artist.innerHTML = All_song[index_no].singer;
 
             track.load();
@@ -146,6 +148,7 @@ function genLink(e) {
         track.src = All_song[e.id - 1].path;
         title.innerHTML = All_song[e.id - 1].name;
         track_image.src = e.img;
+        trackImage.src = e.img;
         artist.innerHTML = e.singer;
         present.innerHTML = All_song[e.id - 1].id;
 
@@ -154,8 +157,8 @@ function genLink(e) {
         playsong();
     });
 
-    mobi_list.forEach(lists=> {
-         lists.append(link);
+    mobi_list.forEach(lists => {
+        lists.append(link);
     });
 
 }
@@ -423,6 +426,7 @@ function out() {
     track.src = All_song[index_no].path;
     title.innerHTML = All_song[index_no].name;
     track_image.src = All_song[index_no].img;
+    trackImage.src = All_song[index_no].img;
     artist.innerHTML = All_song[index_no].singer;
 
     track.load();
@@ -454,14 +458,14 @@ function out() {
 //     main_body_hide.style.display = '';
 //     main.style.display = 'none';
 //     hide_show.innerText = 'X';
-    // hide_show.style.color = "#fff";
+// hide_show.style.color = "#fff";
 // }
 
 // function nochange() {
 //     main_body_hide.style.display = 'none';
 //     main.style.display = '';
 //     hide_show.innerText = '☰';
-    // hide_show.style.color = "#fff";
+// hide_show.style.color = "#fff";
 // }
 
 //  dark mode
@@ -472,15 +476,15 @@ var themebtn = document.getElementById("themebutton");
 var fc = true;
 
 const active_tab = document.querySelector(".active"),
-music_controls = document.querySelector(".music-controls"),
-music_player = document.querySelector(".music-player"),
-bi_btn = document.querySelectorAll(".bi-btn"),
-song_slate = document.querySelector(".song-slate"),
-volu = document.querySelector(".vol"),
-vol_range = document.querySelector(".vol-range"),
-playing = document.querySelector(".playing"),
-list_hover = document.querySelectorAll(".sub-nav-list"),
-playlist_hover = document.querySelectorAll(".track_list li");
+    music_controls = document.querySelector(".music-controls"),
+    music_player = document.querySelector(".music-player"),
+    bi_btn = document.querySelectorAll(".bi-btn"),
+    song_slate = document.querySelector(".song-slate"),
+    volu = document.querySelector(".vol"),
+    vol_range = document.querySelector(".vol-range"),
+    playing = document.querySelector(".playing"),
+    list_hover = document.querySelectorAll(".sub-nav-list"),
+    playlist_hover = document.querySelectorAll(".track_list li");
 
 n_ch();
 themebtn.onclick = function () {
@@ -513,31 +517,31 @@ function ch() {
     vol_range.style.backgroundColor = "#393d4d";
 
 
-    bi_btn.forEach(btn=> {
+    bi_btn.forEach(btn => {
         btn.style.backgroundColor = "#1d2742"
     });
 
-    list_hover.forEach(list=> {
-        list.addEventListener("mouseover", ()=> {
+    list_hover.forEach(list => {
+        list.addEventListener("mouseover", () => {
             list.style.backgroundColor = "#273251";
         });
     });
-    list_hover.forEach(list=> {
-        list.addEventListener("mouseout", ()=> {
-            if(!list.classList.contains("active")){
+    list_hover.forEach(list => {
+        list.addEventListener("mouseout", () => {
+            if (!list.classList.contains("active")) {
                 list.style.backgroundColor = "transparent";
             }
         });
     })
 
-    playlist_hover.forEach(list=> {
-        list.addEventListener("mouseover", ()=> {
+    playlist_hover.forEach(list => {
+        list.addEventListener("mouseover", () => {
             list.style.backgroundColor = "#273251";
         });
     });
-    playlist_hover.forEach(list=> {
-        list.addEventListener("mouseout", ()=> {
-                list.style.backgroundColor = "transparent";
+    playlist_hover.forEach(list => {
+        list.addEventListener("mouseout", () => {
+            list.style.backgroundColor = "transparent";
         });
     });
 
@@ -562,34 +566,34 @@ function n_ch() {
     play.style.backgroundColor = "#2d349f";
     volu.style.backgroundColor = "#2d349f";
     vol_range.style.backgroundColor = "#2d349f";
-    
 
 
-    bi_btn.forEach(btn=> {
+
+    bi_btn.forEach(btn => {
         btn.style.backgroundColor = "#143599"
     });
-    
 
-    list_hover.forEach(list=> {
-        list.addEventListener("mouseover", ()=> {
+
+    list_hover.forEach(list => {
+        list.addEventListener("mouseover", () => {
             list.style.backgroundColor = "rgb(7, 40, 136)";
         });
     })
-    list_hover.forEach(list=> {
-        list.addEventListener("mouseout", ()=> {
-            if(!list.classList.contains("active")){
+    list_hover.forEach(list => {
+        list.addEventListener("mouseout", () => {
+            if (!list.classList.contains("active")) {
                 list.style.backgroundColor = "transparent";
             }
         });
     })
 
-    playlist_hover.forEach(list=> {
-        list.addEventListener("mouseover", ()=> {
+    playlist_hover.forEach(list => {
+        list.addEventListener("mouseover", () => {
             list.style.backgroundColor = "red";
         });
     })
-    playlist_hover.forEach(list=> {
-        list.addEventListener("mouseout", ()=> {
+    playlist_hover.forEach(list => {
+        list.addEventListener("mouseout", () => {
             list.style.backgroundColor = "transparent";
         });
     });

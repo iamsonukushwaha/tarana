@@ -9,7 +9,6 @@ let previous = document.querySelector('#pre'),
     full_duration = document.querySelector('#full_duration'),
     passed_duration = document.querySelector('#passed_duration'),
     track_image = document.querySelector('#track_image'),
-    trackImage = document.querySelector('#track-image'),
     present = document.querySelector('#present'),
     total = document.querySelector('#total'),
     artist = document.querySelector('#artist'),
@@ -104,7 +103,6 @@ function GetAllSongs(index_no) {
             track.src = All_song[index_no].path;
             title.innerHTML = All_song[index_no].name;
             track_image.src = All_song[index_no].img;
-            trackImage.src = All_song[index_no].img;
             artist.innerHTML = All_song[index_no].singer;
 
             track.load();
@@ -148,7 +146,6 @@ function genLink(e) {
         track.src = All_song[e.id - 1].path;
         title.innerHTML = All_song[e.id - 1].name;
         track_image.src = e.img;
-        trackImage.src = e.img;
         artist.innerHTML = e.singer;
         present.innerHTML = All_song[e.id - 1].id;
 
@@ -426,7 +423,6 @@ function out() {
     track.src = All_song[index_no].path;
     title.innerHTML = All_song[index_no].name;
     track_image.src = All_song[index_no].img;
-    trackImage.src = All_song[index_no].img;
     artist.innerHTML = All_song[index_no].singer;
 
     track.load();

@@ -97,7 +97,7 @@ function GetAllSongs(index_no) {
                 list.innerHTML = '';
                 gen = this.value;
                 var genreSong = All_song.filter(g => g.genre === gen);
-                console.log(genreSong);
+                // console.log(genreSong);
                 genreSong.forEach(e => {
                         genLink(e);
                 });

@@ -96,17 +96,12 @@ function GetAllSongs(index_no) {
             genreSearch.addEventListener('input', function () {
                 list.innerHTML = '';
                 gen = this.value;
-                All_song.forEach(e => {
-                    if (e.genre == gen) {
+                var genreSong = All_song.filter(g => g.genre === gen);
+                console.log(genreSong);
+                genreSong.forEach(e => {
                         genLink(e);
-
-                    } else if (gen == '') {
-                        genLink(e);
-                    }
                 });
-
             });
-
         });
 }
 

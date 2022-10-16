@@ -524,7 +524,7 @@ input[type="range"]::-webkit-slider-thumb {
 
     }
 
-    #srh {
+    #srh, #genre {
         display: none;
     }
 
@@ -629,6 +629,10 @@ input[type="range"]::-webkit-slider-thumb {
         padding: 5px 3px;
         margin: 10px auto;
     }
+    .documentation_body {
+        height: 86.5%;
+        top: 5.5%;
+    }
 }
 
 @media screen and (max-width: 230px) and (min-width: 150px) {
@@ -692,8 +696,5 @@ input[type="range"]::-webkit-slider-thumb {
         height: 108%;
     }
 
-    .documentation_body {
-        height: 82.5%;
-        top: 12.5%;
-    }
+    
 }

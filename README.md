@@ -1,5 +1,9 @@
 <h1 align="center"> Tarana - Best Music Player </h1>
 
+<br><br>
+
+![image](https://user-images.githubusercontent.com/51280276/205435278-9beca4db-17b1-43bf-98c3-f4b853452025.png)
+
 
 ### Live Demo on [https://tarana1.netlify.app](https://tarana1.netlify.app/)
 

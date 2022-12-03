@@ -1,7 +1,5 @@
 <h1 align="center"> Tarana - Best Music Player </h1>
 
-<a href="https://singlebucks.blogspot.com/2021/08/music-player.html"><img align="center" src="https://raw.githubusercontent.com/flyingsonu122/tarana/main/img/tarana.png"></a>
-
 ### Live Demo on [flyingsonu122.github.io/tarana](https://flyingsonu122.github.io/tarana)
 
 <!--

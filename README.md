@@ -4,6 +4,11 @@
 
 ![image](https://user-images.githubusercontent.com/51280276/205435305-abc95211-0764-413e-9a6c-1a47111e0cda.png)
 
+<br/><br/>
+
+![image](https://user-images.githubusercontent.com/51280276/205435367-f9aab4ee-16f7-4100-9ffc-5a06b2b7dde4.png)
+
+
 
 ### Live Demo on [flyingsonu122.github.io/tarana](https://flyingsonu122.github.io/tarana)
 

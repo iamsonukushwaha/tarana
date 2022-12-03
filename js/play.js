@@ -9,6 +9,7 @@ let previous = document.querySelector('#pre'),
     full_duration = document.querySelector('#full_duration'),
     passed_duration = document.querySelector('#passed_duration'),
     track_image = document.querySelector('#track_image'),
+    track_name = document.querySelector('#trackName'),
     present = document.querySelector('#present'),
     total = document.querySelector('#total'),
     artist = document.querySelector('#artist'),
@@ -17,7 +18,6 @@ let previous = document.querySelector('#pre'),
     mobi_list = document.querySelectorAll('.track_list'),
     repeat = document.querySelector('#repeat'),
     shuffle = document.querySelector('#shuffle'),
-    genreSearch = document.querySelector('#genre'),
     menu_btn = document.querySelector(".menu-btn"),
     sidenav = document.querySelector(".sidenav"),
     play_open = document.querySelector(".play-open"),
@@ -102,6 +102,7 @@ function GetAllSongs(index_no) {
 
             track.src = All_song[index_no].path;
             title.innerHTML = All_song[index_no].name;
+            track_name.innerHTML = All_song[index_no].name;
             track_image.src = All_song[index_no].img;
             artist.innerHTML = All_song[index_no].singer;
 
@@ -114,20 +115,6 @@ function GetAllSongs(index_no) {
 
             All_song.forEach(element => {
                 genLink(element);
-
-            });
-
-            genreSearch.addEventListener('input', function () {
-                list.innerHTML = '';
-                gen = this.value;
-                All_song.forEach(e => {
-                    if (e.genre == gen) {
-                        genLink(e);
-
-                    } else if (gen == '') {
-                        genLink(e);
-                    }
-                });
 
             });
 
@@ -145,6 +132,7 @@ function genLink(e) {
         index_no = e.id - 1;
         track.src = All_song[e.id - 1].path;
         title.innerHTML = All_song[e.id - 1].name;
+        track_name.innerHTML = All_song[e.id - 1].name;
         track_image.src = e.img;
         artist.innerHTML = e.singer;
         present.innerHTML = All_song[e.id - 1].id;
@@ -422,6 +410,7 @@ function range_slider() {
 function out() {
     track.src = All_song[index_no].path;
     title.innerHTML = All_song[index_no].name;
+    track_name.innerHTML = All_song[index_no].name;
     track_image.src = All_song[index_no].img;
     artist.innerHTML = All_song[index_no].singer;
 

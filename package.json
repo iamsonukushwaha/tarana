@@ -4,7 +4,8 @@
   "description": "Tarana - Best Music Player",
   "main": "./js/play.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "install": "npm install express firebase http-server json-server nodemon",
+    "start": "node server.js",
     "serve": "json-server --watch songs.json"
   },
   "keywords": [

@@ -8,6 +8,9 @@
 
 ![image](https://user-images.githubusercontent.com/51280276/205435367-f9aab4ee-16f7-4100-9ffc-5a06b2b7dde4.png)
 
+![image](https://user-images.githubusercontent.com/51280276/205435397-d17cff99-9ff6-40bd-ab28-ff02f61899a0.png)
+
+
 
 
 ### Live Demo on [flyingsonu122.github.io/tarana](https://flyingsonu122.github.io/tarana)

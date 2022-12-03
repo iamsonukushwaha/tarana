@@ -2,12 +2,7 @@
 
 ### Live Demo on [flyingsonu122.github.io/tarana](https://flyingsonu122.github.io/tarana)
 
-<!--
 
-### Download **Android App** [Tarana](https://github.com/flyingsonu122/tarana/releases/download/v1.0/Tarana.apk)
-
-
--->
 <br/><br/>
 
 ## Contributing :handshake:

@@ -23,7 +23,7 @@
 ### Live Demo on [flyingsonu122.github.io/tarana](https://flyingsonu122.github.io/tarana)
 
 
-different intefaces per branch
+> Different intefaces per branch
 
 <br>
 
@@ -33,10 +33,14 @@ different intefaces per branch
 
 **newinterface** https://tarana1.netlify.app/
 
+> Find features of this **Tarana** webapp in [FEATURES.md](./FEATURES.md) file.
+
+
+
 
 <br/><br/>
 
-## Contributing :handshake:
+## Want to Contribute?  :handshake:
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat&logo=github)](https://github.com/flyingsonu122)  [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/flyingsonu122)
 

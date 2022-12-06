@@ -1,5 +1,12 @@
 <h1 align="center"> Tarana - Best Music Player </h1>
 
+
+
+
+
+
+
+
 <br/><br/>
 
 ![image](https://user-images.githubusercontent.com/51280276/205435305-abc95211-0764-413e-9a6c-1a47111e0cda.png)
@@ -14,6 +21,17 @@
 
 
 ### Live Demo on [flyingsonu122.github.io/tarana](https://flyingsonu122.github.io/tarana)
+
+
+different intefaces per branch
+
+<br>
+
+**main** https://sonukushwaha.me/tarana/ 
+
+**newmain** https://tarana.netlify.app/
+
+**newinterface** https://tarana1.netlify.app/
 
 
 <br/><br/>

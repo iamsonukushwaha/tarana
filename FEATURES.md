@@ -1,3 +1,4 @@
+* responsive on all screen sizes or device
 * share particular song with others using share button
 * play random songs by selecting shuffle button
 * play a song in loop/repeat by  selecting repeat button

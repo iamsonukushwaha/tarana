@@ -4,6 +4,9 @@
 
 ### Live Demo on [flyingsonu122.github.io/tarana](https://flyingsonu122.github.io/tarana)
 
+
+https://tarana.netlify.app/
+
 <!--
 
 ### Download **Android App** [Tarana](https://github.com/flyingsonu122/tarana/releases/download/v1.0/Tarana.apk)

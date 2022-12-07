@@ -16,10 +16,15 @@
 * It has volume control & mute/ unmute features. (:sound:)
 * It shows albumart of each song.
 
+### Extra
+
+* Sign in/ Sign up feature with email or directly login using Google. 
+
+
 ### Stay tuned !! 
 ### There are some upcoming interesting features -
 
-* Sign in/ Sign up feature. 
+
 * Likes to a song. :heart:
 * Display song lyrics.
 * You will be able to create your own playlists by artist/genre.

@@ -24,6 +24,18 @@
 
 <br>
 
+### We can work on all these branches seperatly as they have different intefaces
+
+*steps*
+
+* fork that particular branch
+
+* work on it
+
+* create PR
+
+
+
 **main** https://sonukushwaha.me/tarana/ 
 
 **newmain** https://tarana.netlify.app/

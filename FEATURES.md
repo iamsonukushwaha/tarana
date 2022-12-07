@@ -24,4 +24,3 @@
 * Display song lyrics.
 * You will be able to create your own playlists by artist/genre.
 
-:musical_note: :musical_note:

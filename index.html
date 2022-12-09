@@ -34,6 +34,7 @@
                     <p class="dropbtn"><i class="fa fa-share"></i></p>
                 </div>
                 <div class="dropup-content">
+                    <button class="copyLink" onclick="CopyLink()"><i class="fa fa-copy"></i></button>
                     <a id="fbshare" href="https://facebook.com/sharer/sharer.php?u=https://flyingsonu122.github.io/tarana"
                         target="_blank"><i class="fa fa-facebook"></i></a>
                     <a id="twshare" href="https://twitter.com/intent/tweet?text=https://flyingsonu122.github.io/tarana"
@@ -115,7 +116,7 @@
                 <p id="visits"></p>
             </div>
         </div>
-
+        <script src="./js/copyLink.js"></script>
         <script>
             function cb(response) {
                 document.querySelector('#visits').innerHTML = `${response.value} Visits`;

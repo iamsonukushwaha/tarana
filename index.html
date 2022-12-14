@@ -34,6 +34,7 @@
                     <p class="dropbtn"><i class="fa fa-share"></i></p>
                 </div>
                 <div class="dropup-content">
+                    <button id="copyLink"><i class="fa fa-copy"></i></button>
                     <a id="fbshare" href="https://facebook.com/sharer/sharer.php?u=https://flyingsonu122.github.io/tarana"
                         target="_blank"><i class="fa fa-facebook"></i></a>
                     <a id="twshare" href="https://twitter.com/intent/tweet?text=https://flyingsonu122.github.io/tarana"
@@ -111,11 +112,10 @@
                 </div>
             </div>
             <div class="visits">
-                <p onclick="aboutUs();" id="about" title="Sonu Kumar Kushwaha"> About Us</p>
+                <p onclick="aboutUs();" id="about" title="Login / About Tarana & More">Login / About & More</p>
                 <p id="visits"></p>
             </div>
         </div>
-
         <script>
             function cb(response) {
                 document.querySelector('#visits').innerHTML = `${response.value} Visits`;

@@ -12,10 +12,8 @@
 **Pull requests are the best way to propose changes to the codebase. We actively welcome your pull requests:**
 
 1. Fork the repo and create your branch from **`main`** branch.
-2. Write clear meaningful git commit messages.
-3. Always create PR to **`develop`** branch.
-4. Make sure your code lints.
-5. Issue that pull request!
+2. Write clear code or make changes.
+3. Create pull request!
 
 ## Any contributions you make will be under the MIT Software License
 

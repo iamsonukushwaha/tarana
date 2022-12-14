@@ -62,17 +62,18 @@ body {
     margin-left: 2px;
 }
 
-.dropup-content a {
+.dropup-content a, .dropup-content button {
     color: black;
     padding: 12px;
     text-decoration: none;
     display: block;
+    border: 0px solid;
 
 }
 
-.dropup-content a:hover {
+.dropup-content a:hover, .dropup-content button:hover{
     background-color: #ccc;
-}
+    color:#2980B9;}
 
 .dropup:hover .dropup-content {
     display: block;
@@ -522,6 +523,10 @@ input[type="range"]::-webkit-slider-thumb {
         top: 55px;
         gap: 5px;
 
+    }
+
+    .visits{
+        gap: 20vw;
     }
 
     #srh, #genre {

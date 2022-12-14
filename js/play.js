@@ -47,6 +47,13 @@ window.addEventListener('DOMContentLoaded', renderDetails());
 
 
 function shareplay() {
+    const copyLink = document.getElementById('copyLink');
+    copyLink.onclick=()=>{
+        var copyText = `https://flyingsonu122.github.io/tarana?id=${index_no+1}`;
+        console.log(copyText);
+        navigator.clipboard.writeText(copyText);
+        alert("Copied the text: " + copyText);
+    }
     const fbshare = document.getElementById('fbshare');
     fbshare.href = `https://facebook.com/sharer/sharer.php?u=https://flyingsonu122.github.io/tarana?id=${index_no+1}`
     const twshare = document.getElementById('twshare');

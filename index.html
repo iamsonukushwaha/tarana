@@ -31,19 +31,24 @@
         <div class="main" id="main">
             <div class="dropup">
                 <div>
-                    <p class="dropbtn"><i class="fa fa-share"></i></p>
+                    <p title="share this song" class="dropbtn"><i class="fa fa-share"></i></p>
                 </div>
                 <div class="dropup-content">
-                    <a id="fbshare" href="https://facebook.com/sharer/sharer.php?u=https://flyingsonu122.github.io/tarana"
+                    <a id="copyLink" href="javascript:void(0)" title="click to copy link of this song"><i
+                            class="fa fa-clone"></i></a>
+                    <a id="fbshare" title="share on facebook"
+                        href="https://facebook.com/sharer/sharer.php?u=https://flyingsonu122.github.io/tarana"
                         target="_blank"><i class="fa fa-facebook"></i></a>
-                    <a id="twshare" href="https://twitter.com/intent/tweet?text=https://flyingsonu122.github.io/tarana"
+                    <a id="twshare" title="share on twitter"
+                        href="https://twitter.com/intent/tweet?text=https://flyingsonu122.github.io/tarana"
                         target="_blank"><i class="fa fa-twitter"></i></a>
-                    <a id="whshare" href="https://api.whatsapp.com/send/?text=https://flyingsonu122.github.io/tarana"
+                    <a id="whshare" title="share on whatsapp"
+                        href="https://api.whatsapp.com/send/?text=https://flyingsonu122.github.io/tarana"
                         target="_blank"><i class="fa fa-whatsapp"></i></a>
                 </div>
             </div>
 
-            <p id="themebutton"></p>
+            <p id="themebutton" title="change color theme"></p>
 
             <p id="logo"><i class="fa fa-music"></i>Tarana</p>
             <!--- left part --->
@@ -115,7 +120,6 @@
                 <p id="visits"></p>
             </div>
         </div>
-
         <script>
             function cb(response) {
                 document.querySelector('#visits').innerHTML = `${response.value} Visits`;
@@ -128,10 +132,10 @@
 
         <script src="./js/search.js"></script>
         <script src="./js/play.js"></script>
-        
+
         <script src="./js/fullscreen.js"></script> 
         <script async src="https://api.countapi.xyz/hit/tarana?callback=cb"></script>
     </body>
-    
+
 
 </html>

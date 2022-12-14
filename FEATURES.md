@@ -1,4 +1,4 @@
-## Tarana Music Player contains some amazing features -
+# [Tarana](https://singlebucks.blogspot.com/2021/08/music-player.html) Music Player contains some amazing features -
 
 ### Song settings -
  
@@ -22,10 +22,11 @@
 
 
 ### Stay tuned !! 
+
 ### There are some upcoming interesting features -
 
 
 * Likes to a song. :heart:
 * Display song lyrics.
 * You will be able to create your own playlists by artist/genre.
-
+* More songs 

@@ -16,7 +16,10 @@
 
 ---
 
-### Live Demo on [flyingsonu122.github.io/tarana](https://flyingsonu122.github.io/tarana)
+### Live Demo on [sonukushwaha.me/tarana](https://flyingsonu122.github.io/tarana)
+
+
+**sign up to get access to insider preview**	https://sonukushwaha.me/tarana/user/
 
 ---
 

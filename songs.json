@@ -959,6 +959,14 @@
 			"img": "img/Zindagi.webp",
 			"singer": "Jubin Nautiyal",
 			"genre": "Romantic "
+		},
+		{
+			"id": "121",
+			"name": "Jeda Nasha",
+			"path": "music/jeda_nasha.mp3",
+			"img": "img/jeda_nasha.jpg",
+			"singer": "Amar Jalal, Yohani",
+			"genre": "HotHits"
 		}
 	]
 }

@@ -381,8 +381,10 @@ input[type="range"]::-webkit-slider-thumb {
 
 .hide_show {
     position: absolute;
+    right: 80px;
     font-size: 20px;
     border: none;
+    /* border-radius: 90%; */
     background: transparent;
     cursor: pointer;
     text-decoration: none;
@@ -513,6 +515,64 @@ input[type="range"]::-webkit-slider-thumb {
 #playlist input {
     width: 50%;
 }
+
+.user{
+    /* position: relative; */
+    margin-right: 150px;
+    width: 100px;
+    height: 35px;
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 15px;
+    align-items: center;
+    padding: 0px 0px;
+    border-radius: 50px;
+    background-color: black;
+    cursor: pointer;
+ }
+ .user:hover{
+    background-color: #262729;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+ }
+ .user img{
+    /* position: absolute; */
+    width: 35px;
+    height: 35px;
+    /* right: 30px; */
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px #131312;
+ }
+ .user div{
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    /* position: absolute; */
+    /* width: 30px;
+    height: 30px; */
+    /* right: 30px; */
+    /* border-radius: 50%; */
+    /* box-shadow: 2px 2px 8px #131312; */
+ }
+
+ .device-cont{
+    position: absolute;
+    /* top: 93%; */
+    right: 125%;
+    /* right: 6%; */
+ }
+
+ #devices{
+    width: 110px;
+    height: 37px;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    border-radius: 30px;
+    border: 1px solid #fff;
+    padding: 5px;
+    outline: none;
+ }
 
 
 @media screen and (max-width: 600px) and (min-width: 220px) {

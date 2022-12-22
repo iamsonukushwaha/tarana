@@ -59,6 +59,9 @@
             </div>
             <!--- right part --->
             <div class="right">
+                <!-- <div class="device-cont">
+                    <select name="" id="devices"></select>
+                </div> -->
                 <div class="show_song_no">
                     <p id="present"></p>
                     <p> / </p>
@@ -93,17 +96,24 @@
             </div>
         </div>
         <div class="documentation">
+            <div class="user" id="user">
+                <img src="" alt="User" title="User" id="userimg">
+                <div id="username"></div>
+            </div>
+            <div class="device-cont">
+                <select name="" id="devices"></select>
+            </div>
             <button class="hide_show" id="hide_show"></button>
         </div>
         <div class="documentation_page" id="main_body_hide">
             <p id="logo"><i class="fa fa-music"></i>Tarana</p>
             <div id="playlist">
-                <select name="" id="genre" class="form-control">
+                <!-- <select name="" id="genre" class="form-control">
                     <option value="">all</option>
                     <option value="Romantic">Romantic</option>
                     <option value="Club">Club</option>
                     <option value="HotHits">Hot Hits</option>
-                </select>
+                </select> -->
                 <input type="text" class="form-control" placeholder="search song" required autofocus id="srh">
             </div>
             <div class="documentation_body">
@@ -125,8 +135,8 @@
                 window.open("./aboutus.html", "_blank");
             }
         </script>
-
-        <script src="./js/search.js"></script>
+        <script src="./js/spotifyApi.js"></script>
+        <!-- <script src="./js/search.js"></script> -->
         <script src="./js/play.js"></script>
         
         <script src="./js/fullscreen.js"></script> 

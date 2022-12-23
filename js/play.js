@@ -18,9 +18,41 @@ let previous = document.querySelector('#pre'),
     shuffle = document.querySelector('#shuffle'),
     genreSearch = document.querySelector('#genre');
 
+const searchForm = document.querySelector('#srh');
 
-let timer, link, All_song, max, gen, index_no;
 
+let timer, link, All_song, max, gen, index_no, Song;
+const TOPTRACKS = "https://api.spotify.com/v1/me/top/tracks?limit=100";
+
+
+searchForm.addEventListener('keyup', function(e){
+    list.innerHTML = '';
+    const term=e.target.value.toLowerCase();
+    Song.forEach(song => {
+        const name = song.name;
+        if(name.toLowerCase().includes(term)){
+            link = document.createElement('a');
+            // link.innerHTML = `${e.name} &rarr;${e.singer}`;
+            link.innerHTML = `<span style="color: yellow; ">${song.name}</span>  <i> ${song.artists[0].name} </i>`;
+            link.title = `click to play`; 
+
+            link.addEventListener('click', function () {
+                index_no = Song.indexOf(song);
+                // track.src = All_song[e.id - 1].path;
+                title.innerHTML = song.name;
+                track_image.src = song.album.images[0].url;
+                artist.innerHTML = song.artists[0].name;
+                present.innerHTML = Song.indexOf(e)+1;
+
+                nochange();
+                reset_slider();
+                playsong();
+            });
+
+            list.append(link);
+        }
+    })
+})
 
 
 
@@ -64,68 +96,113 @@ function shareplay() {
 
 }
 
-
+function callApi(method, url, body, callback){
+    let xhr = new XMLHttpRequest();
+    xhr.open(method, url, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.setRequestHeader('Authorization', 'Bearer ' + access_token);
+    xhr.send(body);
+    xhr.onload = callback;
+}
 
 
 // creating an audio Element.
 let track = document.createElement('audio');
 
+callApi( "GET", TOPTRACKS, null, handleTopTracksResponse );
+
+function handleTopTracksResponse(){
+    if( this.status == 200 ){
+        var data_toptracks = JSON.parse(this.responseText);
+        Song = data_toptracks.items;
+        console.log(data_toptracks);
+
+        const item1 = data_toptracks.items[0];
+        index_no = Song.indexOf(item1);
+        // track.src = All_song[e.id - 1].path;
+        title.innerHTML = item1.name;
+        track_image.src = item1.album.images[0].url;
+        artist.innerHTML = item1.artists[0].name;
+        present.innerHTML = Song.indexOf(item1)+1;
+        total.innerHTML = Song.length;
+        // title.innerHTML = ;
+        // track_image.src = ;
+        // artist.innerHTML = ;
+        // genreSearch.addEventListener('input', function () {
+        list.innerHTML = '';
+            // gen = this.value;
+            // console.log(genreSong);
+        Song.forEach(e => {
+            genLink(e, Song);
+        });
+        
+    }
+    else if ( this.status == 401 ){
+        refreshAccessToken();
+        // console.log('helloo3');
+    }
+    else {
+        console.log(this.responseText);
+        alert(this.responseText);
+    }
+}
+
 function GetAllSongs(index_no) {
     shareplay();
 
-    fetch("https://tarana.azurewebsites.net/songs/?_sort=name&_order=asc")
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
+    // fetch("https://tarana.azurewebsites.net/songs/?_sort=name&_order=asc")
+    //     .then(function (response) {
+    //         return response.json();
+    //     })
+    //     .then(function (data) {
 
-            All_song = data;
+    //         All_song = data;
+    //         // console.log(data);
+    //         max = All_song.length;
 
-            max = All_song.length;
+    //         track.src = All_song[index_no].path;
+    //         title.innerHTML = All_song[index_no].name;
+    //         track_image.src = All_song[index_no].img;
+    //         artist.innerHTML = All_song[index_no].singer;
 
-            track.src = All_song[index_no].path;
-            title.innerHTML = All_song[index_no].name;
-            track_image.src = All_song[index_no].img;
-            artist.innerHTML = All_song[index_no].singer;
+    //         track.load();
+    //         track.volume = recent_volume.value / 100;
 
-            track.load();
-            track.volume = recent_volume.value / 100;
+    //         timer = setInterval(range_slider, 1000);
+    //         total.innerHTML = All_song.length;
+    //         present.innerHTML = index_no + 1;
 
-            timer = setInterval(range_slider, 1000);
-            total.innerHTML = All_song.length;
-            present.innerHTML = index_no + 1;
+    //         All_song.forEach(element => {
+    //             genLink(element);
 
-            All_song.forEach(element => {
-                genLink(element);
+    //         });
 
-            });
-
-            genreSearch.addEventListener('input', function () {
-                list.innerHTML = '';
-                gen = this.value;
-                var genreSong = All_song.filter(g => g.genre === gen);
-                // console.log(genreSong);
-                genreSong.forEach(e => {
-                        genLink(e);
-                });
-            });
-        });
+            // genreSearch.addEventListener('input', function () {
+            //     list.innerHTML = '';
+            //     gen = this.value;
+            //     var genreSong = All_song.filter(g => g.genre === gen);
+            //     // console.log(genreSong);
+            //     genreSong.forEach(e => {
+            //             genLink(e);
+            //     });
+            // });
+        // });
 }
 
-function genLink(e) {
+function genLink(e, Song) {
 
     link = document.createElement('a');
     // link.innerHTML = `${e.name} &rarr;${e.singer}`;
-    link.innerHTML = `<span style="color: yellow; ">${e.name}</span>  <i> ${e.singer} </i>`;
+    link.innerHTML = `<span style="color: yellow; ">${e.name}</span>  <i> ${e.artists[0].name} </i>`;
     link.title = `click to play`; 
 
     link.addEventListener('click', function () {
-        index_no = e.id - 1;
-        track.src = All_song[e.id - 1].path;
-        title.innerHTML = All_song[e.id - 1].name;
-        track_image.src = e.img;
-        artist.innerHTML = e.singer;
-        present.innerHTML = All_song[e.id - 1].id;
+        index_no = Song.indexOf(e);
+        // track.src = All_song[e.id - 1].path;
+        title.innerHTML = e.name;
+        track_image.src = e.album.images[0].url;
+        artist.innerHTML = e.artists[0].name;
+        present.innerHTML = Song.indexOf(e)+1;
 
         nochange();
         reset_slider();
@@ -244,7 +321,7 @@ function pausesong() {
 
 // next song
 function next_song() {
-    if (index_no < All_song.length - 1) {
+    if (index_no < Song.length-1) {
         index_no += 1;
         out();
     } else {
@@ -263,7 +340,7 @@ function previous_song() {
         out();
 
     } else {
-        index_no = All_song.length - 1;
+        index_no = Song.length - 1;
         out();
     }
 }
@@ -391,15 +468,15 @@ function range_slider() {
 }
 
 function out() {
-    track.src = All_song[index_no].path;
-    title.innerHTML = All_song[index_no].name;
-    track_image.src = All_song[index_no].img;
-    artist.innerHTML = All_song[index_no].singer;
+    // track.src = Song[index_no].path;
+    title.innerHTML = Song[index_no].name;
+    track_image.src = Song[index_no].album.images[0].url;
+    artist.innerHTML = Song[index_no].artists[0].name;
 
     track.load();
 
     timer = setInterval(range_slider, 1000);
-    total.innerHTML = All_song.length;
+    // total.innerHTML = All_song.length;
     present.innerHTML = index_no + 1;
     playsong();
 }

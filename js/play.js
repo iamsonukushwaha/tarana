@@ -14,6 +14,8 @@ let previous = document.querySelector('#pre'),
     artist = document.querySelector('#artist'),
     main = document.querySelector('#main'),
     list = document.querySelector('#list'),
+    list2 = document.querySelector('#list2'),
+    list3 = document.querySelector('#list3'),
     repeat = document.querySelector('#repeat'),
     shuffle = document.querySelector('#shuffle'),
     genreSearch = document.querySelector('#genre');
@@ -22,27 +24,27 @@ const searchForm = document.querySelector('#srh');
 
 
 let timer, link, All_song, max, gen, index_no, Song;
+var data_recentlyPlayed, data_toptracks, data_recommendations;
+// API Links
 const TOPTRACKS = "https://api.spotify.com/v1/me/top/tracks?limit=100";
-
+const RECENTLY_PLAYED = 'https://api.spotify.com/v1/me/player/recently-played?limit=50';
 
 searchForm.addEventListener('keyup', function(e){
     list.innerHTML = '';
     const term=e.target.value.toLowerCase();
-    Song.forEach(song => {
+    data_toptracks.items.forEach(song => {
         const name = song.name;
         if(name.toLowerCase().includes(term)){
             link = document.createElement('a');
-            // link.innerHTML = `${e.name} &rarr;${e.singer}`;
             link.innerHTML = `<span style="color: yellow; ">${song.name}</span>  <i> ${song.artists[0].name} </i>`;
             link.title = `click to play`; 
 
             link.addEventListener('click', function () {
-                index_no = Song.indexOf(song);
-                // track.src = All_song[e.id - 1].path;
+                index_no = data_toptracks.items.indexOf(song);
                 title.innerHTML = song.name;
                 track_image.src = song.album.images[0].url;
                 artist.innerHTML = song.artists[0].name;
-                present.innerHTML = Song.indexOf(e)+1;
+                present.innerHTML = data_toptracks.items.indexOf(song)+1;
 
                 nochange();
                 reset_slider();
@@ -53,6 +55,114 @@ searchForm.addEventListener('keyup', function(e){
         }
     })
 })
+
+
+const optionsClick = (id) => {
+    const option = document.getElementById(id);
+    if(!option.classList.contains('active')){
+        const active = document.getElementsByClassName('active');
+        Array.from(active).forEach(element => {
+            element.classList.remove('active');
+        });
+        option.classList.add('active');
+        if(id === 1){
+            document.getElementById('list').style.display = 'block';
+            document.getElementById('list2').style.display = 'none';
+            document.getElementById('list3').style.display = 'none';
+            
+            searchForm.addEventListener('keyup', function(e){
+                list.innerHTML = '';
+                const term=e.target.value.toLowerCase();
+                data_toptracks.items.forEach(song => {
+                    const name = song.name;
+                    if(name.toLowerCase().includes(term)){
+                        link = document.createElement('a');
+                        link.innerHTML = `<span style="color: yellow; ">${song.name}</span>  <i> ${song.artists[0].name} </i>`;
+                        link.title = `click to play`; 
+            
+                        link.addEventListener('click', function () {
+                            index_no = data_toptracks.items.indexOf(song);
+                            title.innerHTML = song.name;
+                            track_image.src = song.album.images[0].url;
+                            artist.innerHTML = song.artists[0].name;
+                            present.innerHTML = data_toptracks.items.indexOf(song)+1;
+            
+                            nochange();
+                            reset_slider();
+                            playsong();
+                        });
+            
+                        list.append(link);
+                    }
+                })
+            })
+        }
+        else if(id === 2){
+            document.getElementById('list2').style.display = 'block';
+            document.getElementById('list').style.display = 'none';
+            document.getElementById('list3').style.display = 'none';
+
+            searchForm.addEventListener('keyup', function(e){
+                list2.innerHTML = '';
+                const term=e.target.value.toLowerCase();
+                data_recentlyPlayed.items.forEach(song => {
+                    const name = song.track.name;
+                    if(name.toLowerCase().includes(term)){
+                        link = document.createElement('a');
+                        link.innerHTML = `<span style="color: yellow; ">${song.track.name}</span>  <i> ${song.track.artists[0].name} </i>`;
+                        link.title = `click to play`; 
+            
+                        link.addEventListener('click', function () {
+                            index_no = data_recentlyPlayed.items.indexOf(song);
+                            title.innerHTML = song.track.name;
+                            track_image.src = song.track.album.images[0].url;
+                            artist.innerHTML = song.track.artists[0].name;
+                            present.innerHTML = data_recentlyPlayed.items.indexOf(song)+1;
+            
+                            nochange();
+                            reset_slider();
+                            playsong();
+                        });
+            
+                        list2.append(link);
+                    }
+                })
+            })
+        }
+        else{
+            document.getElementById('list3').style.display = 'block';
+            document.getElementById('list2').style.display = 'none';
+            document.getElementById('list').style.display = 'none';
+
+            searchForm.addEventListener('keyup', function(e){
+                list3.innerHTML = '';
+                const term=e.target.value.toLowerCase();
+                data_recommendations.tracks.forEach(song => {
+                    const name = song.name;
+                    if(name.toLowerCase().includes(term)){
+                        link = document.createElement('a');
+                        link.innerHTML = `<span style="color: yellow; ">${song.name}</span>  <i> ${song.artists[0].name} </i>`;
+                        link.title = `click to play`; 
+            
+                        link.addEventListener('click', function () {
+                            index_no = data_recommendations.tracks.indexOf(song);
+                            title.innerHTML = song.name;
+                            track_image.src = song.album.images[0].url;
+                            artist.innerHTML = song.artists[0].name;
+                            present.innerHTML = data_recommendations.tracks.indexOf(song)+1;
+            
+                            nochange();
+                            reset_slider();
+                            playsong();
+                        });
+                        
+                        list3.append(link);
+                    }
+                })
+            })
+        }
+    }
+}
 
 
 
@@ -109,13 +219,17 @@ function callApi(method, url, body, callback){
 // creating an audio Element.
 let track = document.createElement('audio');
 
+// Top Tracks API Call
 callApi( "GET", TOPTRACKS, null, handleTopTracksResponse );
 
 function handleTopTracksResponse(){
     if( this.status == 200 ){
-        var data_toptracks = JSON.parse(this.responseText);
+        data_toptracks = JSON.parse(this.responseText);
         Song = data_toptracks.items;
         console.log(data_toptracks);
+
+        const RECOMMENDATIONS = `https://api.spotify.com/v1/recommendations?limit=50&market=IN&seed_artists=${data_toptracks.items[0].artists[0].id}&seed_tracks=${data_toptracks.items[0].id}`;
+        callApi( "GET", RECOMMENDATIONS, null, handleRecommendationsResponse );
 
         const item1 = data_toptracks.items[0];
         index_no = Song.indexOf(item1);
@@ -140,6 +254,68 @@ function handleTopTracksResponse(){
     else if ( this.status == 401 ){
         refreshAccessToken();
         // console.log('helloo3');
+    }
+    else {
+        console.log(this.responseText);
+        alert(this.responseText);
+    }
+}
+
+// Recently Played API Call
+callApi( "GET", RECENTLY_PLAYED, null, handleRecentlyPlayedResponse );
+
+function handleRecentlyPlayedResponse(){
+    if( this.status == 200 ){
+        data_recentlyPlayed = JSON.parse(this.responseText);
+        Song = data_recentlyPlayed.items;
+        console.log(data_recentlyPlayed);
+
+        // const item1 = data_recentlyPlayed.items[0];
+        // index_no = Song.indexOf(item1);
+        // title.innerHTML = item1.track.name;
+        // track_image.src = item1.track.album.images[0].url;
+        // artist.innerHTML = item1.track.artists[0].name;
+        // present.innerHTML = Song.indexOf(item1)+1;
+        // total.innerHTML = Song.length;
+        
+        list2.innerHTML = '';
+        Song.forEach(e => {
+            genLink2(e, Song);
+        });
+        
+    }
+    else if ( this.status == 401 ){
+        refreshAccessToken();
+    }
+    else {
+        console.log(this.responseText);
+        alert(this.responseText);
+    }
+}
+
+// Recommendations API Call
+function handleRecommendationsResponse(){
+    if( this.status == 200 ){
+        data_recommendations = JSON.parse(this.responseText);
+        Song = data_recommendations.tracks;
+        console.log(data_recommendations);
+
+        // const item1 = data_recentlyPlayed.items[0];
+        // index_no = Song.indexOf(item1);
+        // title.innerHTML = item1.track.name;
+        // track_image.src = item1.track.album.images[0].url;
+        // artist.innerHTML = item1.track.artists[0].name;
+        // present.innerHTML = Song.indexOf(item1)+1;
+        // total.innerHTML = Song.length;
+        
+        list3.innerHTML = '';
+        Song.forEach(e => {
+            genLink3(e, Song);
+        });
+        
+    }
+    else if ( this.status == 401 ){
+        refreshAccessToken();
     }
     else {
         console.log(this.responseText);
@@ -210,6 +386,53 @@ function genLink(e, Song) {
     });
 
     list.append(link);
+
+}
+function genLink2(e, Song) {
+
+    link = document.createElement('a');
+    // link.innerHTML = `${e.name} &rarr;${e.singer}`;
+    link.innerHTML = `<span style="color: yellow; ">${e.track.name}</span>  <i> ${e.track.artists[0].name} </i>`;
+    link.title = `click to play`; 
+
+    link.addEventListener('click', function () {
+        index_no = Song.indexOf(e);
+        // track.src = All_song[e.id - 1].path;
+        title.innerHTML = e.track.name;
+        track_image.src = e.track.album.images[0].url;
+        artist.innerHTML = e.track.artists[0].name;
+        present.innerHTML = Song.indexOf(e)+1;
+
+        nochange();
+        reset_slider();
+        playsong();
+    });
+
+    list2.append(link);
+
+}
+
+function genLink3(e, Song) {
+
+    link = document.createElement('a');
+    // link.innerHTML = `${e.name} &rarr;${e.singer}`;
+    link.innerHTML = `<span style="color: yellow; ">${e.name}</span>  <i> ${e.artists[0].name} </i>`;
+    link.title = `click to play`; 
+
+    link.addEventListener('click', function () {
+        index_no = Song.indexOf(e);
+        // track.src = All_song[e.id - 1].path;
+        title.innerHTML = e.name;
+        track_image.src = e.album.images[0].url;
+        artist.innerHTML = e.artists[0].name;
+        present.innerHTML = Song.indexOf(e)+1;
+
+        nochange();
+        reset_slider();
+        playsong();
+    });
+
+    list3.append(link);
 
 }
 

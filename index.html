@@ -47,8 +47,27 @@
             <p id="themebutton"></p>
 
             <p id="logo"><i class="fa fa-music"></i>Tarana</p>
+            
+            <!-- user profile page -->
+            <div class="profile" id="profile">
+                <div class="user-top">
+                    <div class="profile-img-cont">
+                        <img src="" alt="USER" id="profile-img">
+                    </div>
+                    <div class="side">
+                        <div class="profile-text">PROFILE</div>
+                        <div id="profile-name"></div>
+                    </div>
+                </div>
+                <div class="user-down">
+                    <div class="artists">
+                        
+                    </div>
+                </div>
+            </div>
+
             <!--- left part --->
-            <div class="left">
+            <div class="left" id="left">
                 <!--- song img --->
                 <div class="image"><img id="track_image"></div>
                 <div class="volume">
@@ -58,7 +77,7 @@
                 </div>
             </div>
             <!--- right part --->
-            <div class="right">
+            <div class="right" id="right">
                 <!-- <div class="device-cont">
                     <select name="" id="devices"></select>
                 </div> -->
@@ -96,7 +115,7 @@
             </div>
         </div>
         <div class="documentation">
-            <div class="user" id="user">
+            <div class="user" id="user" onclick="userClick()">
                 <img src="" alt="User" title="User" id="userimg">
                 <div id="username"></div>
             </div>
@@ -150,7 +169,7 @@
         <!-- <script src="./js/search.js"></script> -->
         <script src="./js/play.js"></script>
         
-        <script src="./js/fullscreen.js"></script> 
+        <!-- <script src="./js/fullscreen.js"></script>  -->
         <script async src="https://api.countapi.xyz/hit/tarana?callback=cb"></script>
     </body>
     

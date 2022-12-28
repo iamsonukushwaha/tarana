@@ -18,7 +18,10 @@ let previous = document.querySelector('#pre'),
     list3 = document.querySelector('#list3'),
     repeat = document.querySelector('#repeat'),
     shuffle = document.querySelector('#shuffle'),
-    genreSearch = document.querySelector('#genre');
+    genreSearch = document.querySelector('#genre'),
+    left = document.querySelector('#left'),
+    right = document.querySelector('#right'),
+    profile = document.querySelector('#profile');
 
 const searchForm = document.querySelector('#srh');
 
@@ -28,6 +31,22 @@ var data_recentlyPlayed, data_toptracks, data_recommendations;
 // API Links
 const TOPTRACKS = "https://api.spotify.com/v1/me/top/tracks?limit=100";
 const RECENTLY_PLAYED = 'https://api.spotify.com/v1/me/player/recently-played?limit=50';
+const FOLLOWED_ARTISTS = 'https://api.spotify.com/v1/me/following?type=artist';
+
+
+const userClick = () => {
+    if(left.style.display === 'none'){
+        left.style.display = 'flex';
+        right.style.display = 'flex';
+        profile.style.display = 'none';
+    }
+    else{
+        left.style.display = 'none';
+        right.style.display = 'none';
+        profile.style.display = 'block';
+        main.style.alignItems = 'flex-start'
+    }
+}
 
 searchForm.addEventListener('keyup', function(e){
     list.innerHTML = '';
@@ -260,6 +279,38 @@ function handleTopTracksResponse(){
         alert(this.responseText);
     }
 }
+
+// Followed Artists API Call
+callApi( "GET", FOLLOWED_ARTISTS, null, handleArtistsResponse );
+function handleArtistsResponse(){
+    if( this.status == 200 ){
+        data_artists = JSON.parse(this.responseText);
+        var artists = data_artists.artists.items;
+        console.log(artists);
+
+        // const item1 = data_recentlyPlayed.items[0];
+        // index_no = Song.indexOf(item1);
+        // title.innerHTML = item1.track.name;
+        // track_image.src = item1.track.album.images[0].url;
+        // artist.innerHTML = item1.track.artists[0].name;
+        // present.innerHTML = Song.indexOf(item1)+1;
+        // total.innerHTML = Song.length;
+        
+        // list2.innerHTML = '';
+        // Song.forEach(e => {
+        //     genLink2(e, Song);
+        // });
+        
+    }
+    else if ( this.status == 401 ){
+        refreshAccessToken();
+    }
+    else {
+        console.log(this.responseText);
+        alert(this.responseText);
+    }
+}
+
 
 // Recently Played API Call
 callApi( "GET", RECENTLY_PLAYED, null, handleRecentlyPlayedResponse );

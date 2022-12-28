@@ -108,11 +108,11 @@ function handleUsersResponse(){
         console.log(data_user);
         const userimg = document.getElementById('userimg');
         const username = document.getElementById('username');
-        // const profileimg = document.getElementById('profile_img');
-        // const profilename = document.getElementById('profile_name');
-        // profileimg.src = data_user.images[0].url;
-        // profilename.textContent = data_user.display_name;
+        const profileImg = document.querySelector('#profile-img');
+        const profileName = document.querySelector('#profile-name');
         userimg.src = data_user.images[0].url;
+        profileImg.src = data_user.images[0].url;
+        profileName.textContent = data_user.display_name;
         username.textContent = data_user.display_name;
 
         // const PLAYLISTS = `https://api.spotify.com/v1/users/${data_user.id}/playlists?limit=10`;

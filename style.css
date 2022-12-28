@@ -13,14 +13,37 @@ body {
     align-items: center;
     justify-content: center;
 }
-
+.profile{
+    display: none;
+    margin-left: 40px;
+}
+.user-top{
+    display: flex;
+    margin-top: 100px;
+    gap: 20px;
+}
+#profile-img{
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+}
+#profile-name{
+    font-size: 49px;
+    font-weight: bold;
+}
+.side{
+    display: flex;
+    flex-direction:column;
+    justify-content: end;
+    gap: 100px;
+}
 .main {
     position: relative;
     height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 

@@ -1,246 +1,392 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tarana - Best Music Player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tarana - Best Music Player" />
+    <meta property="og:title" content="Tarana - Best Music Player" />
+    <meta name="auther" content="Sonu Kumar Kushwaha" />
+    <meta name="email" content="flyingsonu736@gmail.com" />
+    <meta name="twitter:creator" content="@iamsonukushwaha" />
+    <meta name="og:country-name" content="India, Bharat" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
 
-    <head>
-        <meta charset="UTF-8">
-        <title>Tarana - Best Music Player</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Tarana - Best Music Player">
-        <meta property="og:title" content="Tarana - Best Music Player">
-        <meta name="auther" content="Sonu Kumar Kushwaha">
-        <meta name="email" content="flyingsonu736@gmail.com">
-        <meta name="twitter:creator" content="@iamsonukushwaha">
-        <meta name="og:country-name" content="India, Bharat" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+      .UserDetails {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        margin: 1em 0 0 0;
+      }
 
-        <style>
-            .UserDetails {
-                display: none;
-                flex-direction: column;
-                text-align: center;
-                justify-content: center;
-                align-items: center;
-                gap: 1em;
-                margin: 1em 0 0 0;
-            }
+      #googlebtn {
+        display: flex;
+        gap: 10px;
+        font-size: 22px;
+        padding: 8px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
 
-            #googlebtn {
-                display: flex;
-                gap: 10px;
-                font-size: 22px;
-                padding: 8px;
-                border-radius: 10px;
-                cursor: pointer;
-            }
+      #fbbtn:hover {
+        background-color: rgba(211, 115, 182, 0.434);
+      }
 
-            #googlebtn:hover {
-                background-color: rgba(211, 115, 182, 0.434);
-            }
+      #fbbtn {
+        display: flex;
+        gap: 10px;
+        font-size: 22px;
+        padding: 8px;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-left: 15%;
+      }
 
-            @media only screen and (max-width: 600px) {
+      #googlebtn:hover {
+        background-color: rgba(211, 115, 182, 0.434);
+      }
 
-                #googlebtn {
-                    font-size: 14px;
-                }
-            }
-        </style>
+      #fbbtn:hover {
+        background-color: rgba(211, 115, 182, 0.434);
+      }
 
-    </head>
+      @media only screen and (max-width: 600px) {
+        #googlebtn {
+          font-size: 14px;
+        }
 
-    <body>
-        <div class="UserDetails">
-            <img id="useravatar" src="" alt="UserAvatar" style="width: 50px ; border-radius:100px" />
-            <p id="username"></p>
+        #fbbtn {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
 
-            <button type="button" class="btn btn-primary mb-2" id="signout">Sign Out</button>
-        </div>
+  <body>
+    <div class="UserDetails">
+      <img
+        id="useravatar"
+        src=""
+        alt="UserAvatar"
+        style="width: 50px; border-radius: 100px"
+      />
+      <p id="username"></p>
 
-        <div class="WholeSignUpContainer">
-            <h2 class="text-center p-2">Log in to <a href="https://flyingsonu122.github.io/tarana" target="_blank"
-                    rel="noopener noreferrer">Tarana</a></h2>
-            <p class="text-center p-1">sign up to get access to insider preview</p>
-            <div class="container">
-                <form id="inputForm" class="py-3 px-3">
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="enter email" required>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="enter password"
-                                required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <button type="button" class="btn btn-primary mb-2" id="signup">Sign Up</button>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <button type="button" class="btn btn-outline-primary mb-2 pl-4 pr-4" id="signin">Log In</button>
-                        </div>
-                    </div>
+      <button type="button" class="btn btn-primary mb-2" id="signout">
+        Sign Out
+      </button>
+    </div>
 
-                    <hr>
-                    <h6 class="m-3">Directly Sign in using social sites</h6>
-                    <button type="button" id="googlebtn">
-                        <span><svg class="svg" width="18" height="18" viewBox="0 0 18 18"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.874 2.684-6.615z"
-                                    fill-rule="evenodd" fill-opacity="1" fill="#4285f4" stroke="none"></path>
-                                <path
-                                    d="M9.003 18c2.43 0 4.467-.806 5.956-2.18L12.05 13.56c-.806.54-1.836.86-3.047.86-2.344 0-4.328-1.584-5.036-3.711H.96v2.332C2.44 15.983 5.485 18 9.003 18z"
-                                    fill-rule="evenodd" fill-opacity="1" fill="#34a853" stroke="none"></path>
-                                <path
-                                    d="M3.964 10.712c-.18-.54-.282-1.117-.282-1.71 0-.593.102-1.17.282-1.71V4.96H.957C.347 6.175 0 7.55 0 9.002c0 1.452.348 2.827.957 4.042l3.007-2.332z"
-                                    fill-rule="evenodd" fill-opacity="1" fill="#fbbc05" stroke="none"></path>
-                                <path
-                                    d="M9.003 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.464.891 11.428 0 9.002 0 5.485 0 2.44 2.017.96 4.958L3.967 7.29c.708-2.127 2.692-3.71 5.036-3.71z"
-                                    fill-rule="evenodd" fill-opacity="1" fill="#ea4335" stroke="none"></path>
-                            </svg></span>
-
-                        <div class="">Continue with Google</div>
-                    </button>
-
-                </form>
+    <div class="WholeSignUpContainer">
+      <h2 class="text-center p-2">
+        Log in to
+        <a
+          href="https://flyingsonu122.github.io/tarana"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Tarana</a
+        >
+      </h2>
+      <p class="text-center p-1">sign up to get access to insider preview</p>
+      <div class="container">
+        <form id="inputForm" class="py-3 px-3">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="enter email"
+                required
+              />
             </div>
+            <div class="form-group col-md-6">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                placeholder="enter password"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <button type="button" class="btn btn-primary mb-2" id="signup">
+                Sign Up
+              </button>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <button
+                type="button"
+                class="btn btn-outline-primary mb-2 pl-4 pr-4"
+                id="signin"
+              >
+                Log In
+              </button>
+            </div>
+          </div>
 
-        </div>
+          <hr />
+          <h6 class="m-3">Directly Sign in using social sites</h6>
+          <div style="display: flex; flex-direction: row">
+            <button type="button" id="googlebtn">
+              <span
+                ><svg
+                  class="svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.874 2.684-6.615z"
+                    fill-rule="evenodd"
+                    fill-opacity="1"
+                    fill="#4285f4"
+                    stroke="none"
+                  ></path>
+                  <path
+                    d="M9.003 18c2.43 0 4.467-.806 5.956-2.18L12.05 13.56c-.806.54-1.836.86-3.047.86-2.344 0-4.328-1.584-5.036-3.711H.96v2.332C2.44 15.983 5.485 18 9.003 18z"
+                    fill-rule="evenodd"
+                    fill-opacity="1"
+                    fill="#34a853"
+                    stroke="none"
+                  ></path>
+                  <path
+                    d="M3.964 10.712c-.18-.54-.282-1.117-.282-1.71 0-.593.102-1.17.282-1.71V4.96H.957C.347 6.175 0 7.55 0 9.002c0 1.452.348 2.827.957 4.042l3.007-2.332z"
+                    fill-rule="evenodd"
+                    fill-opacity="1"
+                    fill="#fbbc05"
+                    stroke="none"
+                  ></path>
+                  <path
+                    d="M9.003 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.464.891 11.428 0 9.002 0 5.485 0 2.44 2.017.96 4.958L3.967 7.29c.708-2.127 2.692-3.71 5.036-3.71z"
+                    fill-rule="evenodd"
+                    fill-opacity="1"
+                    fill="#ea4335"
+                    stroke="none"
+                  ></path>
+                </svg>
+              </span>
 
-        <script type="module">
-            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
-            import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-database.js";
-            import { getAuth, GoogleAuthProvider, FacebookAuthProvider, signInWithPopup, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js";
+              <div class="">Continue with Google</div>
+            </button>
 
-            const firebaseConfig = {
-                apiKey: "AIzaSyDNTDXhWz8h8-arw5oAC_HQ0Oy6UZqnDl8",
-                authDomain: "tarana-36864.firebaseapp.com",
-                databaseURL: "https://tarana-36864-default-rtdb.firebaseio.com/",
-                projectId: "tarana-36864",
-                storageBucket: "tarana-36864.appspot.com",
-                messagingSenderId: "437811116293",
-                appId: "1:437811116293:web:d0eb8045e059aaca6f5f6c"
-            };
+            <button type="button" id="fbbtn">
+              <span
+                ><svg
+                  id="IconChangeColor"
+                  data-name="Layer 1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  height="18"
+                  width="18"
+                >
+                  <path
+                    d="M480,257.35c0-123.7-100.3-224-224-224s-224,100.3-224,224c0,111.8,81.9,204.47,189,221.29V322.12H164.11V257.35H221V208c0-56.13,33.45-87.16,84.61-87.16,24.51,0,50.15,4.38,50.15,4.38v55.13H327.5c-27.81,0-36.51,17.26-36.51,35v42h62.12l-9.92,64.77H291V478.66C398.1,461.85,480,369.18,480,257.35Z"
+                    fill-rule="evenodd"
+                    id="mainIconPathAttribute"
+                  ></path>
+                </svg>
+              </span>
+              <div class="">Continue with Facebook</div>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
 
-            const app = initializeApp(firebaseConfig);
-            const database = getDatabase(app);
-            const auth = getAuth();
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
+      import {
+        getDatabase,
+        set,
+        ref,
+        update,
+      } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-database.js";
+      import {
+        getAuth,
+        GoogleAuthProvider,
+        FacebookAuthProvider,
+        signInWithPopup,
+        createUserWithEmailAndPassword,
+        signInWithEmailAndPassword,
+        onAuthStateChanged,
+        signOut,
+      } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js";
 
-            var inputForm = document.getElementById('inputForm');
-            document.getElementById('signup').addEventListener('click', (e) => {
-                e.preventDefault();
+      const firebaseConfig = {
+        apiKey: "AIzaSyDNTDXhWz8h8-arw5oAC_HQ0Oy6UZqnDl8",
+        authDomain: "tarana-36864.firebaseapp.com",
+        databaseURL: "https://tarana-36864-default-rtdb.firebaseio.com/",
+        projectId: "tarana-36864",
+        storageBucket: "tarana-36864.appspot.com",
+        messagingSenderId: "437811116293",
+        appId: "1:437811116293:web:d0eb8045e059aaca6f5f6c",
+      };
 
-                var email = document.getElementById('email').value;
-                var password = document.getElementById('password').value;
-                if (email && password) {
-                    createUserWithEmailAndPassword(auth, email, password)
-                        .then((userCredential) => {
-                            const user = userCredential.user;
-                            set(ref(database, 'users/' + user.uid), {
-                                email: email,
-                                password: password,
-                            })
-                            inputForm.reset();
-                        })
-                        .catch((error) => {
-                            const errorCode = error.code;
-                            const errorMessage = error.message;
-                            alert(errorMessage);
-                        });
-                } else {
-                    alert("Enter Email and Password");
-                }
+      const app = initializeApp(firebaseConfig);
+      const database = getDatabase(app);
+      const auth = getAuth();
+
+      var inputForm = document.getElementById("inputForm");
+      document.getElementById("signup").addEventListener("click", (e) => {
+        e.preventDefault();
+
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        if (email && password) {
+          createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+              const user = userCredential.user;
+              set(ref(database, "users/" + user.uid), {
+                email: email,
+                password: password,
+              });
+              inputForm.reset();
             })
-
-            document.getElementById('signin').addEventListener('click', (e) => {
-                e.preventDefault();
-
-                var email = document.getElementById('email').value;
-                var password = document.getElementById('password').value;
-                if (email && password) {
-                    signInWithEmailAndPassword(auth, email, password)
-                        .then((userCredential) => {
-                            // Signed in 
-                            const user = userCredential.user;
-                            const date = new Date();
-                            update(ref(database, 'users/' + user.uid), {
-                                recent_login: date
-                            })
-
-                            inputForm.reset();
-                        })
-                        .catch((error) => {
-                            const errorCode = error.code;
-                            const errorMessage = error.message;
-                            alert(errorMessage);
-                        });
-                } else {
-                    alert("Enter Email and Password");
-                }
-
-            })
-
-            document.getElementById('googlebtn').addEventListener('click', (e) => {
-                e.preventDefault();
-                const provider = new GoogleAuthProvider();
-                signInWithPopup(auth, provider)
-                    .then((result) => {
-                        const credential = GoogleAuthProvider.credentialFromResult(result);
-                        const token = credential.accessToken;
-                        const user = result.user;
-                    }).catch((error) => {
-                        const errorCode = error.code;
-                        const errorMessage = error.message;
-                        const email = error.email;
-                        const credential = GoogleAuthProvider.credentialFromError(error);
-                        alert(errorMessage);
-                    });
-            })
-
-            const user = auth.currentUser;
-            onAuthStateChanged(auth, (user) => {
-                if (user) {
-                    document.querySelector(".UserDetails").style.display = "flex";
-                    document.querySelector(".WholeSignUpContainer").style.display = "none";
-                    if (user.displayName === null || user.photoURL === null) {
-                        document.getElementById('useravatar').src = 'https://i.ibb.co/nB0tBvy/man.png'
-                        document.getElementById('username').innerHTML = "Welcome, " + user.email;
-                    } else {
-                        document.getElementById('useravatar').src = user.photoURL
-                        document.getElementById('username').innerHTML = "Welcome, " + user.displayName;
-                    }
-                } else {
-                    document.querySelector(".UserDetails").style.display = "none";
-                    document.querySelector(".WholeSignUpContainer").style.display = "flex";
-                    document.querySelector(".WholeSignUpContainer").style.flexDirection = "column";
-                }
+            .catch((error) => {
+              const errorCode = error.code;
+              const errorMessage = error.message;
+              alert(errorMessage);
             });
+        } else {
+          alert("Enter Email and Password");
+        }
+      });
 
-            document.getElementById('signout').addEventListener('click', () => {
-                signOut(auth).then(() => {
-                    alert("SignOut Successfully from System");
-                    document.querySelector(".UserDetails").style.display = "none";
-                }).catch((error) => {
-                    alert(error);
-                });
+      document.getElementById("signin").addEventListener("click", (e) => {
+        e.preventDefault();
+
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+
+        if (email && password) {
+          signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+              // Signed in
+              const user = userCredential.user;
+              const date = new Date();
+              update(ref(database, "users/" + user.uid), {
+                recent_login: date,
+              });
+
+              inputForm.reset();
             })
+            .catch((error) => {
+              const errorCode = error.code;
+              const errorMessage = error.message;
+              alert(errorMessage);
+            });
+        } else {
+          alert("Enter Email and Password");
+        }
+      });
 
-        </script> 
+      document.getElementById("googlebtn").addEventListener("click", (e) => {
+        e.preventDefault();
+        const provider = new GoogleAuthProvider();
+        signInWithPopup(auth, provider)
+          .then((result) => {
+            const credential = GoogleAuthProvider.credentialFromResult(result);
+            const token = credential.accessToken;
+            const user = result.user;
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            const email = error.email;
+            const credential = GoogleAuthProvider.credentialFromError(error);
+            alert(errorMessage);
+          });
+      });
 
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
+      document.getElementById("fbbtn").addEventListener("click", (e) => {
+        console.log(MouseEvent.name);
+        e.preventDefault();
+        const provider = new FacebookAuthProvider();
+        const auth = getAuth();
+        signInWithPopup(auth, provider)
+          .then((result) => {
+            const user = result.user;
+            const credential =
+              FacebookAuthProvider.credentialFromResult(result);
+            const accessToken = credential.accessToken;
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            const email = error.customData.email;
+            const credential = FacebookAuthProvider.credentialFromError(error);
+            alert(errorMessage);
+          });
+      });
 
-    </body>
+      const user = auth.currentUser;
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          document.querySelector(".UserDetails").style.display = "flex";
+          document.querySelector(".WholeSignUpContainer").style.display =
+            "none";
+          if (user.displayName === null || user.photoURL === null) {
+            document.getElementById("useravatar").src =
+              "https://i.ibb.co/nB0tBvy/man.png";
+            document.getElementById("username").innerHTML =
+              "Welcome, " + user.email;
+          } else {
+            document.getElementById("useravatar").src = user.photoURL;
+            document.getElementById("username").innerHTML =
+              "Welcome, " + user.displayName;
+          }
+        } else {
+          document.querySelector(".UserDetails").style.display = "none";
+          document.querySelector(".WholeSignUpContainer").style.display =
+            "flex";
+          document.querySelector(".WholeSignUpContainer").style.flexDirection =
+            "column";
+        }
+      });
 
+      document.getElementById("signout").addEventListener("click", () => {
+        signOut(auth)
+          .then(() => {
+            alert("SignOut Successfully from System");
+            document.querySelector(".UserDetails").style.display = "none";
+          })
+          .catch((error) => {
+            alert(error);
+          });
+      });
+    </script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

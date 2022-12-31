@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Welcome to Tarana Styling */
+.navbar {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 15px;
+    height: 80px;
+}
+
+.navbar h2 {
+    font-size: xx-large;
+}
+
+/* Sign up/Sign in card Styling */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    padding: 15px;
+    width: 300px;
+    height: 350px;
+}
+
+.log-in {
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.log-in h3 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+
+
+.mail input[type="email"],
+.pass input[type="password"] {
+    border: 0;
+    border-bottom: 2px solid black;
+    width: 100%;
+    padding: 3px;
+    margin: 20px 1px;
+}
+
+.mail input:focus,
+.pass input:focus {
+    outline: none;
+}
+
+/* Sign up button and Sign in Button Styling */
+.btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Sign button {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 8px 0;
+    color: white;
+    background-color: rgba(49, 130, 223, 0.782);
+}
+
+.Sign button:hover {
+    background-color: rgb(49, 130, 223);
+    transform: scale(0.99);
+}
+
+.Login button {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 8px 0;
+    color: white;
+    background-color: rgba(49, 130, 223, 0.782);
+}
+
+.Login button:hover {
+    background-color: rgb(49, 130, 223);
+    transform: scale(0.99);
+}
+
+#signup {
+    text-align: center;
+}
+
+#signin {
+    text-align: center;
+}
+
+.main-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#or {
+    text-align: center;
+    margin: 8px 0;
+}
+
+/* Google button styling */
+#googlebtn {
+    margin-left: 48px;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+    align-items: center;
+    cursor: pointer;
+    border: 0.6px solid black;
+}
+
+#googlebtn:hover {
+    transform: scale(1.1);
+}
+
+@media only screen and (max-width: 600px) {
+
+    #googlebtn {
+        font-size: 14px;
+    }
+}

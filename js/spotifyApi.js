@@ -10,6 +10,11 @@ const TOKEN = "https://accounts.spotify.com/api/token";
 // API Links
 const USER = `https://api.spotify.com/v1/me`;
 const DEVICES = "https://api.spotify.com/v1/me/player/devices";
+const FOLLOWED_ARTISTS = 'https://api.spotify.com/v1/me/following?type=artist&limit=50';
+const SAVED_ALBUMS = 'https://api.spotify.com/v1/me/albums?limit=50';
+const LIKED_TRACKS = 'https://api.spotify.com/v1/me/tracks?limit=50'
+
+
 
 
 
@@ -118,6 +123,38 @@ function handleUsersResponse(){
         // const PLAYLISTS = `https://api.spotify.com/v1/users/${data_user.id}/playlists?limit=10`;
         // callApi( "GET", PLAYLISTS, null, handlePlaylistsResponse );
         // console.log(data_user.images[0].url);
+        const PLAYLISTS = `https://api.spotify.com/v1/users/${data_user.id}/playlists?limit=50`;
+        callApi( "GET", PLAYLISTS, null, handlePlaylistsResponse );
+    }
+    else if ( this.status == 401 ){
+        refreshAccessToken();
+        // console.log('helloo3');
+    }
+    else {
+        console.log(this.responseText);
+        alert(this.responseText);
+    }
+}
+
+// Playlists API Call
+function handlePlaylistsResponse(){
+    if( this.status == 200 ){
+        var data_playlists = JSON.parse(this.responseText);
+        console.log(data_playlists);
+        const container = document.getElementById('playlists');
+        let adder = '';
+        data_playlists.items.forEach( playlist_ => {
+            adder+=`<li class="songItem">
+            <div class="img_play">
+                <img src="${playlist_.images[0].url}" alt="${playlist_.name}">
+            </div>
+            <h5><div class="play-name">${playlist_.name}</div>
+                <br>
+                <div class="subtitle">${playlist_.owner.display_name}</div>
+            </h5>
+        </li>`
+        })
+        container.innerHTML = adder;
     }
     else if ( this.status == 401 ){
         refreshAccessToken();
@@ -148,6 +185,102 @@ function handleDevicesResponse(){
     }
     else if ( this.status == 401 ){
         refreshAccessToken()
+    }
+    else {
+        console.log(this.responseText);
+        alert(this.responseText);
+    }
+}
+
+// Followed Artists API Call
+callApi( "GET", FOLLOWED_ARTISTS, null, handleFollowedArtistsResponse );
+
+function handleFollowedArtistsResponse(){
+    if( this.status == 200 ){
+        var data_followartists = JSON.parse(this.responseText);
+        console.log(data_followartists);
+
+        const container = document.getElementById('artists');
+        let adder = '';
+        data_followartists.artists.items.forEach( artist_ => {
+            adder+=`<li>
+                        <img src="${artist_.images[0].url}" alt="${artist_.name}" title="${artist_.name}" id="${artist_.id}" onclick="artistClick('${artist_.id}')">
+                        <div class="subtitle">${artist_.name}</div>
+                    </li>`
+            })
+        container.innerHTML = adder;
+    }
+    else if ( this.status == 401 ){
+        refreshAccessToken();
+        // console.log('helloo3');
+    }
+    else {
+        console.log(this.responseText);
+        alert(this.responseText);
+    }
+}
+
+//saved-albums api call
+callApi( "GET", SAVED_ALBUMS, null, handleSavedAlbumsResponse );
+
+function handleSavedAlbumsResponse(){
+    if( this.status == 200 ){
+        var data_savedAlbums = JSON.parse(this.responseText);
+        console.log(data_savedAlbums);
+
+        const container = document.getElementById('albums');
+        let adder = '';
+        data_savedAlbums.items.forEach(album_ => {
+            adder+=`<li class="songItem">
+                        <div class="img_play">
+                            <img src="${album_.album.images[0].url}" alt="${album_.album.artists[0].name}">
+                        </div>
+                        <h5>${album_.album.name}
+                            <br>
+                            <div class="subtitle">${album_.album.artists[0].name}</div>
+                        </h5>
+                    </li>`
+        })
+        container.innerHTML = adder;
+        
+    }
+    else if ( this.status == 401 ){
+        refreshAccessToken();
+        // console.log('helloo3');
+    }
+    else {
+        console.log(this.responseText);
+        alert(this.responseText);
+    }
+}
+
+// liked-songs api call
+callApi( "GET", LIKED_TRACKS, null, handleLikedTracksResponse );
+
+function handleLikedTracksResponse(){
+    if( this.status == 200 ){
+        var data_likedTracks = JSON.parse(this.responseText);
+        console.log(data_likedTracks);
+
+        const container = document.getElementById('saved-tracks');
+        let adder = '';
+        data_likedTracks.items.forEach(song_ => {
+            adder+=`<li class="songItem">
+                        <div class="img_play">
+                            <img src="${song_.track.album.images[0].url}" alt="${song_.track.name}">
+                        </div>
+                        <h5>${song_.track.name}
+                            <br>
+                            <div class="subtitle">${song_.track.artists[0].name}</div>
+                        </h5>
+                    </li>`
+        })
+        container.innerHTML = adder;
+        
+    }
+    else if ( this.status == 401 ){
+        refreshAccessToken();
+        // console.log('helloo3');
     }
     else {
         console.log(this.responseText);

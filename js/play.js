@@ -31,7 +31,6 @@ var data_recentlyPlayed, data_toptracks, data_recommendations;
 // API Links
 const TOPTRACKS = "https://api.spotify.com/v1/me/top/tracks?limit=100";
 const RECENTLY_PLAYED = 'https://api.spotify.com/v1/me/player/recently-played?limit=50';
-const FOLLOWED_ARTISTS = 'https://api.spotify.com/v1/me/following?type=artist';
 
 
 const userClick = () => {
@@ -75,6 +74,45 @@ searchForm.addEventListener('keyup', function(e){
     })
 })
 
+const profileClick = (id) => {
+    const click = document.getElementById(id);
+    if(!click.classList.contains('active')){
+        const active = document.getElementsByClassName('active');
+        Array.from(active).forEach( element => {
+            element.classList.remove('active');
+        });
+        click.classList.add('active');
+        const one = document.getElementById('artists');
+        const two = document.getElementById('playlists');
+        const three = document.getElementById('albums');
+        const four = document.getElementById('saved-tracks');
+        if( id === 4 ){
+            one.style.display = 'flex';
+            two.style.display = 'none';
+            three.style.display = 'none';
+            four.style.display = 'none';
+        }
+        else if(id===5){
+            two.style.display = 'flex';
+            one.style.display = 'none';
+            three.style.display = 'none';
+            four.style.display = 'none';
+        }
+        else if(id===6){
+            three.style.display = 'flex';
+            two.style.display = 'none';
+            one.style.display = 'none';
+            four.style.display = 'none';
+        }
+        else{
+            four.style.display = 'flex';
+            two.style.display = 'none';
+            three.style.display = 'none';
+            one.style.display = 'none';
+        }
+    }
+    // console.log(id);
+}
 
 const optionsClick = (id) => {
     const option = document.getElementById(id);

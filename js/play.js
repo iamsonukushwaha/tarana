@@ -48,6 +48,7 @@ window.addEventListener('DOMContentLoaded', renderDetails());
 
 function shareplay() {
     const copyLink = document.getElementById('copyLink');
+
     copyLink.onclick=()=>{
         var copyText = `https://flyingsonu122.github.io/tarana?id=${index_no+1}`;
         console.log(copyText);
@@ -55,11 +56,11 @@ function shareplay() {
         alert("Copied the text: " + copyText);
     }
     const fbshare = document.getElementById('fbshare');
-    fbshare.href = `https://facebook.com/sharer/sharer.php?u=https://flyingsonu122.github.io/tarana?id=${index_no+1}`
+    fbshare.href = `https://facebook.com/sharer/sharer.php?u=https://flyingsonu122.github.io/tarana?id=${index_no + 1}`
     const twshare = document.getElementById('twshare');
-    twshare.href = `https://twitter.com/intent/tweet?text=https://flyingsonu122.github.io/tarana?id=${index_no+1}`
+    twshare.href = `https://twitter.com/intent/tweet?text=https://flyingsonu122.github.io/tarana?id=${index_no + 1}`
     const whshare = document.getElementById('whshare');
-    whshare.href = `https://api.whatsapp.com/send/?text=https://flyingsonu122.github.io/tarana?id=${index_no+1}`
+    whshare.href = `https://api.whatsapp.com/send/?text=https://flyingsonu122.github.io/tarana?id=${index_no + 1}`
 
 
 }
@@ -106,7 +107,7 @@ function GetAllSongs(index_no) {
                 var genreSong = All_song.filter(g => g.genre === gen);
                 // console.log(genreSong);
                 genreSong.forEach(e => {
-                        genLink(e);
+                    genLink(e);
                 });
             });
         });
@@ -117,7 +118,7 @@ function genLink(e) {
     link = document.createElement('a');
     // link.innerHTML = `${e.name} &rarr;${e.singer}`;
     link.innerHTML = `<span style="color: yellow; ">${e.name}</span>  <i> ${e.singer} </i>`;
-    link.title = `click to play`; 
+    link.title = `click to play`;
 
     link.addEventListener('click', function () {
         index_no = e.id - 1;

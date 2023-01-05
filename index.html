@@ -24,114 +24,307 @@
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
             integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+            <style>
+
+                @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+*:focus {
+  outline: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #DDD;
+  font-size: 16px;
+  color: #222;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+#login-box {
+  position: relative;
+  margin: 5% auto;
+  width: 600px;
+  height: 400px;
+  background: #FFF;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 40px;
+  width: 300px;
+  height: 400px;
+}
+
+h1 {
+  margin: 0 0 20px 0;
+  font-weight: 300;
+  font-size: 28px;
+}
+
+input[type="text"],
+input[type="password"] {
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 4px;
+  width: 220px;
+  height: 32px;
+  border: none;
+  border-bottom: 1px solid #AAA;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  transition: 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-bottom: 2px solid #16a085;
+  color: #16a085;
+  transition: 0.2s ease;
+}
+
+input[type="submit"] {
+  margin-top: 28px;
+  width: 120px;
+  height: 32px;
+  background: #16a085;
+  border: none;
+  border-radius: 2px;
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.1s ease;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  opacity: 0.8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.1s ease;
+}
+
+input[type="submit"]:active {
+  opacity: 1;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: 0.1s ease;
+}
+
+.or {
+  position: absolute;
+  top: 180px;
+  left: 280px;
+  width: 40px;
+  height: 40px;
+  background: #DDD;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  line-height: 40px;
+  text-align: center;
+}
+
+.right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+  padding: 40px;
+  width: 300px;
+  height: 400px;
+  background: url('https://goo.gl/YbktSj');
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 2px 2px 0;
+}
+
+.right .loginwith {
+  display: block;
+  margin-bottom: 40px;
+  font-size: 28px;
+  color: #FFF;
+  text-align: center;
+}
+
+button.social-signin {
+  margin-bottom: 20px;
+  width: 220px;
+  height: 36px;
+  border: none;
+  border-radius: 2px;
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+button.social-signin:hover,
+button.social-signin:focus {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.2s ease;
+}
+
+button.social-signin:active {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: 0.2s ease;
+}
+
+button.social-signin.facebook {
+  background: #32508E;
+}
+
+button.social-signin.twitter {
+  background: #55ACEE;
+}
+
+button.social-signin.google {
+  background: #DD4B39;
+}
+            </style>
     </head>
 
-    <body id="body">
-
-        <div class="main" id="main">
-            <div class="dropup">
-                <div>
-                    <p class="dropbtn"><i class="fa fa-share"></i></p>
-                </div>
-                <div class="dropup-content">
-                    <button id="copyLink"><i class="fa fa-copy"></i></button>
-                    <a id="fbshare" href="https://facebook.com/sharer/sharer.php?u=https://flyingsonu122.github.io/tarana"
-                        target="_blank"><i class="fa fa-facebook"></i></a>
-                    <a id="twshare" href="https://twitter.com/intent/tweet?text=https://flyingsonu122.github.io/tarana"
-                        target="_blank"><i class="fa fa-twitter"></i></a>
-                    <a id="whshare" href="https://api.whatsapp.com/send/?text=https://flyingsonu122.github.io/tarana"
-                        target="_blank"><i class="fa fa-whatsapp"></i></a>
-                </div>
-            </div>
-
-            <p id="themebutton"></p>
-
-            <p id="logo"><i class="fa fa-music"></i>Tarana</p>
-            <!--- left part --->
-            <div class="left">
-                <!--- song img --->
-                <div class="image"><img id="track_image"></div>
-                <div class="volume">
-                    <p id="volume_show">40</p>
-                    <i class="fa fa-volume-up" aria-hidden="true" id="volume_icon" title="Mute"></i>
-                    <input type="range" min="0" max="100" value="40" onchange="volume_change()" id="volume">
-                </div>
-            </div>
-            <!--- right part --->
-            <div class="right">
-                <div class="show_song_no">
-                    <p id="present"></p>
-                    <p> / </p>
-                    <p id="total"></p>
-                </div>
-
-                <!--- song title & artist name --->
-                <p id="title">title</p>
-                <p id="artist">artist </p>
-                <!--- middle part of right part--->
-                <div class="middle">
-                    <button id="shuffle" class="shuffle fa fa-random" title="Enable shuffle">
-                    </button>
-                    <button onclick="previous_song();" id="pre" class="right_blue" title="Previous"><i
-                            class="fa fa-step-backward" aria-hidden="true"></i>
-                    </button>
-                    <button id="play" class="right_pink" title="Play"><i class="fa fa-play" aria-hidden="true"></i>
-                    </button>
-                    <button onclick="next_song();" id="next" class="right_blue" title="Next"><i
-                            class="fa fa-step-forward" aria-hidden="true"></i>
-                    </button>
-                    <button id="repeat" class="repeat fa fa-repeat" title="Enable repeat">
-                    </button>
-                </div>
-                <!--- song duration part --->
-                <div class="duration">
-                    <p id="passed_duration">0:00</p>
-                    <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()"
-                        oninput="changeDur()">
-                    <p id="full_duration">0:00</p>
-                </div>
-            </div>
-        </div>
-        <div class="documentation">
-            <button class="hide_show" id="hide_show"></button>
-        </div>
-        <div class="documentation_page" id="main_body_hide">
-            <p id="logo"><i class="fa fa-music"></i>Tarana</p>
-            <div id="playlist">
-                <select name="" id="genre" class="form-control">
-                    <option value="">all</option>
-                    <option value="Romantic">Romantic</option>
-                    <option value="Club">Club</option>
-                    <option value="HotHits">Hot Hits</option>
-                </select>
-                <input type="text" class="form-control" placeholder="search song" required autofocus id="srh">
-            </div>
-            <div class="documentation_body">
-                <div id="list">
-
-                </div>
-            </div>
-            <div class="visits">
-                <p onclick="aboutUs();" id="about" title="Login / About Tarana & More">Login / About & More</p>
-                <p id="visits"></p>
-            </div>
-        </div>
-        <script>
-            function cb(response) {
-                document.querySelector('#visits').innerHTML = `${response.value} Visits`;
-            }
-
-            function aboutUs() {
-                window.open("./aboutus.html", "_blank");
-            }
-        </script>
-
-        <script src="./js/search.js"></script>
-        <script src="./js/play.js"></script>
+    <body>
+  
+        <div id="login-box">
+          <div class="left">
+            <h1 id='status'>Login</h1>
+            <!-- <input type="text" id="username" name="username" placeholder="username" /> -->
+            
+            <input type="text" id="email" name="email" placeholder="E-mail" />
+            <input type="password" id="password" name="password" placeholder="Password" />
+            
+            <input type="submit" id='login' name="login" value="Login" />
         
-        <script src="./js/fullscreen.js"></script> 
-        <script async src="https://api.countapi.xyz/hit/tarana?callback=cb"></script>
-    </body>
-    
+          </div>
+          
+          <div class="right">
+            <span class="loginwith">Sign in with<br />social network</span>
+            
+            <button class="social-signin facebook">Log in with facebook</button>
+            <button class="social-signin twitter">Log in with Twitter</button>
+            <button class="social-signin google">Log in with Google+</button>
+          </div>
+          <div class="or">OR</div>
+        </div>
+        </body>
+
+
+
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+            import { getDatabase, set,ref, update } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+            import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
+
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+          
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+              apiKey: "AIzaSyDs8w13b1LZuzIrtAmRx-SHI8iopCeDQtI",
+              authDomain: "authentication-b2a60.firebaseapp.com",
+              databaseURL: "https://authentication-b2a60-default-rtdb.firebaseio.com",
+              projectId: "authentication-b2a60",
+              storageBucket: "authentication-b2a60.appspot.com",
+              messagingSenderId: "131371860626",
+              appId: "1:131371860626:web:5150898497082b6e5b5c4b"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+
+            const database = getDatabase(app);
+            const auth = getAuth();
+
+            signUp.addEventListener('click', (e) => {
+                var email = document.getElementById('email').value;
+                var password = document.getElementById('password').value;
+                var username = document.getElementById('username').value;
+
+                createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+
+
+    set(ref(database, 'users/' + user.uid),{
+        username: username,
+        email: email
+    })
+    alert('user created')
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+
+    alert('errorMessage');
+  });
+            })
+
+
+            login.addEventListener('click', (e) => {
+
+                var email = document.getElementById('email').value;
+                var password = document.getElementById('password').value;
+                signInWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    // ...
+
+    const dt = new Date();
+    update(ref(database, 'users/' + user.uid),{
+        last_login: dt,
+    })
+
+    alert('User Logged in!');
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+
+    alert(errorMessage);
+  });
+
+
+            })
+
+            const user = auth.currentUser;
+
+            onAuthStateChanged(auth, (user) => {
+  if (user) {
+    // https://firebase.google.com/docs/reference/js/firebase.User
+    const uid = user.uid;
+    // ...
+  } else {
+    // User is signed out
+    // ...
+  }
+});
+
+logout.addEventListener('click',(e) =>{
+    signOut(auth).then(() => {
+  // Sign-out successful.
+  alert('user logged out');
+}).catch((error) => {
+  // An error happened.
+
+  const errorCode = error.code;
+  const errorMessage = error.message;
+
+  alert(errorMessage);
+});
+})
+          </script>
+
 
 </html>

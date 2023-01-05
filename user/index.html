@@ -43,50 +43,49 @@
                 #googlebtn {
                     font-size: 14px;
                 }
-            }
+     }
         </style>
 
     </head>
 
     <body>
-        <div class="UserDetails">
+ <div class="UserDetails">
             <img id="useravatar" src="" alt="UserAvatar" style="width: 50px ; border-radius:100px" />
             <p id="username"></p>
-
             <button type="button" class="btn btn-primary mb-2" id="signout">Sign Out</button>
         </div>
-
         <div class="WholeSignUpContainer">
-            <h2 class="text-center p-2">Log in to <a href="https://flyingsonu122.github.io/tarana" target="_blank"
+            <h2 class="text-center p-2" style="background-color: #814d93;margin-left:500px;margin-right:500px ">Log in to <a href="https://flyingsonu122.github.io/tarana" target="_blank"
                     rel="noopener noreferrer">Tarana</a></h2>
             <p class="text-center p-1">sign up to get access to insider preview</p>
-            <div class="container">
+            <div class="mobile-container">
                 <form id="inputForm" class="py-3 px-3">
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="enter email" required>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="enter password"
-                                required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <button type="button" class="btn btn-primary mb-2" id="signup">Sign Up</button>
+                            <label for="email" style="margin-left:490px;font-family:arial black;color: #4c3c52 ">Email</label>
+                            <input style="margin-left:480px;width:540px" type="email" class="form-control" id="email" placeholder="enter email" required>
+                        
+                            <label for="password" style="margin-left:490px;font-family:arial black;color: #4c3c52 ">Password</label>
+                            <input style="margin-left:480px;width:540px" type="password" class="form-control" id="password" placeholder="enter password"
+                                required >
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <button type="button" class="btn btn-outline-primary mb-2 pl-4 pr-4" id="signin">Log In</button>
+                            <button style="margin-left:620px;background-color:#814d93;border-color: #5b236f;border-width:3px;font-family:arial black "
+                             type="button" class="btn btn-primary mb-2" id="signup">Sign Up</button>
                         </div>
                     </div>
-
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <button style="margin-left:720px;background-color:#814d93;color:white;border-color: #5b236f;border-width:3px;margin-top:-110px;font-family:arial black"
+                             type="button" class="btn btn-outline-primary mb-2 pl-4 pr-4" id="signin">Log In</button>
+                        </div>
+                    </div>
+        
                     <hr>
-                    <h6 class="m-3">Directly Sign in using social sites</h6>
-                    <button type="button" id="googlebtn">
+                    <h6  class="m-3"style="text-align:center">Directly Sign in using social sites</h6>
+                    <button style="margin-left:600px" type="button" id="googlebtn">
                         <span><svg class="svg" width="18" height="18" viewBox="0 0 18 18"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -110,6 +109,7 @@
             </div>
 
         </div>
+    
 
         <script type="module">
             import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
@@ -240,7 +240,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
-
+ 
     </body>
 
 </html>

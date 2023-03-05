@@ -1,5 +1,6 @@
 <h1 align="center"> Tarana - Best Music Player </h1>
 
+<a href="https://www.producthunt.com/posts/tarana-2?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-tarana&#0045;2" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=382456&theme=light" alt="Tarana - Music&#0032;Player | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
 
 <br/><br/>

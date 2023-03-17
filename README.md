@@ -20,7 +20,7 @@
 ### Live Demo on [sonukushwaha.me/tarana](https://flyingsonu122.github.io/tarana)
 
 
-**sign up to get access to insider preview**	https://sonukushwaha.me/tarana/user/
+**sign up to get access to insider preview**	https://sonukushwaha.me/tarana/user
 
 ---
 
@@ -40,11 +40,11 @@
 
 
 
-**main** https://sonukushwaha.me/tarana/ 
+**main** https://sonukushwaha.me/tarana
 
-**newmain** https://tarana.netlify.app/
+**newmain** https://tarana.netlify.app
 
-**newinterface** https://tarana1.netlify.app/
+**newinterface** https://tarana1.netlify.app
 
 
 ---

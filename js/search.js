@@ -1,7 +1,7 @@
 const searchForm = document.querySelector('#srh');
 
 const searchSong = async (term) => {
-    let uri = `https://tarana.azurewebsites.net/songs/?_sort=name&_order=asc`;
+    let uri = `https://tarana.onrender.com/songs/?_sort=name&_order=asc`;
 
     if (term) {
         uri += `&q=${term}`;

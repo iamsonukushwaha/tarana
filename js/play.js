@@ -27,7 +27,7 @@ let timer, link, All_song, max, gen, index_no;
 const id = new URLSearchParams(window.location.search).get('id');
 
 const renderDetails = async () => {
-    const res = await fetch(`https://tarana.azurewebsites.net/songs/` + id);
+    const res = await fetch(`https://tarana.onrender.com/songs/` + id);
     if (!res.ok) {
         index_no = 0;
         GetAllSongs(index_no);
@@ -66,7 +66,7 @@ let track = document.createElement('audio');
 function GetAllSongs(index_no) {
     shareplay();
 
-    fetch("https://tarana.azurewebsites.net/songs/?_sort=name&_order=asc")
+    fetch("https://tarana.onrender.com/songs/?_sort=name&_order=asc")
         .then(function (response) {
             return response.json();
         })

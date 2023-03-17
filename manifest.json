@@ -1,0 +1,13 @@
+{
+    "name": "Tarana",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "browser_action": {
+      "default_popup": "index.html",
+      "default_icon": "taranalogo.jpeg"
+    },
+    "icons": {
+      "128": "taranalogo.jpeg"
+    },
+    "permissions": ["activeTab"]
+}

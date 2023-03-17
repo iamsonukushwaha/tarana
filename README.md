@@ -46,7 +46,6 @@
 
 **newinterface** https://tarana1.netlify.app/
 
-**codepeak** https://taranadev.netlify.app/
 
 ---
 

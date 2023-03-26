@@ -54,8 +54,13 @@ function shareplay() {
     const copyLink = document.getElementById('copyLink');
     copyLink.onclick = () => {
         var songlink = `https://flyingsonu122.github.io/tarana?id=${index_no + 1}`;
-        navigator.clipboard.writeText(songlink);
-        alert("this song link copied to clipboard " + songlink);
+        navigator.clipboard.writeText(songlink)
+            .then(() => {
+                alert("Song link copied to clipboard " + songlink);
+            })
+            .catch((error) => {
+                console.error('Error copying link to song: ', error);
+            });
     }
     const fbshare = document.getElementById('fbshare');
     fbshare.href = `https://facebook.com/sharer/sharer.php?u=https://flyingsonu122.github.io/tarana?id=${index_no + 1}`

@@ -274,25 +274,7 @@ function previous_song() {
 
 var curmins, cursecs;
 
-// change slider position 
-function change_duration() {
-    slider_position = track.duration * (slider.value / 100);
-    track.currentTime = slider_position;
-}
 
-function changeDur() {
-    slider_position = track.duration * (slider.value / 100);
-    track.currentTime = slider_position;
-    curmins = Math.floor(track.currentTime / 60), cursecs = Math.floor(track.currentTime - curmins * 60);
-
-
-    if (cursecs < 10) {
-        passed_duration.innerHTML = `${curmins} : 0${cursecs}`;
-    } else {
-        passed_duration.innerHTML = `${curmins} : ${cursecs}`;
-    }
-
-}
 
 // for repeat
 var select = true;

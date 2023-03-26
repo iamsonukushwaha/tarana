@@ -27,20 +27,24 @@ let timer, link, All_song, max, gen, index_no;
 const id = new URLSearchParams(window.location.search).get('id');
 
 const renderDetails = async () => {
-    const res = await fetch(`https://tarana.onrender.com/songs/` + id);
-    if (!res.ok) {
+    if (id) {
+        const res = await fetch(`https://tarana.onrender.com/songs/` + id);
+        if (!res.ok) {
+            console.log("No able to fetch songs");
+        } else {
+            const song = await res.json();
+            index_no = parseInt(song.id) - 1;
+            GetAllSongs(index_no);
+
+            window.history.pushState("object or string", "Title", "https://sonukushwaha.me/tarana/index.html");
+        }
+    } else {
+        // console.log("No id provided");
         index_no = 0;
         GetAllSongs(index_no);
-
-    } else {
-        const song = await res.json();
-        index_no = parseInt(song.id) - 1;
-        GetAllSongs(index_no);
-
-        window.history.pushState("object or string", "Title", "https://sonukushwaha.me/tarana/index.html");
     }
-
 }
+
 
 
 window.addEventListener('DOMContentLoaded', renderDetails());

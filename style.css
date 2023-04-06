@@ -10,11 +10,13 @@ body {
     width: 100%;
     background: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.1), transparent, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.05), transparent, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.03) 3px), linear-gradient(0deg, rgb(85, 159, 230), rgb(230, 105, 196));
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
 }
 
-
+p{
+    margin: 0!important;
+}
 .main {
     position: relative;
     height: 100%;
@@ -22,6 +24,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 4rem;
+    
 }
 
 
@@ -32,7 +36,7 @@ body {
     padding: 12px;
     font-size: 15px;
     z-index: 1;
-    position: absolute;
+    /* position: absolute; */
     bottom: 22%;
     left: 0;
     margin-left: 2px;
@@ -58,7 +62,7 @@ body {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
-    bottom: 54px;
+    bottom: 48px;
     z-index: 1;
     margin-left: 2px;
 }
@@ -88,7 +92,7 @@ body {
 
 
 #logo {
-    position: absolute;
+    /* position: absolute; */
     top: 10px;
     left: 30px;
     font-size: 25px;
@@ -130,12 +134,10 @@ button {
     display: flex;
     text-align: center;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
 }
 
 .image {
-    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -216,18 +218,27 @@ input[type="range"]::-webkit-slider-thumb {
     background: linear-gradient(145deg, #4d8fcf, #5baaf6);
     box-shadow: 5px 5px 10px #4887c4, -5px -5px 10px #62b7ff;
 }
+.options{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
 
 .left .show_song_no {
     position: absolute;
-    top: 95%;
-    right: 6%;
+    /* top: 95%; */
+    /* right: 6%; */
     width: 50px;
     height: 30px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    bottom: 1%;
     padding: 8px 12px;
     font-size: 20px;
+    width: 100%;
 }
 
 .left .show_song_no p:nth-child(2) {
@@ -397,8 +408,8 @@ input[type="range"]::-webkit-slider-thumb {
     display: flex;
     color: #000;
     top: 20px;
-    position: fixed;
-    gap: 160px;
+    /* position: fixed; */
+    gap: 2rem;
 }
 
 #about {
@@ -410,7 +421,6 @@ input[type="range"]::-webkit-slider-thumb {
 
 #list {
     overflow-y: scroll;
-    margin-top: 60px;
     height: 87vh;
     width: 100%;
 }
@@ -494,3 +504,85 @@ input[type="range"]::-webkit-slider-thumb {
     width: 50%;
 }
 
+
+.header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 2;
+    padding: 0.5rem 2rem;
+}
+.playlist{
+    display: none;
+    height: 100%;
+    align-items: center;
+    color: white;
+    padding: 0 1rem;
+    background: linear-gradient(145deg, #cf5fb0, #f670d2);
+    cursor: pointer;
+}
+/* Responsive UI */
+@media screen and (max-width:900px) {
+    .left #title{
+        position: static;
+        margin-top: 20px!important;
+    }
+    .left #artist{
+        position: static;
+        transform: translate(0%);
+    }
+    .left .duration{
+        position: static;
+        transform: translate(0%);
+        margin-top: 30px;
+    }
+    .left .middle{
+        position: static;
+        height: auto;
+        margin-top: 30px;
+    }
+    .left .volume{
+        position: static;
+        height: auto;
+        margin-top: 40px;
+    }
+    .right{
+        position: absolute;
+        height: 70%;
+        width: 60%;
+        width: 90%;
+        box-shadow: 0px 0px 4px 0px #939393;
+        display: none;
+        top: 8rem;
+    }
+    .main{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .options{
+        width: 100%;
+        justify-content: space-around;
+        flex-direction: row;
+        margin-bottom: 1rem;
+        height: auto;
+    }
+    .left{
+        width: 95%;
+        height: 90%;
+        justify-content: center;
+    }
+    /* .right .close p{
+        background: white;
+        padding: 0.5rem 0.8rem;
+        font-size: 20px;
+        cursor: pointer;
+    } */
+    #themebutton{
+        z-index: 0;
+    }
+    .playlist{
+        display: flex;
+    }
+}

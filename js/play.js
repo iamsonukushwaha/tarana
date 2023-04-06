@@ -440,6 +440,8 @@ var m = document.getElementById("main");
 var themebtn = document.getElementById("themebutton");
 var about = document.getElementById("about");
 var visits = document.getElementById("visits");
+var playlist = document.getElementsByClassName('right')[0];
+var playListDet = document.querySelector('.playlist');
 var fc = true;
 
 n_ch();
@@ -459,6 +461,7 @@ function ch() {
     body.style.backgroundColor = "black";
     body.style.color = "white";
     m.style.backgroundColor = "#414A4C";
+    playlist.style.backgroundColor = "#414A4C";
     // hide_show.style.color = "white";
     about.style.color = "white";
     visits.style.color = "white";
@@ -471,8 +474,22 @@ function n_ch() {
     body.style.backgroundColor = "white";
     body.style.color = "black";
     m.style.backgroundColor = "#FFFAFA";
+    playlist.style.backgroundColor = "#FFFAFA";
     // hide_show.style.color = "black";
     about.style.color = "black";
     visits.style.color = "black";
     themebtn.className = "fa fa-moon-o";
+}
+
+function play_close(isOpen){
+    if(isOpen==='true'){
+        playlist.style.display = 'none';
+        playListDet.setAttribute('data-open-close','false')
+    }else{
+        playlist.style.display = 'flex';
+        playListDet.setAttribute('data-open-close','true')
+    }
+}
+function playOpenClose(){
+    play_close(playListDet.getAttribute('data-open-close'))
 }

@@ -30,25 +30,36 @@
 
     <body id="body">
 
+        <div class="header">
+            <p id="logo"><i class="fa fa-music"></i>Tarana</p>
+            <div class="visits">
+                <p onclick="aboutUs();" id="about" title="Sonu Kumar Kushwaha"> About Us</p>
+                <p id="visits"></p>
+            </div>
+        </div>
         <div class="main" id="main">
-            <div class="dropup">
-                <div>
-                    <p class="dropbtn"><i class="fa fa-share"></i></p>
+            <div class="options">
+                <div class="dropup">
+                    <div>
+                        <p class="dropbtn"><i class="fa fa-share"></i></p>
+                    </div>
+                    <div class="dropup-content">
+                        <a id="fbshare"
+                            href="https://facebook.com/sharer/sharer.php?u=https://flyingsonu122.github.io/tarana"
+                            target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a id="twshare" href="https://twitter.com/intent/tweet?text=https://flyingsonu122.github.io/tarana"
+                            target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a id="whshare" href="https://api.whatsapp.com/send/?text=https://flyingsonu122.github.io/tarana"
+                            target="_blank"><i class="fa fa-whatsapp"></i></a>
+                    </div>
                 </div>
-                <div class="dropup-content">
-                    <a id="fbshare"
-                        href="https://facebook.com/sharer/sharer.php?u=https://flyingsonu122.github.io/tarana"
-                        target="_blank"><i class="fa fa-facebook"></i></a>
-                    <a id="twshare" href="https://twitter.com/intent/tweet?text=https://flyingsonu122.github.io/tarana"
-                        target="_blank"><i class="fa fa-twitter"></i></a>
-                    <a id="whshare" href="https://api.whatsapp.com/send/?text=https://flyingsonu122.github.io/tarana"
-                        target="_blank"><i class="fa fa-whatsapp"></i></a>
+                <div class="playlist" onclick="playOpenClose()" data-open-close="false">
+                    <p>Playlists</p>
                 </div>
+                <p id="themebutton"></p>
             </div>
 
-            <p id="themebutton"></p>
-
-            <p id="logo"><i class="fa fa-music"></i>Tarana</p>
+            
             <!--- left part --->
             <div class="left">
                 <!--- song img --->
@@ -57,13 +68,6 @@
                 <!--- song title & artist name --->
                 <p id="title">title</p>
                 <p id="artist">artist </p>
-                <!--- song duration part --->
-                <div class="duration">
-                    <p id="passed_duration">0:00</p>
-                    <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()"
-                        oninput="changeDur()">
-                    <p id="full_duration">0:00</p>
-                </div>
                 <!--- middle part of right part--->
                 <div class="middle">
                     <button id="shuffle" class="shuffle fa fa-random" title="Enable shuffle">
@@ -79,6 +83,14 @@
                     <button id="repeat" class="repeat fa fa-repeat" title="Enable repeat">
                     </button>
                 </div>
+                <!--- song duration part --->
+                <div class="duration">
+                    <p id="passed_duration">0:00</p>
+                    <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()"
+                        oninput="changeDur()">
+                    <p id="full_duration">0:00</p>
+                </div>
+                
 
                 <div class="show_song_no">
                     <p id="present"></p>
@@ -94,13 +106,11 @@
             </div>
             <!--- right part --->
             <div class="right">
-                <div class="visits">
-                    <p onclick="aboutUs();" id="about" title="Sonu Kumar Kushwaha"> About Us</p>
-                    <p id="visits"></p>
-                </div>
                 <div id="list">
                 </div>
             </div>
+            <!-- <div class="music-player-box">
+            </div> -->
         </div>
 
         <script>

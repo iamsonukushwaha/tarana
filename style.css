@@ -558,8 +558,8 @@ input[type="range"]::-webkit-slider-thumb {
         top: 8rem;
     }
     .main{
-        flex-direction: column;
-        justify-content: flex-start;
+        flex-direction: column-reverse;
+        gap: 1rem;
     }
     .options{
         width: 100%;
@@ -571,7 +571,6 @@ input[type="range"]::-webkit-slider-thumb {
     .left{
         width: 95%;
         height: 90%;
-        justify-content: center;
     }
     /* .right .close p{
         background: white;

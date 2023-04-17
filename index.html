@@ -5,8 +5,8 @@
         <meta charset="UTF-8">
         <title>Tarana - Best Music Player</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Tarana - Best Music Player">
-        <meta property="og:title" content="Tarana - Best Music Player">
+        <meta name="description" content="Tarana - Music Player">
+        <meta property="og:title" content="Tarana - Music Player">
         <meta name="auther" content="Sonu Kumar Kushwaha">
         <meta name="email" content="flyingsonu736@gmail.com">
         <meta name="twitter:creator" content="@iamsonukushwaha">
@@ -50,15 +50,15 @@
 
             <p id="themebutton" title="change color theme"></p>
 
-            <p id="logo"><i class="fa fa-music"></i>Tarana</p>
+            <p class="logo"><i class="fa fa-music"></i>Tarana</p>
             <!--- left part --->
             <div class="left">
                 <!--- song img --->
-                <div class="image"><img id="track_image"></div>
+                <div class="image"><img id="track_image" alt="song image"></div>
                 <div class="volume">
                     <p id="volume_show">40</p>
                     <i class="fa fa-volume-up" aria-hidden="true" id="volume_icon" title="Mute"></i>
-                    <input type="range" min="0" max="100" value="40" onchange="volume_change()" id="volume">
+                    <input type="range" min="0" max="100" value="40" onchange="volume_change()" id="volume" title="adjust volume">
                 </div>
             </div>
             
@@ -93,7 +93,7 @@
                 <!--- song duration part --->
                 <div class="duration">
                     <p id="passed_duration">0:00</p>
-                    <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()"
+                    <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()" title="adjust duration"
                         oninput="changeDur()">
                     <p id="full_duration">0:00</p>
                 </div>
@@ -104,9 +104,9 @@
             <button class="hide_show" id="hide_show"></button>
         </div>
         <div class="documentation_page" id="main_body_hide">
-            <p id="logo"><i class="fa fa-music"></i>Tarana</p>
+            <p class="logo"><i class="fa fa-music"></i>Tarana</p>
             <div id="playlist">
-                <select name="" id="genre" class="form-control">
+                <select name="" id="genre" class="form-control" title="select genre">
                     <option value="">all</option>
                     <option value="Romantic">Romantic</option>
                     <option value="Club">Club</option>

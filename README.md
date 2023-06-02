@@ -1,6 +1,6 @@
 <h1 align="center"> Tarana - Best Music Player </h1>
 
-https://tarana.sonukushwaha.com/
+
 
 Tarana is a music player that offers features such as shuffle, song sharing, themed playlists, a variety of genres, search, and filters.
 

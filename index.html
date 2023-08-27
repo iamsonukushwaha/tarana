@@ -121,14 +121,11 @@
             </div>
             <div class="visits">
                 <p onclick="aboutUs();" id="about" title="Login / About Tarana & More">Login / About & More</p>
-                <p id="visits"></p>
+                
             </div>
         </div>
         <script>
-            function cb(response) {
-                document.querySelector('#visits').innerHTML = `${response.value} Visits`;
-            }
-
+            
             function aboutUs() {
                 window.open("./aboutus.html", "_blank");
             }
@@ -137,7 +134,7 @@
         <script src="./js/search.js"></script>
         <script src="./js/play.js"></script>
         <script src="./js/fullscreen.js"></script> 
-        <script async src="https://api.countapi.xyz/hit/tarana?callback=cb"></script>
+        
         
     </body>
 </html>

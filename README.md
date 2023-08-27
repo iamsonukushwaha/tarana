@@ -110,7 +110,7 @@ git push -u origin <your_branch_name>
 
 **9.** **Congratulations!** :tada: Sit and relax, you've made your contribution to [Tarana](https://github.com/flyingsonu122/tarana) project. :v: :heart:
 
-
+<sup>This repository is intended for individuals to test their programming skills, and the author(**@flyingsonu122**) will take no responsibility if it is put to any other use. Check [DISCLAIMER.md](./DISCLAIMER.md)</sup>
 -->
 
 ![tarana](https://github.com/flyingsonu122/tarana/assets/51280276/db80521f-3e2f-4a2f-b27c-c9b1d3e6fe3d)
@@ -121,7 +121,7 @@ git push -u origin <your_branch_name>
 
 <br><br>
 
-<sup>This repository is intended for individuals to test their programming skills, and the author(**@flyingsonu122**) will take no responsibility if it is put to any other use. Check [DISCLAIMER.md](./DISCLAIMER.md)</sup>
+
 
 
 

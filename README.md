@@ -1,8 +1,10 @@
-<h1 align="center"> Tarana - Best Music Player </h1>
+<h1 align="center"> Tarana - Music Player </h1>
 
 
 
 Tarana is a music player that offers features such as shuffle, song sharing, themed playlists, a variety of genres, search, and filters.
+
+<!--
 
 <a href="https://www.producthunt.com/posts/tarana-2?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-tarana&#0045;2" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=382456&theme=light" alt="Tarana - Music&#0032;Player | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
@@ -21,7 +23,8 @@ Tarana is a music player that offers features such as shuffle, song sharing, the
 
 ---
 
-### Live Demo on [Tarana](https://flyingsonu122.github.io/tarana)
+
+
 
 
 
@@ -108,9 +111,19 @@ git push -u origin <your_branch_name>
 **9.** **Congratulations!** :tada: Sit and relax, you've made your contribution to [Tarana](https://github.com/flyingsonu122/tarana) project. :v: :heart:
 
 
+-->
+
+![tarana](https://github.com/flyingsonu122/tarana/assets/51280276/db80521f-3e2f-4a2f-b27c-c9b1d3e6fe3d)
+
+
+### Live Demo on [flyingsonu122.github.io/tarana](https://flyingsonu122.github.io/tarana)
+
+
+<br><br>
+
 <sup>This repository is intended for individuals to test their programming skills, and the author(**@flyingsonu122**) will take no responsibility if it is put to any other use. Check [DISCLAIMER.md](./DISCLAIMER.md)</sup>
 
-**Thank You**
+
 
 <br/><br/><br/>
 

@@ -36,7 +36,7 @@ const renderDetails = async () => {
             index_no = parseInt(song.id) - 1;
             GetAllSongs(index_no);
 
-            window.history.pushState("object or string", "Title", "https://sonukushwaha.me/tarana/index.html");
+            window.history.pushState("object or string", "Tarana", "https://flyingsonu122.github.io/tarana/index.html");
         }
     } else {
         // console.log("No id provided");

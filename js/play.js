@@ -22,6 +22,7 @@ let previous = document.querySelector('#pre'),
 let timer, link, All_song, max, gen, index_no;
 
 var ogImageMeta = document.querySelector('meta[property="og:image"]');
+var ogTwtImgMeta = document.querySelector('meta[name="twitter:card"]');
 
 
 
@@ -37,7 +38,8 @@ const renderDetails = async () => {
             index_no = parseInt(song.id) - 1;
             GetAllSongs(index_no);
 
-            window.history.pushState("Tarana", "Tarana", "https://flyingsonu122.github.io/tarana/index.html");
+            // window.history.pushState("Tarana", "Tarana", "https://flyingsonu122.github.io/tarana/index.html");
+            window.history.pushState("Tarana", "Tarana", "https://flyingsonu122.github.io/tarana");
         }
     } else {
         // console.log("No id provided");
@@ -96,6 +98,7 @@ function GetAllSongs(index_no) {
             title.innerHTML = All_song[index_no].name;
             track_image.src = All_song[index_no].img;
             ogImageMeta.setAttribute('content', All_song[index_no].img);
+            ogTwtImgMeta.setAttribute('content', All_song[index_no].img);
             artist.innerHTML = All_song[index_no].singer;
 
             track.load();
@@ -387,6 +390,7 @@ function out() {
     title.innerHTML = All_song[index_no].name;
     track_image.src = All_song[index_no].img;
     ogImageMeta.setAttribute('content', All_song[index_no].img);
+    ogTwtImgMeta.setAttribute('content', All_song[index_no].img);
     artist.innerHTML = All_song[index_no].singer;
 
     track.load();

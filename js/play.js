@@ -21,6 +21,7 @@ let previous = document.querySelector('#pre'),
 
 let timer, link, All_song, max, gen, index_no;
 
+var ogImageMeta = document.querySelector('meta[property="og:image"]');
 
 
 
@@ -36,7 +37,7 @@ const renderDetails = async () => {
             index_no = parseInt(song.id) - 1;
             GetAllSongs(index_no);
 
-            window.history.pushState("object or string", "Tarana", "https://flyingsonu122.github.io/tarana/index.html");
+            window.history.pushState("Tarana", "Tarana", "https://flyingsonu122.github.io/tarana/index.html");
         }
     } else {
         // console.log("No id provided");
@@ -74,14 +75,14 @@ function shareplay() {
 
 
 
-
 // creating an audio Element.
 let track = document.createElement('audio');
 
 function GetAllSongs(index_no) {
     shareplay();
 
-    fetch("https://tarana.onrender.com/songs/?_sort=name&_order=asc")
+
+    fetch("https://tarana.onrender.com/songs")
         .then(function (response) {
             return response.json();
         })
@@ -94,6 +95,7 @@ function GetAllSongs(index_no) {
             track.src = All_song[index_no].path;
             title.innerHTML = All_song[index_no].name;
             track_image.src = All_song[index_no].img;
+            ogImageMeta.setAttribute('content', All_song[index_no].img);
             artist.innerHTML = All_song[index_no].singer;
 
             track.load();
@@ -384,6 +386,7 @@ function out() {
     track.src = All_song[index_no].path;
     title.innerHTML = All_song[index_no].name;
     track_image.src = All_song[index_no].img;
+    ogImageMeta.setAttribute('content', All_song[index_no].img);
     artist.innerHTML = All_song[index_no].singer;
 
     track.load();

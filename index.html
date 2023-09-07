@@ -45,10 +45,7 @@
 
                 <ul class="side-list">
                     <li class="list">
-                        <!-- <div class="nav-list">
-              <div class="list-icon"><i class="bi bi-globe"></i></div>
-              <div class="list-name">discover</div>
-            </div> -->
+
                         <ul class="sublist">
                             <li class="sub-nav-list active">
                                 <div class="sublist-icon">
@@ -56,56 +53,25 @@
                                 </div>
                                 <div class="sublist-name">home</div>
                             </li>
-                            <!-- <li class="sub-nav-list">
-                <div class="sublist-icon"><i class="bi bi-search"></i></div>
-                <div class="sublist-name">search</div>
-              </li>
-              <li class="sub-nav-list">
-                <div class="sublist-icon">
-                  <i class="fa-solid fa-headphones-simple"></i>
-                </div>
-                <div class="sublist-name">library</div>
-              </li> -->
+
                         </ul>
                     </li>
-                    <!-- <li class="list">
-            <div class="nav-list">
-              <div class="list-icon">
-                <i class="fa-solid fa-headphones-simple"></i>
-              </div>
-              <div class="list-name">library</div>
-            </div>
-            <ul class="sublist">
-              <li class="sub-nav-list">
-                <div class="sublist-icon"><i class="bi bi-star-fill"></i></div>
-                <div class="sublist-name">favorites</div>
-              </li>
-              <li class="sub-nav-list">
-                <div class="sublist-icon">
-                  <i class="bi bi-music-note-list"></i>
-                </div>
-                <div class="sublist-name">playlist 1</div>
-              </li>
-              <li class="sub-nav-list">
-                <div class="sublist-icon">
-                  <i class="bi bi-music-note-list"></i>
-                </div>
-                <div class="sublist-name">party playlist</div>
-              </li>
-              <li class="sub-nav-list">
-                <div class="sublist-icon">
-                  <i class="bi bi-music-note-list"></i>
-                </div>
-                <div class="sublist-name">old songs</div>
-              </li>
-            </ul>
-          </li> -->
-                    <li class="list">
-                        <!-- <div class="nav-list">
-              <div class="list-icon"><i class="bi bi-person"></i></div>
-              <div class="list-name">about</div>
-            </div> -->
 
+
+                    <li class="list">
+                        <ul class="sublist">
+                            <li class="sub-nav-list">
+                                <div class="sublist-icon">
+                                    <i class="bi bi-file-music-fill"></i>
+                                </div>
+                                <div class="sublist-name" id="lofisongs">
+                                    Lofi Songs
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="list">
                         <ul class="sublist">
                             <li class="sub-nav-list">
                                 <div class="sublist-icon">
@@ -274,6 +240,11 @@
             function aboutUs() {
                 window.open("./aboutus.html", "_blank");
             }
+
+            document.getElementById("lofisongs").addEventListener("click", function () {
+                window.open("https://singlebucks.blogspot.com/2023/05/300-lofi-songs.html", "_blank");
+            });
+
         </script>
 
         <!-- <script src="./js/search.js"></script> -->

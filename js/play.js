@@ -48,40 +48,55 @@ playlist.addEventListener("click", () => {
 
 
 
+
+
 const id = new URLSearchParams(window.location.search).get('id');
 
 const renderDetails = async () => {
-    const res = await fetch(`https://tarana.onrender.com/songs/` + id);
-    if (!res.ok) {
+    if (id) {
+        const res = await fetch(`https://tarana.onrender.com/songs/` + id);
+        if (!res.ok) {
+            console.log("No able to fetch songs");
+        } else {
+            const song = await res.json();
+            index_no = parseInt(song.id) - 1;
+            GetAllSongs(index_no);
+
+            window.history.pushState("Tarana", "Tarana", "https://tarana.netlify.app/");
+        }
+    } else {
+        // console.log("No id provided");
         index_no = 0;
         GetAllSongs(index_no);
-
-    } else {
-        const song = await res.json();
-        index_no = parseInt(song.id) - 1;
-        GetAllSongs(index_no);
-
-        window.history.pushState("object or string", "Title", "https://sonukushwaha.me/tarana/index.html");
     }
-
 }
+
 
 
 window.addEventListener('DOMContentLoaded', renderDetails());
 
 
 function shareplay() {
+    const copyLink = document.getElementById('copyLink');
+    copyLink.onclick = () => {
+        var songlink = `https://flyingsonu122.github.io/tarana/?id=${index_no + 1}`;
+        navigator.clipboard.writeText(songlink)
+            .then(() => {
+                alert("Song link copied to clipboard " + songlink);
+            })
+            .catch((error) => {
+                console.error('Error copying link to song: ', error);
+            });
+    }
     const fbshare = document.getElementById('fbshare');
-    fbshare.href = `https://facebook.com/sharer/sharer.php?u=https://flyingsonu122.github.io/tarana?id=${index_no + 1}`
+    fbshare.href = `https://facebook.com/sharer/sharer.php?u=https://flyingsonu122.github.io/tarana/?id=${index_no + 1}`
     const twshare = document.getElementById('twshare');
-    twshare.href = `https://twitter.com/intent/tweet?text=https://flyingsonu122.github.io/tarana?id=${index_no + 1}`
+    twshare.href = `https://twitter.com/intent/tweet?text=https://flyingsonu122.github.io/tarana/?id=${index_no + 1}`
     const whshare = document.getElementById('whshare');
-    whshare.href = `https://api.whatsapp.com/send/?text=https://flyingsonu122.github.io/tarana?id=${index_no + 1}`
+    whshare.href = `https://api.whatsapp.com/send/?text=https://flyingsonu122.github.io/tarana/?id=${index_no + 1}`
 
 
 }
-
-
 
 
 // creating an audio Element.
@@ -90,7 +105,7 @@ let track = document.createElement('audio');
 function GetAllSongs(index_no) {
     shareplay();
 
-    fetch("https://tarana.onrender.com/songs/?_sort=name&_order=asc")
+    fetch("https://tarana.onrender.com/songs/")
         .then(function (response) {
             return response.json();
         })
@@ -422,36 +437,8 @@ function out() {
     playsong();
 }
 
-// Function to open and close documentation.
-// const hide_show = document.getElementById('hide_show'),
-//     main_body_hide = document.getElementById('main_body_hide');
 
-// var click = true;
-// nochange();
 
-// hide_show.onclick = function () {
-//     if (click) {
-//         change();
-//         click = false;
-//     } else {
-//         nochange();
-//         click = true;
-//     }
-// }
-
-// function change() {
-//     main_body_hide.style.display = '';
-//     main.style.display = 'none';
-//     hide_show.innerText = 'X';
-// hide_show.style.color = "#fff";
-// }
-
-// function nochange() {
-//     main_body_hide.style.display = 'none';
-//     main.style.display = '';
-//     hide_show.innerText = '☰';
-// hide_show.style.color = "#fff";
-// }
 
 //  dark mode
 

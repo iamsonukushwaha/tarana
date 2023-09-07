@@ -241,13 +241,12 @@ body {
 }
 
 .image {
-    width: 350px;
-    height: 190px;
+    width: 250px;
+    height: 290px;
     border-radius: 9px;
     position: relative;
     object-fit: contain;
     object-position: center;
-    box-shadow: 0 0 10rem 10px #163888;
 }
 
 .play-pause-btn {
@@ -460,6 +459,7 @@ input[type=range]::-moz-range-progress {
 
 #list li {
     padding: 10px 30px;
+    margin-right: 30px;
     cursor: pointer;
     transition: all .4s ease;
 }
@@ -686,6 +686,7 @@ input[type=range]::-moz-range-progress {
 @media (max-width: 580px) {
     .image {
         width: 250px;
+        height: 190px;
         margin: 0 auto;
     }
 

@@ -152,7 +152,7 @@ function genLink(e) {
         artist.innerHTML = e.singer;
         present.innerHTML = All_song[e.id - 1].id;
 
-        nochange();
+        
         reset_slider();
         playsong();
     });

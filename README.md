@@ -1,8 +1,6 @@
 <h1 align="center"> Tarana - Music Player </h1>
 
-
-
-Tarana is a music player that offers features such as shuffle, song sharing, themed playlists, a variety of genres, search, and filters.
+**Tarana** is a music player that offers features such as shuffle, song sharing, themed playlists, a variety of genres, search, and filters.
 
 <!--
 
@@ -118,10 +116,10 @@ git push -u origin <your_branch_name>
 
 ### Live Demo on [flyingsonu122.github.io/tarana](https://flyingsonu122.github.io/tarana)
 
-
 <br><br>
 
 
+**&copy; [Sonu Kumar Kushwaha](https://singlebucks.blogspot.com)**
 
 
 
@@ -134,4 +132,4 @@ git push -u origin <your_branch_name>
 	<a href="https://twitter.com/iamsonukushwaha"><img src="https://img.shields.io/twitter/follow/iamsonukushwaha?label=Twitter&style=social" alt="Twitter"></a>
 </p>
 
-<br><br><br><br>
+<br><br>

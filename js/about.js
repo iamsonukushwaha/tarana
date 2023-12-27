@@ -1,6 +1,6 @@
 const getPersons = async () => {
     const person = document.getElementById('person');
-    let url = 'https://api.github.com/repos/flyingsonu122/tarana/contributors';
+    let url = 'https://api.github.com/repos/iamsonukushwaha/tarana/contributors';
     const res = await fetch(url);
     const data = await res.json();
     // console.log(data);

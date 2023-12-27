@@ -114,7 +114,7 @@ git push -u origin <your_branch_name>
 ![tarana](https://github.com/flyingsonu122/tarana/assets/51280276/db80521f-3e2f-4a2f-b27c-c9b1d3e6fe3d)
 
 
-### Live Demo on [flyingsonu122.github.io/tarana](https://flyingsonu122.github.io/tarana)
+### Live Demo on [iamsonukushwaha.github.io/tarana](https://iamsonukushwaha.github.io/tarana)
 
 <br><br>
 

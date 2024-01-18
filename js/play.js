@@ -37,7 +37,7 @@ const renderDetails = async () => {
         index_no = parseInt(song.id) - 1;
         GetAllSongs(index_no);
 
-        window.history.pushState("object or string", "Title", "https://sonukushwaha.me/tarana/index.html");
+            window.history.pushState("Tarana", "Tarana", "https://iamsonukushwaha.github.io/tarana");
     }
 
 }
@@ -48,11 +48,11 @@ window.addEventListener('DOMContentLoaded', renderDetails());
 
 function shareplay() {
     const fbshare = document.getElementById('fbshare');
-    fbshare.href = `https://facebook.com/sharer/sharer.php?u=https://flyingsonu122.github.io/tarana?id=${index_no+1}`
+    fbshare.href = `https://facebook.com/sharer/sharer.php?u=https://iamsonukushwaha.github.io/tarana?id=${index_no+1}`
     const twshare = document.getElementById('twshare');
-    twshare.href = `https://twitter.com/intent/tweet?text=https://flyingsonu122.github.io/tarana?id=${index_no+1}`
+    twshare.href = `https://twitter.com/intent/tweet?text=https://iamsonukushwaha.github.io/tarana?id=${index_no+1}`
     const whshare = document.getElementById('whshare');
-    whshare.href = `https://api.whatsapp.com/send/?text=https://flyingsonu122.github.io/tarana?id=${index_no+1}`
+    whshare.href = `https://api.whatsapp.com/send/?text=https://iamsonukushwaha.github.io/tarana?id=${index_no+1}`
 
 
 }

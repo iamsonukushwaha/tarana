@@ -23,11 +23,9 @@ let previous = document.querySelector('#pre'),
     play_open = document.querySelector(".play-open"),
     playlist = document.querySelector(".playlist");
 
-
 let timer, link, All_song, max, gen, index_no;
 
 // for mobile sidenav
-
 menu_btn.addEventListener("click", () => {
     if (menu_btn.classList.contains("active")) {
         menu_btn.classList.remove("active");
@@ -46,10 +44,6 @@ playlist.addEventListener("click", () => {
     }
 })
 
-
-
-
-
 const id = new URLSearchParams(window.location.search).get('id');
 
 const renderDetails = async () => {
@@ -61,22 +55,18 @@ const renderDetails = async () => {
             const song = await res.json();
             index_no = parseInt(song.id) - 1;
             GetAllSongs(index_no);
-
             window.history.pushState("Tarana", "Tarana", "https://iamsonukushwaha.github.io/tarana/");
         }
     } else {
-        // console.log("No id provided");
         index_no = 0;
         GetAllSongs(index_no);
     }
 }
 
-
-
 window.addEventListener('DOMContentLoaded', renderDetails());
 
-
 function shareplay() {
+    // Function to handle sharing options
     const copyLink = document.getElementById('copyLink');
     copyLink.onclick = () => {
         var songlink = `https://iamsonukushwaha.github.io/tarana/?id=${index_no + 1}`;
@@ -94,10 +84,7 @@ function shareplay() {
     twshare.href = `https://twitter.com/intent/tweet?text=https://iamsonukushwaha.github.io/tarana/?id=${index_no + 1}`
     const whshare = document.getElementById('whshare');
     whshare.href = `https://api.whatsapp.com/send/?text=https://iamsonukushwaha.github.io/tarana/?id=${index_no + 1}`
-
-
 }
-
 
 // creating an audio Element.
 let track = document.createElement('audio');
@@ -112,7 +99,6 @@ function GetAllSongs(index_no) {
         .then(function (data) {
 
             All_song = data;
-
             max = All_song.length;
 
             track.src = All_song[index_no].path;
@@ -130,18 +116,13 @@ function GetAllSongs(index_no) {
 
             All_song.forEach(element => {
                 genLink(element);
-
             });
-
         });
 }
-
-
 
 function genLink(e) {
     link = document.createElement('li');
     link.innerHTML = `<span class="s-name">${e.name}</span><br><span class="s-artist">${e.singer}</span>`;
-
 
     link.addEventListener('click', function () {
         index_no = e.id - 1;
@@ -151,8 +132,6 @@ function genLink(e) {
         track_image.src = e.img;
         artist.innerHTML = e.singer;
         present.innerHTML = All_song[e.id - 1].id;
-
-        
         reset_slider();
         playsong();
     });
@@ -160,9 +139,7 @@ function genLink(e) {
     mobi_list.forEach(lists => {
         lists.append(link);
     });
-
 }
-
 
 var first_click = true;
 pausesong();
@@ -185,14 +162,12 @@ volume_icon.onclick = function () {
         volume_icon.classList.add('fa-volume-off');
         volume_icon.classList.remove('fa-volume-up');
         volume_icon.title = "Unmute";
-
     } else {
         reset_sound();
         first = true;
         volume_icon.classList.remove('fa-volume-off');
         volume_icon.classList.add('fa-volume-up');
         volume_icon.title = "Mute";
-
     }
 }
 
@@ -205,7 +180,6 @@ function mute_sound() {
     track.volume = 0;
     volume.value = 0;
     volume_show.innerHTML = 0;
-
 }
 
 function reset_sound() {
@@ -217,13 +191,10 @@ function reset_sound() {
 // change volume
 function volume_change() {
     volume_icon.title = "Mute";
-    // playsong();
-    // first_click = false;
     if (volume_icon.classList.contains('fa-volume-off')) {
         first = true;
         volume_icon.classList.add('fa-volume-up');
     }
-
     volume_show.innerHTML = recent_volume.value;
     track.volume = recent_volume.value / 100;
     if (track.volume == 0) {
@@ -237,16 +208,12 @@ function volume_change() {
         volume_icon.classList.remove('fa-volume-off');
         volume_icon.classList.add('fa-volume-up');
     }
-
 }
-
 
 recent_volume.oninput = function () {
     volume_show.innerHTML = this.value;
     track.volume = this.value / 100;
 }
-
-
 
 // reset song slider
 function reset_slider() {
@@ -264,7 +231,6 @@ function playsong() {
 
 // pause song
 function pausesong() {
-
     track.pause();
     first_click = true;
     play.innerHTML = '<i class="fa fa-play" aria-hidden="true"></i>';
@@ -279,48 +245,38 @@ function next_song() {
     } else {
         index_no = 0;
         out();
-
     }
-
 }
 
 // previous song
-
 function previous_song() {
     if (index_no > 0) {
         index_no -= 1;
         out();
-
     } else {
         index_no = All_song.length - 1;
         out();
     }
 }
 
-
 var curmins, cursecs;
 
-// change slider position 
+// change slider position
 function change_duration() {
     slider_position = track.duration * (slider.value / 100);
     track.currentTime = slider_position;
 }
 
 function changeDur() {
-
-
-
     slider_position = track.duration * (slider.value / 100);
     track.currentTime = slider_position;
     curmins = Math.floor(track.currentTime / 60), cursecs = Math.floor(track.currentTime - curmins * 60);
-
 
     if (cursecs < 10) {
         passed_duration.innerHTML = `${curmins} : 0${cursecs}`;
     } else {
         passed_duration.innerHTML = `${curmins} : ${cursecs}`;
     }
-
 }
 
 // for repeat
@@ -362,11 +318,8 @@ function range_slider() {
             repeat.title = "Disable repeat";
             if (track.ended) {
                 out();
-
             }
-
             select = false;
-
         } else {
             repeat.innerHTML = `<i class="bi bi-arrow-clockwise"></i>`;
             repeat.classList.add('repeat');
@@ -376,27 +329,17 @@ function range_slider() {
         }
     }
 
-
     shuffle.onclick = function () {
-
         if (selected) {
-
             shuffle.classList.add('selected');
             shuffle.classList.remove('shuffle');
-            // console.log(shuffle.className);
             selected = false;
             shuffle.title = "Disable shuffle";
-
             if (track.ended) {
-
-            } else {
                 var anotherRandom = Math.floor(Math.random() * max);
-                // console.log(anotherRandom);
                 index_no = anotherRandom;
-                // console.log(index_no);
                 out();
             }
-
         } else {
             shuffle.classList.remove('selected');
             shuffle.classList.add('shuffle');
@@ -404,7 +347,6 @@ function range_slider() {
             shuffle.title = "Enable shuffle";
         }
     }
-
 
     // function will run when the song is over
     if (track.ended) {
@@ -428,20 +370,14 @@ function out() {
     track_name.innerHTML = All_song[index_no].name;
     track_image.src = All_song[index_no].img;
     artist.innerHTML = All_song[index_no].singer;
-
     track.load();
-
     timer = setInterval(range_slider, 1000);
     total.innerHTML = All_song.length;
     present.innerHTML = index_no + 1;
     playsong();
 }
 
-
-
-
-//  dark mode
-
+// dark mode
 var body = document.getElementById("body");
 var m = document.getElementById("main");
 var themebtn = document.getElementById("themebutton");
@@ -469,7 +405,7 @@ themebtn.onclick = function () {
     }
 }
 
-//dark
+// dark
 function ch() {
     themebtn.style.color = "#fff";
     themebtn.style.backgroundColor = "#1d2742";
@@ -487,7 +423,6 @@ function ch() {
     play.style.backgroundColor = "#393d4d";
     volu.style.backgroundColor = "#393d4d";
     vol_range.style.backgroundColor = "#393d4d";
-
 
     bi_btn.forEach(btn => {
         btn.style.backgroundColor = "#1d2742"
@@ -519,8 +454,7 @@ function ch() {
 
 }
 
-
-//light
+// light
 function n_ch() {
     themebtn.style.color = "white";
     themebtn.style.backgroundColor = "#143599";
@@ -539,12 +473,9 @@ function n_ch() {
     volu.style.backgroundColor = "#2d349f";
     vol_range.style.backgroundColor = "#2d349f";
 
-
-
     bi_btn.forEach(btn => {
         btn.style.backgroundColor = "#143599"
     });
-
 
     list_hover.forEach(list => {
         list.addEventListener("mouseover", () => {

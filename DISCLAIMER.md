@@ -6,4 +6,4 @@ We do not have any license of these songs, copyrights reserved to their respecti
 For any queries, suggestions or support. Please email us at **[taranacare@gmail.com](mailto:taranacare@gmail.com)**
 
 
-_Author: @[Sonu Kushwaha](https://github.com/flyingsonu122)_
+_Author: @[Sonu Kushwaha](https://github.com/iamsonukushwaha)_

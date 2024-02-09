@@ -3,11 +3,7 @@
     top: 0;
     width: 100%;
     height: 450px;
-
-
 }
-
-
 
 #player {
     width: 100%;
@@ -26,8 +22,6 @@
     pointer-events: auto;
 
 }
-
-
 
 
 button {
@@ -68,10 +62,9 @@ button {
 
 
 
-/* @media (max-width: 767px) {
+@media (max-width: 767px) {
     .video-link {
         font-size: 18px;
-
         width: 90%;
     }
 
@@ -94,4 +87,4 @@ button {
 
 
     }
-} */
+}

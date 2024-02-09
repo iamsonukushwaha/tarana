@@ -1,6 +1,6 @@
-# Contributing to [Tarana](https://github.com/flyingsonu122/tarana)
+# Contributing to [Tarana](https://github.com/iamsonukushwaha/tarana)
 
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat&logo=git&logoColor=white)](https://github.com/flyingsonu122/tarana/pulls) [![GitHub issues](https://img.shields.io/github/issues/flyingsonu122/tarana?logo=github&color=red)](https://github.com/flyingsonu122/tarana/issues) 
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat&logo=git&logoColor=white)](https://github.com/iamsonukushwaha/tarana/pulls) [![GitHub issues](https://img.shields.io/github/issues/iamsonukushwaha/tarana?logo=github&color=red)](https://github.com/iamsonukushwaha/tarana/issues) 
 
 **We love your input! We want to make contributing to this project as easy and transparent as possible, whether it's:**
 
@@ -19,16 +19,16 @@
 
 ## Any contributions you make will be under the MIT Software License
 
-[![GitHub pull requests](https://img.shields.io/github/issues-pr-closed/flyingsonu122/tarana?color=lightgray&logo=github)](https://github.com/flyingsonu122/tarana/pulls?q=is%3Apr+is%3Aclosed)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr-closed/iamsonukushwaha/tarana?color=lightgray&logo=github)](https://github.com/iamsonukushwaha/tarana/pulls?q=is%3Apr+is%3Aclosed)
 
-In short, when you submit code changes, your submissions are understood to be under the same [MIT License](https://github.com/flyingsonu122/tarana/blob/main/LICENSE) that covers the project. Feel free to contact the maintainers if that's a concern.
+In short, when you submit code changes, your submissions are understood to be under the same [MIT License](https://github.com/iamsonukushwaha/tarana/blob/main/LICENSE) that covers the project. Feel free to contact the maintainers if that's a concern.
 
-## Report bugs using Github's [issues](https://github.com/flyingsonu122/tarana/issues)
+## Report bugs using Github's [issues](https://github.com/iamsonukushwaha/tarana/issues)
 
-We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/flyingsonu122/tarana/issues/new); it's that easy!
+We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/iamsonukushwaha/tarana/issues/new); it's that easy!
 
 ## License
 
-By contributing, you agree that your contributions will be licensed under its [MIT License](https://github.com/flyingsonu122/tarana/blob/main/LICENSE).
+By contributing, you agree that your contributions will be licensed under its [MIT License](https://github.com/iamsonukushwaha/tarana/blob/main/LICENSE).
 
-[![GitHub license](https://img.shields.io/github/license/flyingsonu122/tarana?logo=github)](https://github.com/flyingsonu122/tarana/blob/main/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/iamsonukushwaha/tarana?logo=github)](https://github.com/iamsonukushwaha/tarana/blob/main/LICENSE)

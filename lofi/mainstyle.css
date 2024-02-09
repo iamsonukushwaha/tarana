@@ -229,7 +229,7 @@ body {
     display: flex;
     gap: 20px;
     /* padding-left: 80px; */
-    margin-top: 30px;
+    /* margin-top: 30px; */
 }
 
 #track_image {
@@ -279,7 +279,7 @@ body {
     margin-top: 5px;
 }
 
-.right-slate {
+/* .right-slate {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -295,11 +295,11 @@ body {
     font-size: 1.4rem;
     padding-top: 2px;
     cursor: pointer;
-}
+} */
 
 /* music control */
 
-.music-controls {
+/* .music-controls {
     display: flex;
     justify-content: space-between;
     position: absolute;
@@ -310,9 +310,9 @@ body {
     height: 80px;
     padding: 0 20px;
     align-items: center;
-}
+} */
 
-.track-stuff {
+/* .track-stuff {
     display: flex;
     gap: 10px;
 }
@@ -326,7 +326,7 @@ body {
 
 .controls {
     display: flex;
-}
+} */
 
 .controls button {
     height: 35px;
@@ -515,9 +515,7 @@ input[type=range]::-moz-range-progress {
         height: 550px;
     }
 
-    .main-list .track_list {
-        height: 395px;
-    }
+    
 }
 
 @media (max-height: 590px) and (max-width: 970px) {

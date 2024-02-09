@@ -70,20 +70,25 @@ button {
 
     #content-container {
 
-        height: 350px;
+        height: 280px;
 
 
+    }
+
+    button {
+        margin: 2px;
+    padding: 2px;
     }
 
 
 
     #player {
-        height: 260px;
+        height: 200px;
     }
 
     #overlay {
 
-        height: 260px;
+        height: 200px;
 
 
     }

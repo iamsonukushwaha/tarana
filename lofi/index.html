@@ -102,6 +102,41 @@
                     <div class="logo-title">Tarana</div>
                 </div>
 
+                <div class="search">
+                    <!-- <div class="search-icon">
+                        <i class="bi bi-search"></i>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Search Song" required autofocus id="srh" /> -->
+                </div>
+
+                <div class="links">
+                    <!-- <div class="theme-btn bi-btn" id="themebutton">
+                        <i class="bi bi-circle-half"></i>
+                    </div> -->
+
+                    <div class="social">
+                        <div class="share-btn bi-btn">
+                            <i class="bi bi-share-fill"></i>
+                        </div>
+                        <div class="social-content">
+                            <!-- <a class="social-link bi-btn" id="copyLink" href="javascript:void(0)"
+                                title="copy link of this song"><i class="bi bi-clipboard"></i></a> -->
+                            <a class="social-link bi-btn" id="fbshare"
+                                href="https://facebook.com/sharer/sharer.php?u=https://iamsonukushwaha.github.io/tarana"
+                                target="_blank"><i class="bi bi-facebook"></i></a>
+                            <a class="social-link bi-btn" id="twshare"
+                                href="https://twitter.com/intent/tweet?text=https://iamsonukushwaha.github.io/tarana"
+                                target="_blank"><i class="bi bi-twitter"></i></a>
+                            <a class="social-link bi-btn" id="whshare"
+                                href="https://api.whatsapp.com/send/?text=https://iamsonukushwaha.github.io/tarana"
+                                target="_blank"><i class="bi bi-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="menu-btn bi-btn">
+                        <i class="bi bi-list"></i>
+                    </div>
+                </div>
+
 
 
             </div>
@@ -109,13 +144,15 @@
             <div class="music-board">
 
                 <div class="song-slate">
-                    <div id="content-container">
-                        <div id="player"></div>
-                        <div id="overlay"></div>
-                        <div id="videoTitle"></div>
-                        <button id="prevButton">Previous</button>
-                        <button id="playPauseButton">Play</button>
-                        <button id="nextButton">Next</button>
+                    <div class="left-slate">
+                        <div id="content-container">
+                            <div id="player"></div>
+                            <div id="overlay"></div>
+                            <div id="videoTitle"></div>
+                            <button id="prevButton">Previous</button>
+                            <button id="playPauseButton">Play</button>
+                            <button id="nextButton">Next</button>
+                        </div>
                     </div>
 
                     <div class="main-list">
@@ -137,6 +174,18 @@
     </div>
 
     <script>
+
+        let menu_btn = document.querySelector(".menu-btn");
+        menu_btn.addEventListener("click", () => {
+            if (menu_btn.classList.contains("active")) {
+                menu_btn.classList.remove("active");
+                sidenav.style.left = "-100%"
+            } else {
+                menu_btn.classList.add("active");
+                sidenav.style.left = "0"
+            }
+        });
+
         function aboutUs() {
             window.open("https://tarana.netlify.app/aboutus.html", "_blank");
         }

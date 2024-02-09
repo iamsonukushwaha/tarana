@@ -79,7 +79,7 @@ window.addEventListener('DOMContentLoaded', renderDetails());
 function shareplay() {
     const copyLink = document.getElementById('copyLink');
     copyLink.onclick = () => {
-        var songlink = `https://flyingsonu122.github.io/tarana/?id=${index_no + 1}`;
+        var songlink = `https://iamsonukushwaha.github.io/tarana/?id=${index_no + 1}`;
         navigator.clipboard.writeText(songlink)
             .then(() => {
                 alert("Song link copied to clipboard " + songlink);
@@ -89,11 +89,11 @@ function shareplay() {
             });
     }
     const fbshare = document.getElementById('fbshare');
-    fbshare.href = `https://facebook.com/sharer/sharer.php?u=https://flyingsonu122.github.io/tarana/?id=${index_no + 1}`
+    fbshare.href = `https://facebook.com/sharer/sharer.php?u=https://iamsonukushwaha.github.io/tarana/?id=${index_no + 1}`
     const twshare = document.getElementById('twshare');
-    twshare.href = `https://twitter.com/intent/tweet?text=https://flyingsonu122.github.io/tarana/?id=${index_no + 1}`
+    twshare.href = `https://twitter.com/intent/tweet?text=https://iamsonukushwaha.github.io/tarana/?id=${index_no + 1}`
     const whshare = document.getElementById('whshare');
-    whshare.href = `https://api.whatsapp.com/send/?text=https://flyingsonu122.github.io/tarana/?id=${index_no + 1}`
+    whshare.href = `https://api.whatsapp.com/send/?text=https://iamsonukushwaha.github.io/tarana/?id=${index_no + 1}`
 
 
 }

@@ -289,37 +289,27 @@ var selected = true;
 
 function range_slider() {
     let position = 0;
-    // update slider position
+    // Update slider position
     if (!isNaN(track.duration)) {
-
         position = track.currentTime * (100 / track.duration);
         slider.value = position;
 
-        curmins = Math.floor(track.currentTime / 60), cursecs = Math.floor(track.currentTime - curmins * 60);
-        if (cursecs < 10) {
-            passed_duration.innerHTML = `${curmins} : 0${cursecs}`;
-        } else {
-            passed_duration.innerHTML = `${curmins} : ${cursecs}`;
-        }
+        curmins = Math.floor(track.currentTime / 60);
+        cursecs = Math.floor(track.currentTime - curmins * 60);
+        passed_duration.innerHTML = cursecs < 10 ? `${curmins} : 0${cursecs}` : `${curmins} : ${cursecs}`;
 
-        var durmins = Math.floor(track.duration / 60),
-            dursecs = Math.floor(track.duration - durmins * 60);
-        if (dursecs < 10) {
-            full_duration.innerHTML = `${durmins} : 0${dursecs}`;
-        } else {
-            full_duration.innerHTML = `${durmins} : ${dursecs}`;
-        }
+        var durmins = Math.floor(track.duration / 60);
+        dursecs = Math.floor(track.duration - durmins * 60);
+        full_duration.innerHTML = dursecs < 10 ? `${durmins} : 0${dursecs}` : `${durmins} : ${dursecs}`;
     }
 
+    // Handle repeat functionality
     repeat.onclick = function () {
         if (select) {
             repeat.innerHTML = `1`;
             repeat.classList.add('selected');
             repeat.classList.remove('repeat');
             repeat.title = "Disable repeat";
-            if (track.ended) {
-                out();
-            }
             select = false;
         } else {
             repeat.innerHTML = `<i class="bi bi-arrow-clockwise"></i>`;
@@ -330,17 +320,13 @@ function range_slider() {
         }
     }
 
+    // Handle shuffle functionality
     shuffle.onclick = function () {
         if (selected) {
             shuffle.classList.add('selected');
             shuffle.classList.remove('shuffle');
             selected = false;
             shuffle.title = "Disable shuffle";
-            if (track.ended) {
-                var anotherRandom = Math.floor(Math.random() * max);
-                index_no = anotherRandom;
-                out();
-            }
         } else {
             shuffle.classList.remove('selected');
             shuffle.classList.add('shuffle');
@@ -349,22 +335,26 @@ function range_slider() {
         }
     }
 
-    // function will run when the song is over
+    // Function to play a random song when shuffle is selected and track ends
+    function playRandomSong() {
+        var anotherRandom = Math.floor(Math.random() * max);
+        index_no = anotherRandom;
+        out();
+    }
+
+    // Function will run when the song is over
     if (track.ended) {
-        if (shuffle.classList.contains("selected") && repeat.innerHTML == '') {
-            var random = Math.floor(Math.random() * max);
-            index_no = random;
-            out();
-        } else if (repeat.innerHTML == '') {
-            next_song();
+        if (shuffle.classList.contains("selected")) {
+            playRandomSong();
+        } else if (repeat.classList.contains("selected")) {
+            track.currentTime = 0; // Start playing the same song again
+            track.play();
         } else {
-            if (track.ended) {
-                next_song();
-                out();
-            }
+            next_song(); // Play the next song
         }
     }
 }
+
 
 function out() {
     track.src = All_song[index_no].path;

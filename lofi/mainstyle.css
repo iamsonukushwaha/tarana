@@ -216,7 +216,7 @@ body {
 }
 
 .music-board {
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .music-board h2 {
@@ -227,8 +227,8 @@ body {
 
 .song-slate {
     display: flex;
-    gap: 40px;
-    padding-left: 80px;
+    gap: 20px;
+    /* padding-left: 80px; */
     margin-top: 30px;
 }
 
@@ -444,17 +444,18 @@ input[type=range]::-moz-range-progress {
     padding: 30px;
 }
 
-.main-list {
-    margin-top: 20px;
+.left-slate {
+    width: 60%;
 }
 
 .main-list .track_list {
     overflow-y: scroll;
     overflow-x: hidden;
-    height: 100vh;
+    height: 80vh;
     display: block;
-    scrollbar-width: thin;
+    /* scrollbar-width: thin; */
     scrollbar-color: grey transparent;
+    
 }
 
 #list li {
@@ -591,6 +592,9 @@ input[type=range]::-moz-range-progress {
     .main-list {
         position: relative;
         margin-top: 0;
+    }
+    .left-slate {
+        width: 100%;
     }
 
     #list {

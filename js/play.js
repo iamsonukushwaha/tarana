@@ -280,6 +280,47 @@ function changeDur() {
     }
 }
 
+
+// for repeat
+var select = true;
+repeat.innerHTML = ``;
+
+// for shuffle
+var selected = true;
+
+shuffle.onclick = function () {
+    if (selected) {
+        shuffle.classList.add('selected');
+        shuffle.classList.remove('shuffle');
+        selected = false;
+        shuffle.title = "Disable shuffle";
+    } else {
+        shuffle.classList.remove('selected');
+        shuffle.classList.add('shuffle');
+        selected = true;
+        shuffle.title = "Enable shuffle";
+    }
+}
+
+repeat.onclick = function () {
+    if (select) {
+        repeat.innerHTML = `1`;
+        repeat.classList.add('selected');
+        repeat.classList.remove('repeat');
+        repeat.title = "Disable repeat";
+        select = false;
+    } else {
+        repeat.innerHTML = `<i class="bi bi-arrow-clockwise"></i>`;
+        repeat.classList.add('repeat');
+        repeat.classList.remove('selected');
+        select = true;
+        repeat.title = "Enable repeat";
+    }
+}
+
+
+
+
 function range_slider() {
     let position = 0;
     // Update slider position

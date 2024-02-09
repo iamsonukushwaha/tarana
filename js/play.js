@@ -248,7 +248,6 @@ function next_song() {
     }
 }
 
-track.addEventListener('ended', next_song);
 
 // previous song
 function previous_song() {
@@ -360,6 +359,7 @@ function range_slider() {
             next_song();
         } else {
             if (track.ended) {
+                next_song();
                 out();
             }
         }

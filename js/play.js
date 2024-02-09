@@ -62,7 +62,7 @@ const renderDetails = async () => {
             index_no = parseInt(song.id) - 1;
             GetAllSongs(index_no);
 
-            window.history.pushState("Tarana", "Tarana", "https://tarana.netlify.app/");
+            window.history.pushState("Tarana", "Tarana", "https://iamsonukushwaha.github.io/tarana/");
         }
     } else {
         // console.log("No id provided");

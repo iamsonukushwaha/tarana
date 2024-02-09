@@ -248,6 +248,8 @@ function next_song() {
     }
 }
 
+track.addEventListener('ended', next_song);
+
 // previous song
 function previous_song() {
     if (index_no > 0) {

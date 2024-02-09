@@ -128,4 +128,4 @@ https://www.contributor-covenant.org/faq. Translations are available at
 https://www.contributor-covenant.org/translations.
 
 
-[![GitHub license](https://img.shields.io/github/license/flyingsonu122/tarana?logo=github)](https://github.com/flyingsonu122/tarana/blob/main/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/iamsonukushwaha/tarana?logo=github)](https://github.com/iamsonukushwaha/tarana/blob/main/LICENSE)

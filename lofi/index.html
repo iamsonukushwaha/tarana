@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>Tarana - Music Player</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Tarana - Music Player" />
+        <meta property="og:title" content="Tarana - Music Player" />
+        <meta name="auther" content="Sonu Kumar Kushwaha" />
+        <meta name="email" content="flyingsonu736@gmail.com" />
+        <meta name="twitter:creator" content="@iamsonukushwaha" />
+        <meta name="og:country-name" content="India, Bharat" />
+
+        <meta property="og:image"
+            content="https://raw.githubusercontent.com/iamsonukushwaha/tarana/main/img/tarana.jpg" />
+        <link rel="shortcut icon" href="https://tarana.netlify.app/img/taranalogo.jpeg" type="image/x-icon" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <!-- font link -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500&display=swap"
+            rel="stylesheet" />
+        <!-- bootstrap icons cdn link -->
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" />
+
+
+    </head>
+
+    <body id="body">
+        <div class="main" id="main">
+            <!-- sidelist -->
+
+            <div class="sidenav">
+                <div class="logo">
+                    <div class="logo-img">
+                        <img src="https://tarana.netlify.app/img/taranalogo.jpeg" alt="taranalogo" />
+                    </div>
+                    <div class="logo-title">Tarana</div>
+                </div>
+
+                <ul class="side-list">
+                    <li class="list">
+
+                        <ul class="sublist">
+                            <li class="sub-nav-list active">
+                                <div class="sublist-icon">
+                                    <i class="fa-solid fa-house"></i>
+                                </div>
+                                <div class="sublist-name">home</div>
+                            </li>
+
+                        </ul>
+                    </li>
+
+
+                    <li class="list">
+                        <ul class="sublist">
+                            <li class="sub-nav-list">
+                                <div class="sublist-icon">
+                                    <i class="bi bi-file-music-fill"></i>
+                                </div>
+                                <div class="sublist-name" id="lofisongs">
+                                    Lofi Songs
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="list">
+                        <ul class="sublist">
+                            <li class="sub-nav-list">
+                                <div class="sublist-icon">
+                                    <i class="bi bi-person-fill"></i>
+                                </div>
+                                <div class="sublist-name" onclick="aboutUs();" id="about">
+                                    about us
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+
+
+                    <li class="list">
+                        <br><br><br><br><br><br><br>
+                    </li>
+
+
+                    <div class="songs-count">
+                        <span id="present"></span> / <span id="total"></span>
+                    </div>
+                </ul>
+            </div>
+
+            <!-- sidelist end -->
+
+            <!-- musicplayer start -->
+
+            <div class="music-player">
+                <div class="player-head">
+                    <div class="logo mobi-logo">
+                        <div class="logo-img">
+                            <img src="https://tarana.netlify.app/img/taranalogo.jpeg" alt="taranalogo" />
+                        </div>
+                        <div class="logo-title">Tarana</div>
+                    </div>
+
+                    <div class="search">
+                        <!-- <div class="search-icon">
+              <i class="bi bi-search"></i>
+            </div>
+            <input type="text" class="form-control" placeholder="Search Song" required autofocus id="srh" /> -->
+                    </div>
+                    <div class="links">
+                        <div class="theme-btn bi-btn" id="themebutton">
+                            <i class="bi bi-circle-half"></i>
+                        </div>
+
+                        <div class="social">
+                            <div class="share-btn bi-btn">
+                                <i class="bi bi-share-fill"></i>
+                            </div>
+                            <div class="social-content">
+                                <a class="social-link bi-btn" id="copyLink" href="javascript:void(0)"
+                                    title="copy link of this song"><i class="bi bi-clipboard"></i></a>
+                                <a class="social-link bi-btn" id="fbshare"
+                                    href="https://facebook.com/sharer/sharer.php?u=https://iamsonukushwaha.github.io/tarana"
+                                    target="_blank"><i class="bi bi-facebook"></i></a>
+                                <a class="social-link bi-btn" id="twshare"
+                                    href="https://twitter.com/intent/tweet?text=https://iamsonukushwaha.github.io/tarana"
+                                    target="_blank"><i class="bi bi-twitter"></i></a>
+                                <a class="social-link bi-btn" id="whshare"
+                                    href="https://api.whatsapp.com/send/?text=https://iamsonukushwaha.github.io/tarana"
+                                    target="_blank"><i class="bi bi-whatsapp"></i></a>
+                            </div>
+                        </div>
+                        <div class="menu-btn bi-btn">
+                            <i class="bi bi-list"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="music-board">
+                    <h2 class="playing">PLAYING NOW</h2>
+                    <div class="song-slate">
+                        <div id="content-container">
+                            <div id="player"></div>
+                            <div id="overlay"></div>
+                            <div id="videoTitle"></div>
+                            <button id="prevButton">Previous</button>
+                            <button id="playPauseButton">Play</button>
+                            <button id="nextButton">Next</button>
+                        </div>
+                    
+                    
+                        <div id="links">
+                            <div id="links-container"></div>
+                        </div>
+                        <br>
+                    
+                        <p class="made-by">
+                            Your playlist, curated by <a href="https://singlebucks.blogspot.com/" target="_blank"
+                                rel="noopener noreferrer">Sonu Kumar
+                                Kushwaha</a>
+                        </p>
+                    
+                        <script src="https://www.youtube.com/iframe_api"></script>
+                    
+                        <script src="./obfuscated.js"></script>
+                    </div>
+                </div>
+
+                
+
+                
+            </div>
+        </div>
+
+        <!-- <script>
+            function aboutUs() {
+                window.open("./aboutus.html", "_blank");
+            }
+
+            document.getElementById("lofisongs").addEventListener("click", function () {
+                window.open("https://singlebucks.blogspot.com/2023/05/300-lofi-songs.html", "_blank");
+            });
+
+        </script> -->
+
+        
+
+
+    </body>
+
+</html>

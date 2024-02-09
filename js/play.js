@@ -282,11 +282,11 @@ function changeDur() {
 
 
 // for repeat
-var select ;
+var select  = true;
 repeat.innerHTML = `<i class="bi bi-arrow-clockwise"></i>`;
 
 // for shuffle
-var selected ;
+var selected = true;
 
 shuffle.onclick = function () {
     if (selected) {

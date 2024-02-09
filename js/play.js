@@ -281,12 +281,12 @@ function changeDur() {
 }
 
 
-// for repeat
-var select = true;
-repeat.innerHTML = ``;
+// // for repeat
+// var select = true;
+repeat.innerHTML = `<i class="bi bi-arrow-clockwise"></i>`;
 
-// for shuffle
-var selected = true;
+// // for shuffle
+// var selected = true;
 
 shuffle.onclick = function () {
     if (selected) {

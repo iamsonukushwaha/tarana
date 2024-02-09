@@ -280,13 +280,6 @@ function changeDur() {
     }
 }
 
-// for repeat
-var select = true;
-repeat.innerHTML = `<i class="bi bi-arrow-clockwise"></i>`;
-
-// for shuffle
-var selected = true;
-
 function range_slider() {
     let position = 0;
     // Update slider position
@@ -311,6 +304,10 @@ function range_slider() {
             repeat.classList.remove('repeat');
             repeat.title = "Disable repeat";
             select = false;
+            // Ensure shuffle is unselected when repeat is selected
+            if (selected) {
+                shuffle.click();
+            }
         } else {
             repeat.innerHTML = `<i class="bi bi-arrow-clockwise"></i>`;
             repeat.classList.add('repeat');
@@ -327,6 +324,10 @@ function range_slider() {
             shuffle.classList.remove('shuffle');
             selected = false;
             shuffle.title = "Disable shuffle";
+            // Ensure repeat is unselected when shuffle is selected
+            if (!select) {
+                repeat.click();
+            }
         } else {
             shuffle.classList.remove('selected');
             shuffle.classList.add('shuffle');

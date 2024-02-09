@@ -132,6 +132,23 @@ body {
 }
 
 
+#sonu{
+    p{
+        color: #666;
+    }
+    a {
+        color: #c39898;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    a:hover {
+        color: #fff;
+        text-decoration: underline;
+    }
+    
+}
+
 /* musicplayer css */
 
 .music-player {

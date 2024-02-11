@@ -59,7 +59,7 @@ button {
     border-radius: 5px;
     text-decoration: none;
     color: white;
-    font-size: 10px;
+    font-size: 28px;
     font-weight: bold;
     text-align: center;
     transition: background-color 0.2s ease-in-out;
@@ -80,7 +80,7 @@ button {
 
 @media (max-width: 767px) {
     .video-link {
-        font-size: 10px;
+        font-size: 18px;
         width: 90%;
     }
 

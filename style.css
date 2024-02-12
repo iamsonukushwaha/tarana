@@ -480,6 +480,7 @@ input[type=range]::-moz-range-progress {
 
 #list li:hover {
     background-color: #273251;
+    color: white;
 }
 
 .s-artist {

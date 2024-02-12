@@ -462,10 +462,11 @@ input[type=range]::-moz-range-progress {
 .main-list .track_list {
     overflow-y: scroll;
     overflow-x: hidden;
-    height: 270px;
+    height: 80vh;
     display: block;
-    scrollbar-width: thin;
+    /* scrollbar-width: thin; */
     scrollbar-color: grey transparent;
+    
 }
 
 #list li {

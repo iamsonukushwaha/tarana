@@ -475,11 +475,11 @@ input[type=range]::-moz-range-progress {
     cursor: pointer;
     transition: all .4s ease;
     border-radius: 5px; 
-    background-color: #273251;
+    background-color: #3498db;
 }
 
 #list li:hover {
-    background-color: #3b4b6c; /* Changed hover background color */
+    background-color: #273251;
 }
 
 .s-artist {

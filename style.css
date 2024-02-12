@@ -685,9 +685,7 @@ input[type=range]::-moz-range-progress {
         display: none;
     }
     
-    .playing{
-        display: none;
-    }
+    
 
     .menu-btn {
         display: flex;

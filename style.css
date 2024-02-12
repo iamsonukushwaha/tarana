@@ -119,6 +119,7 @@ body {
 
 .sublist-name {
     font-size: .85rem;
+    letter-spacing: 2px;
 }
 
 .view-count {

@@ -455,13 +455,6 @@ input[type=range]::-moz-range-progress {
     height: 400px;
 }
 
-.play-title {
-    display: flex;
-    gap: 20px;
-    font-size: 1.3rem;
-    padding: 30px;
-}
-
 .main-list {
     margin-top: 20px;
 }

@@ -424,7 +424,6 @@ const active_tab = document.querySelector(".active"),
     song_slate = document.querySelector(".song-slate"),
     volu = document.querySelector(".vol"),
     vol_range = document.querySelector(".vol-range"),
-    playing = document.querySelector(".playing"),
     list_hover = document.querySelectorAll(".sub-nav-list"),
     playlist_hover = document.querySelectorAll(".track_list li");
 
@@ -453,7 +452,6 @@ function ch() {
     shuffle.style.backgroundColor = "#273251";
     repeat.style.backgroundColor = "#273251";
     song_slate.style.color = "#fff";
-    playing.style.color = "#aea4a4";
     play.style.backgroundColor = "#393d4d";
     volu.style.backgroundColor = "#393d4d";
     vol_range.style.backgroundColor = "#393d4d";
@@ -502,7 +500,6 @@ function n_ch() {
     shuffle.style.backgroundColor = "#0876ec";
     repeat.style.backgroundColor = "#0876ec";
     song_slate.style.color = "black";
-    playing.style.color = "black";
     play.style.backgroundColor = "#2d349f";
     volu.style.backgroundColor = "#2d349f";
     vol_range.style.backgroundColor = "#2d349f";

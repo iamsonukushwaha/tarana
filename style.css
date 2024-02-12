@@ -455,13 +455,6 @@ input[type=range]::-moz-range-progress {
     height: 400px;
 }
 
-.play-title {
-    display: flex;
-    gap: 20px;
-    font-size: 1.3rem;
-    padding: 30px;
-}
-
 .main-list {
     margin-top: 20px;
 }
@@ -469,21 +462,25 @@ input[type=range]::-moz-range-progress {
 .main-list .track_list {
     overflow-y: scroll;
     overflow-x: hidden;
-    height: 270px;
+    height: 65vh;
     display: block;
-    scrollbar-width: thin;
+    /* scrollbar-width: thin; */
     scrollbar-color: grey transparent;
+    
 }
 
 #list li {
     padding: 10px 30px;
-    margin-right: 30px;
+    margin: 10px 0;
     cursor: pointer;
     transition: all .4s ease;
+    border-radius: 5px; 
+    background-color: #3498db;
 }
 
 #list li:hover {
     background-color: #273251;
+    color: white;
 }
 
 .s-artist {
@@ -692,9 +689,7 @@ input[type=range]::-moz-range-progress {
         display: none;
     }
     
-    .playing{
-        display: none;
-    }
+    
 
     .menu-btn {
         display: flex;

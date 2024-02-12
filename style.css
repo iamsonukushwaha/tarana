@@ -471,10 +471,10 @@ input[type=range]::-moz-range-progress {
 
 #list li {
     padding: 10px 30px;
-    margin-right: 30px;
+    margin: 10px 0;
     cursor: pointer;
     transition: all .4s ease;
-    background-color: #273251; /* Added background color */
+    border-radius: 5px; 
 }
 
 #list li:hover {

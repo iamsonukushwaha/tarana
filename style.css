@@ -474,10 +474,11 @@ input[type=range]::-moz-range-progress {
     margin-right: 30px;
     cursor: pointer;
     transition: all .4s ease;
+    background-color: #273251; /* Added background color */
 }
 
 #list li:hover {
-    background-color: #273251;
+    background-color: #3b4b6c; /* Changed hover background color */
 }
 
 .s-artist {

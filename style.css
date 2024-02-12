@@ -470,11 +470,12 @@ input[type=range]::-moz-range-progress {
 }
 
 #list li {
-    padding: 10px 30px;
+    padding: 10px 0;
     margin: 10px 0;
     cursor: pointer;
     transition: all .4s ease;
     border-radius: 5px; 
+    background-color: #273251;
 }
 
 #list li:hover {

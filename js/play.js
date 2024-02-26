@@ -16,8 +16,8 @@ let previous = document.querySelector('#pre'),
     main = document.querySelector('#main'),
     list = document.querySelector('#list'),
     mobi_list = document.querySelectorAll('.track_list'),
-    repeat = document.querySelector('#repeat'),
-    shuffle = document.querySelector('#shuffle'),
+    // repeat = document.querySelector('#repeat'),
+    // shuffle = document.querySelector('#shuffle'),
     menu_btn = document.querySelector(".menu-btn"),
     sidenav = document.querySelector(".sidenav"),
     play_open = document.querySelector(".play-open"),
@@ -281,42 +281,42 @@ function changeDur() {
 }
 
 
-// for repeat
-var select  = true;
-repeat.innerHTML = `<i class="bi bi-arrow-clockwise"></i>`;
+// // for repeat
+// var select  = true;
+// // repeat.innerHTML = `<i class="bi bi-arrow-clockwise"></i>`;
 
-// for shuffle
-var selected = true;
+// // for shuffle
+// var selected = true;
 
-shuffle.onclick = function () {
-    if (selected) {
-        shuffle.classList.add('selected');
-        shuffle.classList.remove('shuffle');
-        selected = false;
-        shuffle.title = "Disable shuffle";
-    } else {
-        shuffle.classList.remove('selected');
-        shuffle.classList.add('shuffle');
-        selected = true;
-        shuffle.title = "Enable shuffle";
-    }
-}
+// shuffle.onclick = function () {
+//     if (selected) {
+//         shuffle.classList.add('selected');
+//         shuffle.classList.remove('shuffle');
+//         selected = false;
+//         shuffle.title = "Disable shuffle";
+//     } else {
+//         shuffle.classList.remove('selected');
+//         shuffle.classList.add('shuffle');
+//         selected = true;
+//         shuffle.title = "Enable shuffle";
+//     }
+// }
 
-repeat.onclick = function () {
-    if (select) {
-        repeat.innerHTML = `1`;
-        repeat.classList.add('selected');
-        repeat.classList.remove('repeat');
-        repeat.title = "Disable repeat";
-        select = false;
-    } else {
-        repeat.innerHTML = `<i class="bi bi-arrow-clockwise"></i>`;
-        repeat.classList.add('repeat');
-        repeat.classList.remove('selected');
-        select = true;
-        repeat.title = "Enable repeat";
-    }
-}
+// repeat.onclick = function () {
+//     if (select) {
+//         repeat.innerHTML = `1`;
+//         repeat.classList.add('selected');
+//         repeat.classList.remove('repeat');
+//         repeat.title = "Disable repeat";
+//         select = false;
+//     } else {
+//         repeat.innerHTML = `<i class="bi bi-arrow-clockwise"></i>`;
+//         repeat.classList.add('repeat');
+//         repeat.classList.remove('selected');
+//         select = true;
+//         repeat.title = "Enable repeat";
+//     }
+// }
 
 
 
@@ -337,45 +337,45 @@ function range_slider() {
         full_duration.innerHTML = dursecs < 10 ? `${durmins} : 0${dursecs}` : `${durmins} : ${dursecs}`;
     }
 
-    // Handle repeat functionality
-    repeat.onclick = function () {
-        if (select) {
-            repeat.innerHTML = `1`;
-            repeat.classList.add('selected');
-            repeat.classList.remove('repeat');
-            repeat.title = "Disable repeat";
-            select = false;
-            // Ensure shuffle is unselected when repeat is selected
-            if (selected) {
-                shuffle.click();
-            }
-        } else {
-            repeat.innerHTML = `<i class="bi bi-arrow-clockwise"></i>`;
-            repeat.classList.add('repeat');
-            repeat.classList.remove('selected');
-            select = true;
-            repeat.title = "Enable repeat";
-        }
+    // // Handle repeat functionality
+    // repeat.onclick = function () {
+    //     if (select) {
+    //         repeat.innerHTML = `1`;
+    //         repeat.classList.add('selected');
+    //         repeat.classList.remove('repeat');
+    //         repeat.title = "Disable repeat";
+    //         select = false;
+    //         // Ensure shuffle is unselected when repeat is selected
+    //         if (selected) {
+    //             shuffle.click();
+    //         }
+    //     } else {
+    //         repeat.innerHTML = `<i class="bi bi-arrow-clockwise"></i>`;
+    //         repeat.classList.add('repeat');
+    //         repeat.classList.remove('selected');
+    //         select = true;
+    //         repeat.title = "Enable repeat";
+    //     }
     }
 
-    // Handle shuffle functionality
-    shuffle.onclick = function () {
-        if (selected) {
-            shuffle.classList.add('selected');
-            shuffle.classList.remove('shuffle');
-            selected = false;
-            shuffle.title = "Disable shuffle";
-            // Ensure repeat is unselected when shuffle is selected
-            if (!select) {
-                repeat.click();
-            }
-        } else {
-            shuffle.classList.remove('selected');
-            shuffle.classList.add('shuffle');
-            selected = true;
-            shuffle.title = "Enable shuffle";
-        }
-    }
+    // // Handle shuffle functionality
+    // shuffle.onclick = function () {
+    //     if (selected) {
+    //         shuffle.classList.add('selected');
+    //         shuffle.classList.remove('shuffle');
+    //         selected = false;
+    //         shuffle.title = "Disable shuffle";
+    //         // Ensure repeat is unselected when shuffle is selected
+    //         if (!select) {
+    //             repeat.click();
+    //         }
+    //     } else {
+    //         shuffle.classList.remove('selected');
+    //         shuffle.classList.add('shuffle');
+    //         selected = true;
+    //         shuffle.title = "Enable shuffle";
+    //     }
+    // }
 
     // Function to play a random song when shuffle is selected and track ends
     function playRandomSong() {
@@ -386,14 +386,16 @@ function range_slider() {
 
     // Function will run when the song is over
     if (track.ended) {
-        if (shuffle.classList.contains("selected")) {
-            playRandomSong();
-        } else if (repeat.classList.contains("selected")) {
-            track.currentTime = 0; // Start playing the same song again
-            track.play();
-        } else {
+        // if (shuffle.classList.contains("selected")) {
+        //     playRandomSong();
+        // } else if (repeat.classList.contains("selected")) {
+        //     track.currentTime = 0; // Start playing the same song again
+        //     track.play();
+        // } else {
+        //     next_song(); // Play the next song
+        // }
+        
             next_song(); // Play the next song
-        }
     }
 }
 
@@ -450,7 +452,7 @@ function ch() {
     music_controls.style.backgroundColor = "#181c2d";
     music_player.style.background = "#080f24";
     shuffle.style.backgroundColor = "#273251";
-    repeat.style.backgroundColor = "#273251";
+    // repeat.style.backgroundColor = "#273251";
     song_slate.style.color = "#fff";
     play.style.backgroundColor = "#393d4d";
     volu.style.backgroundColor = "#393d4d";
@@ -497,8 +499,8 @@ function n_ch() {
     active_tab.style.backgroundColor = "#072888";
     music_controls.style.backgroundColor = "#5a75c6 ";
     music_player.style.background = "linear-gradient(#0a388e 1%, #b1f0f7 80%)";
-    shuffle.style.backgroundColor = "#0876ec";
-    repeat.style.backgroundColor = "#0876ec";
+    // shuffle.style.backgroundColor = "#0876ec";
+    // repeat.style.backgroundColor = "#0876ec";
     song_slate.style.color = "black";
     play.style.backgroundColor = "#2d349f";
     volu.style.backgroundColor = "#2d349f";

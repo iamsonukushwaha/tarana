@@ -356,48 +356,48 @@ function range_slider() {
     //         select = true;
     //         repeat.title = "Enable repeat";
     //     }
-    }
+}
 
-    // // Handle shuffle functionality
-    // shuffle.onclick = function () {
-    //     if (selected) {
-    //         shuffle.classList.add('selected');
-    //         shuffle.classList.remove('shuffle');
-    //         selected = false;
-    //         shuffle.title = "Disable shuffle";
-    //         // Ensure repeat is unselected when shuffle is selected
-    //         if (!select) {
-    //             repeat.click();
-    //         }
-    //     } else {
-    //         shuffle.classList.remove('selected');
-    //         shuffle.classList.add('shuffle');
-    //         selected = true;
-    //         shuffle.title = "Enable shuffle";
-    //     }
+// // Handle shuffle functionality
+// shuffle.onclick = function () {
+//     if (selected) {
+//         shuffle.classList.add('selected');
+//         shuffle.classList.remove('shuffle');
+//         selected = false;
+//         shuffle.title = "Disable shuffle";
+//         // Ensure repeat is unselected when shuffle is selected
+//         if (!select) {
+//             repeat.click();
+//         }
+//     } else {
+//         shuffle.classList.remove('selected');
+//         shuffle.classList.add('shuffle');
+//         selected = true;
+//         shuffle.title = "Enable shuffle";
+//     }
+// }
+
+// Function to play a random song when shuffle is selected and track ends
+function playRandomSong() {
+    var anotherRandom = Math.floor(Math.random() * max);
+    index_no = anotherRandom;
+    out();
+}
+
+// Function will run when the song is over
+if (track.ended) {
+    // if (shuffle.classList.contains("selected")) {
+    //     playRandomSong();
+    // } else if (repeat.classList.contains("selected")) {
+    //     track.currentTime = 0; // Start playing the same song again
+    //     track.play();
+    // } else {
+    //     next_song(); // Play the next song
     // }
 
-    // Function to play a random song when shuffle is selected and track ends
-    function playRandomSong() {
-        var anotherRandom = Math.floor(Math.random() * max);
-        index_no = anotherRandom;
-        out();
-    }
-
-    // Function will run when the song is over
-    if (track.ended) {
-        // if (shuffle.classList.contains("selected")) {
-        //     playRandomSong();
-        // } else if (repeat.classList.contains("selected")) {
-        //     track.currentTime = 0; // Start playing the same song again
-        //     track.play();
-        // } else {
-        //     next_song(); // Play the next song
-        // }
-        
-            next_song(); // Play the next song
-    }
+    next_song(); // Play the next song
 }
+
 
 
 function out() {

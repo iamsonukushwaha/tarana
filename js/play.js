@@ -451,7 +451,7 @@ function ch() {
     active_tab.style.backgroundColor = "#273251";
     music_controls.style.backgroundColor = "#181c2d";
     music_player.style.background = "#080f24";
-    shuffle.style.backgroundColor = "#273251";
+    // shuffle.style.backgroundColor = "#273251";
     // repeat.style.backgroundColor = "#273251";
     song_slate.style.color = "#fff";
     play.style.backgroundColor = "#393d4d";

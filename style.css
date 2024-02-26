@@ -483,6 +483,13 @@ input[type=range]::-moz-range-progress {
     color: white;
 }
 
+.play-title {
+    display: flex;
+    gap: 20px;
+    font-size: 1.3rem;
+    padding: 30px;
+}
+
 .s-artist {
     font-size: 0.8rem;
 }

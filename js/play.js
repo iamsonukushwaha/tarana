@@ -26,13 +26,19 @@ let previous = document.querySelector('#pre'),
 let timer, link, All_song, max, gen, index_no;
 
 // for mobile sidenav
+const iconElement = menu_btn.querySelector('i');
 menu_btn.addEventListener("click", () => {
     if (menu_btn.classList.contains("active")) {
         menu_btn.classList.remove("active");
-        sidenav.style.left = "-100%"
+        sidenav.style.left = "-100%";
+        iconElement.classList.add('bi-list');
+        iconElement.classList.remove('bi-x-square-fill');
+        
     } else {
         menu_btn.classList.add("active");
         sidenav.style.left = "0"
+        iconElement.classList.remove('bi-list');
+        iconElement.classList.add('bi-x-square-fill');    
     }
 });
 

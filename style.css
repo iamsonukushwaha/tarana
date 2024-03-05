@@ -451,7 +451,7 @@ input[type=range]::-moz-range-progress {
     width: 550px;
     position: absolute;
     right: 0;
-    top: 100px;
+    top: 70px;
     height: 400px;
 }
 

@@ -55,7 +55,11 @@ const renderDetails = async () => {
             const song = await res.json();
             index_no = parseInt(song.id) - 1;
             GetAllSongs(index_no);
-            window.history.pushState("Tarana", "Tarana", "https://iamsonukushwaha.github.io/tarana/");
+            const currentURL = window.location.href;
+            const parts = currentURL.split('?');
+            const urlBeforeQuery = parts[0];
+            window.history.pushState("Tarana", "Tarana", urlBeforeQuery);
+            console.log(urlBeforeQuery);
         }
     } else {
         index_no = 0;

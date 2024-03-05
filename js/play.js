@@ -51,6 +51,8 @@ const renderDetails = async () => {
         const res = await fetch(`https://tarana.onrender.com/songs/` + id);
         if (!res.ok) {
             console.log("No able to fetch songs");
+            index_no = 0;
+            GetAllSongs(index_no);
         } else {
             const song = await res.json();
             index_no = parseInt(song.id) - 1;

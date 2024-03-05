@@ -48,7 +48,6 @@ const id = new URLSearchParams(window.location.search).get('id');
 const url = `https://iamsonukushwaha.github.io/tarana/songs.json`;
 
 const renderDetails = async () => {
-
     fetch(url)
         .then(response => {
             if (!response.ok) {
@@ -68,21 +67,24 @@ const renderDetails = async () => {
                 if (song) {
                     index_no = parseInt(song.id) - 1;
                     GetAllSongs(index_no);
+                    const currentURL = window.location.href;
+                    const parts = currentURL.split('?');
+                    const urlBeforeQuery = parts[0];
+                    window.history.pushState("Tarana", "Tarana", urlBeforeQuery);
                 } else {
                     console.error('Song not found, hence playing first song.');
                     index_no = 0;
                     GetAllSongs(index_no);
+                    const currentURL = window.location.href;
+                    const parts = currentURL.split('?');
+                    const urlBeforeQuery = parts[0];
+                    window.history.pushState("Tarana", "Tarana", urlBeforeQuery);
                 }
-
             }
-
-
         })
         .catch(error => {
             console.error('There was a problem with the fetch operation:', error);
         });
-
-
 }
 
 window.addEventListener('DOMContentLoaded', renderDetails());

@@ -395,11 +395,11 @@ function range_slider() {
 // }
 
 // Function to play a random song when shuffle is selected and track ends
-function playRandomSong() {
-    var anotherRandom = Math.floor(Math.random() * max);
-    index_no = anotherRandom;
-    out();
-}
+// function playRandomSong() {
+//     var anotherRandom = Math.floor(Math.random() * max);
+//     index_no = anotherRandom;
+//     out();
+// }
 
 // Function will run when the song is over
 if (track.ended) {
@@ -412,6 +412,7 @@ if (track.ended) {
     //     next_song(); // Play the next song
     // }
 
+    console.log("track ended");
     next_song(); // Play the next song
 }
 

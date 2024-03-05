@@ -113,16 +113,23 @@ function shareplay() {
 // creating an audio Element.
 let track = document.createElement('audio');
 
-function GetAllSongs(index_no) {
-    out();
-    track.volume = recent_volume.value / 100;
 
+function GetAllSongs(index_no) {
+    track.src = All_song[index_no].path;
+    title.innerHTML = All_song[index_no].name;
+    track_name.innerHTML = All_song[index_no].name;
+    track_image.src = All_song[index_no].img;
+    artist.innerHTML = All_song[index_no].singer;
+    track.load();
+    timer = setInterval(range_slider, 1000);
+    total.innerHTML = All_song.length;
+    present.innerHTML = index_no + 1;
+    track.volume = recent_volume.value / 100;
     All_song.forEach(element => {
         genLink(element);
     });
-
-
 }
+
 
 function genLink(e) {
     link = document.createElement('li');

@@ -45,28 +45,44 @@ playlist.addEventListener("click", () => {
 })
 
 const id = new URLSearchParams(window.location.search).get('id');
+const url = `https://iamsonukushwaha.github.io/tarana/songs.json`;
 
 const renderDetails = async () => {
-    if (id) {
-        const res = await fetch(`https://tarana.onrender.com/songs/` + id);
-        if (!res.ok) {
-            console.log("this particular song is not present");
-            index_no = 0;
-            GetAllSongs(index_no);
-        } else {
-            const song = await res.json();
-            index_no = parseInt(song.id) - 1;
-            GetAllSongs(index_no);
-            const currentURL = window.location.href;
-            const parts = currentURL.split('?');
-            const urlBeforeQuery = parts[0];
-            window.history.pushState("Tarana", "Tarana", urlBeforeQuery);
-            // console.log(urlBeforeQuery);
-        }
-    } else {
-        index_no = 0;
-        GetAllSongs(index_no);
-    }
+
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            All_song = data.songs;
+            max = All_song.length;
+            if (!id) {
+                console.error('ID is missing in the URL, hence playing first song');
+                index_no = 0;
+                GetAllSongs(index_no);
+            } else {
+                const song = All_song.find(song => song.id === id.toString());
+                if (song) {
+                    index_no = parseInt(song.id) - 1;
+                    GetAllSongs(index_no);
+                } else {
+                    console.error('Song not found, hence playing first song.');
+                    index_no = 0;
+                    GetAllSongs(index_no);
+                }
+
+            }
+
+
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
+
+
 }
 
 window.addEventListener('DOMContentLoaded', renderDetails());
@@ -96,34 +112,14 @@ function shareplay() {
 let track = document.createElement('audio');
 
 function GetAllSongs(index_no) {
-    shareplay();
+    out();
+    track.volume = recent_volume.value / 100;
 
-    fetch("https://tarana.onrender.com/songs/")
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
+    All_song.forEach(element => {
+        genLink(element);
+    });
 
-            All_song = data;
-            max = All_song.length;
 
-            track.src = All_song[index_no].path;
-            title.innerHTML = All_song[index_no].name;
-            track_name.innerHTML = All_song[index_no].name;
-            track_image.src = All_song[index_no].img;
-            artist.innerHTML = All_song[index_no].singer;
-
-            track.load();
-            track.volume = recent_volume.value / 100;
-
-            timer = setInterval(range_slider, 1000);
-            total.innerHTML = All_song.length;
-            present.innerHTML = index_no + 1;
-
-            All_song.forEach(element => {
-                genLink(element);
-            });
-        });
 }
 
 function genLink(e) {

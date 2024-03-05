@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Heebo', sans-serif;
+    font-family: Arial, sans-serif;
     list-style: none;
     transition: all .3s ease;
 }

@@ -59,7 +59,7 @@ const renderDetails = async () => {
             const parts = currentURL.split('?');
             const urlBeforeQuery = parts[0];
             window.history.pushState("Tarana", "Tarana", urlBeforeQuery);
-            console.log(urlBeforeQuery);
+            // console.log(urlBeforeQuery);
         }
     } else {
         index_no = 0;

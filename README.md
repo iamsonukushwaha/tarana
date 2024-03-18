@@ -1,5 +1,8 @@
 <h1 align="center"> Tarana - Music Player </h1>
 
+![image](https://github.com/iamsonukushwaha/tarana/assets/51280276/8229cfe1-5848-44e5-ab94-c26a93573c0e)
+
+
 **Tarana** is a music player that offers features such as shuffle, song sharing, themed playlists, a variety of genres, search, and filters.
 
 

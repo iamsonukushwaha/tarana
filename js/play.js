@@ -228,7 +228,7 @@ function volume_change() {
 }
 
 recent_volume.oninput = function () {
-    volume_show.innerHTML = this.value;
+    volume_show.textContent = this.value;
     track.volume = this.value / 100;
 }
 

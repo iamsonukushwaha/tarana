@@ -212,7 +212,7 @@ function volume_change() {
         first = true;
         volume_icon.classList.add('fa-volume-up');
     }
-    volume_show.innerHTML = recent_volume.value;
+    volume_show.textContent = recent_volume.value;
     track.volume = recent_volume.value / 100;
     if (track.volume == 0) {
         first = false;

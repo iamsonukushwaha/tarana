@@ -202,7 +202,7 @@ function mute_sound() {
 function reset_sound() {
     track.volume = curVolume;
     volume.value = curVolVal;
-    volume_show.innerHTML = curVolVal;
+    volume_show.textContent = curVolVal;
 }
 
 // change volume
